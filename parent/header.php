@@ -1,7 +1,7 @@
 <?php
-
 // session_start();
-$site_url = "http://localhost/sms-project/";
+
+$site_url = "http://{$_SERVER['SERVER_NAME']}/";
 
 if ( isset($_SESSION['login']) )
 {
@@ -19,26 +19,27 @@ else
 
 $std_id = $_SESSION['user_id'];
 $parent = get_user_data($std_id);
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <!-- Font Awesome Icons -->
+  <!--
+    1. Font Awesome Icons
+    2. overlayScrollbars
+    3. Theme style
+    4. Google Font: Source Sans Pro
+  -->
   <link rel="stylesheet" type="text/css" href="../plugins/fontawesome-free/css/all.min.css">
-  <!-- overlayScrollbars -->
   <link rel="stylesheet" type="text/css" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Theme style -->
   <link rel="stylesheet" type="text/css" href="../dist/css/adminlte.min.css">
-  <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
 
-  <title>Parent | Dashboard </title>
+  <title>Parent | Dashboard</title>
 
   <!-- jQuery -->
   <script async src="../plugins/jquery/jquery.min.js"></script>
