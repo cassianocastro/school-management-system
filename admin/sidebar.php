@@ -289,7 +289,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?=$site_url?>/admin/acadamy-settings/basic-information.php" class="nav-link">
+              <a href="<?=$site_url?>/admin/academy-settings/basic-information.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Basic Informations</p>
               </a>
