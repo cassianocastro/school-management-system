@@ -34,7 +34,7 @@
   <title>School Management System</title>
 </head>
 <body>
-  <?php require_once __DIR__ . '/includes/config.php'; ?>
+  <?php require_once __DIR__ . '/../includes/config.php'; ?>
 
   <?php require_once __DIR__ . '/header.php';?>
 
