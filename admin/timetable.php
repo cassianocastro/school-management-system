@@ -1,5 +1,5 @@
 <?php
-require '../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 if ( isset($_POST['submit']) )
 {
@@ -37,313 +37,346 @@ if ( isset($_POST['submit']) )
   }
 
   header('Location: timetable.php');
-
-  require 'header.php';
-  require 'sidebar.php';
 }
-
 ?>
 
-<!-- Content Header (Page header) -->
-<div class="content-header">
-  <div class="container-fluid">
-    <div class="row mb-2">
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-      <div class="col-sm-6">
-        <h1 class="m-0 text-dark">
-          Manage Time Table
-          <a href="?action=add" class="btn btn-success btn-sm">Add New</a>
-        </h1>
-      </div><!-- /.col -->
+  <link rel="stylesheet" type="text/css" href="../plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" type="text/css" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="../dist/css/adminlte.min.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
 
-      <div class="col-sm-6">
-        <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="#">Admin</a></li>
-          <li class="breadcrumb-item active">Time Table</li>
-        </ol>
-      </div><!-- /.col -->
+  <title>Admin | Dashboard</title>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+  <div class="wrapper">
 
-    </div><!-- /.row -->
-  </div><!-- /.container-fluid -->
-</div>
-<!-- /.content-header -->
+    <?php require_once __DIR__ . '/header.php'; ?>
 
-<!-- Main content -->
-<section class="content">
-  <div class="container-fluid">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
 
-    <?php if ( isset($_GET['action']) and $_GET['action'] == 'add' ) { ?>
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">
+              Manage Time Table
+              <a href="?action=add" class="btn btn-success btn-sm">Add New</a>
+            </h1>
+          </div><!-- /.col -->
 
-    <div class="card">
-      <div class="card-body">
-        <form action="" method="post">
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Admin</a></li>
+              <li class="breadcrumb-item active">Time Table</li>
+            </ol>
+          </div><!-- /.col -->
+
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+
+        <?php if ( isset($_GET['action']) and $_GET['action'] == 'add' ) { ?>
+
+        <div class="card">
+          <div class="card-body">
+            <form action="" method="post">
+              <div class="row">
+                <div class="col-lg">
+                  <div class="form-group">
+                    <label for="class_id">Select Class</label>
+
+                    <select require name="class_id" id="class_id" class="form-control">
+                      <option value="">-Select Class-</option>
+                      <?php
+                      $args = ['type' => 'class', 'status' => 'publish'];
+                      $classes = get_posts($args);
+
+                      foreach ($classes as $key => $class) {
+                      ?>
+                      <option value="<?= $class->id ?>"><?= $class->title ?></option>
+                      <?php } ?>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg">
+                  <div class="form-group" id="section-container">
+                    <label for="section_id">Select Section</label>
+
+                    <select require name="section_id" id="section_id" class="form-control">
+                      <option value="">-Select Section-</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg">
+                  <div class="form-group" id="section-container">
+                    <label for="teacher_id">Select Teacher</label>
+
+                    <select require name="teacher_id" id="teacher_id" class="form-control">
+                      <option value="">-Select Teacher-</option>
+                      <option value="1">Teacher 1</option>
+                      <option value="2">Teacher 2</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg">
+                  <div class="form-group" id="section-container">
+                    <label for="period_id">Select Period</label>
+
+                    <select require name="period_id" id="period_id" class="form-control">
+                      <option value="">-Select Period-</option>
+                        <?php
+                        $args    = ['type' => 'period', 'status' => 'publish'];
+                        $periods = get_posts($args);
+
+                        foreach ( $periods as $key => $period ) {
+                        ?>
+                          <option value="<?= $period->id ?>"><?= $period->title ?></option>
+                        <?php } ?>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg">
+                  <div class="form-group" id="section-container">
+                    <label for="day_name">Select Day</label>
+
+                    <select require name="day_name" id="day_name" class="form-control">
+                      <option value="">-Select Day-</option>
+
+                      <?php
+                      $days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+
+                      foreach ( $days as $key => $day ) {
+                      ?>
+                        <option value="<?= $day ?>"><?= ucwords($day) ?></option>
+                      <?php } ?>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg">
+                  <div class="form-group" id="section-container">
+                    <label for="subject_id">Select Subject</label>
+
+                    <select require name="subject_id" id="subject_id" class="form-control">
+                      <option value="">-Select Subject-</option>
+                      <option value="19">Mathematics</option>
+                      <option value="20">English</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg">
+                  <div class="from-group">
+                    <label for="">&nbsp;</label>
+
+                    <input type="submit" value="submit" name="submit" class="btn btn-success form-control">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <?php } else { ?>
+
+        <form action="" method="get">
+          <?php
+          $class_id   = $_GET['class'] ?? 43;
+          $section_id = $_GET['section'] ?? 3;
+          ?>
           <div class="row">
-            <div class="col-lg">
+            <div class="col-auto">
               <div class="form-group">
-                <label for="class_id">Select Class</label>
-
-                <select require name="class_id" id="class_id" class="form-control">
-                  <option value="">-Select Class-</option>
+                <select name="class" id="class" class="form-control">
+                  <option value="">Select Class</option>
                   <?php
-                  $args = ['type' => 'class', 'status' => 'publish'];
+                  $args    = ['type' => 'class', 'status' => 'publish'];
                   $classes = get_posts($args);
 
-                  foreach ($classes as $key => $class) {
+                  foreach ( $classes as $class )
+                  {
+                    $selected = ($class_id ==  $class->id) ? 'selected' : '';
+                    echo '<option value="' . $class->id . '" '.$selected.'>' . $class->title . '</option>';
+                  }
                   ?>
-                  <option value="<?= $class->id ?>"><?= $class->title ?></option>
-                  <?php } ?>
                 </select>
               </div>
             </div>
-            <div class="col-lg">
+
+            <div class="col-auto">
               <div class="form-group" id="section-container">
-                <label for="section_id">Select Section</label>
-
-                <select require name="section_id" id="section_id" class="form-control">
-                  <option value="">-Select Section-</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-lg">
-              <div class="form-group" id="section-container">
-                <label for="teacher_id">Select Teacher</label>
-
-                <select require name="teacher_id" id="teacher_id" class="form-control">
-                  <option value="">-Select Teacher-</option>
-                  <option value="1">Teacher 1</option>
-                  <option value="2">Teacher 2</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-lg">
-              <div class="form-group" id="section-container">
-                <label for="period_id">Select Period</label>
-
-                <select require name="period_id" id="period_id" class="form-control">
-                  <option value="">-Select Period-</option>
-                    <?php
-                    $args    = ['type' => 'period', 'status' => 'publish'];
-                    $periods = get_posts($args);
-
-                    foreach ( $periods as $key => $period ) {
-                    ?>
-                      <option value="<?= $period->id ?>"><?= $period->title ?></option>
-                    <?php } ?>
-                </select>
-              </div>
-            </div>
-            <div class="col-lg">
-              <div class="form-group" id="section-container">
-                <label for="day_name">Select Day</label>
-
-                <select require name="day_name" id="day_name" class="form-control">
-                  <option value="">-Select Day-</option>
-
+                <select name="section" id="section" class="form-control">
+                  <option value="">Select Section</option>
                   <?php
-                  $days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+                  $args = ['type' => 'section', 'status' => 'publish'];
+                  $sections = get_posts($args);
 
-                  foreach ( $days as $key => $day ) {
+                  foreach ( $sections as $section )
+                  {
+                    $selected = ($section_id ==  $section->id) ? 'selected' : '';
+                    echo '<option value="' . $section->id . '" '.$selected.'>' . $section->title . '</option>';
+                  }
                   ?>
-                    <option value="<?= $day ?>"><?= ucwords($day) ?></option>
-                  <?php } ?>
                 </select>
               </div>
             </div>
-            <div class="col-lg">
-              <div class="form-group" id="section-container">
-                <label for="subject_id">Select Subject</label>
 
-                <select require name="subject_id" id="subject_id" class="form-control">
-                  <option value="">-Select Subject-</option>
-                  <option value="19">Mathematics</option>
-                  <option value="20">English</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-lg">
-              <div class="from-group">
-                <label for="">&nbsp;</label>
-
-                <input type="submit" value="submit" name="submit" class="btn btn-success form-control">
-              </div>
+            <div class="col-auto">
+              <button class="btn btn-primary">Apply</button>
             </div>
           </div>
         </form>
-      </div>
-    </div>
-    <?php } else { ?>
 
-    <form action="" method="get">
-      <?php
-      $class_id   = $_GET['class'] ?? 43;
-      $section_id = $_GET['section'] ?? 3;
-      ?>
-      <div class="row">
-        <div class="col-auto">
-          <div class="form-group">
-            <select name="class" id="class" class="form-control">
-              <option value="">Select Class</option>
-              <?php
-              $args    = ['type' => 'class', 'status' => 'publish'];
-              $classes = get_posts($args);
-
-              foreach ( $classes as $class )
-              {
-                $selected = ($class_id ==  $class->id) ? 'selected' : '';
-                echo '<option value="' . $class->id . '" '.$selected.'>' . $class->title . '</option>';
-              }
-              ?>
-            </select>
-          </div>
-        </div>
-
-        <div class="col-auto">
-          <div class="form-group" id="section-container">
-            <select name="section" id="section" class="form-control">
-              <option value="">Select Section</option>
-              <?php
-              $args = ['type' => 'section', 'status' => 'publish'];
-              $sections = get_posts($args);
-
-              foreach ( $sections as $section )
-              {
-                $selected = ($section_id ==  $section->id) ? 'selected' : '';
-                echo '<option value="' . $section->id . '" '.$selected.'>' . $section->title . '</option>';
-              }
-              ?>
-            </select>
-          </div>
-        </div>
-
-        <div class="col-auto">
-          <button class="btn btn-primary">Apply</button>
-        </div>
-      </div>
-    </form>
-
-    <div class="card">
-      <div class="card-body">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Timing</th>
-              <th>Monday</th>
-              <th>Tuesday</th>
-              <th>Wednesday</th>
-              <th>Thursday</th>
-              <th>Friday</th>
-              <th>Saturday</th>
-              <th>Sunday</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php
-            $args = ['type' => 'period', 'status' => 'publish'];
-            $periods = get_posts($args);
-
-            foreach ( $periods as $period )
-            {
-              $from = get_metadata($period->id, 'from')[0]->meta_value;
-              $to   = get_metadata($period->id, 'to')[0]->meta_value;
-            ?>
-            <tr>
-              <td><?= date('h:i A',strtotime($from)) ?> - <?= date('h:i A',strtotime($to)) ?></td>
+        <div class="card">
+          <div class="card-body">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Timing</th>
+                  <th>Monday</th>
+                  <th>Tuesday</th>
+                  <th>Wednesday</th>
+                  <th>Thursday</th>
+                  <th>Friday</th>
+                  <th>Saturday</th>
+                  <th>Sunday</th>
+                </tr>
+              </thead>
+              <tbody>
                 <?php
-                $days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+                $args = ['type' => 'period', 'status' => 'publish'];
+                $periods = get_posts($args);
 
-                foreach ( $days as $day )
+                foreach ( $periods as $period )
                 {
-                  $query = mysqli_query($db_conn, "SELECT * FROM posts as p
-                  INNER JOIN metadata as md ON (md.item_id = p.id)
-                  INNER JOIN metadata as mp ON (mp.item_id = p.id)
-                  INNER JOIN metadata as mc ON (mc.item_id = p.id)
-                  INNER JOIN metadata as ms ON (ms.item_id = p.id)
-                  WHERE p.type = 'timetable' AND p.status = 'publish' AND md.meta_key = 'day_name' AND md.meta_value = '$day' AND mp.meta_key = 'period_id' AND mp.meta_value = $period->id AND mc.meta_key = 'class_id' AND mc.meta_value = $class_id AND ms.meta_key = 'section_id' AND ms.meta_value = $section_id");
-
-                  if ( mysqli_num_rows($query) > 0 )
-                  {
-                      while ( $timetable = mysqli_fetch_object($query) ) {
+                  $from = get_metadata($period->id, 'from')[0]->meta_value;
+                  $to   = get_metadata($period->id, 'to')[0]->meta_value;
                 ?>
-                        <td>
-                          <p>
-                            <b>Teacher: </b>
-                            <?php
-                            $teacher_id = get_metadata($timetable->item_id,'teacher_id')[0]->meta_value;
+                <tr>
+                  <td><?= date('h:i A',strtotime($from)) ?> - <?= date('h:i A',strtotime($to)) ?></td>
+                    <?php
+                    $days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
 
-                            echo get_user_data($teacher_id)->name;
-                            ?>
+                    foreach ( $days as $day )
+                    {
+                      $query = mysqli_query($db_conn, "SELECT * FROM posts as p
+                      INNER JOIN metadata as md ON (md.item_id = p.id)
+                      INNER JOIN metadata as mp ON (mp.item_id = p.id)
+                      INNER JOIN metadata as mc ON (mc.item_id = p.id)
+                      INNER JOIN metadata as ms ON (ms.item_id = p.id)
+                      WHERE p.type = 'timetable' AND p.status = 'publish' AND md.meta_key = 'day_name' AND md.meta_value = '$day' AND mp.meta_key = 'period_id' AND mp.meta_value = $period->id AND mc.meta_key = 'class_id' AND mc.meta_value = $class_id AND ms.meta_key = 'section_id' AND ms.meta_value = $section_id");
 
-                            <br>
-                            <b>Class: </b>
+                      if ( mysqli_num_rows($query) > 0 )
+                      {
+                          while ( $timetable = mysqli_fetch_object($query) ) {
+                    ?>
+                            <td>
+                              <p>
+                                <b>Teacher: </b>
+                                <?php
+                                $teacher_id = get_metadata($timetable->item_id,'teacher_id')[0]->meta_value;
 
-                            <?php
-                            $class_id = get_metadata($timetable->item_id,'class_id',)[0]->meta_value;
+                                echo get_user_data($teacher_id)->name;
+                                ?>
 
-                            echo get_post(array('id'=>$class_id))->title;
-                            ?>
-                            <br>
-                            <b>Section: </b>
-                            <?php
-                            $section_id = get_metadata($timetable->item_id,'section_id',)[0]->meta_value;
+                                <br>
+                                <b>Class: </b>
 
-                            echo get_post(array('id'=>$section_id))->title;
-                            ?>
-                            <br>
-                            <b>Subject: </b>
-                            <?php
-                            $subject_id = get_metadata($timetable->item_id,'subject_id',)[0]->meta_value;
+                                <?php
+                                $class_id = get_metadata($timetable->item_id,'class_id',)[0]->meta_value;
 
-                            echo get_post(array('id'=>$subject_id))->title;
-                            ?>
-                            <br>
-                          </p>
-                        </td>
-                <?php }
-                  } else {
-                ?>
-                        <td>
-                          Unscheduled
-                        </td>
-                <?php }
-                }?>
-            </tr>
-            <?php } ?>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <?php } ?>
-  </div><!--/. container-fluid -->
-</section>
-<!-- /.content -->
-<!-- Subject -->
+                                echo get_post(array('id'=>$class_id))->title;
+                                ?>
+                                <br>
+                                <b>Section: </b>
+                                <?php
+                                $section_id = get_metadata($timetable->item_id,'section_id',)[0]->meta_value;
 
-<script>
-jQuery(document).ready(function() {
+                                echo get_post(array('id'=>$section_id))->title;
+                                ?>
+                                <br>
+                                <b>Subject: </b>
+                                <?php
+                                $subject_id = get_metadata($timetable->item_id,'subject_id',)[0]->meta_value;
 
-  jQuery('#class_id').change(function() {
-    // alert(jQuery(this).val());
+                                echo get_post(array('id'=>$subject_id))->title;
+                                ?>
+                                <br>
+                              </p>
+                            </td>
+                    <?php }
+                      } else {
+                    ?>
+                            <td>
+                              Unscheduled
+                            </td>
+                    <?php }
+                    }?>
+                </tr>
+                <?php } ?>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <?php } ?>
+      </div><!--/. container-fluid -->
+    </section><!-- /.content -->
 
-    jQuery.ajax({
-      url:'ajax.php',
-      type: 'POST',
-      data: { 'class_id': jQuery(this).val() },
-      dataType: 'json',
-      success: function(response) {
-        if ( response.count > 0 )
-        {
-          jQuery('#section-container').show();
+    <?php require_once __DIR__ . '/sidebar.php'; ?>
+
+    <?php require_once __DIR__ . '/footer.php'; ?>
+  </div>
+
+  <script defer src="../plugins/jquery/jquery.min.js"></script>
+  <script defer src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script defer src="../plugins/datatables/jquery.dataTables.min.js"></script>
+  <script defer src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script defer src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script defer src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script defer src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script defer src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script defer src="../dist/js/adminlte.js"></script>
+  <script defer src="../dist/js/demo.js"></script>
+  <!-- <script defer src="./dashboard.js"></script> -->
+  <script>
+  jQuery(document).ready(function() {
+
+    jQuery('#class_id').change(function() {
+      // alert(jQuery(this).val());
+
+      jQuery.ajax({
+        url:'ajax.php',
+        type: 'POST',
+        data: { 'class_id': jQuery(this).val() },
+        dataType: 'json',
+        success: function(response) {
+          if ( response.count > 0 )
+          {
+            jQuery('#section-container').show();
+          }
+          else
+          {
+            jQuery('#section-container').hide();
+          }
+
+          jQuery('#section_id').html(response.options);
         }
-        else
-        {
-          jQuery('#section-container').hide();
-        }
-
-        jQuery('#section_id').html(response.options);
-      }
+      });
     });
   });
-});
-</script>
-
-<?php require 'footer.php'; ?>
+  </script>
+</body>
+</html>
