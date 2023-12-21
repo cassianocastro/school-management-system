@@ -6,9 +6,7 @@ $db_conn = mysqli_connect('localhost', 'php', 'php', 'sms_project');
 
 if ( ! $db_conn )
 {
-    echo 'Connection Failed';
-
-    exit;
+    die("Connection Failed");
 }
 
 session_start();
@@ -18,6 +16,6 @@ session_start();
 //   session_start();
 // }
 
-date_default_timezone_set('Asia/Kolkata');
+date_default_timezone_set("America/Sao_Paulo");
 
 require 'functions.php';
