@@ -1,196 +1,232 @@
 <?php
-  include('../includes/config.php');
+require_once __DIR__ . '/../includes/config.php';
 
-  if ( isset($_POST['submit']) )
+if ( isset($_POST['submit']) )
+{
+  $name     = $_POST['name'];
+  $category = $_POST['category'];
+  $duration = $_POST['duration'];
+  $image    = $_FILES["thumbnail"]["name"];
+  $today    = date('Y-m-d');
+
+  $target_dir    = "../dist/uploads/";
+  $target_file   = $target_dir . basename($_FILES["thumbnail"]["name"]);
+  $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+  $uploadOk      = 1;
+
+  // Check if file already exists
+  if ( file_exists($target_file) )
   {
-    $name     = $_POST['name'];
-    $category = $_POST['category'];
-    $duration = $_POST['duration'];
-    $image    = $_FILES["thumbnail"]["name"];
-    $today    = date('Y-m-d');
+    echo "Sorry, file already exists.";
+    $uploadOk = 0;
+  }
 
-    $target_dir    = "../dist/uploads/";
-    $target_file   = $target_dir . basename($_FILES["thumbnail"]["name"]);
-    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-    $uploadOk      = 1;
+  // Check file size
+  if ( $_FILES["thumbnail"]["size"] > 500000 )
+  {
+    echo "Sorry, your file is too large.";
+    $uploadOk = 0;
+  }
 
-    // Check if file already exists
-    if ( file_exists($target_file) )
+  // Allow certain file formats
+  if ( $imageFileType != "jpg"
+  && $imageFileType != "png"
+  && $imageFileType != "jpeg"
+  && $imageFileType != "gif" )
+  {
+    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    $uploadOk = 0;
+  }
+
+  // Check if $uploadOk is set to 0 by an error
+  if ( $uploadOk == 0 )
+  {
+    echo "Sorry, your file was not uploaded.";
+    // if everything is ok, try to upload file
+  }
+  else
+  {
+    if ( move_uploaded_file($_FILES["thumbnail"]["tmp_name"], $target_file) )
     {
-      echo "Sorry, file already exists.";
-      $uploadOk = 0;
-    }
+      mysqli_query($db_conn, "INSERT INTO courses (`name`, `category`, `duration`,`image`, `date`) VALUES ('$name', '$category', '$duration', '$image', '$today')") or die(mysqli_error($db_conn));
 
-    // Check file size
-    if ( $_FILES["thumbnail"]["size"] > 500000 )
-    {
-      echo "Sorry, your file is too large.";
-      $uploadOk = 0;
-    }
+      $_SESSION['success_msg'] = 'Course has been uploaded successfuly';
 
-    // Allow certain file formats
-    if ( $imageFileType != "jpg"
-    && $imageFileType != "png"
-    && $imageFileType != "jpeg"
-    && $imageFileType != "gif" )
-    {
-      echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-      $uploadOk = 0;
-    }
+      header('Location: courses.php');
 
-    // Check if $uploadOk is set to 0 by an error
-    if ( $uploadOk == 0 )
-    {
-      echo "Sorry, your file was not uploaded.";
-      // if everything is ok, try to upload file
+      exit;
     }
     else
     {
-      if ( move_uploaded_file($_FILES["thumbnail"]["tmp_name"], $target_file) )
-      {
-        mysqli_query($db_conn, "INSERT INTO courses (`name`, `category`, `duration`,`image`, `date`) VALUES ('$name', '$category', '$duration', '$image', '$today')") or die(mysqli_error($db_conn));
-
-        $_SESSION['success_msg'] = 'Course has been uploaded successfuly';
-
-        header('Location: courses.php');
-
-        exit;
-      }
-      else
-      {
-        echo "Sorry, there was an error uploading your file.";
-      }
+      echo "Sorry, there was an error uploading your file.";
     }
-    // ob_start();
-    // ob_end_flush();
   }
-
-  require 'header.php';
-  require 'sidebar.php';
+  // ob_start();
+  // ob_end_flush();
+}
 ?>
 
-<!-- Content Header (Page header) -->
-<div class="content-header">
-  <div class="container-fluid">
-    <div class="row mb-2">
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-      <div class="col-sm-6">
-        <h1 class="m-0 text-dark">Manage Courses </h1>
-      </div><!-- /.col -->
+  <link rel="stylesheet" type="text/css" href="../plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" type="text/css" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="../dist/css/adminlte.min.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
 
-      <div class="col-sm-6">
-        <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="#">Admin</a></li>
-          <li class="breadcrumb-item active">Courses</li>
-        </ol>
-      </div><!-- /.col -->
+  <title>Admin | Dashboard</title>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+  <div class="wrapper">
 
-      <?php if ( isset($_SESSION['success_msg']) ) { ?>
-        <div class="col-12">
-          <small class="text-success" style="font-size:16px"><?=$_SESSION['success_msg']?></small>
-        </div>
-      <?php
-          unset($_SESSION['success_msg']);
-        }
-      ?>
-    </div><!-- /.row -->
-  </div><!-- /.container-fluid -->
-</div>
-<!-- /.content-header -->
+    <?php require_once __DIR__ . '/header.php'; ?>
 
-<!-- Main content -->
-<section class="content">
-  <div class="container-fluid">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
 
-  <?php if (isset($_REQUEST['action'])) : ?>
-    <!-- Info boxes -->
-    <div class="card">
-      <div class="card-header py-2">
-        <h3 class="card-title">Add New Course</h3>
-      </div>
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Manage Courses </h1>
+          </div><!-- /.col -->
 
-      <div class="card-body">
-        <form action="" method="POST" enctype="multipart/form-data">
-          <div class="form-group">
-            <label for="name">Course Name</label>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Admin</a></li>
+              <li class="breadcrumb-item active">Courses</li>
+            </ol>
+          </div><!-- /.col -->
 
-            <input type="text" name="name" placeholder="Course Name" required class="form-control">
-          </div>
-
-          <div class="form-group">
-            <label for="category">Course Category</label>
-
-            <select name="category" id="category" class="form-control">
-              <option value="">Select Category</option>
-              <option value="web-design-and-development">Web Design & Development</option>
-              <option value="app-developement">App Development</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="duration">Course Duration</label>
-
-            <input type="text" name="duration" id="duration" class="form-control" placeholder="Course Duration" required>
-          </div>
-
-          <div class="form-group">
-            <input type="file" name="thumbnail" id="thumbnail" required>
-          </div>
-
-          <button name="submit" class="btn btn-success">Submit</button>
-        </form>
-      </div>
+          <?php if ( isset($_SESSION['success_msg']) ) { ?>
+            <div class="col-12">
+              <small class="text-success" style="font-size:16px"><?=$_SESSION['success_msg']?></small>
+            </div>
+          <?php
+              unset($_SESSION['success_msg']);
+            }
+          ?>
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
     </div>
-    <!-- /.row -->
-  <?php else: ?>
-    <!-- Info boxes -->
-    <div class="card">
-      <div class="card-header py-2">
-        <h3 class="card-title">Courses</h3>
+    <!-- /.content-header -->
 
-        <div class="card-tools">
-          <a href="?action=add-new" class="btn btn-success btn-xs"><i class="fa fa-plus mr-2"></i>Add New</a>
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+
+      <?php if (isset($_REQUEST['action'])) : ?>
+        <!-- Info boxes -->
+        <div class="card">
+          <div class="card-header py-2">
+            <h3 class="card-title">Add New Course</h3>
+          </div>
+
+          <div class="card-body">
+            <form action="" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="name">Course Name</label>
+
+                <input type="text" name="name" placeholder="Course Name" required class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="category">Course Category</label>
+
+                <select name="category" id="category" class="form-control">
+                  <option value="">Select Category</option>
+                  <option value="web-design-and-development">Web Design & Development</option>
+                  <option value="app-developement">App Development</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="duration">Course Duration</label>
+
+                <input type="text" name="duration" id="duration" class="form-control" placeholder="Course Duration" required>
+              </div>
+
+              <div class="form-group">
+                <input type="file" name="thumbnail" id="thumbnail" required>
+              </div>
+
+              <button name="submit" class="btn btn-success">Submit</button>
+            </form>
+          </div>
         </div>
-      </div>
+        <!-- /.row -->
+      <?php else: ?>
+        <!-- Info boxes -->
+        <div class="card">
+          <div class="card-header py-2">
+            <h3 class="card-title">Courses</h3>
 
-      <div class="card-body">
-        <div class="table-responsive bg-white">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>S.No.</th>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Category</th>
-                <th>Duration</th>
-                <th>Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php
-              $count = 1;
-              $curse_query = mysqli_query($db_conn, 'SELECT * FROM courses');
+            <div class="card-tools">
+              <a href="?action=add-new" class="btn btn-success btn-xs"><i class="fa fa-plus mr-2"></i>Add New</a>
+            </div>
+          </div>
 
-              while ( $course = mysqli_fetch_object($curse_query) ) :
-              ?>
-              <tr>
-                <td><?= $count++ ?></td>
-                <td><img src="../dist/uploads/<?= $course->image ?>" height="100" alt="<?= $course->name ?>" class="border"></td>
-                <td><?= $course->name ?></td>
-                <td><?= $course->category ?></td>
-                <td><?= $course->duration ?></td>
-                <td><?= $course->date ?></td>
-              </tr>
-              <?php endwhile; ?>
-            </toby>
-          </table>
+          <div class="card-body">
+            <div class="table-responsive bg-white">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>S.No.</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Duration</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                  $count = 1;
+                  $curse_query = mysqli_query($db_conn, 'SELECT * FROM courses');
+
+                  while ( $course = mysqli_fetch_object($curse_query) ) :
+                  ?>
+                  <tr>
+                    <td><?= $count++ ?></td>
+                    <td><img src="../dist/uploads/<?= $course->image ?>" height="100" alt="<?= $course->name ?>" class="border"></td>
+                    <td><?= $course->name ?></td>
+                    <td><?= $course->category ?></td>
+                    <td><?= $course->duration ?></td>
+                    <td><?= $course->date ?></td>
+                  </tr>
+                  <?php endwhile; ?>
+                </toby>
+              </table>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <!-- /.row -->
-    <?php endif; ?>
-  </div><!--/. container-fluid -->
-</section>
-<!-- /.content -->
+        <!-- /.row -->
+        <?php endif; ?>
+      </div><!--/. container-fluid -->
+    </section><!-- /.content -->
 
-<?php require 'footer.php'; ?>
+    <?php require_once __DIR__ . '/sidebar.php'; ?>
+
+    <?php require_once __DIR__ . '/footer.php'; ?>
+  </div>
+
+  <script defer src="../plugins/jquery/jquery.min.js"></script>
+  <script defer src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script defer src="../plugins/datatables/jquery.dataTables.min.js"></script>
+  <script defer src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script defer src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script defer src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script defer src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script defer src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script defer src="../dist/js/adminlte.js"></script>
+  <script defer src="../dist/js/demo.js"></script>
+  <!-- <script defer src="./dashboard.js"></script> -->
+</body>
+</html>
