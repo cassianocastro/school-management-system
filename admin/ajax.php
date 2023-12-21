@@ -1,5 +1,5 @@
 <?php
-require '../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 if ( isset($_POST['class_id']) and $_POST['class_id'] )
 {
@@ -20,7 +20,7 @@ if ( isset($_POST['class_id']) and $_POST['class_id'] )
 
     echo json_encode($output);
 
-    die;
+    die();
 }
 
 $type  = $_GET['user'];
@@ -58,4 +58,5 @@ while ( $row = mysqli_fetch_object($query) )
 }
 
 echo json_encode($data);
-die;
+
+die();
