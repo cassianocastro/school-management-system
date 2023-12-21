@@ -132,7 +132,7 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-      
+
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -196,7 +196,7 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              
+
               <li class="nav-item">
                 <a href="<?=$site_url?>admin/sections.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -229,7 +229,7 @@
               </li>
             </ul>
           </li>
-          
+
           <!-- Class Routine -->
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -300,7 +300,7 @@
                 Manage Attendance
                 <i class="fas fa-angle-left right"></i>
               </p>
-            </a>       
+            </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="<?=$site_url?>admin/attendance.php" class="nav-link">
@@ -314,7 +314,7 @@
                   <p>Leave</p>
                 </a>
               </li>
-            </ul>       
+            </ul>
           </li>
 
           <!-- Manage Accounts -->
@@ -327,7 +327,7 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              
+
               <li class="nav-item">
                 <a href="<?=$site_url?>admin/student-fee.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -344,7 +344,7 @@
                 Study Materials
                 <i class="fas fa-angle-left right"></i>
               </p>
-            </a>  
+            </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="<?=$site_url?>admin/study-materials.php" class="nav-link">
@@ -352,7 +352,7 @@
                   <p>Study Materials</p>
                 </a>
               </li>
-            </ul>           
+            </ul>
           </li>
 
           <!-- Event -->
@@ -363,7 +363,7 @@
                 Manage Events
                 <i class="fas fa-angle-left right"></i>
               </p>
-            </a>     
+            </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="<?=$site_url?>admin/campus-functions.php" class="nav-link">
@@ -377,7 +377,7 @@
                   <p>Webinar/Seminar</p>
                 </a>
               </li>
-            </ul>        
+            </ul>
           </li>
           <!-- Communication -->
           <li class="nav-item has-treeview">
@@ -387,7 +387,7 @@
                 Communications
                 <i class="fas fa-angle-left right"></i>
               </p>
-            </a>    
+            </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="<?=$site_url?>admin/parent-meeting.php" class="nav-link">
@@ -395,7 +395,7 @@
                   <p>Parent's Meetings</p>
                 </a>
               </li>
-            </ul>          
+            </ul>
           </li>
 
           <!-- Acadmy Settings -->
@@ -406,7 +406,7 @@
                 Acadmy Settings
                 <i class="fas fa-angle-left right"></i>
               </p>
-            </a>    
+            </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="<?=$site_url?>admin/acadamy-settings/basic-information.php" class="nav-link">
@@ -414,7 +414,7 @@
                   <p>Basic Informations</p>
                 </a>
               </li>
-            </ul>          
+            </ul>
           </li>
         </ul>
       </nav>
