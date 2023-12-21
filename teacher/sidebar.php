@@ -132,7 +132,7 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-      
+
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -173,7 +173,7 @@
               </li>
             </ul>
           </li>
-          
+
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
@@ -213,7 +213,7 @@
                 Manage Attendance
                 <i class="fas fa-angle-left right"></i>
               </p>
-            </a>       
+            </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="<?=$site_url?>teacher/attendance.php" class="nav-link">
@@ -221,7 +221,7 @@
                   <p>Attendance</p>
                 </a>
               </li>
-            </ul>       
+            </ul>
           </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -230,7 +230,7 @@
                 Fee Details
                 <i class="fas fa-angle-left right"></i>
               </p>
-            </a>    
+            </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="<?=$site_url?>teacher/fee-details.php" class="nav-link">
@@ -238,7 +238,7 @@
                   <p>Fee Details</p>
                 </a>
               </li>
-            </ul>        
+            </ul>
           </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -247,7 +247,7 @@
                 Study Materials
                 <i class="fas fa-angle-left right"></i>
               </p>
-            </a>  
+            </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="<?=$site_url?>teacher/study-materials.php" class="nav-link">
@@ -255,7 +255,7 @@
                   <p>Study Mterials</p>
                 </a>
               </li>
-            </ul>              
+            </ul>
           </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -264,7 +264,7 @@
                 Manage Events
                 <i class="fas fa-angle-left right"></i>
               </p>
-            </a>            
+            </a>
           </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -273,7 +273,7 @@
                 Communications
                 <i class="fas fa-angle-left right"></i>
               </p>
-            </a>            
+            </a>
           </li>
         </ul>
       </nav>

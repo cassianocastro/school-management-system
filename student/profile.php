@@ -1,35 +1,41 @@
-<?php include('../includes/config.php') ?>
-<?php include('header.php') ?>
-<?php include('sidebar.php') ?>
+<?php
+require '../includes/config.php';
+require 'header.php';
+require 'sidebar.php';
+?>
 
 <!-- Content Header (Page header) -->
 <div class="content-header">
   <div class="container-fluid">
     <div class="row mb-2">
+
       <div class="col-sm-6">
         <h1 class="m-0 text-dark">Profile</h1>
       </div><!-- /.col -->
+
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
           <li class="breadcrumb-item"><a href="#">Student</a></li>
           <li class="breadcrumb-item active">Profile</li>
         </ol>
       </div><!-- /.col -->
+
     </div><!-- /.row -->
   </div><!-- /.container-fluid -->
 </div>
 <!-- /.content-header -->
+
 <?php
-$class = get_post(['id' => $stdmeta['class']]);
+$class   = get_post(['id' => $stdmeta['class']]);
 $section = get_post(['id' => $stdmeta['section']]);
 ?>
+
 <!-- Main content -->
 <section class="content">
   <div class="container-fluid">
 
     <div class="row">
       <div class="col-md-3">
-
         <div class="card card-primary card-outline">
           <div class="card-body box-profile">
             <div class="text-center">
@@ -62,10 +68,7 @@ $section = get_post(['id' => $stdmeta['section']]);
               </span>
             </p>
           </div>
-
         </div>
-
-
       </div>
 
       <div class="col-md-9">
@@ -95,7 +98,6 @@ $section = get_post(['id' => $stdmeta['section']]);
             <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
           </div>
-
         </div>
 
         <div class="card card-primary">
@@ -128,8 +130,8 @@ $section = get_post(['id' => $stdmeta['section']]);
         </div>
       </div>
     </div>
-
   </div><!--/. container-fluid -->
 </section>
 <!-- /.content -->
-<?php include('footer.php') ?>
+
+<?php require 'footer.php'; ?>
