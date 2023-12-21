@@ -1,5 +1,5 @@
 <?php
-require '../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 if ( isset($_POST['type']) and $_POST['type'] == 'student' and isset($_POST['email']) and ! empty($_POST['email']) )
 {
