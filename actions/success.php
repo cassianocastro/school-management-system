@@ -1,9 +1,9 @@
 <?php
-require '../includes/config.php';
-require '../includes/functions.php';
+require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/../includes/functions.php';
 
 session_start();
-// require 'config.php';
+
 // extract($_REQUEST);
 
 $status      = $_POST["status"];
