@@ -1,6 +1,5 @@
 <?php
-
-require '../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 if ( isset($_POST["login"]) )
 {
@@ -31,7 +30,7 @@ if ( isset($_POST["login"]) )
     {
         $_SESSION["login"] = true;
 
-        header("Location: ../admin/dashboard.php");
+        header("Location: ../admin");
     }
     else
     {
