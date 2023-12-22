@@ -1,10 +1,16 @@
 <?php
 
+/**
+ *
+ */
 function get_the_teachers($args)
 {
     return $args;
 }
 
+/**
+ *
+ */
 function get_the_classes()
 {
     global $db_conn;
@@ -20,6 +26,9 @@ function get_the_classes()
     return $output;
 }
 
+/**
+ *
+ */
 function get_post(array $args = [])
 {
     global $db_conn;
@@ -46,6 +55,9 @@ function get_post(array $args = [])
     return mysqli_fetch_object($query);
 }
 
+/**
+ *
+ */
 function get_posts(array $args = [], string $type = 'object')
 {
     global $db_conn;
@@ -72,6 +84,9 @@ function get_posts(array $args = [], string $type = 'object')
     return data_output($query, $type);
 }
 
+/**
+ *
+ */
 function get_metadata($item_id, $meta_key = '', $type = 'object')
 {
     global $db_conn;
@@ -80,17 +95,20 @@ function get_metadata($item_id, $meta_key = '', $type = 'object')
 
     if ( ! empty($meta_key) )
     {
-        $query = mysqli_query($db_conn, "SELECT * FROM metadata WHERE item_id = $item_id AND meta_key = '$meta_key'");
+        $query = mysqli_query($db_conn, "SELECT * FROM metadata WHERE item_id = $item_id AND meta_key = $meta_key");
     }
 
     return data_output($query, $type);
 }
 
-function data_output($query, $type = 'object')
+/**
+ *
+ */
+function data_output($query, $type = "object")
 {
     $output = [];
 
-    if ( $type == 'object' )
+    if ( $type == "object" )
     {
         while ( $result = mysqli_fetch_object($query) )
         {
@@ -108,7 +126,10 @@ function data_output($query, $type = 'object')
     return $output;
 }
 
-function get_user_data($user_id, $type = 'object')
+/**
+ *
+ */
+function get_user_data($user_id, $type = "object")
 {
     global $db_conn;
 
@@ -117,12 +138,18 @@ function get_user_data($user_id, $type = 'object')
     return data_output($query, $type)[0];
 }
 
-function get_post_title($post_id = '')
+/**
+ *
+ */
+function get_post_title($post_id = "")
 {
 
 }
 
-function get_users($args = [], $type = 'object')
+/**
+ *
+ */
+function get_users($args = [], $type = "object")
 {
     global $db_conn;
 
@@ -148,6 +175,9 @@ function get_users($args = [], $type = 'object')
     return data_output($query, $type);
 }
 
+/**
+ *
+ */
 function get_user_metadata($user_id)
 {
     global $db_conn;
@@ -164,25 +194,22 @@ function get_user_metadata($user_id)
     return $output;
 }
 
+/**
+ *
+ */
 function get_usermeta($user_id, $meta_key, $signle = true)
 {
     global $db_conn;
 
     if ( ! empty($user_id) and ! empty($meta_key) )
-    {
         $query = mysqli_query($db_conn, "SELECT * FROM usermeta WHERE user_id = $user_id AND meta_key = $meta_key");
-    }
     else
-    {
         return false;
-    }
 
     if ( $signle )
     {
         return mysqli_fetch_object($query)->meta_value;
     }
-    else
-    {
-        return mysqli_fetch_object($query);
-    }
+
+    return mysqli_fetch_object($query);
 }
