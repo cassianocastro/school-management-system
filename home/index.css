@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+.btn
+{
+    margin: 0;
+}
+
+.course-image
+{
+    object-fit: cover;
+    object-position: center;
+
+    height: 170px !important;
+    width: 100%;
+}
