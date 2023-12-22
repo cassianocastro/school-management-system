@@ -1,7 +1,7 @@
 <?php
-require '../includes/config.php';
-require 'header.php';
-require 'sidebar.php';
+require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/header.php';
+require_once __DIR__ . '/sidebar.php';
 ?>
 
 <!-- Content Header (Page header) -->
@@ -28,6 +28,7 @@ require 'sidebar.php';
 <!-- Main content -->
 <section class="content">
   <div class="container-fluid">
+
     <div class="table-responsive">
       <table class="table table-bordered">
         <thead>
@@ -41,30 +42,27 @@ require 'sidebar.php';
 
         <tbody>
           <?php
-          $count = 1;
-          $args = [
-            'type' => 'period',
-            'status' => 'publish',
-          ];
+          $count   = 1;
+          $args    = ['type' => 'period', 'status' => 'publish'];
           $periods = get_posts($args);
 
-          foreach ( $periods as $period ) {
+          foreach ( $periods as $period ) :
             $from = get_metadata($period->id, 'from')[0]->meta_value;
             $to   = get_metadata($period->id, 'to')[0]->meta_value;
           ?>
           <tr>
             <td><?= $count++ ?></td>
             <td><?= $period->title ?></td>
-            <td><?php echo date('h:i A',strtotime($from)) ?></td>
-            <td><?php echo date('h:i A',strtotime($to)) ?></td>
+            <td><?= date('h:i A', strtotime($from)) ?></td>
+            <td><?= date('h:i A', strtotime($to)) ?></td>
           </tr>
-          <?php } ?>
+          <?php endforeach; ?>
         </toby>
       </table>
     </div>
-  </div>
-  <!--/. container-fluid -->
+
+  </div><!--/. container-fluid -->
 </section>
 <!-- /.content -->
 
-<?php require 'footer.php'; ?>
+<?php require_once __DIR__ . '/footer.php'; ?>
