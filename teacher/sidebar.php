@@ -154,19 +154,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?=$site_url?>teacher/courses.php" class="nav-link">
+                <a href="<?=$site_url?>/teacher/courses.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Courses</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?=$site_url?>teacher/subjects.php" class="nav-link">
+                <a href="<?=$site_url?>/teacher/subjects.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Subects</p>
+                  <p>Subjects</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?=$site_url?>teacher/lessons.php" class="nav-link">
+                <a href="<?=$site_url?>/teacher/lessons.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Lessons</p>
                 </a>
@@ -184,13 +184,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?=$site_url?>teacher/periods.php" class="nav-link">
+                <a href="<?=$site_url?>/teacher/periods.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Periods</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?=$site_url?>teacher/timetable.php" class="nav-link">
+                <a href="<?=$site_url?>/teacher/timetable.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Time Table</p>
                 </a>
@@ -216,7 +216,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?=$site_url?>teacher/attendance.php" class="nav-link">
+                <a href="<?=$site_url?>/teacher/attendance.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Attendance</p>
                 </a>
@@ -233,7 +233,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?=$site_url?>teacher/fee-details.php" class="nav-link">
+                <a href="<?=$site_url?>/teacher/fee-details.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Fee Details</p>
                 </a>
@@ -250,9 +250,9 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?=$site_url?>teacher/study-materials.php" class="nav-link">
+                <a href="<?=$site_url?>/teacher/study-materials.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Study Mterials</p>
+                  <p>Study Materials</p>
                 </a>
               </li>
             </ul>
