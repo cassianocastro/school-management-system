@@ -6,7 +6,8 @@ if ( isset($_POST["login"]) )
     $email = $_POST["email"];
     $pass  = $_POST["password"];
 
-    $pass_md5 = md5($pass);
+    $pass_md5 = $pass;
+    // $pass_md5 = md5($pass);
 
     $query = mysqli_query($db_conn, "SELECT * FROM accounts WHERE email = '$email' AND password = '$pass_md5'");
 
