@@ -6,12 +6,12 @@ if ( isset($_POST['class_id']) and $_POST['class_id'] )
     $class_id   = $_POST['class_id'];
     $class_meta = get_metadata($class_id, 'section');
     $count      = 0;
-    $options    = '<option value="">-Select Section-</option>';
+    $options    = "<option value=\"\" label=\"Select Section\"></option>";
 
     foreach ( $class_meta as $meta )
     {
-        $section = get_post(array('id'=>$meta->meta_value));
-        $options .= '<option value="'.$section->id.'">'.$section->title.'</option>';
+        $section = get_post(['id' => $meta->meta_value]);
+        $options .= "<option value=\"{$section->id}\">{$section->title}</option>";
         $count++;
     }
 
@@ -37,7 +37,7 @@ $limit  = $_POST['length'];
 $offset = $_POST['start'];
 $column = $_POST['order'][0]['column'];
 $dir    = $_POST['order'][0]['dir'];
-$order_by = ($column == 0)? 'id': $_POST['columns'][$column]['data'];
+$order_by = ($column == 0) ? 'id' : $_POST['columns'][$column]['data'];
 $query  = mysqli_query($db_conn, "SELECT * FROM accounts WHERE type = $type ORDER BY $order_by $dir LIMIT $offset, $limit");
 
 $i = 1;
@@ -51,9 +51,11 @@ while ( $row = mysqli_fetch_object($query) )
         'name'   => $row->name,
         'email'  => $row->email,
         'action' =>
-        '<a href="#" class="btn btn-sm btn-success"><i class="fa fa-eye"></i></a>
-        <a href="#" class="btn btn-sm btn-info"><i class="fa fa-pencil-alt"></i></a>
-        <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>'
+        <<<HTML
+            <a href="#" class="btn btn-sm btn-success"><i class="fa fa-eye"></i></a>
+            <a href="#" class="btn btn-sm btn-info"><i class="fa fa-pencil-alt"></i></a>
+            <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+        HTML
     ];
 }
 
