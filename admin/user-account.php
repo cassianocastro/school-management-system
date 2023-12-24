@@ -71,7 +71,7 @@ if ( isset($_POST['submit']) )
   */
   </style>
 
-  <title>Admin | Dashboard</title>
+  <title>Admin's Dashboard | School SysManager</title>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
   <div class="wrapper">
