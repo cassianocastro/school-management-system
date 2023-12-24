@@ -31,12 +31,6 @@ $student = get_user_data($std_id);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <!--
-    1. Font Awesome Icons
-    2. overlayScrollbars
-    3. Theme style
-    4. Google Font: Source Sans Pro
-  -->
   <link rel="stylesheet" type="text/css" href="../plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" type="text/css" href="../dist/css/adminlte.min.css">
@@ -115,13 +109,6 @@ $student = get_user_data($std_id);
     <?php require_once __DIR__ . '/sidebar.php'; ?>
   </div>
 
-  <!--
-    1. jQuery
-    2. Bootstrap
-    3. overlayScrollbars
-    4. AdminLTE App
-    5. OPTIONAL SCRIPTS
-  -->
   <script defer src="../plugins/jquery/jquery.min.js"></script>
   <script defer src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script defer src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
