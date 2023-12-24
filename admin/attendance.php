@@ -57,7 +57,7 @@
             </div>
 
             <div class="card-body">
-              <strong>Name: </strong><?= get_users(array('id' => $std_id))[0]->name ?>
+              <strong>Name: </strong><?= get_users(['id' => $std_id])[0]->name ?>
               <br>
               <strong>Class: </strong><?= $usermeta['class'] ?>
             </div>
@@ -83,7 +83,16 @@
                 $current_month = strtolower(date('F'));
                 $current_year  = date('Y');
 
-                $sql = "SELECT * FROM `attendance` WHERE `attendance_month` = '$current_month' AND year(current_session) = $current_year";
+                $sql = <<<SQL
+                  SELECT
+                    *
+                  FROM
+                    attendance
+                  WHERE
+                    attendance_month = $current_month
+                  AND
+                    year(current_session) = $current_year
+                SQL;
 
                 $query = mysqli_query($db_conn, $sql);
                 $row   = mysqli_fetch_object($query);

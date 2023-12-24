@@ -129,26 +129,26 @@ if ( isset($_POST['submit']) )
                 </div>
 
                 <div class="card-body">
-                  <form action="" method="POST">
+                  <form action="" method="post">
                     <div class="form-group">
                       <label for="title">Title</label>
 
-                      <input type="text" name="title" placeholder="Title" required class="form-control">
+                      <input type="text" name="title" placeholder="Title" class="form-control" required>
                     </div>
 
                     <div class="form-group">
                       <label for="title">From</label>
 
-                      <input type="time" name="from" placeholder="From" required class="form-control">
+                      <input type="time" name="from" placeholder="From" class="form-control" required>
                     </div>
 
                     <div class="form-group">
                       <label for="title">To</label>
 
-                      <input type="time" name="to" placeholder="To" required class="form-control">
+                      <input type="time" name="to" placeholder="To" class="form-control" required>
                     </div>
 
-                    <button name="submit" class="btn btn-success float-right">Submit</button>
+                    <button type="submit" name="submit" class="btn btn-success float-right">Submit</button>
                   </form>
                 </div>
 

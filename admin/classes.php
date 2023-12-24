@@ -78,11 +78,11 @@ if ( isset($_POST['submit']) )
               </div>
 
               <div class="card-body">
-                <form action="" method="POST">
+                <form action="" method="post">
                   <div class="form-group">
                     <label for="title">Title</label>
 
-                    <input type="text" name="title" placeholder="Title" required class="form-control">
+                    <input type="text" name="title" placeholder="Title" class="form-control" required>
                   </div>
 
                   <div class="form-group">
@@ -92,11 +92,11 @@ if ( isset($_POST['submit']) )
                     $args = ['type' => 'section', 'status' => 'publish'];
                     $sections = get_posts($args);
 
-                    foreach ($sections as $key => $section) {
+                    foreach ( $sections as $key => $section ) {
                     ?>
                       <div>
                         <label for="<?= $key ?>">
-                          <input type="checkbox" name="section[]" id="<?= $key ?>" value="<?= $section->id ?>" placeholder="section">
+                          <input type="checkbox" name="section[]" id="<?= $key ?>" value="<?= $section->id ?>">
 
                           <?= $section->title ?>
                         </label>
@@ -104,7 +104,7 @@ if ( isset($_POST['submit']) )
                     <?php } ?>
                   </div>
 
-                  <button name="submit" class="btn btn-success">Submit</button>
+                  <button type="submit" name="submit" class="btn btn-success">Submit</button>
                 </form>
               </div>
             </div>
@@ -114,8 +114,9 @@ if ( isset($_POST['submit']) )
                 <h3 class="card-title">Classes</h3>
 
                 <div class="card-tools">
-                  <a href="?action=add-new" class="btn btn-success btn-xs">
+                  <a class="btn btn-success btn-xs" href="?action=add-new">
                     <i class="fa fa-plus mr-2"></i>
+
                     Add New
                   </a>
                 </div>
@@ -148,9 +149,9 @@ if ( isset($_POST['submit']) )
                             <?php
                             $class_meta = get_metadata($class->id, 'section');
 
-                            foreach ($class_meta as $meta)
+                            foreach ( $class_meta as $meta )
                             {
-                              $section = get_post(array('id' => $meta->meta_value));
+                              $section = get_post(['id' => $meta->meta_value]);
 
                               echo $section->title;
                             }

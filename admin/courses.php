@@ -109,7 +109,7 @@ if ( isset($_POST['submit']) )
 
             <?php if ( isset($_SESSION['success_msg']) ) { ?>
               <div class="col-12">
-                <small class="text-success" style="font-size:16px"><?=$_SESSION['success_msg']?></small>
+                <small class="text-success" style="font-size: 16px"><?= $_SESSION['success_msg'] ?></small>
               </div>
             <?php
                 unset($_SESSION['success_msg']);
@@ -123,7 +123,7 @@ if ( isset($_POST['submit']) )
       <section class="content">
         <div class="container-fluid">
 
-        <?php if (isset($_REQUEST['action'])) : ?>
+        <?php if ( isset($_REQUEST['action']) ) : ?>
           <!-- Info boxes -->
           <div class="card">
             <div class="card-header py-2">
@@ -131,34 +131,34 @@ if ( isset($_POST['submit']) )
             </div>
 
             <div class="card-body">
-              <form action="" method="POST" enctype="multipart/form-data">
+              <form action="" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                   <label for="name">Course Name</label>
 
-                  <input type="text" name="name" placeholder="Course Name" required class="form-control">
+                  <input type="text" name="name" placeholder="Course Name" class="form-control" required>
                 </div>
 
                 <div class="form-group">
                   <label for="category">Course Category</label>
 
                   <select name="category" id="category" class="form-control">
-                    <option value="">Select Category</option>
-                    <option value="web-design-and-development">Web Design & Development</option>
-                    <option value="app-developement">App Development</option>
+                    <option value="" label="Select Category"></option>
+                    <option value="web-design-and-development" label="Web Design & Development"></option>
+                    <option value="app-developement" label="App Development"></option>
                   </select>
                 </div>
 
                 <div class="form-group">
                   <label for="duration">Course Duration</label>
 
-                  <input type="text" name="duration" id="duration" class="form-control" placeholder="Course Duration" required>
+                  <input type="text" name="duration" id="duration" placeholder="Course Duration" class="form-control" required>
                 </div>
 
                 <div class="form-group">
                   <input type="file" name="thumbnail" id="thumbnail" required>
                 </div>
 
-                <button name="submit" class="btn btn-success">Submit</button>
+                <button type="submit" name="submit" class="btn btn-success">Submit</button>
               </form>
             </div>
           </div>
@@ -169,7 +169,11 @@ if ( isset($_POST['submit']) )
               <h3 class="card-title">Courses</h3>
 
               <div class="card-tools">
-                <a href="?action=add-new" class="btn btn-success btn-xs"><i class="fa fa-plus mr-2"></i>Add New</a>
+                <a class="btn btn-success btn-xs" href="?action=add-new">
+                  <i class="fa fa-plus mr-2"></i>
+
+                  Add New
+                </a>
               </div>
             </div>
 
@@ -195,7 +199,7 @@ if ( isset($_POST['submit']) )
                     ?>
                     <tr>
                       <td><?= $count++ ?></td>
-                      <td><img src="../dist/uploads/<?= $course->image ?>" height="100" alt="<?= $course->name ?>" class="border"></td>
+                      <td><img src="../dist/uploads/<?= $course->image ?>" alt="<?= $course->name ?>" height="100" class="border"></td>
                       <td><?= $course->name ?></td>
                       <td><?= $course->category ?></td>
                       <td><?= $course->duration ?></td>
