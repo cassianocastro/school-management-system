@@ -56,19 +56,18 @@ if ( isset($_POST['submit']) )
 
             <div class="col-sm-6">
               <h1 class="m-0 text-dark">Manage Periods</h1>
-            </div><!-- /.col -->
+            </div>
 
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Admin</a></li>
                 <li class="breadcrumb-item active">Periods</li>
               </ol>
-            </div><!-- /.col -->
+            </div>
 
-          </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
+          </div>
+        </div>
       </div>
-      <!-- /.content-header -->
 
       <!-- Main content -->
       <section class="content">
@@ -156,8 +155,8 @@ if ( isset($_POST['submit']) )
               </div>
             </div>
           </div>
-        </div><!--/. container-fluid -->
-      </section><!-- /.content -->
+        </div>
+      </section>
     </div>
 
     <?php require_once __DIR__ . '/footer.php'; ?>

@@ -78,19 +78,18 @@ if ( isset($_POST['submit']) )
                   Add New
                 </a>
               </h1>
-            </div><!-- /.col -->
+            </div>
 
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Admin</a></li>
                 <li class="breadcrumb-item active">Time Table</li>
               </ol>
-            </div><!-- /.col -->
+            </div>
 
-          </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
+          </div>
+        </div>
       </div>
-      <!-- /.content-header -->
 
       <!-- Main content -->
       <section class="content">
@@ -345,8 +344,8 @@ if ( isset($_POST['submit']) )
             </div>
           </div>
           <?php } ?>
-        </div><!--/. container-fluid -->
-      </section><!-- /.content -->
+        </div>
+      </section>
     </div>
 
     <?php require_once __DIR__ . '/footer.php'; ?>

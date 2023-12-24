@@ -41,10 +41,9 @@
               </ol>
             </div>
 
-          </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
+          </div>
+        </div>
       </div>
-      <!-- /.content-header -->
 
       <!-- Main content -->
       <section class="content">
@@ -55,7 +54,7 @@
             </div>
           </div>
         </div>
-      </section><!-- /.content -->
+      </section>
     </div>
 
     <?php require_once __DIR__ . '/footer.php'; ?>

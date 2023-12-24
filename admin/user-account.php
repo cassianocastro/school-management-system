@@ -85,38 +85,38 @@ if ( isset($_POST['submit']) )
       <div class="content-header">
         <div class="container-fluid">
           <div class="row mb-2">
-            <div class="col-sm-6">
 
+            <div class="col-sm-6">
               <div class="d-flex">
                 <h1 class="m-0 text-dark">Manage Accounts</h1>
                 <!-- <a href="user-account.php?user=<?= $_REQUEST['user'] ?>&action=add-new" class="btn btn-primary btn-sm">Add New</a> -->
               </div>
-
-            </div><!-- /.col -->
+            </div>
 
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Accounts</a></li>
                 <li class="breadcrumb-item active"><?= ucfirst($_REQUEST['user']) ?></li>
               </ol>
-            </div><!-- /.col -->
+            </div>
 
             <?php
             // $_SESSION['success_msg'] = 'User has been succefuly registered';
+
             // print_r($_SESSION);
+
             if ( isset($_SESSION['success_msg']) ) {
             ?>
               <div class="col-12">
-                <small class="text-success" style="font-size:16px"><?= $_SESSION['success_msg'] ?></small>
+                <small class="text-success" style="font-size: 16px"><?= $_SESSION['success_msg'] ?></small>
               </div>
             <?php
               unset($_SESSION['success_msg']);
             }
             ?>
-          </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
+          </div>
+        </div>
       </div>
-      <!-- /.content-header -->
 
       <!-- Main content -->
       <section class="content">
@@ -419,10 +419,9 @@ if ( isset($_POST['submit']) )
                 </div>
               </div>
             </div>
-            <!-- /.row -->
           <?php } ?>
-        </div><!--/. container-fluid -->
-      </section><!-- /.content -->
+        </div>
+      </section>
     </div>
 
     <?php require_once __DIR__ . '/footer.php'; ?>

@@ -29,26 +29,28 @@
       <div class="content-header">
         <div class="container-fluid">
           <div class="row mb-2">
+
             <div class="col-sm-6">
               <h1 class="m-0 text-dark">Manage Student Fee Details</h1>
-            </div><!-- /.col -->
+            </div>
+
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Admin</a></li>
                 <li class="breadcrumb-item active">Student Fee Details</li>
               </ol>
-            </div><!-- /.col -->
-          </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
+            </div>
+
+          </div>
+        </div>
       </div>
-      <!-- /.content-header -->
 
       <!-- Main content -->
       <section class="content">
         <div class="container-fluid">
 
           <?php
-          if (isset($_GET['action']) and $_GET['action'] == 'view') {
+          if ( isset($_GET['action']) and $_GET['action'] == 'view' ) {
             $std_id   = $_GET['std_id'] ?? '';
             $usermeta = get_user_metadata($std_id);
           ?>
@@ -91,9 +93,7 @@
                       $paid_fees[] = strtolower($row->month);
                     }
 
-                    // echo '<pre>';
-                    // print_r($paid_fees);
-                    // echo '</pre>';
+                    // echo '<pre>', print_r($paid_fees), '</pre>';
 
                     $months = ['january', 'fabruary', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
 
@@ -300,17 +300,19 @@
                         <i class="fa fa-eye fa-fw"></i>
                         View
                       </a>
-                      <!-- <a href="" class="btn btn-xs btn-dark">
-                      <i class="fa fa-pencil-alt fa-fw"></i>
-                    </a> -->
+                      <!--
+                      <a href="" class="btn btn-xs btn-dark">
+                        <i class="fa fa-pencil-alt fa-fw"></i>
+                      </a>
+                      -->
                     </td>
                   </tr>
                 <?php } ?>
               </tbody>
             </table>
           <?php } ?>
-        </div><!--/. container-fluid -->
-      </section><!-- /.content -->
+        </div>
+      </section>
     </div>
 
     <?php require_once __DIR__ . '/footer.php'; ?>

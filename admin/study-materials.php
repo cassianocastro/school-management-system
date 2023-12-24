@@ -32,19 +32,18 @@
 
             <div class="col-sm-6">
               <h1 class="m-0 text-dark">Study Materials</h1>
-            </div><!-- /.col -->
+            </div>
 
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Student</a></li>
                 <li class="breadcrumb-item active">Study Materials</li>
               </ol>
-            </div><!-- /.col -->
+            </div>
 
-          </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
+          </div>
+        </div>
       </div>
-      <!-- /.content-header -->
 
       <!-- Main content -->
       <section class="content">
@@ -98,7 +97,7 @@
                 </table>
               </div>
             </div>
-          </div><!-- /.row -->
+          </div>
         </div>
       </section>
     </div>

@@ -98,14 +98,14 @@ if ( isset($_POST['submit']) )
 
             <div class="col-sm-6">
               <h1 class="m-0 text-dark">Manage Courses </h1>
-            </div><!-- /.col -->
+            </div>
 
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Admin</a></li>
                 <li class="breadcrumb-item active">Courses</li>
               </ol>
-            </div><!-- /.col -->
+            </div>
 
             <?php if ( isset($_SESSION['success_msg']) ) { ?>
               <div class="col-12">
@@ -115,10 +115,9 @@ if ( isset($_POST['submit']) )
                 unset($_SESSION['success_msg']);
               }
             ?>
-          </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
+          </div>
+        </div>
       </div>
-      <!-- /.content-header -->
 
       <!-- Main content -->
       <section class="content">
@@ -163,7 +162,6 @@ if ( isset($_POST['submit']) )
               </form>
             </div>
           </div>
-          <!-- /.row -->
         <?php else: ?>
           <!-- Info boxes -->
           <div class="card">
@@ -209,10 +207,9 @@ if ( isset($_POST['submit']) )
               </div>
             </div>
           </div>
-          <!-- /.row -->
           <?php endif; ?>
-        </div><!--/. container-fluid -->
-      </section><!-- /.content -->
+        </div>
+      </section>
     </div>
 
     <?php require_once __DIR__ . '/footer.php'; ?>
