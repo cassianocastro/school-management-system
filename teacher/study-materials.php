@@ -177,7 +177,7 @@ if ( isset($_POST['submit']) )
                   <div class="form-group">
                     <label for="name">Title</label>
 
-                    <input type="text" name="title" placeholder="enter the title" class="form-control">
+                    <input type="text" name="title" placeholder="Enter the title" class="form-control">
                   </div>
 
                   <div class="form-group">
@@ -189,12 +189,12 @@ if ( isset($_POST['submit']) )
                   <div class="form-group">
                     <label for="name">Select Class</label>
 
-                    <select required name="class" class="form-control" id="class">
-                      <option value="">Select Class</option>
+                    <select name="class" id="class" class="form-control" required>
+                      <option value="" label="Select Class"></option>
                       <?php
                       foreach ( $classes as $key => $class )
                       {
-                        echo '<option value="' . $class->id . '">' . $class->title . '</option>';
+                        echo "<option value=\"{$class->id}\" label=\"{$class->title}\"></option>";
                       }
                       ?>
                     </select>
@@ -203,12 +203,12 @@ if ( isset($_POST['submit']) )
                   <div class="form-group">
                     <label for="category">Select Your Subject</label>
 
-                    <select required name="subject" class="form-control" id="subject">
-                      <option value="">Select Your Subject</option>
+                    <select name="subject" id="subject" class="form-control" required>
+                      <option value="" label="Select Your Subject"></option>
                       <?php
                       foreach ( $subjects as $key => $subject )
                       {
-                        echo '<option value="' . $subject->id . '">' . $subject->title . '</option>';
+                        echo "<option value=\"{$subject->id}\" label=\"{$subject->title}\"></option>";
                       }
                       ?>
                     </select>
@@ -273,7 +273,7 @@ if ( isset($_POST['submit']) )
                         <tr>
                           <td><?= $count++ ?></td>
                           <td><?= $att->title ?></td>
-                          <td><a href="<?= "../dist/uploads/$file_attachment"; ?>">Download File</a></td>
+                          <td><a href="<?= "../dist/uploads/$file_attachment" ?>">Download File</a></td>
                           <td><?= $class->title ?></td>
                           <td><?= $subject->title ?></td>
                           <td><?= $att->publish_date ?></td>
