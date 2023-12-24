@@ -33,17 +33,17 @@
 
             <div class="col-sm-6">
               <h1 class="m-0 text-dark">Dashboard</h1>
-            </div><!-- /.col -->
+            </div>
 
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Teacher</a></li>
                 <li class="breadcrumb-item active">Dashboard</li>
               </ol>
-            </div><!-- /.col -->
+            </div>
 
-          </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
+          </div>
+        </div>
       </div>
       <!-- /.content-header -->
 
@@ -52,64 +52,63 @@
         <div class="container-fluid">
           <!-- Info boxes -->
           <div class="row">
+
             <div class="col-12 col-sm-6 col-md-3">
               <div class="info-box">
-                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-graduation-cap"></i></span>
+                <span class="info-box-icon bg-info elevation-1">
+                  <i class="fas fa-graduation-cap"></i>
+                </span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">Total Students</span>
                   <span class="info-box-number">2000</span>
                 </div>
-                <!-- /.info-box-content -->
               </div>
-              <!-- /.info-box -->
             </div>
-            <!-- /.col -->
+
             <div class="col-12 col-sm-6 col-md-3">
               <div class="info-box mb-3">
-                <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-users"></i></span>
+                <span class="info-box-icon bg-danger elevation-1">
+                  <i class="fas fa-users"></i>
+                </span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">Total Teachers</span>
                   <span class="info-box-number">50</span>
                 </div>
-                <!-- /.info-box-content -->
               </div>
-              <!-- /.info-box -->
             </div>
-            <!-- /.col -->
 
             <!-- fix for small devices only -->
             <div class="clearfix hidden-md-up"></div>
 
             <div class="col-12 col-sm-6 col-md-3">
               <div class="info-box mb-3">
-                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-book-open"></i></span>
+                <span class="info-box-icon bg-success elevation-1">
+                  <i class="fas fa-book-open"></i>
+                </span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">Total Courses</span>
                   <span class="info-box-number">100</span>
                 </div>
-                <!-- /.info-box-content -->
               </div>
-              <!-- /.info-box -->
             </div>
-            <!-- /.col -->
+
             <div class="col-12 col-sm-6 col-md-3">
               <div class="info-box mb-3">
-                <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-question"></i></span>
+                <span class="info-box-icon bg-warning elevation-1">
+                  <i class="fas fa-question"></i>
+                </span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">New Inquiries</span>
                   <span class="info-box-number">10</span>
                 </div>
-                <!-- /.info-box-content -->
               </div>
-              <!-- /.info-box -->
             </div>
-            <!-- /.col -->
-          </div>
-          <!-- /.row -->
+
+          </div><!-- /.row -->
 
           <hr>
 
@@ -123,9 +122,8 @@
           $row   = mysqli_fetch_object($query);
 
           $attendance = unserialize($row->attendance_value);
-          // echo '<pre>';
-          // print_r($attendance);
-          // echo '</pre>';
+
+          // echo '<pre>', print_r($attendance), '</pre>';
 
           if ( isset($_POST['sign-in']) )
           {
@@ -192,15 +190,14 @@
               </div>
             </div>
           </div>
-        </div><!--/. container-fluid -->
+        </div>
       </section>
-      <!-- /.content -->
     </div>
 
     <?php require_once __DIR__ . '/footer.php'; ?>
 
     <?php require_once __DIR__ . '/sidebar.php'; ?>
-  </div><!-- ./wrapper -->
+  </div>
 
   <!--
     1. jQuery

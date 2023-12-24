@@ -59,17 +59,17 @@ $student = get_user_data($std_id);
 
             <div class="col-sm-6">
               <h1 class="m-0 text-dark">Periods</h1>
-            </div><!-- /.col -->
+            </div>
 
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Student</a></li>
                 <li class="breadcrumb-item active">Periods</li>
               </ol>
-            </div><!-- /.col -->
+            </div>
 
-          </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
+          </div>
+        </div>
       </div>
       <!-- /.content-header -->
 
@@ -106,14 +106,14 @@ $student = get_user_data($std_id);
               </toby>
             </table>
           </div>
-        </div><!--/. container-fluid -->
-      </section><!-- /.content -->
+        </div>
+      </section>
     </div>
 
     <?php require_once __DIR__ . '/footer.php'; ?>
 
     <?php require_once __DIR__ . '/sidebar.php'; ?>
-  </div><!-- ./wrapper -->
+  </div>
 
   <!--
     1. jQuery
