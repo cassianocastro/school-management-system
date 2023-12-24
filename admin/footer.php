@@ -1,6 +1,8 @@
 <footer class="main-footer">
   <strong>
-    Copyright &copy; 2020 <a href="http://technostudy.co.in">School Managment System</a>.
+    Copyright &copy; 2020
+
+    <a rel="external" type="text/html" hreflang="en" href="http://technostudy.co.in">School Managment System</a>.
   </strong>
 
   All rights reserved.
