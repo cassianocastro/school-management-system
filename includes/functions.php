@@ -91,11 +91,11 @@ function get_metadata($item_id, $meta_key = '', $type = 'object')
 {
     global $db_conn;
 
-    $query = mysqli_query($db_conn, "SELECT * FROM metadata WHERE item_id = $item_id");
+    $query = mysqli_query($db_conn, "SELECT * FROM metadata WHERE item_id = '$item_id'");
 
     if ( ! empty($meta_key) )
     {
-        $query = mysqli_query($db_conn, "SELECT * FROM metadata WHERE item_id = $item_id AND meta_key = $meta_key");
+        $query = mysqli_query($db_conn, "SELECT * FROM metadata WHERE item_id = '$item_id' AND meta_key = '$meta_key'");
     }
 
     return data_output($query, $type);
@@ -133,7 +133,7 @@ function get_user_data($user_id, $type = "object")
 {
     global $db_conn;
 
-    $query = mysqli_query($db_conn, "SELECT * FROM accounts WHERE id = $user_id");
+    $query = mysqli_query($db_conn, "SELECT * FROM accounts WHERE id = '$user_id'");
 
     return data_output($query, $type)[0];
 }
