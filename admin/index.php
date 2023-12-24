@@ -11,12 +11,15 @@ if ( isset($_SESSION['login']) and $_SESSION['login'] == true )
   {
     $user_type = $_SESSION['user_type'];
 
-    header("Location: /sms-project/$user_type/dashboard.php");
+    if ( $user_type === "teacher" )
+      header("Location: ../teacher");
+    else
+      header("Location: ../$user_type/dashboard.php");
   }
 }
 else
 {
-  header("Location: ../login.php");
+  header("Location: ../login");
 }
 
 require_once __DIR__ . '/dashboard.php';
