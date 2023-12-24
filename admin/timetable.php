@@ -278,18 +278,47 @@ if ( isset($_POST['submit']) )
                     $to   = get_metadata($period->id, 'to')[0]->meta_value;
                   ?>
                   <tr>
-                    <td><?= date('h:i A',strtotime($from)) ?> - <?= date('h:i A',strtotime($to)) ?></td>
+                    <td><?= date('h:i A', strtotime($from)) ?> - <?= date('h:i A', strtotime($to)) ?></td>
                       <?php
                       $days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
 
                       foreach ( $days as $day )
                       {
-                        $query = mysqli_query($db_conn, "SELECT * FROM posts as p
-                        INNER JOIN metadata as md ON (md.item_id = p.id)
-                        INNER JOIN metadata as mp ON (mp.item_id = p.id)
-                        INNER JOIN metadata as mc ON (mc.item_id = p.id)
-                        INNER JOIN metadata as ms ON (ms.item_id = p.id)
-                        WHERE p.type = 'timetable' AND p.status = 'publish' AND md.meta_key = 'day_name' AND md.meta_value = '$day' AND mp.meta_key = 'period_id' AND mp.meta_value = $period->id AND mc.meta_key = 'class_id' AND mc.meta_value = $class_id AND ms.meta_key = 'section_id' AND ms.meta_value = $section_id");
+                        $query = mysqli_query(
+                          $db_conn,
+                          <<<SQL
+                            SELECT * FROM
+                              posts as p
+                            INNER JOIN
+                              metadata as md ON (md.item_id = p.id)
+                            INNER JOIN
+                              metadata as mp ON (mp.item_id = p.id)
+                            INNER JOIN
+                              metadata as mc ON (mc.item_id = p.id)
+                            INNER JOIN
+                              metadata as ms ON (ms.item_id = p.id)
+                            WHERE
+                              p.type = 'timetable'
+                            AND
+                              p.status = 'publish'
+                            AND
+                              md.meta_key = 'day_name'
+                            AND
+                              md.meta_value = '$day'
+                            AND
+                              mp.meta_key = 'period_id'
+                            AND
+                              mp.meta_value = $period->id
+                            AND
+                              mc.meta_key = 'class_id'
+                            AND
+                              mc.meta_value = $class_id
+                            AND
+                              ms.meta_key = 'section_id'
+                            AND
+                              ms.meta_value = $section_id
+                          SQL
+                        );
 
                         if ( mysqli_num_rows($query) > 0 )
                         {
@@ -299,7 +328,7 @@ if ( isset($_POST['submit']) )
                                 <p>
                                   <b>Teacher: </b>
                                   <?php
-                                  $teacher_id = get_metadata($timetable->item_id,'teacher_id')[0]->meta_value;
+                                  $teacher_id = get_metadata($timetable->item_id, 'teacher_id')[0]->meta_value;
 
                                   echo get_user_data($teacher_id)->name;
                                   ?>
@@ -308,23 +337,23 @@ if ( isset($_POST['submit']) )
                                   <b>Class: </b>
 
                                   <?php
-                                  $class_id = get_metadata($timetable->item_id,'class_id',)[0]->meta_value;
+                                  $class_id = get_metadata($timetable->item_id, 'class_id')[0]->meta_value;
 
-                                  echo get_post(array('id'=>$class_id))->title;
+                                  echo get_post(['id' => $class_id])->title;
                                   ?>
                                   <br>
                                   <b>Section: </b>
                                   <?php
-                                  $section_id = get_metadata($timetable->item_id,'section_id',)[0]->meta_value;
+                                  $section_id = get_metadata($timetable->item_id, 'section_id')[0]->meta_value;
 
-                                  echo get_post(array('id'=>$section_id))->title;
+                                  echo get_post(['id' => $section_id])->title;
                                   ?>
                                   <br>
                                   <b>Subject: </b>
                                   <?php
-                                  $subject_id = get_metadata($timetable->item_id,'subject_id',)[0]->meta_value;
+                                  $subject_id = get_metadata($timetable->item_id, 'subject_id')[0]->meta_value;
 
-                                  echo get_post(array('id'=>$subject_id))->title;
+                                  echo get_post(['id' => $subject_id])->title;
                                   ?>
                                   <br>
                                 </p>
