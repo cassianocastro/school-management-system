@@ -73,7 +73,21 @@
                     $usermeta = get_user_metadata($std_id);
                     $class = $usermeta['class'];
                     $count = 1;
-                    $query = mysqli_query($db_conn, "SELECT * FROM `posts` as p INNER JOIN `metadata` as m ON p.id = m.item_id WHERE p.`type` = 'study-material' AND m.meta_key = 'class' AND m.meta_value = $class");
+                    $query = mysqli_query(
+                      $db_conn,
+                      <<<SQL
+                        SELECT * FROM
+                          posts as p
+                        INNER JOIN
+                          metadata as m ON p.id = m.item_id
+                        WHERE
+                          p.`type` = 'study-material'
+                        AND
+                          m.meta_key = 'class'
+                        AND
+                          m.meta_value = $class
+                      SQL
+                    );
 
                     while ( $att = mysqli_fetch_object($query) )
                     {
