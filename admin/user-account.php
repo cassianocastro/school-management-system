@@ -128,34 +128,39 @@ if ( isset($_POST['submit']) )
                 <?php if ( $_GET['action'] == 'add-new' ) { ?>
                   <form action="" id="student-registration" method="post">
                     <fieldset class="border border-secondary p-3 form-group">
+
                       <legend class="d-inline w-auto h6">Student Information</legend>
+
                       <div class="row">
                         <div class="col-lg-12">
                           <div class="form-group">
                             <label for="">Full Name</label>
 
-                            <input type="text" class="form-control" placeholder="Full Name" name="name">
+                            <input type="text" name="name" placeholder="Full Name" class="form-control">
                           </div>
                         </div>
+
                         <div class="col-lg-4">
                           <div class="form-group">
                             <label for="">DOB</label>
 
-                            <input type="date" required class="form-control" placeholder="DOB" name="dob">
+                            <input type="date" name="dob" placeholder="DOB" class="form-control" required>
                           </div>
                         </div>
+
                         <div class="col-lg-4">
                           <div class="form-group">
                             <label for="">Mobile</label>
 
-                            <input type="text" class="form-control" placeholder="Mobile" name="mobile">
+                            <input type="text" name="mobile" placeholder="Mobile" class="form-control">
                           </div>
                         </div>
+
                         <div class="col-lg-4">
                           <div class="form-group">
                             <label for="">Email</label>
 
-                            <input type="email" required class="form-control" placeholder="Email Address" name="email">
+                            <input type="email" name="email" placeholder="Email Address" class="form-control" required>
                           </div>
                         </div>
 
@@ -164,62 +169,70 @@ if ( isset($_POST['submit']) )
                           <div class="form-group">
                             <label for="">Address</label>
 
-                            <input type="text" class="form-control" placeholder="Address" name="address">
+                            <input type="text" name="address" placeholder="Address" class="form-control">
                           </div>
                         </div>
+
                         <div class="col-lg-4">
                           <div class="form-group">
                             <label for="">Country</label>
 
-                            <input type="text" class="form-control" placeholder="Country" name="country">
+                            <input type="text" name="country" placeholder="Country" class="form-control">
                           </div>
                         </div>
+
                         <div class="col-lg-4">
                           <div class="form-group">
                             <label for="">State</label>
 
-                            <input type="text" class="form-control" placeholder="State" name="state">
+                            <input type="text" name="state" placeholder="State" class="form-control">
                           </div>
                         </div>
+
                         <div class="col-lg-4">
                           <div class="form-group">
                             <label for="">Pin/Zip Code</label>
 
-                            <input type="text" class="form-control" placeholder="Pin/Zip Code" name="zip">
+                            <input type="text" name="zip" placeholder="Pin/Zip Code" class="form-control">
                           </div>
                         </div>
                       </div>
                     </fieldset>
 
                     <fieldset class="border border-secondary p-3 form-group">
+
                       <legend class="d-inline w-auto h6">Parents Information</legend>
+
                       <div class="row">
                         <div class="col-lg-6">
                           <div class="form-group">
                             <label for="">Father's Name</label>
 
-                            <input type="text" class="form-control" placeholder="Father's Name" name="father_name">
+                            <input type="text" name="father_name" placeholder="Father's Name" class="form-control">
                           </div>
                         </div>
+
                         <div class="col-lg-6">
                           <div class="form-group">
                             <label for="">Father's Mobile</label>
 
-                            <input type="text" class="form-control" placeholder="Father's Mobile" name="father_mobile">
+                            <input type="text" name="father_mobile" placeholder="Father's Mobile" class="form-control">
                           </div>
                         </div>
+
                         <div class="col-lg-6">
                           <div class="form-group">
                             <label for="">Mother's Name</label>
 
-                            <input type="text" class="form-control" placeholder="Mother's Name" name="mother_name">
+                            <input type="text" name="mother_name" placeholder="Mother's Name" class="form-control">
                           </div>
                         </div>
+
                         <div class="col-lg-6">
                           <div class="form-group">
                             <label for="">Mothers's Mobile</label>
 
-                            <input type="text" class="form-control" placeholder="Mothers's Mobile" name="mother_mobile">
+                            <input type="text" name="mother_mobile" placeholder="Mothers's Mobile" class="form-control">
                           </div>
                         </div>
                         <!-- Address Fields -->
@@ -227,84 +240,96 @@ if ( isset($_POST['submit']) )
                           <div class="form-group">
                             <label for="">Address</label>
 
-                            <input type="text" class="form-control" placeholder="Address" name="parents_address">
+                            <input type="text" name="parents_address" placeholder="Address" class="form-control">
                           </div>
                         </div>
+
                         <div class="col-lg-4">
                           <div class="form-group">
                             <label for="">Country</label>
 
-                            <input type="text" class="form-control" placeholder="Country" name="parents_country">
+                            <input type="text" name="parents_country" placeholder="Country" class="form-control">
                           </div>
                         </div>
+
                         <div class="col-lg-4">
                           <div class="form-group">
                             <label for="">State</label>
 
-                            <input type="text" class="form-control" placeholder="State" name="parents_state">
+                            <input type="text" name="parents_state" placeholder="State" class="form-control">
                           </div>
                         </div>
+
                         <div class="col-lg-4">
                           <div class="form-group">
                             <label for="">Pin/Zip Code</label>
 
-                            <input type="text" class="form-control" placeholder="Pin/Zip Code" name="parents_zip">
+                            <input type="text" name="parents_zip" placeholder="Pin/Zip Code" class="form-control">
                           </div>
                         </div>
                       </div>
                     </fieldset>
 
                     <fieldset class="border border-secondary p-3 form-group">
+
                       <legend class="d-inline w-auto h6">Last Qualification</legend>
+
                       <div class="row">
 
                         <div class="col-lg-12">
                           <div class="form-group">
                             <label for="">School Name</label>
 
-                            <input type="text" class="form-control" placeholder="School Name" name="school_name">
+                            <input type="text" name="school_name" placeholder="School Name" class="form-control">
                           </div>
                         </div>
+
                         <div class="col-lg">
                           <div class="form-group">
                             <label for="">Class</label>
 
-                            <input type="text" class="form-control" placeholder="Class" name="previous_class">
+                            <input type="text" name="previous_class" placeholder="Class" class="form-control">
                           </div>
                         </div>
+
                         <div class="col-lg">
                           <div class="form-group">
                             <label for="">Status</label>
 
-                            <input type="text" class="form-control" placeholder="Status" name="status">
+                            <input type="text" name="status" placeholder="Status" class="form-control">
                           </div>
                         </div>
+
                         <div class="col-lg">
                           <div class="form-group">
                             <label for="">Total Marks</label>
 
-                            <input type="text" class="form-control" placeholder="Total Marks" name="total_marks">
+                            <input type="text" name="total_marks" placeholder="Total Marks" class="form-control">
                           </div>
                         </div>
+
                         <div class="col-lg">
                           <div class="form-group">
                             <label for="">Obtain Marks</label>
 
-                            <input type="text" class="form-control" placeholder="Obtain Marks" name="obtain_mark">
+                            <input type="text" name="obtain_mark" placeholder="Obtain Marks" class="form-control">
                           </div>
                         </div>
+
                         <div class="col-lg">
                           <div class="form-group">
                             <label for="">Percentage</label>
 
-                            <input type="text" class="form-control" placeholder="Percentage" name="previous_percentage">
+                            <input type="text" placeholder="Percentage" name="previous_percentage" class="form-control">
                           </div>
                         </div>
                       </div>
                     </fieldset>
 
                     <fieldset class="border border-secondary p-3 form-group">
+
                       <legend class="d-inline w-auto h6">Admission Details</legend>
+
                       <div class="row">
                         <div class="col-lg">
                           <div class="form-group">
@@ -312,14 +337,14 @@ if ( isset($_POST['submit']) )
                             <!-- <input type="text" class="form-control" placeholder="Class" name="class"> -->
 
                             <select name="class" id="class" class="form-control">
-                              <option value="">Select Class</option>
+                              <option value="" label="Select Class"></option>
                               <?php
                               $args = ['type' => 'class', 'status' => 'publish'];
                               $classes = get_posts($args);
 
-                              foreach ($classes as $class)
+                              foreach ( $classes as $class )
                               {
-                                echo '<option value="' . $class->id . '">' . $class->title . '</option>';
+                                echo "<option value=\"{$class->id}\" label=\"{$class->title}\"></option>";
                               }
                               ?>
                             </select>
@@ -329,8 +354,8 @@ if ( isset($_POST['submit']) )
                           <div class="form-group" id="section-container">
                             <label for="section">Select Section</label>
 
-                            <select require name="section" id="section" class="form-control">
-                              <option value="">-Select Section-</option>
+                            <select name="section" id="section" class="form-control" required>
+                              <option value="" label="Select Section"></option>
                             </select>
                           </div>
                         </div>
@@ -338,28 +363,42 @@ if ( isset($_POST['submit']) )
                           <div class="form-group">
                             <label for="">Subject Streem</label>
 
-                            <input type="text" class="form-control" placeholder="Subject Streem" name="subject_streem">
+                            <input type="text" name="subject_streem" placeholder="Subject Streem" class="form-control">
                           </div>
                         </div>
                         <div class="col-lg">
                           <div class="form-group">
                             <label for="">Date of Admission</label>
 
-                            <input type="date" class="form-control" placeholder="Date of Admission" name="doa">
+                            <input type="date" name="doa" placeholder="Date of Admission" class="form-control">
                           </div>
                         </div>
                       </div>
                     </fieldset>
 
                     <div class="form-group">
-                      <label for="online-payment"><input type="radio" name="payment_method" value="online" id="online-payment"> Online Payment</label>
+                      <label for="online-payment">
+                        <input type="radio" name="payment_method" value="online" id="online-payment">
 
-                      <label for="offline-payment"><input type="radio" name="payment_method" value="offline" id="offline-payment"> Offline Payment</label>
+                        Online Payment
+                      </label>
+
+                      <label for="offline-payment">
+                        <input type="radio" name="payment_method" value="offline" id="offline-payment">
+
+                        Offline Payment
+                      </label>
                     </div>
 
-                    <input type="hidden" name="type" value="<?php echo $_REQUEST['user'] ?>">
+                    <input type="hidden" name="type" value="<?= $_REQUEST['user'] ?>">
 
-                    <button type="submit" name="submit" class="btn btn-primary"><span id="loader" style='display:none'><i class="fas fa-circle-notch fa-spin"></i></span> Register</button>
+                    <button type="submit" name="submit" class="btn btn-primary">
+                      <span id="loader" style='display: none'>
+                        <i class="fas fa-circle-notch fa-spin"></i>
+                      </span>
+
+                      Register
+                    </button>
                   </form>
                 <?php } elseif ($_GET['action'] == 'fee-payment') { ?>
                   <form action="" id="registration-fee" method="post">
