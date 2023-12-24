@@ -106,9 +106,9 @@ if ( isset($_POST['submit']) )
               </ol>
             </div>
 
-            <?php if(isset($_SESSION['success_msg'])) { ?>
+            <?php if ( isset($_SESSION['success_msg']) ) { ?>
               <div class="col-12">
-                <small class="text-success" style="font-size:16px"><?= $_SESSION['success_msg']?></small>
+                <small class="text-success" style="font-size: 16px"><?= $_SESSION['success_msg']?></small>
               </div>
             <?php
                 unset($_SESSION['success_msg']);
@@ -131,7 +131,7 @@ if ( isset($_POST['submit']) )
             </div>
 
             <div class="card-body">
-              <form action="" method="POST" enctype="multipart/form-data">
+              <form action="" method="post" enctype="multipart/form-data">
 
                 <div class="form-group">
                   <label for="name">Course Name</label>
@@ -143,23 +143,23 @@ if ( isset($_POST['submit']) )
                   <label for="category">Course Category</label>
 
                   <select name="category" id="category" class="form-control">
-                    <option value="">Select Category</option>
-                    <option value="web-design-and-development">Web Design & Development</option>
-                    <option value="app-developement">App Development</option>
+                    <option value="" label="Select Category"></option>
+                    <option value="web-design-and-development" label="Web Design & Development"></option>
+                    <option value="app-developement" label="App Development"></option>
                   </select>
                 </div>
 
                 <div class="form-group">
                   <label for="duration">Course Duration</label>
 
-                  <input type="text" name="duration" id="duration" class="form-control" placeholder="Course Duration" required>
+                  <input type="text" name="duration" id="duration" placeholder="Course Duration" class="form-control" required>
                 </div>
 
                 <div class="form-group">
                   <input type="file" name="thumbnail" id="thumbnail" required>
                 </div>
 
-                <button name="submit" class="btn btn-success">Submit</button>
+                <button type="submit" name="submit" class="btn btn-success">Submit</button>
 
               </form>
             </div>
@@ -179,31 +179,31 @@ if ( isset($_POST['submit']) )
                     <div class="form-group">
                       <label for="class">Select Class</label>
 
-                      <select require name="class" id="class" class="form-control">
-                        <option value="">-Select Class-</option>
+                      <select name="class" id="class" class="form-control" required>
+                        <option value="" label="Select Class"></option>
                         <?php
                         $args    = ['type' => 'class', 'status' => 'publish'];
                         $classes = get_posts($args);
 
                         foreach ( $classes as $key => $class ) {
                         ?>
-                        <option value="<?= $class->id ?>"><?= $class->title ?></option>
+                        <option value="<?= $class->id ?>" label="<?= $class->title ?>"></option>
                         <?php } ?>
                       </select>
                     </div>
 
-                    <div class="form-group" id="section-container" style="display:none">
+                    <div id="section-container" class="form-group" style="display: none">
                       <label for="section">Select Section</label>
 
-                      <select require name="section" id="section" class="form-control">
-                        <option value="">-Select Section-</option>
+                      <select name="section" id="section" class="form-control" required>
+                        <option value="" label="Select Section"></option>
                       </select>
                     </div>
 
                     <div class="form-group">
                       <label for="subject">Subject Name</label>
 
-                      <input require type="text" name="subject" id="subject" placeholder="Subject Name" class="form-control">
+                      <input type="text" name="subject" id="subject" placeholder="Subject Name" class="form-control" required>
                     </div>
 
                     <div class="form-group">
@@ -221,8 +221,9 @@ if ( isset($_POST['submit']) )
                   <h3 class="card-title">Subjects</h3>
 
                   <div class="card-tools">
-                    <a href="?action=add-new" class="btn btn-success btn-xs">
+                    <a class="btn btn-success btn-xs" href="?action=add-new">
                       <i class="fa fa-plus mr-2"></i>
+
                       Add New
                     </a>
                   </div>
