@@ -61,7 +61,7 @@
               </div>
 
               <div class="card-body">
-                <strong>Name: </strong><?= get_users(array('id' => $std_id))[0]->name ?>
+                <strong>Name: </strong><?= get_users(['id' => $std_id])[0]->name ?>
                 <br>
                 <strong>Class: </strong><?= $usermeta['class'] ?>
               </div>
@@ -84,12 +84,28 @@
                   </thead>
                   <tbody>
                     <?php
-                    $sql = "SELECT m.meta_value as `month` FROM `posts` as p JOIN `metadata` as m ON p.id = m.item_id WHERE p.type = 'payment' AND p.author = $std_id AND m.meta_key = 'month' AND year(p.publish_date) = 2023";
+                    $sql = <<<SQL
+                      SELECT
+                        m.meta_value as `month`
+                      FROM
+                        `posts` as p
+                      JOIN
+                        `metadata` as m ON p.id = m.item_id
+                      WHERE
+                        p.type = 'payment'
+                      AND
+                        p.author = $std_id
+                      AND
+                        m.meta_key = 'month'
+                      AND
+                        year(p.publish_date) = 2023
+                    SQL;
 
                     $query = mysqli_query($db_conn, $sql);
                     $paid_fees = [];
 
-                    while ($row = mysqli_fetch_object($query)) {
+                    while ( $row = mysqli_fetch_object($query) )
+                    {
                       $paid_fees[] = strtolower($row->month);
                     }
 
@@ -97,11 +113,13 @@
 
                     $months = ['january', 'fabruary', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
 
-                    foreach ($months as $key => $value) {
+                    foreach ( $months as $key => $value )
+                    {
                       $highlight = '';
                       $paid = false;
 
-                      if (in_array($value, $paid_fees)) {
+                      if ( in_array($value, $paid_fees) )
+                      {
                         $paid = true;
                         $highlight = 'class="bg-success"';
                       }
@@ -114,14 +132,20 @@
                       <tr>
                         <td><?= ++$key ?></td>
                         <td><?= ucwords($value) ?></td>
-                        <td <?= $highlight ?>>
-                          <?= ($paid) ? "Paid" : "Pending"; ?>
-                        </td>
+                        <td <?= $highlight ?>><?= ($paid) ? "Paid" : "Pending"; ?></td>
                         <td>
                           <?php if ($paid) : ?>
-                            <a href="?action=view-invoice&month=<?= $value ?>&std_id=<?= $std_id ?>" class="btn btn-sm btn-primary"><i class="fa fa-eye fa-fw"></i> View</a>
+                            <a class="btn btn-sm btn-primary" href="?action=view-invoice&month=<?= $value ?>&std_id=<?= $std_id ?>">
+                              <i class="fa fa-eye fa-fw"></i>
+
+                              View
+                            </a>
                           <?php else : ?>
-                            <a href="#" data-toggle="modal" data-month="<?= ucwords($value) ?>" data-target="#paynow-popup" class="btn btn-sm btn-warning paynow-btn"><i class="fa fa-money-check-alt fa-fw"></i> Pay Now</a>
+                            <a class="btn btn-sm btn-warning paynow-btn" data-toggle="modal" data-month="<?= ucwords($value) ?>" data-target="#paynow-popup" href="#">
+                              <i class="fa fa-money-check-alt fa-fw"></i>
+
+                              Pay Now
+                            </a>
                           <?php endif; ?>
                         </td>
                       </tr>
@@ -130,24 +154,35 @@
                 </table>
               </div>
             </div>
-
-          <?php } elseif (isset($_GET['action']) && $_GET['action'] == 'view-invoice') { ?>
+          <?php } elseif (isset($_GET['action']) and $_GET['action'] == 'view-invoice') { ?>
             <div class="container">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="card">
                     <div class="card-body">
                       <div class="invoice-title">
-                        <h4 class="float-end font-size-15">Invoice #DS0204 <span class="badge bg-success font-size-12 ms-2">Paid</span></h4>
+                        <h4 class="float-end font-size-15">
+                          Invoice #DS0204
+
+                          <span class="badge bg-success font-size-12 ms-2">Paid</span>
+                        </h4>
 
                         <div class="mb-4">
                           <h2 class="mb-1 text-muted">Bootdey.com</h2>
                         </div>
 
                         <div class="text-muted">
-                          <p class="mb-1">3184 Spruce Drive Pittsburgh, PA 15201</p>
-                          <p class="mb-1"><i class="uil uil-envelope-alt me-1"></i> xyz@987.com</p>
-                          <p><i class="uil uil-phone me-1"></i> 012-345-6789</p>
+                          <p class="mb-1">
+                            3184 Spruce Drive Pittsburgh, PA 15201
+                          </p>
+
+                          <p class="mb-1">
+                            <i class="uil uil-envelope-alt me-1"></i> xyz@987.com
+                          </p>
+
+                          <p>
+                            <i class="uil uil-phone me-1"></i> 012-345-6789
+                          </p>
                         </div>
                       </div>
 
@@ -157,9 +192,13 @@
                         <div class="col-sm-6">
                           <div class="text-muted">
                             <h5 class="font-size-16 mb-3">Billed To:</h5>
+
                             <h5 class="font-size-15 mb-2">Preston Miller</h5>
+
                             <p class="mb-1">4068 Post Avenue Newfolden, MN 56738</p>
+
                             <p class="mb-1">PrestonMiller@armyspy.com</p>
+
                             <p>001-234-5678</p>
                           </div>
                         </div>
@@ -169,16 +208,19 @@
                           <div class="text-muted text-sm-end">
                             <div>
                               <h5 class="font-size-15 mb-1">Invoice No:</h5>
+
                               <p>#DZ0112</p>
                             </div>
 
                             <div class="mt-4">
                               <h5 class="font-size-15 mb-1">Invoice Date:</h5>
+
                               <p>12 Oct, 2020</p>
                             </div>
 
                             <div class="mt-4">
                               <h5 class="font-size-15 mb-1">Order No:</h5>
+
                               <p>#1123456</p>
                             </div>
                           </div>
@@ -261,8 +303,13 @@
 
                         <div class="d-print-none mt-4">
                           <div class="float-end">
-                            <a href="javascript:window.print()" class="btn btn-success me-1"><i class="fa fa-print"></i></a>
-                            <a href="#" class="btn btn-primary w-md">Send</a>
+                            <a class="btn btn-success me-1" href="javascript: window.print()">
+                              <i class="fa fa-print"></i>
+                            </a>
+
+                            <a class="btn btn-primary w-md" href="#">
+                              Send
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -285,9 +332,9 @@
               </thead>
               <tbody>
                 <?php
-                $students = get_users(array('type' => 'student'));
+                $students = get_users(['type' => 'student']);
 
-                foreach ($students as $key => $student) {
+                foreach ( $students as $key => $student ) {
                 ?>
                   <tr>
                     <td><?= ++$key ?></td>
@@ -296,8 +343,9 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <a href="?action=view&std_id=<?= $student->id ?>" class="btn btn-sm btn-info">
+                      <a class="btn btn-sm btn-info" href="?action=view&std_id=<?= $student->id ?>">
                         <i class="fa fa-eye fa-fw"></i>
+
                         View
                       </a>
                       <!--
