@@ -64,7 +64,7 @@
           <div aria-labelledby="navbarDropdownMenuLink-333" class="dropdown-menu dropdown-menu-right dropdown-default">
             <a class="dropdown-item" type="text/html" hreflang="en" href="/admin">Dashboard</a>
             <a class="dropdown-item" type="text/html" hreflang="en" href="#">Another action</a>
-            <a class="dropdown-item" type="text/html" hreflang="en" href="logout.php">Logout</a>
+            <a class="dropdown-item" type="text/html" hreflang="en" href="/actions/logout.php">Logout</a>
           </div>
         <?php else: ?>
           <a href="/login" class="nav-link">
