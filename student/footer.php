@@ -10,13 +10,15 @@
 </div>
 <!-- ./wrapper -->
 
-<!-- Bootstrap -->
+<!--
+  1. Bootstrap
+  2. overlayScrollbars
+  3. AdminLTE App
+  4. OPTIONAL SCRIPTS
+-->
 <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- overlayScrollbars -->
 <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
 <script src="../dist/js/adminlte.js"></script>
-<!-- OPTIONAL SCRIPTS -->
 <script src="../dist/js/demo.js"></script>
 
 <script>

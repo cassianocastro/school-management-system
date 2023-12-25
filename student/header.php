@@ -30,13 +30,15 @@ $stdmeta = get_user_metadata($std_id);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <!-- Font Awesome Icons -->
+  <!--
+    1. Font Awesome Icons
+    2. overlayScrollbars
+    3. Theme style
+    4. Google Font: Source Sans Pro
+  -->
   <link rel="stylesheet" type="text/css" href="../plugins/fontawesome-free/css/all.min.css">
-  <!-- overlayScrollbars -->
   <link rel="stylesheet" type="text/css" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Theme style -->
   <link rel="stylesheet" type="text/css" href="../dist/css/adminlte.min.css">
-  <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
 
   <title>Student | Dashboard</title>
