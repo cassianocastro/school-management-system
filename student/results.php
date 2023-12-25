@@ -1,6 +1,6 @@
-<?php include('../includes/config.php') ?>
-<?php include('header.php') ?>
-<?php include('sidebar.php') ?>
+<?php require_once __DIR__ . '/../includes/config.php'; ?>
+<?php require_once __DIR__ . '/header.php'; ?>
+<?php require_once __DIR__ . '/sidebar.php'; ?>
 
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -24,11 +24,11 @@
       <div class="container-fluid">
         <div class="card">
             <div class="card-body">
-                
+
             </div>
         </div>
 
       </div><!--/. container-fluid -->
     </section>
     <!-- /.content -->
-<?php include('footer.php') ?>
+<?php require_once __DIR__ . '/footer.php'; ?>
