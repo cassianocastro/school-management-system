@@ -41,13 +41,13 @@ $section = get_post(['id' => $stdmeta['section']]);
               <img src="../dist/img/AdminLTELogo.png" alt="User profile picture" class="profile-user-img img-fluid img-circle">
             </div>
 
-            <h3 class="profile-username text-center"><?php echo $student->name; ?></h3>
+            <h3 class="profile-username text-center"><?= $student->name; ?></h3>
 
             <p class="text-muted text-center">
-              <?php echo $stdmeta['address']; ?>,
-              <?php echo $stdmeta['state']; ?>,
-              <?php echo $stdmeta['country']; ?>
-              (<?php echo $stdmeta['zip']; ?>)
+              <?= $stdmeta['address']; ?>,
+              <?= $stdmeta['state']; ?>,
+              <?= $stdmeta['country']; ?>
+              (<?= $stdmeta['zip']; ?>)
             </p>
 
             <hr>
@@ -60,7 +60,7 @@ $section = get_post(['id' => $stdmeta['section']]);
               </strong>
 
               <span class="text-muted float-right">
-                <?php echo $class->title; ?> (<?php echo $section->title; ?>)
+                <?= $class->title; ?> (<?= $section->title; ?>)
               </span>
             </p>
 
@@ -74,7 +74,7 @@ $section = get_post(['id' => $stdmeta['section']]);
               </strong>
 
               <span class="text-muted float-right">
-                <?php echo $stdmeta['dob']; ?>
+                <?= $stdmeta['dob']; ?>
               </span>
             </p>
 
@@ -88,7 +88,7 @@ $section = get_post(['id' => $stdmeta['section']]);
               </strong>
 
               <span class="text-muted float-right">
-                <?php echo $stdmeta['mobile']; ?>
+                <?= $stdmeta['mobile']; ?>
               </span>
             </p>
           </div>
