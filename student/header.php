@@ -1,7 +1,8 @@
 <?php
 // session_start();
 
-$site_url = "http://localhost/sms-project/";
+// $site_url = "http://localhost/sms-project/";
+$site_url = "http://{$_SERVER["SERVER_NAME"]}/";
 
 if ( isset($_SESSION['login']) )
 {
