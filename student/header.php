@@ -41,10 +41,10 @@ $stdmeta = get_user_metadata($std_id);
   <link rel="stylesheet" type="text/css" href="../dist/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
 
-  <title>Student | Dashboard</title>
+  <title>Student's Dashboard | School SysManager</title>
 
   <!-- jQuery -->
   <script async src="../plugins/jquery/jquery.min.js"></script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
-<div class="wrapper">
+  <div class="wrapper">
