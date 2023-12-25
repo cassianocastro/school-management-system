@@ -36,7 +36,7 @@
         </li> -->
       </ul>
       <ul class="navbar-nav ml-auto nav-flex-icons">
-        
+
         <li class="nav-item dropdown">
           <?php if (isset($_SESSION['login'])) { ?>
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
@@ -101,7 +101,7 @@
       </div>
     </div>
   </div>
-  
+
   <!-- About us -->
   <section class="py-5">
     <div class="container">
@@ -127,7 +127,7 @@
     object-fit: cover;
     object-position: center;
   }
-  </style>   
+  </style>
   <!-- Our Courses -->
   <section class="py-5 bg-light">
     <div class="text-center mb-5">
@@ -137,8 +137,8 @@
 
     <div class="container">
       <div class="row">
-            
-        <?php 
+
+        <?php
         $query = mysqli_query($db_conn,"SELECT * FROM courses ORDER BY id DESC LIMIT 0, 8");
         while($course = mysqli_fetch_object($query))
         {?>
@@ -182,7 +182,7 @@
               <p><i class="fa fa-star text-warning"></i> <i class="fa fa-star text-warning"></i> <i class="fa fa-star text-warning"></i> <i class="fa fa-star text-warning"></i> <i class="fa fa-star text-warning"></i></p>
               <p class="card-text">
                 <b>Courses: </b> 5 <br>
-                <b>Ratings: </b> 
+                <b>Ratings: </b>
               </p>
             </div>
           </div>
@@ -294,7 +294,7 @@
 
   <!-- Footer -->
   <footer style="background:url(./assets/images/still-life-851328_1280.jpg) center/cover no-repeat">
-    <div  class="py-5 text-white" style="background:#000000bb"> 
+    <div  class="py-5 text-white" style="background:#000000bb">
       <div class="container-fluid">
           <div class="row">
             <div class="col-lg-4">
@@ -354,5 +354,5 @@
       Copyright 2020-2020 All Rights Reseved. <a href="#" class="text-light">School Management System</a>
     </div>
   </section>
-  
+
   <?php include('footer.php') ?>
