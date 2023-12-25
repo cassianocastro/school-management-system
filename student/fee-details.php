@@ -371,7 +371,7 @@ if ( isset($_GET['action']) and $_GET['action'] == 'view-invoice' ) :
     </div>
   </div>
 
-  <script src="./fee-details.js"></script>
+  <script defer src="./fee-details.js"></script>
 
 <?php
 endif;
