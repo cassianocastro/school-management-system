@@ -1,7 +1,7 @@
 <?php
-require '../includes/config.php';
-require 'header.php';
-require 'sidebar.php';
+require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/header.php';
+require_once __DIR__ . '/sidebar.php';
 ?>
 
 <!-- Content Header (Page header) -->
@@ -215,4 +215,4 @@ $section = get_post(['id' => $stdmeta['section']]);
   </div>
 </section>
 
-<?php require 'footer.php'; ?>
+<?php require_once __DIR__ . '/footer.php'; ?>
