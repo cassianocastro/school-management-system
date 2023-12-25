@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set("display_errors", true);
+
 require_once __DIR__ . '/../includes/config.php';
 require_once __DIR__ . '/header.php';
 require_once __DIR__ . '/sidebar.php';
@@ -366,13 +369,7 @@ if (isset($_GET['action']) and $_GET['action'] == 'view-invoice') { ?>
     </div>
   </div>
 
-  <script>
-    jQuery(document).on('click', '.paynow-btn', function() {
-      var month = jQuery(this).data('month');
-
-      jQuery('#month').val(month);
-    })
-  </script>
+  <script src="./fee-details.js"></script>
 
 <?php
 }
