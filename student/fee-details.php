@@ -9,7 +9,8 @@ require_once __DIR__ . '/sidebar.php';
 $success_msg =  false;
 $user_id     = $_SESSION['user_id'] ?? "";
 
-if (isset($_POST['form_submitted'])) {
+if ( isset($_POST['form_submitted']) )
+{
   $status    = $_POST["status"] ?? 'success';
   $firstname = $_POST["firstname"] ?? '';
   $amount    = $_POST["amount"] ?? '';
@@ -19,7 +20,8 @@ if (isset($_POST['form_submitted'])) {
 
   $query = mysqli_query($db_conn, "INSERT INTO posts (title, type, description, status, author, parent) VALUES ($title, payment,'', $status, $user_id, 0)");
 
-  if ($query) {
+  if ( $query )
+  {
     $item_id = mysqli_insert_id($db_conn);
   }
 
@@ -30,14 +32,16 @@ if (isset($_POST['form_submitted'])) {
     'month'      => $month
   ];
 
-  foreach ($payment_data as $key => $value) {
+  foreach ( $payment_data as $key => $value )
+  {
     mysqli_query($db_conn, "INSERT INTO metadata (item_id, meta_key, meta_value) VALUES ($item_id, $key, $value)");
   }
 
   $success_msg = true;
 }
 
-if (isset($_GET['action']) and $_GET['action'] == 'view-invoice') { ?>
+if ( isset($_GET['action']) and $_GET['action'] == 'view-invoice' ) :
+?>
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -87,7 +91,7 @@ if (isset($_GET['action']) and $_GET['action'] == 'view-invoice') { ?>
                   <p>001-234-5678</p>
                 </div>
               </div>
-              <!-- end col -->
+
               <div class="col-sm-6">
                 <div class="text-muted text-sm-end">
                   <div>
@@ -109,9 +113,7 @@ if (isset($_GET['action']) and $_GET['action'] == 'view-invoice') { ?>
                   </div>
                 </div>
               </div>
-              <!-- end col -->
             </div>
-            <!-- end row -->
 
             <div class="py-2">
               <h5 class="font-size-15">Order Summary</h5>
@@ -171,7 +173,7 @@ if (isset($_GET['action']) and $_GET['action'] == 'view-invoice') { ?>
       </div>
     </div>
   </div>
-<?php } else { ?>
+<?php else: ?>
   <!-- Content Header (Page header) -->
   <div class="content-header">
     <div class="container-fluid">
@@ -372,6 +374,7 @@ if (isset($_GET['action']) and $_GET['action'] == 'view-invoice') { ?>
   <script src="./fee-details.js"></script>
 
 <?php
-}
+endif;
+
 require_once __DIR__ . '/footer.php';
 ?>
