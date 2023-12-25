@@ -39,9 +39,11 @@ require_once __DIR__ . '/sidebar.php';
       </div>
 
       <div class="card-body">
-        <strong>Name: </strong> <?= get_users(array('id' => $std_id))[0]->name ?><br>
+        <strong>Name: </strong><?= get_users(['id' => $std_id])[0]->name ?>
 
-        <strong>Class: </strong> <?= $class->title ?>
+        <br>
+
+        <strong>Class: </strong><?= $class->title ?>
       </div>
     </div>
 
@@ -64,20 +66,29 @@ require_once __DIR__ . '/sidebar.php';
           <?php
           $current_month = strtolower(date('F'));
           $current_year  = date('Y');
-          $sql = "SELECT * FROM `attendance` WHERE `attendance_month` = '$current_month' AND year(current_session) = $current_year";
+          $sql = <<<SQL
+            SELECT
+              *
+            FROM
+              attendance
+            WHERE
+              attendance_month = '$current_month'
+            AND
+              year(current_session) = '$current_year'
+          SQL;
 
           $query = mysqli_query($db_conn, $sql);
           $row   = mysqli_fetch_object($query);
 
-          foreach ( unserialize($row->attendance_value) as $date => $value)
-          { ?>
+          foreach ( unserialize($row->attendance_value) as $date => $value ) :
+          ?>
             <tr>
               <td><?= $date ?></td>
               <td><?= ($value['signin_at']) ? 'Present' : 'Absent' ?></td>
               <td><?= ($value['signin_at']) ? date('d-m-yyy h:i:s', $value['signin_at']) : '' ?></td>
               <td><?= ($value['signout_at']) ? date('d-m-yyy h:i:s', $value['signout_at']) : '' ?></td>
             </tr>
-          <?php } ?>
+          <?php endforeach; ?>
           </tbody>
         </table>
       </div>
