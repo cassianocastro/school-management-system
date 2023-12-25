@@ -11,19 +11,18 @@ require_once __DIR__ . '/sidebar.php';
 
       <div class="col-sm-6">
         <h1 class="m-0 text-dark">Manage Student Attendance</h1>
-      </div><!-- /.col -->
+      </div>
 
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
           <li class="breadcrumb-item"><a href="#">Student</a></li>
           <li class="breadcrumb-item active">Attendance</li>
         </ol>
-      </div><!-- /.col -->
+      </div>
 
-    </div><!-- /.row -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </div>
-<!-- /.content-header -->
 
 <!-- Main content -->
 <section class="content">
@@ -38,8 +37,10 @@ require_once __DIR__ . '/sidebar.php';
       <div class="card-header">
         <h3 class="card-title">Student Detail</h3>
       </div>
+
       <div class="card-body">
         <strong>Name: </strong> <?php echo get_users(array('id' => $std_id))[0]->name ?><br>
+
         <strong>Class: </strong> <?php echo $class->title ?>
       </div>
     </div>
@@ -48,6 +49,7 @@ require_once __DIR__ . '/sidebar.php';
       <div class="card-header">
         <h3 class="card-title">Attendance</h3>
       </div>
+
       <div class="card-body">
         <table class="table table-bordered">
           <thead>
@@ -80,8 +82,8 @@ require_once __DIR__ . '/sidebar.php';
         </table>
       </div>
     </div>
-  </div><!--/. container-fluid -->
+
+  </div>
 </section>
-<!-- /.content -->
 
 <?php require_once __DIR__ . '/footer.php'; ?>
