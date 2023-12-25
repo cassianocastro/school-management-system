@@ -1,7 +1,7 @@
 <?php
-require '../includes/config.php';
-require 'header.php';
-require 'sidebar.php';
+require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/header.php';
+require_once __DIR__ . '/sidebar.php';
 
 $success_msg =  false;
 $user_id     = $_SESSION['user_id'] ?? "";
@@ -209,11 +209,11 @@ if (isset($_GET['action']) and $_GET['action'] == 'view-invoice') { ?>
         </div>
 
         <div class="card-body">
-          <strong>Name: </strong><?php echo get_users(array('id' => $std_id))[0]->name ?>
+          <strong>Name: </strong><?= get_users(['id' => $std_id])[0]->name ?>
 
           <br>
 
-          <strong>Class: </strong><?php echo $class->title ?>
+          <strong>Class: </strong><?= $class->title ?>
         </div>
       </div>
 
@@ -265,14 +265,22 @@ if (isset($_GET['action']) and $_GET['action'] == 'view-invoice') { ?>
                 // }
               ?>
                 <tr>
-                  <td><?php echo ++$key; ?></td>
-                  <td><?php echo ucwords($value); ?></td>
-                  <td <?php echo $highlight; ?>><?php echo ($paid) ? "Paid" : "Pending"; ?></td>
+                  <td><?= ++$key; ?></td>
+                  <td><?= ucwords($value); ?></td>
+                  <td <?= $highlight; ?>><?= ($paid) ? "Paid" : "Pending"; ?></td>
                   <td>
                     <?php if ($paid) : ?>
-                      <a href="?action=view-invoice&month=<?php echo $value ?>&std_id=<?php echo $std_id ?>" class="btn btn-sm btn-primary"><i class="fa fa-eye fa-fw"></i> View</a>
+                      <a href="?action=view-invoice&month=<?= $value ?>&std_id=<?= $std_id ?>" class="btn btn-sm btn-primary">
+                        <i class="fa fa-eye fa-fw"></i>
+
+                        View
+                      </a>
                     <?php else : ?>
-                      <a href="#" data-toggle="modal" data-month="<?php echo ucwords($value) ?>" data-target="#paynow-popup" class="btn btn-sm btn-warning paynow-btn"><i class="fa fa-money-check-alt fa-fw"></i> Pay Now</a>
+                      <a href="#" data-toggle="modal" data-month="<?= ucwords($value) ?>" data-target="#paynow-popup" class="btn btn-sm btn-warning paynow-btn">
+                        <i class="fa fa-money-check-alt fa-fw"></i>
+
+                        Pay Now
+                      </a>
                     <?php endif; ?>
                   </td>
                 </tr>
@@ -306,7 +314,7 @@ if (isset($_GET['action']) and $_GET['action'] == 'view-invoice') { ?>
                 <div class="form-group">
                   <label for="">Full Name</label>
 
-                  <input type="text" name="firstname" readonly class="form-control" value="<?php echo $student->name ?>">
+                  <input type="text" name="firstname" readonly class="form-control" value="<?= $student->name ?>">
                 </div>
               </div>
 
@@ -314,7 +322,7 @@ if (isset($_GET['action']) and $_GET['action'] == 'view-invoice') { ?>
                 <div class="form-group">
                   <label for="">Email Address</label>
 
-                  <input type="email" name="email" readonly class="form-control" value="<?php echo $student->email ?>">
+                  <input type="email" name="email" readonly class="form-control" value="<?= $student->email ?>">
                 </div>
               </div>
 
@@ -330,7 +338,7 @@ if (isset($_GET['action']) and $_GET['action'] == 'view-invoice') { ?>
                 <div class="form-group">
                   <label for="">Months</label>
 
-                  <input type="text" name="month" readonly class="form-control" id="month" value="<?php echo $student->name ?>">
+                  <input type="text" name="month" readonly class="form-control" id="month" value="<?= $student->name ?>">
                 </div>
               </div>
 
@@ -368,5 +376,5 @@ if (isset($_GET['action']) and $_GET['action'] == 'view-invoice') { ?>
 
 <?php
 }
-require 'footer.php';
+require_once __DIR__ . '/footer.php';
 ?>
