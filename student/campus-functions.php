@@ -1,7 +1,7 @@
 <?php
-require '../includes/config.php';
-require 'header.php';
-require 'sidebar.php';
+require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/header.php';
+require_once __DIR__ . '/sidebar.php';
 ?>
 
 <!-- Content Header (Page header) -->
@@ -11,19 +11,18 @@ require 'sidebar.php';
 
       <div class="col-sm-6">
         <h1 class="m-0 text-dark">Time Table</h1>
-      </div><!-- /.col -->
+      </div>
 
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
           <li class="breadcrumb-item"><a href="#">Student</a></li>
           <li class="breadcrumb-item active">Time Table</li>
         </ol>
-      </div><!-- /.col -->
+      </div>
 
-    </div><!-- /.row -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </div>
-<!-- /.content-header -->
 
 <!-- Main content -->
 <section class="content">
@@ -33,8 +32,7 @@ require 'sidebar.php';
 
       </div>
     </div>
-  </div><!--/. container-fluid -->
+  </div>
 </section>
-<!-- /.content -->
 
-<?php require 'footer.php'; ?>
+<?php require_once __DIR__ . '/footer.php'; ?>
