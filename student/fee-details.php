@@ -312,14 +312,14 @@ if ( isset($_GET['action']) and $_GET['action'] == 'view-invoice' ) :
 
         <div class="modal-body">
           <form action="" method="post">
-            <input type="hidden" name="amount" readonly="readonly" value="500"/>
+            <input type="hidden" name="amount" value="500" readonly>
 
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-group">
                   <label for="">Full Name</label>
 
-                  <input type="text" name="firstname" readonly class="form-control" value="<?= $student->name ?>">
+                  <input type="text" name="firstname" value="<?= $student->name ?>" class="form-control" readonly>
                 </div>
               </div>
 
@@ -327,7 +327,7 @@ if ( isset($_GET['action']) and $_GET['action'] == 'view-invoice' ) :
                 <div class="form-group">
                   <label for="">Email Address</label>
 
-                  <input type="email" name="email" readonly class="form-control" value="<?= $student->email ?>">
+                  <input type="email" name="email" value="<?= $student->email ?>" class="form-control" readonly>
                 </div>
               </div>
 
@@ -335,7 +335,7 @@ if ( isset($_GET['action']) and $_GET['action'] == 'view-invoice' ) :
                 <div class="form-group">
                   <label for="">Phone</label>
 
-                  <input type="text" name="phone" readonly class="form-control" value="1234567890">
+                  <input type="text" name="phone" value="1234567890" class="form-control" readonly>
                 </div>
               </div>
 
@@ -343,7 +343,7 @@ if ( isset($_GET['action']) and $_GET['action'] == 'view-invoice' ) :
                 <div class="form-group">
                   <label for="">Months</label>
 
-                  <input type="text" name="month" readonly class="form-control" id="month" value="<?= $student->name ?>">
+                  <input type="text" name="month" id="month" value="<?= $student->name ?>" class="form-control" readonly>
                 </div>
               </div>
 
