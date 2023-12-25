@@ -39,9 +39,9 @@ require_once __DIR__ . '/sidebar.php';
       </div>
 
       <div class="card-body">
-        <strong>Name: </strong> <?php echo get_users(array('id' => $std_id))[0]->name ?><br>
+        <strong>Name: </strong> <?= get_users(array('id' => $std_id))[0]->name ?><br>
 
-        <strong>Class: </strong> <?php echo $class->title ?>
+        <strong>Class: </strong> <?= $class->title ?>
       </div>
     </div>
 
@@ -72,10 +72,10 @@ require_once __DIR__ . '/sidebar.php';
           foreach ( unserialize($row->attendance_value) as $date => $value)
           { ?>
             <tr>
-              <td><?php echo $date; ?></td>
-              <td><?php echo ($value['signin_at']) ? 'Present' : 'Absent'; ?></td>
-              <td><?php echo ($value['signin_at']) ? date('d-m-yyy h:i:s', $value['signin_at']) : ''; ?></td>
-              <td><?php echo ($value['signout_at']) ? date('d-m-yyy h:i:s', $value['signout_at']) : ''; ?></td>
+              <td><?= $date ?></td>
+              <td><?= ($value['signin_at']) ? 'Present' : 'Absent' ?></td>
+              <td><?= ($value['signin_at']) ? date('d-m-yyy h:i:s', $value['signin_at']) : '' ?></td>
+              <td><?= ($value['signout_at']) ? date('d-m-yyy h:i:s', $value['signout_at']) : '' ?></td>
             </tr>
           <?php } ?>
           </tbody>
