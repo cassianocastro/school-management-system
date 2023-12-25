@@ -1,7 +1,7 @@
 <?php
-require '../includes/config.php';
-require 'header.php';
-require 'sidebar.php';
+require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/header.php';
+require_once __DIR__ . '/sidebar.php';
 ?>
 
 <!-- Content Header (Page header) -->
@@ -23,7 +23,6 @@ require 'sidebar.php';
     </div>
   </div>
 </div>
-<!-- /.content-header -->
 
 <!-- Main content -->
 <section class="content">
@@ -61,6 +60,5 @@ require 'sidebar.php';
     </div>
   </div>
 </section>
-<!-- /.content -->
 
-<?php require 'footer.php'; ?>
+<?php require_once __DIR__ . '/footer.php'; ?>
