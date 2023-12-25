@@ -16,11 +16,13 @@
 </div><!-- ./wrapper -->
 
 <!--
-  1. Bootstrap
-  2. overlayScrollbars
-  3. AdminLTE App
-  4. OPTIONAL SCRIPTS
+  1. jQuery
+  2. Bootstrap
+  3. overlayScrollbars
+  4. AdminLTE App
+  5. OPTIONAL SCRIPTS
 -->
+<script src="../plugins/jquery/jquery.min.js"></script>
 <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <script src="../dist/js/adminlte.js"></script>
