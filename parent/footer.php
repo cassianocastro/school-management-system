@@ -15,8 +15,7 @@
       <b>Version</b> 1.0
     </div>
   </footer>
-</div>
-<!-- ./wrapper -->
+</div><!-- ./wrapper -->
 
 <!--
   1. jQuery

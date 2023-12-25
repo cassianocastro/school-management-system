@@ -160,7 +160,7 @@
     </li>
 
     <li class="nav-item">
-      <a title="Logout" href="../logout.php" class="nav-link">
+      <a title="Logout" href="../actions/logout.php" class="nav-link">
         Logout
 
         <i class="fa fa-sign-out-alt"></i>

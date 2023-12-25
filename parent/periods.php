@@ -11,19 +11,18 @@ require_once __DIR__ . '/sidebar.php';
 
       <div class="col-sm-6">
         <h1 class="m-0 text-dark">Periods</h1>
-      </div><!-- /.col -->
+      </div>
 
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
           <li class="breadcrumb-item"><a href="#">Student</a></li>
           <li class="breadcrumb-item active">Periods</li>
         </ol>
-      </div><!-- /.col -->
+      </div>
 
-    </div><!-- /.row -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </div>
-<!-- /.content-header -->
 
 <!-- Main content -->
 <section class="content">
@@ -39,7 +38,6 @@ require_once __DIR__ . '/sidebar.php';
             <th>To</th>
           </tr>
         </thead>
-
         <tbody>
           <?php
           $count   = 1;
@@ -61,8 +59,7 @@ require_once __DIR__ . '/sidebar.php';
       </table>
     </div>
 
-  </div><!--/. container-fluid -->
+  </div>
 </section>
-<!-- /.content -->
 
 <?php require_once __DIR__ . '/footer.php'; ?>

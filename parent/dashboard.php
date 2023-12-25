@@ -11,19 +11,18 @@ require_once __DIR__ . '/sidebar.php';
 
       <div class="col-sm-6">
         <h1 class="m-0 text-dark">Dashboard</h1>
-      </div><!-- /.col -->
+      </div>
 
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
           <li class="breadcrumb-item"><a href="#">Parent</a></li>
           <li class="breadcrumb-item active">Dashboard</li>
         </ol>
-      </div><!-- /.col -->
+      </div>
 
-    </div><!-- /.row -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </div>
-<!-- /.content-header -->
 
 <!-- Main content -->
 <section class="content">
@@ -38,11 +37,9 @@ require_once __DIR__ . '/sidebar.php';
             <span class="info-box-text">Total Students</span>
             <span class="info-box-number">2000</span>
           </div>
-          <!-- /.info-box-content -->
         </div>
-        <!-- /.info-box -->
       </div>
-      <!-- /.col -->
+
       <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box mb-3">
           <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-users"></i></span>
@@ -51,11 +48,8 @@ require_once __DIR__ . '/sidebar.php';
             <span class="info-box-text">Total Teachers</span>
             <span class="info-box-number">50</span>
           </div>
-          <!-- /.info-box-content -->
         </div>
-        <!-- /.info-box -->
       </div>
-      <!-- /.col -->
 
       <!-- fix for small devices only -->
       <div class="clearfix hidden-md-up"></div>
@@ -68,11 +62,9 @@ require_once __DIR__ . '/sidebar.php';
             <span class="info-box-text">Total Courses</span>
             <span class="info-box-number">100</span>
           </div>
-          <!-- /.info-box-content -->
         </div>
-        <!-- /.info-box -->
       </div>
-      <!-- /.col -->
+
       <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box mb-3">
           <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-question"></i></span>
@@ -81,16 +73,12 @@ require_once __DIR__ . '/sidebar.php';
             <span class="info-box-text">New Inquiries</span>
             <span class="info-box-number">10</span>
           </div>
-          <!-- /.info-box-content -->
         </div>
-        <!-- /.info-box -->
       </div>
-      <!-- /.col -->
     </div>
-    <!-- /.row -->
+
     <hr>
-  </div><!--/. container-fluid -->
+  </div>
 </section>
-<!-- /.content -->
 
 <?php require_once __DIR__ . '/footer.php'; ?>
