@@ -99,7 +99,7 @@ if ( isset($_POST['submit']) )
 
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="#">Teacher</a></li>
+          <li class="breadcrumb-item"><a href="#">Parent</a></li>
           <li class="breadcrumb-item active">Study Materials</li>
         </ol>
       </div>
@@ -125,7 +125,7 @@ if ( isset($_POST['submit']) )
       </div>
 
       <div class="card-body">
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="./" method="post" enctype="multipart/form-data">
           <div class="form-group">
             <label for="name">Title</label>
 
@@ -135,7 +135,7 @@ if ( isset($_POST['submit']) )
           <div class="form-group">
             <label for="name">Description</label>
 
-            <textarea name="description" id="description" placeholder="Description" cols="30" rows="10" class="form-control"></textarea>
+            <textarea name="description" id="description" placeholder="Enter the description" cols="30" rows="10" class="form-control"></textarea>
           </div>
 
           <div class="form-group">
@@ -208,16 +208,11 @@ if ( isset($_POST['submit']) )
               $count = 1;
               $query = mysqli_query($db_conn, "SELECT * FROM posts WHERE type = 'study-material' AND author = 1");
 
-              while ( $att = mysqli_fetch_object($query) )
-              {
-                $class_id = get_metadata($att->id, 'class')[0]->meta_value;
-
-                $class = get_post(['id' => $class_id]);
-
-                $subject_id = get_metadata($att->id, 'subject')[0]->meta_value;
-
-                $subject = get_post(['id' => $subject_id]);
-
+              while ( $att = mysqli_fetch_object($query) ) :
+                $class_id        = get_metadata($att->id, 'class')[0]->meta_value;
+                $class           = get_post(['id' => $class_id]);
+                $subject_id      = get_metadata($att->id, 'subject')[0]->meta_value;
+                $subject         = get_post(['id' => $subject_id]);
                 $file_attachment = get_metadata($att->id, 'file_attachment')[0]->meta_value;
 
                 // $file_attachment = get_post(['id' => $file_attachment]);
@@ -226,12 +221,12 @@ if ( isset($_POST['submit']) )
                 <tr>
                   <td><?= $count++ ?></td>
                   <td><?= $att->title ?></td>
-                  <td><a href="<?= "../assets/uploads/$file_attachment"; ?>">Download File</a></td>
+                  <td><a href="<?= "../assets/uploads/$file_attachment" ?>">Download File</a></td>
                   <td><?= $class->title ?></td>
                   <td><?= $subject->title ?></td>
                   <td><?= $att->publish_date ?></td>
                 </tr>
-              <?php } ?>
+              <?php endwhile; ?>
             </toby>
           </table>
         </div>
