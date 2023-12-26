@@ -16,7 +16,7 @@
       <div class="col-lg-3 mb-4">
         <div class="card">
           <div>
-            <img src="./dist/uploads/<?= $course->image ?>" alt="" class="img-fluid rounded-top course-image">
+            <img src="assets/uploads/<?= $course->image ?>" alt="" class="img-fluid rounded-top course-image">
           </div>
 
           <div class="card-body">
