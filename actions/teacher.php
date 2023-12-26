@@ -2,8 +2,6 @@
 // error_reporting(E_ALL);
 // ini_set("display_errors", true);
 
-require_once __DIR__ . '/../includes/config.php';
-
 $site_url = "http://{$_SERVER['SERVER_NAME']}";
 
 if ( isset($_SESSION['login']) )
