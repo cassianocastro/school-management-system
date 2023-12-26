@@ -2,7 +2,9 @@
   <div class="text-center mb-5">
     <h2 class="font-weight-bold">What People Says</h2>
 
-    <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus perspiciatis obcaecati facilis nulla</p>
+    <p class="text-muted">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus perspiciatis obcaecati facilis nulla
+    </p>
   </div>
 
   <div class="container">
@@ -13,15 +15,17 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus corporis quasi dolorum officia illum, cumque quo accusamus expedita dignissimos eligendi libero eum perferendis quos, aliquid assumenda! Cumque a quis molestias.
           </div>
 
-          <i class="fa fa-quote-left fa-3x position-absolute" style="top:.5rem; left: .5rem; opacity:.2"></i>
+          <i class="fa fa-quote-left fa-3x position-absolute" style="top: .5rem; left: .5rem; opacity: .2"></i>
         </div>
 
         <div class="text-center mt-n2">
-          <img src="./assets/images/placeholder.jpg" alt="" class="rounded-circle border" width="100" height="100">
+          <img src="assets/img/placeholder.jpg" alt="" height="100" width="100" class="rounded-circle border">
 
           <h6 class="mb-0 font-weight-bold">Name Of Candidate</h6>
 
-          <p><i>Designation</i></p>
+          <p>
+            <i>Designation</i>
+          </p>
         </div>
       </div>
 
@@ -31,15 +35,17 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus corporis quasi dolorum officia illum, cumque quo accusamus expedita dignissimos eligendi libero eum perferendis quos, aliquid assumenda! Cumque a quis molestias.
           </div>
 
-          <i class="fa fa-quote-left fa-3x position-absolute" style="top:.5rem; left: .5rem; opacity:.2"></i>
+          <i class="fa fa-quote-left fa-3x position-absolute" style="top: .5rem; left: .5rem; opacity: .2"></i>
         </div>
 
         <div class="text-center mt-n2">
-          <img src="./assets/images/placeholder.jpg" alt="" class="rounded-circle border" width="100" height="100">
+          <img src="assets/img/placeholder.jpg" alt="" height="100" width="100" class="rounded-circle border">
 
           <h6 class="mb-0 font-weight-bold">Name Of Candidate</h6>
 
-          <p><i>Designation</i></p>
+          <p>
+            <i>Designation</i>
+          </p>
         </div>
       </div>
     </div>
