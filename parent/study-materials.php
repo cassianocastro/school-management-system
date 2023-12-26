@@ -141,12 +141,12 @@ if ( isset($_POST['submit']) )
           <div class="form-group">
             <label for="name">Select Class</label>
 
-            <select required name="class" class="form-control" id="class">
-              <option value="">Select Class</option>
+            <select name="class" id="class" class="form-control" required>
+              <option value="" label="Select"></option>
               <?php
               foreach ( $classes as $key => $class )
               {
-                echo '<option value="' . $class->id . '">' . $class->title . '</option>';
+                echo "<option value=\"{$class->id}\" label=\"{$class->title}\"></option>";
               }
               ?>
             </select>
@@ -155,12 +155,12 @@ if ( isset($_POST['submit']) )
           <div class="form-group">
             <label for="category">Select Your Subject</label>
 
-            <select required name="subject" class="form-control" id="subject">
-              <option value="">Select Your Subject</option>
+            <select name="subject" id="subject" class="form-control" required>
+              <option value="" label="Select"></option>
               <?php
               foreach ( $subjects as $key => $subject )
               {
-                echo '<option value="' . $subject->id . '">' . $subject->title . '</option>';
+                echo "<option value=\"{$subject->id}\" label=\"{$subject->title}\"></option>";
               }
               ?>
             </select>
