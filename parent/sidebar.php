@@ -29,7 +29,7 @@
         <a href="#" class="dropdown-item">
           <!-- Message Start -->
           <div class="media">
-            <img src="<?= $site_url ?>dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+            <img src="<?= $site_url ?>assets/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
 
             <div class="media-body">
               <h3 class="dropdown-item-title">
@@ -57,7 +57,7 @@
         <a href="#" class="dropdown-item">
           <!-- Message Start -->
           <div class="media">
-            <img src="<?= $site_url ?>dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <img src="<?= $site_url ?>assets/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
 
             <div class="media-body">
               <h3 class="dropdown-item-title">
@@ -85,7 +85,7 @@
         <a href="#" class="dropdown-item">
           <!-- Message Start -->
           <div class="media">
-            <img src="<?= $site_url ?>dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <img src="<?= $site_url ?>assets/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
 
             <div class="media-body">
               <h3 class="dropdown-item-title">
@@ -175,7 +175,7 @@
 
   <!-- Brand Logo -->
   <a href="<?= $site_url ?>" class="brand-link">
-    <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" style="opacity: .8" class="brand-image img-circle elevation-3">
+    <img src="../assets/img/AdminLTELogo.png" alt="AdminLTE Logo" style="opacity: .8" class="brand-image img-circle elevation-3">
 
     <span class="brand-text font-weight-light">Parent Panel</span>
   </a>

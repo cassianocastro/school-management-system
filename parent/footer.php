@@ -27,8 +27,8 @@
 <script defer src="../plugins/jquery/jquery.min.js"></script>
 <script defer src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script defer src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<script defer src="../dist/js/adminlte.js"></script>
-<script defer src="../dist/js/demo.js"></script>
+<script defer src="../assets/js/adminlte.js"></script>
+<script defer src="../assets/js/demo.js"></script>
 <script>
   (function () {
     var path = window.location.href;
