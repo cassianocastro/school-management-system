@@ -2,7 +2,9 @@
   <strong>
     Copyright &copy; 2020
 
-    <a rel="external" type="text/html" hreflang="en" href="http://technostudy.co.in">School Managment System</a>.
+    <a title="School SysManager" rel="external" type="text/html" hreflang="en" href="http://technostudy.co.in">
+      School Management System
+    </a>.
   </strong>
 
   All rights reserved.
