@@ -27,6 +27,10 @@ if ( isset($_POST["login"]) )
         {
             header("Location: ../teacher");
         }
+        elseif ( $user_type === "parent" )
+        {
+            header("Location: ../parent");
+        }
         else
         {
             header("Location: ../$user_type/dashboard.php");
