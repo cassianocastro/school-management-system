@@ -31,7 +31,9 @@ require_once __DIR__ . '/sidebar.php';
     <div class="row">
       <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box">
-          <span class="info-box-icon bg-info elevation-1"><i class="fas fa-graduation-cap"></i></span>
+          <span class="info-box-icon bg-info elevation-1">
+            <i class="fas fa-graduation-cap"></i>
+          </span>
 
           <div class="info-box-content">
             <span class="info-box-text">Total Students</span>
@@ -42,7 +44,9 @@ require_once __DIR__ . '/sidebar.php';
 
       <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box mb-3">
-          <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-users"></i></span>
+          <span class="info-box-icon bg-danger elevation-1">
+            <i class="fas fa-users"></i>
+          </span>
 
           <div class="info-box-content">
             <span class="info-box-text">Total Teachers</span>
@@ -56,7 +60,9 @@ require_once __DIR__ . '/sidebar.php';
 
       <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box mb-3">
-          <span class="info-box-icon bg-success elevation-1"><i class="fas fa-book-open"></i></span>
+          <span class="info-box-icon bg-success elevation-1">
+            <i class="fas fa-book-open"></i>
+          </span>
 
           <div class="info-box-content">
             <span class="info-box-text">Total Courses</span>
@@ -67,7 +73,9 @@ require_once __DIR__ . '/sidebar.php';
 
       <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box mb-3">
-          <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-question"></i></span>
+          <span class="info-box-icon bg-warning elevation-1">
+            <i class="fas fa-question"></i>
+          </span>
 
           <div class="info-box-content">
             <span class="info-box-text">New Inquiries</span>
@@ -78,6 +86,7 @@ require_once __DIR__ . '/sidebar.php';
     </div>
 
     <hr>
+
   </div>
 </section>
 
