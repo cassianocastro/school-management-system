@@ -1,7 +1,7 @@
 <?php
-require '../includes/config.php';
-require 'header.php';
-require 'sidebar.php';
+require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/header.php';
+require_once __DIR__ . '/sidebar.php';
 ?>
 
 <!-- Content Header (Page header) -->
@@ -53,27 +53,24 @@ require 'sidebar.php';
               $count = 1;
               $query = mysqli_query($db_conn, "SELECT * FROM `posts` as p INNER JOIN `metadata` as m ON p.id = m.item_id WHERE p.`type` = 'study-material' AND m.meta_key = 'class' AND m.meta_value = $class");
 
-              while ( $att = mysqli_fetch_object($query) ) {
+              while ( $att = mysqli_fetch_object($query) ) :
                 // $class_id = get_metadata($att->id, 'class')[0]->meta_value;
 
-                $class = get_post(['id' => $class]);
-
-                $subject_id = get_metadata($att->item_id, 'subject')[0]->meta_value;
-
-                $subject = get_post(['id' => $subject_id]);
-
+                $class           = get_post(['id' => $class]);
+                $subject_id      = get_metadata($att->item_id, 'subject')[0]->meta_value;
+                $subject         = get_post(['id' => $subject_id]);
                 $file_attachment = get_metadata($att->item_id, 'file_attachment')[0]->meta_value;
               ?>
                 <tr>
                   <td><?= $count++ ?></td>
                   <td><?= $att->title ?></td>
-                  <td><a href="<?= "../dist/uploads/$file_attachment"; ?>">Download File</a></td>
+                  <td><a href="<?= "../assets/uploads/$file_attachment" ?>">Download File</a></td>
                   <td><?= $class->title ?></td>
                   <td><?= $subject->title ?></td>
                   <td><?= $att->publish_date ?></td>
                 </tr>
-              <?php } ?>
-              </toby>
+              <?php endwhile; ?>
+            </toby>
           </table>
         </div>
       </div>
@@ -81,4 +78,4 @@ require 'sidebar.php';
   </div>
 </section>
 
-<?php require 'footer.php'; ?>
+<?php require_once __DIR__ . '/footer.php'; ?>
