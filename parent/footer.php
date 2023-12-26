@@ -3,8 +3,9 @@
   <footer class="main-footer">
     <strong>
       Copyright &copy; 2020
-      <a rel="external" type="text/html" hreflang="en" href="https://technostudy.co.in">
-        School Managment System
+
+      <a title="School SysManager" rel="external" type="text/html" hreflang="en" href="https://technostudy.co.in">
+        School Management System
       </a>
       .
     </strong>
