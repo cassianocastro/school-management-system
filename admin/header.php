@@ -51,7 +51,7 @@
         <a class="dropdown-item" href="#">
           <!-- Message Start -->
           <div class="media">
-            <img src="<?= $site_url ?>/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+            <img src="<?= $site_url ?>/assets/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
 
             <div class="media-body">
               <h3 class="dropdown-item-title">
@@ -73,7 +73,7 @@
         <a class="dropdown-item" href="#">
           <!-- Message Start -->
           <div class="media">
-            <img src="<?= $site_url ?>/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <img src="<?= $site_url ?>/assets/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
 
             <div class="media-body">
               <h3 class="dropdown-item-title">
@@ -95,7 +95,7 @@
         <a class="dropdown-item" href="#">
           <!-- Message Start -->
           <div class="media">
-            <img src="<?= $site_url ?>/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <img src="<?= $site_url ?>/assets/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
 
             <div class="media-body">
               <h3 class="dropdown-item-title">

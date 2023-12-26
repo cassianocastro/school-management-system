@@ -12,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" type="text/css" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" type="text/css" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-  <link rel="stylesheet" type="text/css" href="../dist/css/adminlte.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
 
   <title>Admin's Dashboard | School SysManager</title>
@@ -70,6 +70,9 @@
                   </thead>
                   <tbody>
                     <?php
+                    // error_reporting(E_ALL);
+                    // ini_set("display_errors", true);
+
                     $usermeta = get_user_metadata($std_id);
                     $class = $usermeta['class'];
                     $count = 1;
@@ -85,7 +88,7 @@
                         AND
                           m.meta_key = 'class'
                         AND
-                          m.meta_value = $class
+                          m.meta_value = '$class'
                       SQL
                     );
 
@@ -101,7 +104,7 @@
                     <tr>
                       <td><?= $count++ ?></td>
                       <td><?= $att->title ?></td>
-                      <td><a href="<?="../dist/uploads/$file_attachment"; ?>">Download File</a></td>
+                      <td><a href="<?= "../assets/uploads/$file_attachment" ?>">Download File</a></td>
                       <td><?= $class->title ?></td>
                       <td><?= $subject->title ?></td>
                       <td><?= $att->publish_date ?></td>
@@ -130,8 +133,8 @@
   <script defer src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
   <script defer src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
   <script defer src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-  <script defer src="../dist/js/adminlte.js"></script>
-  <script defer src="../dist/js/demo.js"></script>
+  <script defer src="../assets/js/adminlte.js"></script>
+  <script defer src="../assets/js/demo.js"></script>
   <!-- <script defer src="./dashboard.js"></script> -->
 </body>
 </html>

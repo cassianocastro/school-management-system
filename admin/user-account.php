@@ -41,7 +41,7 @@ if ( isset($_POST['submit']) )
   <link rel="stylesheet" type="text/css" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" type="text/css" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" type="text/css" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-  <link rel="stylesheet" type="text/css" href="../dist/css/adminlte.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
 
   <style>
@@ -477,8 +477,8 @@ if ( isset($_POST['submit']) )
   <script defer src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
   <script defer src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
   <script defer src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-  <script defer src="../dist/js/adminlte.js"></script>
-  <script defer src="../dist/js/demo.js"></script>
+  <script defer src="../assets/js/adminlte.js"></script>
+  <script defer src="../assets/js/demo.js"></script>
   <!-- <script defer src="./dashboard.js"></script> -->
   <?php require_once __DIR__ . '/user-account.js.php'; ?>
 </body>
