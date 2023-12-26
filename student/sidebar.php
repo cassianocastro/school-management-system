@@ -30,7 +30,7 @@
         <a class="dropdown-item" href="#">
           <!-- Message Start -->
           <div class="media">
-            <img src="<?= $site_url ?>dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+            <img src="<?= $site_url ?>assets/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
 
             <div class="media-body">
               <h3 class="dropdown-item-title">
@@ -60,7 +60,7 @@
         <a class="dropdown-item" href="#">
           <!-- Message Start -->
           <div class="media">
-            <img src="<?= $site_url ?>dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <img src="<?= $site_url ?>assets/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
 
             <div class="media-body">
               <h3 class="dropdown-item-title">
@@ -90,7 +90,7 @@
         <a class="dropdown-item" href="#">
           <!-- Message Start -->
           <div class="media">
-            <img src="<?= $site_url ?>dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <img src="<?= $site_url ?>assets/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
 
             <div class="media-body">
               <h3 class="dropdown-item-title">
@@ -166,7 +166,7 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" title="Logout" href="../logout.php">
+      <a class="nav-link" title="Logout" href="../actions/logout.php">
         Logout
 
         <i class="fa fa-sign-out-alt"></i>
@@ -180,7 +180,7 @@
   <!-- Brand Logo -->
   <a class="brand-link" href="<?= $site_url ?>student/profile.php">
     <img
-      src="../dist/img/AdminLTELogo.png"
+      src="../assets/img/AdminLTELogo.png"
       alt="AdminLTE Logo"
       class="brand-image img-circle elevation-3"
       style="opacity: .8"
@@ -230,7 +230,7 @@
               <a class="nav-link" href="<?= $site_url ?>student/subjects.php">
                 <i class="far fa-circle nav-icon"></i>
 
-                <p>Subects</p>
+                <p>Subjects</p>
               </a>
             </li>
 

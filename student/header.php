@@ -38,7 +38,7 @@ $stdmeta = get_user_metadata($std_id);
   -->
   <link rel="stylesheet" type="text/css" href="../plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" type="text/css" href="../dist/css/adminlte.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
 
   <title>Student's Dashboard | School SysManager</title>

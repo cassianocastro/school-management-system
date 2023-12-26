@@ -38,7 +38,7 @@ $section = get_post(['id' => $stdmeta['section']]);
         <div class="card card-primary card-outline">
           <div class="card-body box-profile">
             <div class="text-center">
-              <img src="../dist/img/AdminLTELogo.png" alt="User profile picture" class="profile-user-img img-fluid img-circle">
+              <img src="../assets/img/AdminLTELogo.png" alt="User profile picture" class="profile-user-img img-fluid img-circle">
             </div>
 
             <h3 class="profile-username text-center"><?= $student->name; ?></h3>

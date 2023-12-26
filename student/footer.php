@@ -25,8 +25,8 @@
 <script src="../plugins/jquery/jquery.min.js"></script>
 <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<script src="../dist/js/adminlte.js"></script>
-<script src="../dist/js/demo.js"></script>
+<script src="../assets/js/adminlte.js"></script>
+<script src="../assets/js/demo.js"></script>
 <script src="./index.js"></script>
 </body>
 </html>
