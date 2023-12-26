@@ -1,5 +1,5 @@
-<footer style="background: url(./assets/images/still-life-851328_1280.jpg) center/cover no-repeat">
-  <div class="py-5 text-white" style="background:#000000bb">
+<footer style="background: url(assets/img/still-life-851328_1280.jpg) center / cover no-repeat">
+  <div class="py-5 text-white" style="background: #000000bb">
     <div class="container-fluid">
       <div class="row">
 
@@ -7,11 +7,11 @@
           <h5>Useful Links</h5>
 
           <ul class="fa-ul ml-4">
-            <li><a href="" class="text-light"><i class="fa-li fa fa-angle-right"></i>Home</a></li>
-            <li><a href="" class="text-light"><i class="fa-li fa fa-angle-right"></i>About Us</a></li>
-            <li><a href="" class="text-light"><i class="fa-li fa fa-angle-right"></i>Courses</a></li>
-            <li><a href="" class="text-light"><i class="fa-li fa fa-angle-right"></i>Terms & Conditions</a></li>
-            <li><a href="" class="text-light"><i class="fa-li fa fa-angle-right"></i>Privacy Policy</a></li>
+            <li><a href="#" class="text-light"><i class="fa-li fa fa-angle-right"></i>Home</a></li>
+            <li><a href="#" class="text-light"><i class="fa-li fa fa-angle-right"></i>About Us</a></li>
+            <li><a href="#" class="text-light"><i class="fa-li fa fa-angle-right"></i>Courses</a></li>
+            <li><a href="#" class="text-light"><i class="fa-li fa fa-angle-right"></i>Terms & Conditions</a></li>
+            <li><a href="#" class="text-light"><i class="fa-li fa fa-angle-right"></i>Privacy Policy</a></li>
           </ul>
         </div>
 
@@ -49,13 +49,15 @@
         <div class="col-lg-3">
           <h5>Subscribe Now</h5>
 
-          <form action="">
+          <form action="./" method="post">
             <!-- Material input -->
             <div class="form-group">
-              <input type="email" id="email-s" class="form-control" placeholder="Your Email">
+              <input type="email" id="email-s" placeholder="Your Email" class="form-control">
             </div>
 
-            <button class="btn btn-secondary py-2 btn-block">Submit</button>
+            <button type="submit" class="btn btn-secondary py-2 btn-block">
+              Submit
+            </button>
           </form>
         </div>
       </div>
@@ -65,6 +67,8 @@
 
 <section class="py-2 bg-dark text-light">
   <div class="container-fluid">
-    Copyright 2020-2020 All Rights Reseved. <a href="#" class="text-light">School Management System</a>
+    Copyright 2020-2020 All Rights Reseved.
+
+    <a class="text-light" href="#">School Management System</a>
   </div>
 </section>
