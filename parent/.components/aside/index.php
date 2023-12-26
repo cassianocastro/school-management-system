@@ -3,7 +3,7 @@
 
   <!-- Brand Logo -->
   <a href="<?= $site_url ?>" class="brand-link">
-    <img src="../assets/img/AdminLTELogo.png" alt="AdminLTE Logo" style="opacity: .8" class="brand-image img-circle elevation-3">
+    <img src="<?= $site_url ?>assets/img/AdminLTELogo.png" alt="AdminLTE Logo" style="opacity: .8" class="brand-image img-circle elevation-3">
 
     <span class="brand-text font-weight-light">Parent Panel</span>
   </a>
@@ -75,7 +75,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= $site_url ?>parent/periods.php" class="nav-link">
+              <a href="<?= $site_url ?>parent/.components/routines/periods.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Periods</p>
@@ -83,7 +83,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="<?= $site_url ?>parent/timetable.php" class="nav-link">
+              <a href="<?= $site_url ?>parent/.components/routines/timetable.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Time Table</p>
@@ -161,7 +161,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= $site_url ?>parent/study-materials.php" class="nav-link">
+              <a href="<?= $site_url ?>parent/.components/study-materials" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Study Materials</p>
