@@ -39,7 +39,7 @@ $parent = get_user_data($std_id);
   <link rel="stylesheet" type="text/css" href="../assets/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
 
-  <title>Parent | Dashboard</title>
+  <title>Parent's Dashboard | School SysManager</title>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
   <div class="wrapper">
