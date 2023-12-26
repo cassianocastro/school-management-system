@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set("display_errors", true);
+
 require_once __DIR__ . '/../includes/config.php';
 require_once __DIR__ . '/header.php';
 require_once __DIR__ . '/sidebar.php';
@@ -67,14 +70,15 @@ require_once __DIR__ . '/sidebar.php';
                         <p>
                           <b>Teacher: </b>
                           <?php
-                          $teacher_id = get_metadata($timetable->item_id, 'teacher_id',)[0]->meta_value;
+                          $teacher_id = get_metadata($timetable->item_id, 'teacher_id')[0]->meta_value;
 
-                          echo get_user_data($teacher_id)[0]->name;
+                          // echo get_user_data($teacher_id)[0]->name;
+                          echo get_user_data($teacher_id)->name;
                           ?>
                           <br>
                           <b>Subject: </b>
                           <?php
-                          $subject_id = get_metadata($timetable->item_id, 'subject_id',)[0]->meta_value;
+                          $subject_id = get_metadata($timetable->item_id, 'subject_id')[0]->meta_value;
 
                           echo get_post(array('id' => $subject_id))->title;
                           ?>
