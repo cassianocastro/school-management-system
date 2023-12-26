@@ -2,7 +2,7 @@
   <!-- Brand Logo -->
   <a class="brand-link" href="<?= $site_url ?>">
     <img
-      src="<?= $site_url ?>/dist/img/AdminLTELogo.png"
+      src="<?= $site_url ?>/assets/img/AdminLTELogo.png"
       alt="AdminLTE Logo"
       style="opacity: .8"
       class="brand-image img-circle elevation-3">

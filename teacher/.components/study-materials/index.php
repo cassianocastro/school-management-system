@@ -32,7 +32,7 @@ if ( isset($_POST['submit']) )
   $file        = $_FILES["attachment"]["name"];
   $today       = date('Y-m-d');
 
-  $target_dir  = "../dist/uploads/";
+  $target_dir  = "../assets/uploads/";
   $target_file = $target_dir . basename($_FILES["attachment"]["name"]);
   // $FileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
   $uploadOk = 1;
@@ -117,7 +117,7 @@ if ( isset($_POST['submit']) )
 
   <link rel="stylesheet" type="text/css" href="../../../plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="../../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" type="text/css" href="../../../dist/css/adminlte.min.css">
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
 
   <title>Teacher's Dashboard | School SysManager</title>
@@ -267,7 +267,7 @@ if ( isset($_POST['submit']) )
                         <tr>
                           <td><?= $count++ ?></td>
                           <td><?= $att->title ?></td>
-                          <td><a href="<?= "http://{$_SERVER['SERVER_NAME']}/dist/uploads/$file_attachment" ?>">Download File</a></td>
+                          <td><a href="<?= "http://{$_SERVER['SERVER_NAME']}/assets/uploads/$file_attachment" ?>">Download File</a></td>
                           <td><?= $class->title ?></td>
                           <td><?= $subject->title ?></td>
                           <td><?= $att->publish_date ?></td>
@@ -291,8 +291,8 @@ if ( isset($_POST['submit']) )
   <script defer src="../../../plugins/jquery/jquery.min.js"></script>
   <script defer src="../../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script defer src="../../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-  <script defer src="../../../dist/js/adminlte.js"></script>
-  <script defer src="../../../dist/js/demo.js"></script>
+  <script defer src="../../../assets/js/adminlte.js"></script>
+  <script defer src="../../../assets/js/demo.js"></script>
   <script defer src="../../index.js"></script>
 </body>
 </html>
