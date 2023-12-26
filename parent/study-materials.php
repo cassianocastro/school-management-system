@@ -129,17 +129,17 @@ if ( isset($_POST['submit']) )
           <div class="form-group">
             <label for="name">Title</label>
 
-            <input type="text" name="title" placeholder="enter the title" class="form-control">
+            <input type="text" name="title" placeholder="Enter the title" class="form-control">
           </div>
 
           <div class="form-group">
             <label for="name">Description</label>
 
-            <textarea name="description" id="description" cols="30" rows="10" class="form-control">Description</textarea>
+            <textarea name="description" id="description" placeholder="Description" cols="30" rows="10" class="form-control"></textarea>
           </div>
 
           <div class="form-group">
-            <label for="name">Select Class</label>
+            <label for="name">Class</label>
 
             <select name="class" id="class" class="form-control" required>
               <option value="" label="Select"></option>
@@ -153,7 +153,7 @@ if ( isset($_POST['submit']) )
           </div>
 
           <div class="form-group">
-            <label for="category">Select Your Subject</label>
+            <label for="category">Your Subject</label>
 
             <select name="subject" id="subject" class="form-control" required>
               <option value="" label="Select"></option>
@@ -170,7 +170,7 @@ if ( isset($_POST['submit']) )
             <input type="file" name="attachment" id="attachment" required>
           </div>
 
-          <button name="submit" class="btn btn-success">Submit</button>
+          <button type="submit" name="submit" class="btn btn-success">Submit</button>
         </form>
       </div>
     </div>
