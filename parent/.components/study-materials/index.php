@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../../actions/parent.php';
 
 if ( isset($_POST['submit']) )
 {
