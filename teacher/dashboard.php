@@ -1,3 +1,7 @@
+<?php require_once __DIR__ . '/../includes/config.php'; ?>
+
+<?php require_once __DIR__ . '/../actions/teacher.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 <head>
