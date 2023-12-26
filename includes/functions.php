@@ -184,7 +184,7 @@ function get_user_metadata($user_id)
 
     $output = [];
 
-    $query = mysqli_query($db_conn, "SELECT * FROM usermeta WHERE user_id = $user_id");
+    $query = mysqli_query($db_conn, "SELECT * FROM usermeta WHERE user_id = '$user_id'");
 
     while ( $result = mysqli_fetch_object($query) )
     {
