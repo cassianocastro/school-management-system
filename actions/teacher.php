@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . '/../includes/config.php';
-
 // error_reporting(E_ALL);
 // ini_set("display_errors", true);
+
+require_once __DIR__ . '/../includes/config.php';
 
 $site_url = "http://{$_SERVER['SERVER_NAME']}";
 
@@ -22,5 +22,3 @@ else
 
 $std_id  = $_SESSION['user_id'];
 $student = get_user_data($std_id);
-
-require_once __DIR__ . '/dashboard.php';
