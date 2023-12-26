@@ -18,10 +18,10 @@
         <a type="text/html" hreflang="en" href="about-us.php" class="btn btn-secondary">Know More</a>
       </div>
 
-      <div class="col-lg-6" style="background: url(assets/images/still-life-851328_1280.jpg)">
+      <div class="col-lg-6" style="background: url(assets/img/still-life-851328_1280.jpg)">
 
       </div>
-      <!-- <img src="assets/images/still-life-851328_1280.jpg" alt="Still Life" class="col-lg-6"> -->
+      <!-- <img src="assets/img/still-life-851328_1280.jpg" alt="Still Life" class="col-lg-6"> -->
     </div>
   </div>
 </section>
