@@ -189,7 +189,7 @@
           with font-awesome or any other icon font library
         -->
         <li class="nav-item">
-          <a href="<?= $site_url ?>teacher/dashboard.php" class="nav-link">
+          <a href="<?= $site_url ?>parent/dashboard.php" class="nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
 
             <p>Dashboard</p>
@@ -209,7 +209,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= $site_url ?>teacher/courses.php" class="nav-link">
+              <a href="<?= $site_url ?>parent/courses.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Courses</p>
@@ -217,7 +217,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="<?= $site_url ?>teacher/subjects.php" class="nav-link">
+              <a href="<?= $site_url ?>parent/subjects.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Subjects</p>
@@ -225,7 +225,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="<?= $site_url ?>teacher/lessons.php" class="nav-link">
+              <a href="<?= $site_url ?>parent/lessons.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Lessons</p>
@@ -247,7 +247,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= $site_url ?>teacher/periods.php" class="nav-link">
+              <a href="<?= $site_url ?>parent/periods.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Periods</p>
@@ -255,7 +255,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="<?= $site_url ?>teacher/timetable.php" class="nav-link">
+              <a href="<?= $site_url ?>parent/timetable.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Time Table</p>
@@ -289,7 +289,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= $site_url ?>teacher/attendance.php" class="nav-link">
+              <a href="<?= $site_url ?>parent/attendance.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Attendance</p>
@@ -311,7 +311,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= $site_url ?>teacher/fee-details.php" class="nav-link">
+              <a href="<?= $site_url ?>parent/fee-details.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Fee Details</p>
@@ -333,7 +333,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= $site_url ?>teacher/study-materials.php" class="nav-link">
+              <a href="<?= $site_url ?>parent/study-materials.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Study Materials</p>
