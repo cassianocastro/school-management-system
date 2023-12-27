@@ -213,7 +213,7 @@ if ( isset($_POST['submit']) )
               <div class="col-auto">
                 <div class="form-group">
                   <select name="class" id="class" class="form-control">
-                    <option value="" label="Select Class"></option>
+                    <option value="" label="Select"></option>
                     <?php
                     $args    = ['type' => 'class', 'status' => 'publish'];
                     $classes = get_posts($args);
@@ -231,7 +231,7 @@ if ( isset($_POST['submit']) )
               <div class="col-auto">
                 <div class="form-group" id="section-container">
                   <select name="section" id="section" class="form-control">
-                    <option value="" label="Select Section"></option>
+                    <option value="" label="Select"></option>
                     <?php
                     $args = ['type' => 'section', 'status' => 'publish'];
                     $sections = get_posts($args);
