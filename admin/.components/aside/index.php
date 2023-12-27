@@ -235,7 +235,7 @@
           </ul>
         </li>
 
-        <!-- Event -->
+        <!-- Events -->
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-calendar-check"></i>
@@ -246,13 +246,13 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?=$site_url?>/admin/campus-functions.php" class="nav-link">
+              <a href="<?=$site_url?>/admin/.components/events/campus-functions.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Campus Functions</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?=$site_url?>/admin/webinar-seminar.php" class="nav-link">
+              <a href="<?=$site_url?>/admin/.components/events/webinar-seminar.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Webinar/Seminar</p>
               </a>
