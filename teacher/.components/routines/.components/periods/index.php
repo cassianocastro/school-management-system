@@ -47,7 +47,6 @@ require_once __DIR__ . '/../../../../../actions/teacher.php';
           </div>
         </div>
       </div>
-      <!-- /.content-header -->
 
       <!-- Main content -->
       <section class="content">
