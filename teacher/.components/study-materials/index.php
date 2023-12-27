@@ -131,7 +131,6 @@ if ( isset($_POST['submit']) )
           </div>
         </div>
       </div>
-      <!-- /.content-header -->
 
       <!-- Main content -->
       <section class="content">
@@ -198,7 +197,6 @@ if ( isset($_POST['submit']) )
                 </form>
               </div>
             </div>
-            <!-- /.row -->
           <?php else: ?>
             <!-- Info boxes -->
             <div class="card">
@@ -233,18 +231,14 @@ if ( isset($_POST['submit']) )
                       $query = mysqli_query($db_conn, "SELECT * FROM `posts` WHERE `type` = 'study-material' AND author = 1");
 
                       while ( $att = mysqli_fetch_object($query) ) :
-                        $class_id = get_metadata($att->id, 'class')[0]->meta_value;
-
-                        $class = get_post(['id' => $class_id]);
-
-                        $subject_id = get_metadata($att->id, 'subject')[0]->meta_value;
-
-                        $subject = get_post(['id' => $subject_id]);
-
+                        $class_id        = get_metadata($att->id, 'class')[0]->meta_value;
+                        $class           = get_post(['id' => $class_id]);
+                        $subject_id      = get_metadata($att->id, 'subject')[0]->meta_value;
+                        $subject         = get_post(['id' => $subject_id]);
                         $file_attachment = get_metadata($att->id, 'file_attachment')[0]->meta_value;
 
-                        //   $file_attachment = get_post(['id' => $file_attachment]);
-                        //   echo '<pre>', print_r($class), '</pre>';
+                        // $file_attachment = get_post(['id' => $file_attachment]);
+                        // echo '<pre>', print_r($class), '</pre>';
                       ?>
                         <tr>
                           <td><?= $count++ ?></td>
