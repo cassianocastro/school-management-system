@@ -24,7 +24,7 @@ if ( isset($_POST['class_id']) and $_POST['class_id'] )
 }
 
 $type  = $_GET['user'];
-$query = mysqli_query($db_conn, "SELECT * FROM accounts WHERE type = $type");
+$query = mysqli_query($db_conn, "SELECT * FROM accounts WHERE type = '$type'");
 
 $data = [
     "draw" => $_POST['draw'],
@@ -38,7 +38,7 @@ $offset = $_POST['start'];
 $column = $_POST['order'][0]['column'];
 $dir    = $_POST['order'][0]['dir'];
 $order_by = ($column == 0) ? 'id' : $_POST['columns'][$column]['data'];
-$query  = mysqli_query($db_conn, "SELECT * FROM accounts WHERE type = $type ORDER BY $order_by $dir LIMIT $offset, $limit");
+$query  = mysqli_query($db_conn, "SELECT * FROM accounts WHERE type = '$type' ORDER BY '$order_by' '$dir' LIMIT $offset, $limit");
 
 $i = 1;
 
