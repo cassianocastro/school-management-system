@@ -2,7 +2,7 @@
   jQuery(document).ready(() => {
     jQuery('#users-table').DataTable({
       ajax: {
-        url: 'ajax.php?user=<?= $_GET['user'] ?>',
+        url: '../../../actions/ajax.php?user=<?= $_GET['user'] ?>',
         type: 'POST'
       },
       columns: [

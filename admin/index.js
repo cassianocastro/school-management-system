@@ -4,7 +4,7 @@ $('#class').change(() => {
     // alert($(this).val());
 
     $.ajax({
-        url: 'ajax.php',
+        url: '../actions/ajax.php',
         type: 'POST',
         data: { 'class_id': $(this).val() },
         dataType: 'json',

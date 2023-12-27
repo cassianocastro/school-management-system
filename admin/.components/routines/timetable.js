@@ -4,7 +4,7 @@ jQuery(document).ready(() => {
         // alert(jQuery(this).val());
 
         jQuery.ajax({
-            url:'ajax.php',
+            url:'../../../actions/ajax.php',
             type: 'POST',
             data: { 'class_id': jQuery(this).val() },
             dataType: 'json',
