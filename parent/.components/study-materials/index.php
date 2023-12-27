@@ -162,12 +162,9 @@ if ( isset($_POST['submit']) )
 
                   <select name="class" id="class" class="form-control" required>
                     <option value="" label="Select"></option>
-                    <?php
-                    foreach ( $classes as $key => $class )
-                    {
-                      echo "<option value=\"{$class->id}\" label=\"{$class->title}\"></option>";
-                    }
-                    ?>
+                    <?php foreach ( $classes as $class ) : ?>
+                      <option value="<?= $class->id ?>" label="<?= $class->title ?>"></option>
+                    <?php endforeach; ?>
                   </select>
                 </div>
 
@@ -176,12 +173,9 @@ if ( isset($_POST['submit']) )
 
                   <select name="subject" id="subject" class="form-control" required>
                     <option value="" label="Select"></option>
-                    <?php
-                    foreach ( $subjects as $key => $subject )
-                    {
-                      echo "<option value=\"{$subject->id}\" label=\"{$subject->title}\"></option>";
-                    }
-                    ?>
+                    <?php foreach ( $subjects as $subject ) : ?>
+                      <option value="<?= $subject->id ?>" label="<?= $subject->title ?>"></option>
+                    <?php endforeach; ?>
                   </select>
                 </div>
 
