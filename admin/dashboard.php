@@ -24,7 +24,7 @@
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
   <div class="wrapper">
 
-    <?php require_once __DIR__ . '/header.php'; ?>
+    <?php require_once __DIR__ . '/.components/header/index.php'; ?>
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -115,9 +115,9 @@
       </section>
     </div>
 
-    <?php require_once __DIR__ . '/footer.php'; ?>
+    <?php require_once __DIR__ . '/.components/footer/index.php'; ?>
 
-    <?php require_once __DIR__ . '/sidebar.php'; ?>
+    <?php require_once __DIR__ . '/.components/aside/index.php'; ?>
   </div>
 
   <!--

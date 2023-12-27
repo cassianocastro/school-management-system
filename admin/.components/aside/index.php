@@ -2,7 +2,7 @@
   <!-- Brand Logo -->
   <a href="<?=$site_url?>/admin" class="brand-link">
     <img
-      src="../assets/img/AdminLTELogo.png"
+      src="<?=$site_url?>/assets/img/AdminLTELogo.png"
       alt="AdminLTE Logo"
       class="brand-image img-circle elevation-3"
       style="opacity: .8">
@@ -34,31 +34,31 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?=$site_url?>/admin/user-account.php?user=counseller" class="nav-link">
+              <a href="<?=$site_url?>/admin/.components/accounts/?user=counseller" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Counseller</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?=$site_url?>/admin/user-account.php?user=teacher" class="nav-link">
+              <a href="<?=$site_url?>/admin/.components/accounts/?user=teacher" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Teachers</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?=$site_url?>/admin/user-account.php?user=student" class="nav-link">
+              <a href="<?=$site_url?>/admin/.components/accounts/?user=student" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Students</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?=$site_url?>/admin/user-account.php?user=parent" class="nav-link">
+              <a href="<?=$site_url?>/admin/.components/accounts/?user=parent" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Parents</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?=$site_url?>/admin/user-account.php?user=librarian" class="nav-link">
+              <a href="<?=$site_url?>/admin/.components/accounts/?user=librarian" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Librarian</p>
               </a>
