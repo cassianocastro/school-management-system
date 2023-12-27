@@ -1,6 +1,4 @@
 <?php
-require_once __DIR__ . '/../includes/config.php';
-
 //session_start();
 
 $site_url = "http://{$_SERVER['SERVER_NAME']}";
@@ -21,5 +19,3 @@ else
 {
   header("Location: ../login");
 }
-
-require_once __DIR__ . '/dashboard.php';
