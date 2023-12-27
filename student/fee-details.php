@@ -251,7 +251,7 @@ if ( isset($_GET['action']) and $_GET['action'] == 'view-invoice' ) :
 
               // echo '<pre>', print_r($paid_fees), '</pre>';
 
-              $months = ['january', 'fabruary', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+              $months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
 
               foreach ( $months as $key => $value )
               {
