@@ -1,25 +1,24 @@
-jQuery(document).ready(() => {
+"use strict";
 
-    jQuery('#class_id').change(() => {
-        // alert(jQuery(this).val());
+$('#class_id').change(() => {
+    // alert($(this).val());
 
-        jQuery.ajax({
-            url:'../../../actions/ajax.php',
-            type: 'POST',
-            data: { 'class_id': jQuery(this).val() },
-            dataType: 'json',
-            success: (response) => {
-                if ( response.count > 0 )
-                {
-                    jQuery('#section-container').show();
-                }
-                else
-                {
-                    jQuery('#section-container').hide();
-                }
-
-                jQuery('#section_id').html(response.options);
+    $.ajax({
+        url: '../../../actions/ajax.php',
+        type: 'POST',
+        data: { 'class_id': $(this).val() },
+        dataType: 'json',
+        success: (response) => {
+            if ( response.count > 0 )
+            {
+                $('#section-container').show();
             }
-        });
+            else
+            {
+                $('#section-container').hide();
+            }
+
+            $('#section_id').html(response.options);
+        }
     });
 });
