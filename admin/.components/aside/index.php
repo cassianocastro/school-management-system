@@ -121,13 +121,13 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?=$site_url?>/admin/periods.php" class="nav-link">
+              <a href="<?=$site_url?>/admin/.components/routines/periods.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Periods</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?=$site_url?>/admin/timetable.php" class="nav-link">
+              <a href="<?=$site_url?>/admin/.components/routines/timetable.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Time Table</p>
               </a>
