@@ -146,25 +146,25 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?=$site_url?>/admin/exam-form.php" class="nav-link">
+              <a href="<?=$site_url?>/admin/.components/examinations/exam-form.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Examination Form</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?=$site_url?>/admin/admin-card.php" class="nav-link">
+              <a href="<?=$site_url?>/admin/.components/examinations/admin-card.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Admin card</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?=$site_url?>/admin/paper-schedule.php" class="nav-link">
+              <a href="<?=$site_url?>/admin/.components/examinations/paper-schedule.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Paper Schedule</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?=$site_url?>/admin/results.php" class="nav-link">
+              <a href="<?=$site_url?>/admin/.components/examinations/results.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Results</p>
               </a>
