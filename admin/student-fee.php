@@ -203,7 +203,6 @@
                           </div>
                         </div>
 
-                        <!-- end col -->
                         <div class="col-sm-6">
                           <div class="text-muted text-sm-end">
                             <div>
@@ -225,9 +224,7 @@
                             </div>
                           </div>
                         </div>
-                        <!-- end col -->
                       </div>
-                      <!-- end row -->
 
                       <div class="py-2">
                         <h5 class="font-size-15">Order Summary</h5>
@@ -242,7 +239,7 @@
                                 <th>Quantity</th>
                                 <th class="text-end" style="width: 120px;">Total</th>
                               </tr>
-                            </thead><!-- end thead -->
+                            </thead>
                             <tbody>
                               <tr>
                                 <th scope="row">01</th>
@@ -256,7 +253,7 @@
                                 <td>1</td>
                                 <td class="text-end">$ 245.50</td>
                               </tr>
-                              <!-- end tr -->
+
                               <tr>
                                 <th scope="row">02</th>
                                 <td>
@@ -269,37 +266,37 @@
                                 <td>2</td>
                                 <td class="text-end">$491.00</td>
                               </tr>
-                              <!-- end tr -->
+
                               <tr>
                                 <th scope="row" colspan="4" class="text-end">Sub Total</th>
                                 <td class="text-end">$732.50</td>
                               </tr>
-                              <!-- end tr -->
+
                               <tr>
                                 <th scope="row" colspan="4" class="border-0 text-end">Discount:</th>
                                 <td class="border-0 text-end">- $25.50</td>
                               </tr>
-                              <!-- end tr -->
+
                               <tr>
                                 <th scope="row" colspan="4" class="border-0 text-end">Shipping Charge:</th>
                                 <td class="border-0 text-end">$20.00</td>
                               </tr>
-                              <!-- end tr -->
+
                               <tr>
                                 <th scope="row" colspan="4" class="border-0 text-end">Tax</th>
                                 <td class="border-0 text-end">$12.00</td>
                               </tr>
-                              <!-- end tr -->
+
                               <tr>
                                 <th scope="row" colspan="4" class="border-0 text-end">Total</th>
                                 <td class="border-0 text-end">
                                   <h4 class="m-0 fw-semibold">$739.00</h4>
                                 </td>
                               </tr>
-                              <!-- end tr -->
-                            </tbody><!-- end tbody -->
-                          </table><!-- end table -->
-                        </div><!-- end table responsive -->
+
+                            </tbody>
+                          </table>
+                        </div>
 
                         <div class="d-print-none mt-4">
                           <div class="float-end">
@@ -315,7 +312,7 @@
                       </div>
                     </div>
                   </div>
-                </div><!-- end col -->
+                </div>
               </div>
             </div>
           <?php } else { ?>
