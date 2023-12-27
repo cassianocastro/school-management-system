@@ -183,13 +183,13 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?=$site_url?>/admin/attendance.php" class="nav-link">
+              <a href="<?=$site_url?>/admin/.components/attendance/attendance.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Attendance</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?=$site_url?>/admin/leave.php" class="nav-link">
+              <a href="<?=$site_url?>/admin/.components/attendance/leave.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Leave</p>
               </a>
