@@ -142,6 +142,6 @@
   <script defer src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
   <script defer src="../assets/js/adminlte.js"></script>
   <script defer src="../assets/js/demo.js"></script>
-  <script defer src="./dashboard.js"></script>
+  <script defer src="./index.js"></script>
 </body>
 </html>
