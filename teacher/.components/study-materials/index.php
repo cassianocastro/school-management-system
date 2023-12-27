@@ -148,7 +148,7 @@ if ( isset($_POST['submit']) )
               </div>
 
               <div class="card-body">
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="./" method="post" enctype="multipart/form-data">
                   <div class="form-group">
                     <label for="name">Title</label>
 
@@ -156,16 +156,16 @@ if ( isset($_POST['submit']) )
                   </div>
 
                   <div class="form-group">
-                    <label for="name">Description</label>
+                    <label for="description">Description</label>
 
-                    <textarea name="description" id="description" cols="30" rows="10" class="form-control">Description</textarea>
+                    <textarea id="description" name="description" placeholder="Enter the description" cols="30" rows="10" class="form-control"></textarea>
                   </div>
 
                   <div class="form-group">
-                    <label for="name">Select Class</label>
+                    <label for="class">Class</label>
 
                     <select name="class" id="class" class="form-control" required>
-                      <option value="" label="Select Class"></option>
+                      <option value="" label="Select"></option>
                       <?php
                       foreach ( $classes as $key => $class )
                       {
@@ -176,10 +176,10 @@ if ( isset($_POST['submit']) )
                   </div>
 
                   <div class="form-group">
-                    <label for="category">Select Your Subject</label>
+                    <label for="subject">Your Subject</label>
 
                     <select name="subject" id="subject" class="form-control" required>
-                      <option value="" label="Select Your Subject"></option>
+                      <option value="" label="Select"></option>
                       <?php
                       foreach ( $subjects as $key => $subject )
                       {
@@ -193,7 +193,7 @@ if ( isset($_POST['submit']) )
                     <input type="file" name="attachment" id="attachment" required>
                   </div>
 
-                  <button name="submit" class="btn btn-success">Submit</button>
+                  <button type="submit" name="submit" class="btn btn-success">Submit</button>
                 </form>
               </div>
             </div>
