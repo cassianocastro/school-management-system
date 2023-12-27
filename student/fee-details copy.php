@@ -1,7 +1,7 @@
 <?php
-require '../includes/config.php';
-require 'header.php';
-require 'sidebar.php';
+require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/header.php';
+require_once __DIR__ . '/sidebar.php';
 ?>
 
 <!-- Content Header (Page header) -->
@@ -15,7 +15,7 @@ require 'sidebar.php';
 
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="#">Admin</a></li>
+          <li class="breadcrumb-item"><a href="#">Student</a></li>
           <li class="breadcrumb-item active">Student Fee Details</li>
         </ol>
       </div>
@@ -23,15 +23,12 @@ require 'sidebar.php';
     </div>
   </div>
 </div>
-<!-- /.content-header -->
 
 <!-- Main content -->
 <section class="content">
   <div class="container-fluid">
 
-    <?php
-      $usermeta = get_user_metadata($std_id);
-    ?>
+    <?php $usermeta = get_user_metadata($std_id); ?>
 
     <div class="card">
       <div class="card-header">
@@ -39,8 +36,11 @@ require 'sidebar.php';
       </div>
 
       <div class="card-body">
-        <strong>Name: </strong><?php echo get_users(array('id' => $std_id))[0]->name ?><br>
-        <strong>Class: </strong><?php echo $usermeta['class'] ?>
+        <strong>Name: </strong><?= get_users(['id' => $std_id])[0]->name ?>
+
+        <br>
+
+        <strong>Class: </strong><?= $usermeta['class'] ?>
       </div>
     </div>
 
@@ -76,10 +76,26 @@ require 'sidebar.php';
                 <td <?= $highlight ?>><?= ucwords($value) ?></td>
                 <td></td>
                 <td>
-                  <a href="?action=pay&month=<?= $value ?>&std_id=<?= $std_id ?>" class="btn btn-sm btn-primary"><i class="fa fa-eye fa-fw"></i> View</a>
-                  <a href="#" data-toggle="modal" data-month="<?= ucwords($value) ?>" data-target="#paynow-popup" class="btn btn-sm btn-warning paynow-btn"><i class="fa fa-money-check-alt fa-fw"></i> Pay Now</a>
-                  <a href="?action=pay&month=<?= $value ?>&std_id=<?= $std_id ?>" class="btn btn-sm btn-dark"><i class="fa fa-envelope fa-fw"></i> Send Message</a>
-                  <a href="?action=pay&month=<?= $value ?>&std_id=<?= $std_id ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash fa-fw"></i>Delete</a>
+                  <a href="?action=pay&month=<?= $value ?>&std_id=<?= $std_id ?>" class="btn btn-sm btn-primary">
+                    <i class="fa fa-eye fa-fw"></i>
+
+                    View
+                  </a>
+                  <a href="#" data-toggle="modal" data-month="<?= ucwords($value) ?>" data-target="#paynow-popup" class="btn btn-sm btn-warning paynow-btn">
+                    <i class="fa fa-money-check-alt fa-fw"></i>
+
+                    Pay Now
+                  </a>
+                  <a href="?action=pay&month=<?= $value ?>&std_id=<?= $std_id ?>" class="btn btn-sm btn-dark">
+                    <i class="fa fa-envelope fa-fw"></i>
+
+                    Send Message
+                  </a>
+                  <a href="?action=pay&month=<?= $value ?>&std_id=<?= $std_id ?>" class="btn btn-sm btn-danger">
+                    <i class="fa fa-trash fa-fw"></i>
+
+                    Delete
+                  </a>
                 </td>
               </tr>
             <?php endforeach; ?>
@@ -87,9 +103,8 @@ require 'sidebar.php';
         </table>
       </div>
     </div>
-  </div><!--/. container-fluid -->
+  </div>
 </section>
-<!-- /.content -->
 
 <?php
 $MERCHANT_KEY  = "YOUR MERCHANT_KEY";
@@ -149,7 +164,7 @@ if ( empty($posted['hash']) and sizeof($posted) > 0 )
     $hashVarsSeq = explode('|', $hashSequence);
     $hash_string = '';
 
-    foreach($hashVarsSeq as $hash_var)
+    foreach ( $hashVarsSeq as $hash_var )
     {
       $hash_string .= isset($posted[$hash_var]) ? $posted[$hash_var] : '';
       $hash_string .= '|';
@@ -182,21 +197,21 @@ elseif ( ! empty($posted['hash']) )
 
       <div class="modal-body">
         <form action="<?= $action ?>" method="post" name="payuForm">
-          <input type="hidden" name="surl" value="http://localhost:8888/sms/actions/success.php" size="64"/>
-          <input type="hidden" name="furl" value="http://localhost:8888/sms/actions/failure.php" size="64"/>
-          <input type="hidden" name="amount" value="500" readonly/>
-          <input type="hidden" name="key" value="<?= $MERCHANT_KEY ?>" readonly/>
-          <input type="hidden" name="hash" value="<?= $hash ?>" readonly/>
-          <input type="hidden" name="txnid" value="<?= $txnid ?>" readonly/>
-          <input type="hidden" name="service_provider" value="payu_paisa" size="64" readonly/>
-          <input type="hidden" name="productinfo" value="Fee payment" readonly/>
+          <input type="hidden" name="surl" value="http://localhost:8888/sms/actions/success.php" size="64">
+          <input type="hidden" name="furl" value="http://localhost:8888/sms/actions/failure.php" size="64">
+          <input type="hidden" name="amount" value="500" readonly>
+          <input type="hidden" name="key" value="<?= $MERCHANT_KEY ?>" readonly>
+          <input type="hidden" name="hash" value="<?= $hash ?>" readonly>
+          <input type="hidden" name="txnid" value="<?= $txnid ?>" readonly>
+          <input type="hidden" name="service_provider" value="payu_paisa" size="64" readonly>
+          <input type="hidden" name="productinfo" value="Fee payment" readonly>
 
           <div class="row">
             <div class="col-lg-6">
               <div class="form-group">
                 <label for="">Full Name</label>
 
-                <input type="text" name="firstname" readonly class="form-control" value="<?= $student->name ?>">
+                <input type="text" name="firstname" value="<?= $student->name ?>" readonly class="form-control">
               </div>
             </div>
 
@@ -204,7 +219,7 @@ elseif ( ! empty($posted['hash']) )
               <div class="form-group">
                 <label for="">Email Address</label>
 
-                <input type="email" name="email" readonly class="form-control" value="<?= $student->email ?>">
+                <input type="email" name="email" value="<?= $student->email ?>" readonly class="form-control">
               </div>
             </div>
 
@@ -212,7 +227,7 @@ elseif ( ! empty($posted['hash']) )
               <div class="form-group">
                 <label for="">Phone</label>
 
-                <input type="text" name="phone" readonly class="form-control" value="1234567890">
+                <input type="text" name="phone" value="1234567890" readonly class="form-control">
               </div>
             </div>
 
@@ -220,7 +235,7 @@ elseif ( ! empty($posted['hash']) )
               <div class="form-group">
                 <label for="">Months</label>
 
-                <input type="text" name="month" readonly class="form-control" id="month" value="<?= $student->name ?>">
+                <input type="text" name="month" id="month" value="<?= $student->name ?>" readonly class="form-control">
               </div>
             </div>
 
@@ -249,9 +264,7 @@ elseif ( ! empty($posted['hash']) )
 
     jQuery('#month').val(month);
   });
-</script>
 
-<script>
   var hash = '<?= $hash ?>';
 
   function submitPayuForm()
@@ -270,4 +283,4 @@ elseif ( ! empty($posted['hash']) )
   });
 </script>
 
-<?php require 'footer.php'; ?>
+<?php require_once __DIR__ . '/footer.php'; ?>
