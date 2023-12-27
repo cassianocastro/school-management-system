@@ -270,7 +270,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?=$site_url?>/admin/parent-meeting.php" class="nav-link">
+              <a href="<?=$site_url?>/admin/.components/communications/parent-meeting.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Parent's Meetings</p>
               </a>
