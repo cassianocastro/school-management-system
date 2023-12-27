@@ -37,27 +37,29 @@
     <div class="col-3 m-auto">
       <div class="card">
         <div class="card-body">
-          <div class="border rounded-circle mx-auto d-flex" style="width: 100px;height:100px">
+          <div class="border rounded-circle mx-auto d-flex" style="height: 100px; width: 100px;">
             <i class="fa fa-user text-light fa-3x m-auto"></i>
           </div>
 
-          <form action="actions/login.php" method="post">
+          <form action="actions/login.php" method="post" autocomplete="off">
             <!-- Material input -->
             <div class="md-form">
-              <input type="text" id="email" name="email" class="form-control">
+              <input type="email" name="email" id="email" required class="form-control">
 
               <label for="email">Your Email</label>
             </div>
 
             <!-- Material input -->
             <div class="md-form">
-              <input type="password" id="password" name="password" class="form-control">
+              <input type="password" name="password" id="password" required class="form-control">
 
               <label for="password">Your Password</label>
             </div>
 
             <div class="text-center">
-              <button class="btn btn-secondary" name="login">Login</button>
+              <button type="submit" name="login" class="btn btn-secondary">
+                Login
+              </button>
             </div>
           </form>
         </div>
