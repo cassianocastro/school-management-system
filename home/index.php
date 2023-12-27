@@ -33,28 +33,20 @@
 <body>
   <?php require_once __DIR__ . '/../includes/config.php'; ?>
 
-  <!-- Header -->
   <?php require_once __DIR__ . '/.components/header/index.php';?>
 
-  <!-- Admission -->
   <?php require_once __DIR__. '/.components/admission/index.php'; ?>
 
-  <!-- About us -->
   <?php require_once __DIR__. '/.components/about/index.php'; ?>
 
-  <!-- Our Courses -->
   <?php require_once __DIR__. '/.components/courses/index.php'; ?>
 
-  <!-- Teachers -->
   <?php require_once __DIR__. '/.components/teachers/index.php'; ?>
 
-  <!-- Achievements -->
   <?php require_once __DIR__ . '/.components/achievements/index.php'; ?>
 
-  <!-- Testimonials -->
   <?php require_once __DIR__ . '/.components/testimonials/index.php'; ?>
 
-  <!-- Footer -->
   <?php require_once __DIR__ . '/.components/footer/index.php'; ?>
 
   <!--
