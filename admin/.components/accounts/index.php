@@ -468,18 +468,18 @@ if ( isset($_POST['submit']) )
     <?php require_once __DIR__ . '/../aside/index.php'; ?>
   </div>
 
-  <script defer src="../../../plugins/jquery/jquery.min.js"></script>
-  <script defer src="../../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script defer src="../../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-  <script defer src="../../../plugins/datatables/jquery.dataTables.min.js"></script>
-  <script defer src="../../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-  <script defer src="../../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-  <script defer src="../../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-  <script defer src="../../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-  <script defer src="../../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-  <script defer src="../../../assets/js/adminlte.js"></script>
-  <script defer src="../../../assets/js/demo.js"></script>
-  <!-- <script defer src="./dashboard.js"></script> -->
-  <?php require_once __DIR__ . '/user-account.js.php'; ?>
+  <script src="../../../plugins/jquery/jquery.min.js"></script>
+  <script src="../../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script src="../../../plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="../../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="../../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="../../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="../../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="../../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="../../../assets/js/adminlte.js"></script>
+  <script src="../../../assets/js/demo.js"></script>
+  <!-- <script src="./dashboard.js"></script> -->
+  <?php require_once __DIR__ . '/index.js.php'; ?>
 </body>
 </html>
