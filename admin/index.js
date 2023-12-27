@@ -3,7 +3,7 @@
 
     // console.log(path);
 
-    $(".nav-link").each(function () {
+    $(".nav-link").each(() => {
         var href = $(this).attr('href');
         // console.log(href);
 
@@ -22,8 +22,8 @@
     });
 }());
 
-jQuery(document).ready(function () {
-    jQuery('#class').change(function () {
+jQuery(document).ready(() => {
+    jQuery('#class').change(() => {
         // alert(jQuery(this).val());
 
         jQuery.ajax({
