@@ -3,8 +3,6 @@ error_reporting(E_ALL);
 ini_set("display_errors", true);
 
 require_once __DIR__ . '/../includes/config.php';
-require_once __DIR__ . '/header.php';
-require_once __DIR__ . '/sidebar.php';
 
 $success_msg =  false;
 $user_id     = $_SESSION['user_id'] ?? "";
@@ -39,342 +37,373 @@ if ( isset($_POST['form_submitted']) )
 
   $success_msg = true;
 }
-
-if ( isset($_GET['action']) and $_GET['action'] == 'view-invoice' ) :
 ?>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="card">
-          <div class="card-body">
-            <div class="invoice-title">
-              <h4 class="float-end font-size-15">
-                Invoice #DS0204
 
-                <span class="badge bg-success font-size-12 ms-2">Paid</span>
-              </h4>
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-              <div class="mb-4">
-                <h2 class="mb-1 text-muted">Techno Study</h2>
-              </div>
+  <link rel="stylesheet" type="text/css" href="../plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/adminlte.min.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
 
-              <div class="text-muted">
-                <p class="mb-1">
-                  Vishwsh khand, Gomtinagar, Lucknow, UP 231216, India
-                </p>
+  <title>Student's Dashboard | School SysManager</title>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+  <div class="wrapper">
 
-                <p class="mb-1">
-                  <i class="uil uil-envelope-alt me-1"></i>
-                  modifiercrazy@gmail.com
-                </p>
+    <?php require_once __DIR__ . '/header.php'; ?>
 
-                <p>
-                  <i class="uil uil-phone me-1"></i>
-                  012-345-6789
-                </p>
-              </div>
-            </div>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
 
-            <hr class="my-4">
+      <?php if ( isset($_GET['action']) and $_GET['action'] == 'view-invoice' ) : ?>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="invoice-title">
+                    <h4 class="float-end font-size-15">
+                      Invoice #DS0204
 
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="text-muted">
-                  <h5 class="font-size-16 mb-3">Billed To:</h5>
+                      <span class="badge bg-success font-size-12 ms-2">Paid</span>
+                    </h4>
 
-                  <h5 class="font-size-15 mb-2">Preston Miller</h5>
+                    <div class="mb-4">
+                      <h2 class="mb-1 text-muted">Techno Study</h2>
+                    </div>
 
-                  <p class="mb-1">4068 Post Avenue Newfolden, MN 56738</p>
+                    <div class="text-muted">
+                      <p class="mb-1">
+                        Vishwsh khand, Gomtinagar, Lucknow, UP 231216, India
+                      </p>
 
-                  <p class="mb-1">PrestonMiller@armyspy.com</p>
+                      <p class="mb-1">
+                        <i class="uil uil-envelope-alt me-1"></i>
+                        modifiercrazy@gmail.com
+                      </p>
 
-                  <p>001-234-5678</p>
-                </div>
-              </div>
-
-              <div class="col-sm-6">
-                <div class="text-muted text-sm-end">
-                  <div>
-                    <h5 class="font-size-15 mb-1">Invoice No:</h5>
-
-                    <p>#DZ0112</p>
+                      <p>
+                        <i class="uil uil-phone me-1"></i>
+                        012-345-6789
+                      </p>
+                    </div>
                   </div>
 
-                  <div class="mt-4">
-                    <h5 class="font-size-15 mb-1">Invoice Date:</h5>
+                  <hr class="my-4">
 
-                    <p>12 Oct, 2020</p>
-                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="text-muted">
+                        <h5 class="font-size-16 mb-3">Billed To:</h5>
 
-                  <div class="mt-4">
-                    <h5 class="font-size-15 mb-1">Order No:</h5>
+                        <h5 class="font-size-15 mb-2">Preston Miller</h5>
 
-                    <p>#1123456</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+                        <p class="mb-1">4068 Post Avenue Newfolden, MN 56738</p>
 
-            <div class="py-2">
-              <h5 class="font-size-15">Order Summary</h5>
+                        <p class="mb-1">PrestonMiller@armyspy.com</p>
 
-              <div class="table-responsive">
-                <table class="table align-middle table-nowrap table-centered mb-0">
-                  <thead>
-                    <tr>
-                      <th style="width: 70px;">No.</th>
-                      <th>Fees</th>
-                      <th class="text-end" style="width: 120px;">Price</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">01</th>
+                        <p>001-234-5678</p>
+                      </div>
+                    </div>
 
-                      <td>
+                    <div class="col-sm-6">
+                      <div class="text-muted text-sm-end">
                         <div>
-                          <h5 class="text-truncate font-size-14 mb-1">Tuition Fee</h5>
-                          <!-- <p class="text-muted mb-0">Watch, Black</p> -->
+                          <h5 class="font-size-15 mb-1">Invoice No:</h5>
+
+                          <p>#DZ0112</p>
                         </div>
-                      </td>
 
-                      <td class="text-end">Rs. 500.00</td>
-                    </tr>
-                    <tr>
-                      <th scope="row" colspan="2" class="text-end">Sub Total</th>
+                        <div class="mt-4">
+                          <h5 class="font-size-15 mb-1">Invoice Date:</h5>
 
-                      <td class="text-end">Rs. 500.00</td>
-                    </tr>
-                    <tr>
-                      <th scope="row" colspan="2" class="border-0 text-end">Total</th>
+                          <p>12 Oct, 2020</p>
+                        </div>
 
-                      <td class="border-0 text-end">
-                        <h4 class="m-0 fw-semibold">Rs. 500.00</h4>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                        <div class="mt-4">
+                          <h5 class="font-size-15 mb-1">Order No:</h5>
 
-              <div class="d-print-none mt-4">
-                <div class="float-end">
-                  <a href="javascript:window.print()" class="btn btn-success me-1">
-                    <i class="fa fa-print"></i>
-                  </a>
+                          <p>#1123456</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-                  <a href="#" class="btn btn-primary w-md">
-                    Send
-                  </a>
+                  <div class="py-2">
+                    <h5 class="font-size-15">Order Summary</h5>
+
+                    <div class="table-responsive">
+                      <table class="table align-middle table-nowrap table-centered mb-0">
+                        <thead>
+                          <tr>
+                            <th style="width: 70px;">No.</th>
+                            <th>Fees</th>
+                            <th class="text-end" style="width: 120px;">Price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">01</th>
+
+                            <td>
+                              <div>
+                                <h5 class="text-truncate font-size-14 mb-1">Tuition Fee</h5>
+                                <!-- <p class="text-muted mb-0">Watch, Black</p> -->
+                              </div>
+                            </td>
+
+                            <td class="text-end">Rs. 500.00</td>
+                          </tr>
+                          <tr>
+                            <th scope="row" colspan="2" class="text-end">Sub Total</th>
+
+                            <td class="text-end">Rs. 500.00</td>
+                          </tr>
+                          <tr>
+                            <th scope="row" colspan="2" class="border-0 text-end">Total</th>
+
+                            <td class="border-0 text-end">
+                              <h4 class="m-0 fw-semibold">Rs. 500.00</h4>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="d-print-none mt-4">
+                      <div class="float-end">
+                        <a href="javascript:window.print()" class="btn btn-success me-1">
+                          <i class="fa fa-print"></i>
+                        </a>
+
+                        <a href="#" class="btn btn-primary w-md">
+                          Send
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-<?php else: ?>
-  <!-- Content Header (Page header) -->
-  <div class="content-header">
-    <div class="container-fluid">
-      <div class="row mb-2">
+      <?php else: ?>
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
 
-        <div class="col-sm-6">
-          <h1 class="m-0 text-dark">Manage Student Fee Details</h1>
-        </div>
-
-        <div class="col-sm-6">
-          <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Admin</a></li>
-            <li class="breadcrumb-item active">Student Fee Details</li>
-          </ol>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- Main content -->
-  <section class="content">
-    <div class="container-fluid">
-
-      <?php if ($success_msg) : ?>
-        <div class="alert alert-success" role="alert">
-          Payment has been completed, Thank You!
-        </div>
-      <?php endif; ?>
-
-      <?php
-      $usermeta = get_user_metadata($std_id);
-      $class    = get_post(['id' => $usermeta['class']]);
-      ?>
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Student Detail</h3>
-        </div>
-
-        <div class="card-body">
-          <strong>Name: </strong><?= get_users(['id' => $std_id])[0]->name ?>
-
-          <br>
-
-          <strong>Class: </strong><?= $class->title ?>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Tution Fee</h3>
-        </div>
-
-        <div class="card-body">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>S.No</th>
-                <th>Month</th>
-                <th>Fee Status</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php
-              $sql = "SELECT m.meta_value as `month` FROM `posts` as p JOIN `metadata` as m ON p.id = m.item_id WHERE p.type = 'payment' AND p.author = $user_id AND m.meta_key = 'month' AND year(p.publish_date) = 2023";
-
-              $query = mysqli_query($db_conn, $sql);
-              $paid_fees = [];
-
-              while ( $row = mysqli_fetch_object($query) )
-              {
-                $paid_fees[] = strtolower($row->month);
-              }
-
-              // echo '<pre>', print_r($paid_fees), '</pre>';
-
-              $months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
-
-              foreach ( $months as $key => $value )
-              {
-                $highlight = '';
-
-                $paid = false;
-
-                if ( in_array($value, $paid_fees) )
-                {
-                  $paid = true;
-                  $highlight = 'class="bg-success"';
-                }
-                // if ( date('F') == ucwords($value) )
-                // {
-                //   $highlight = 'class="bg-success"';
-                // }
-              ?>
-                <tr>
-                  <td><?= ++$key; ?></td>
-                  <td><?= ucwords($value); ?></td>
-                  <td <?= $highlight; ?>><?= ($paid) ? "Paid" : "Pending"; ?></td>
-                  <td>
-                    <?php if ($paid) : ?>
-                      <a href="?action=view-invoice&month=<?= $value ?>&std_id=<?= $std_id ?>" class="btn btn-sm btn-primary">
-                        <i class="fa fa-eye fa-fw"></i>
-
-                        View
-                      </a>
-                    <?php else : ?>
-                      <a href="#" data-toggle="modal" data-month="<?= ucwords($value) ?>" data-target="#paynow-popup" class="btn btn-sm btn-warning paynow-btn">
-                        <i class="fa fa-money-check-alt fa-fw"></i>
-
-                        Pay Now
-                      </a>
-                    <?php endif; ?>
-                  </td>
-                </tr>
-              <?php } ?>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Modal -->
-  <div class="modal fade" id="paynow-popup" tabindex="-1" role="dialog" aria-labelledby="paynow-popupLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <h5 class="modal-title" id="paynow-popupLabel">Paynow</h5>
-
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <div class="modal-body">
-          <form action="" method="post">
-            <input type="hidden" name="amount" value="500" readonly>
-
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <label for="">Full Name</label>
-
-                  <input type="text" name="firstname" value="<?= $student->name ?>" class="form-control" readonly>
-                </div>
+              <div class="col-sm-6">
+                <h1 class="m-0 text-dark">Manage Student Fee Details</h1>
               </div>
 
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <label for="">Email Address</label>
-
-                  <input type="email" name="email" value="<?= $student->email ?>" class="form-control" readonly>
-                </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                  <li class="breadcrumb-item active">Student Fee Details</li>
+                </ol>
               </div>
 
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <label for="">Phone</label>
+            </div>
+          </div>
+        </div>
 
-                  <input type="text" name="phone" value="1234567890" class="form-control" readonly>
-                </div>
+        <!-- Main content -->
+        <section class="content">
+          <div class="container-fluid">
+
+            <?php if ($success_msg) : ?>
+              <div class="alert alert-success" role="alert">
+                Payment has been completed, Thank You!
+              </div>
+            <?php endif; ?>
+
+            <?php
+            $usermeta = get_user_metadata($std_id);
+            $class    = get_post(['id' => $usermeta['class']]);
+            ?>
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Student Detail</h3>
               </div>
 
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <label for="">Months</label>
+              <div class="card-body">
+                <strong>Name: </strong><?= get_users(['id' => $std_id])[0]->name ?>
 
-                  <input type="text" name="month" id="month" value="<?= $student->name ?>" class="form-control" readonly>
-                </div>
-              </div>
+                <br>
 
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <h3>
-                    <i class="fa fa-rupee-sign"></i>
-
-                    500.00
-                  </h3>
-                </div>
-              </div>
-
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <button type="submit" name="form_submitted" class="btn btn-success">
-                    Confirm & Pay
-                  </button>
-                </div>
+                <strong>Class: </strong><?= $class->title ?>
               </div>
             </div>
-          </form>
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Tution Fee</h3>
+              </div>
+
+              <div class="card-body">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>Month</th>
+                      <th>Fee Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    $sql = "SELECT m.meta_value as `month` FROM `posts` as p JOIN `metadata` as m ON p.id = m.item_id WHERE p.type = 'payment' AND p.author = $user_id AND m.meta_key = 'month' AND year(p.publish_date) = 2023";
+
+                    $query = mysqli_query($db_conn, $sql);
+                    $paid_fees = [];
+
+                    while ( $row = mysqli_fetch_object($query) )
+                    {
+                      $paid_fees[] = strtolower($row->month);
+                    }
+
+                    // echo '<pre>', print_r($paid_fees), '</pre>';
+
+                    $months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+
+                    foreach ( $months as $key => $value )
+                    {
+                      $highlight = '';
+
+                      $paid = false;
+
+                      if ( in_array($value, $paid_fees) )
+                      {
+                        $paid = true;
+                        $highlight = 'class="bg-success"';
+                      }
+                      // if ( date('F') == ucwords($value) )
+                      // {
+                      //   $highlight = 'class="bg-success"';
+                      // }
+                    ?>
+                      <tr>
+                        <td><?= ++$key; ?></td>
+                        <td><?= ucwords($value); ?></td>
+                        <td <?= $highlight; ?>><?= ($paid) ? "Paid" : "Pending"; ?></td>
+                        <td>
+                          <?php if ($paid) : ?>
+                            <a href="?action=view-invoice&month=<?= $value ?>&std_id=<?= $std_id ?>" class="btn btn-sm btn-primary">
+                              <i class="fa fa-eye fa-fw"></i>
+
+                              View
+                            </a>
+                          <?php else : ?>
+                            <a href="#" data-toggle="modal" data-month="<?= ucwords($value) ?>" data-target="#paynow-popup" class="btn btn-sm btn-warning paynow-btn">
+                              <i class="fa fa-money-check-alt fa-fw"></i>
+
+                              Pay Now
+                            </a>
+                          <?php endif; ?>
+                        </td>
+                      </tr>
+                    <?php } ?>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="paynow-popup" tabindex="-1" role="dialog" aria-labelledby="paynow-popupLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <h5 class="modal-title" id="paynow-popupLabel">Paynow</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="modal-body">
+                <form action="" method="post">
+                  <input type="hidden" name="amount" value="500" readonly>
+
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="">Full Name</label>
+
+                        <input type="text" name="firstname" value="<?= $student->name ?>" class="form-control" readonly>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="">Email Address</label>
+
+                        <input type="email" name="email" value="<?= $student->email ?>" class="form-control" readonly>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="">Phone</label>
+
+                        <input type="text" name="phone" value="1234567890" class="form-control" readonly>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="">Months</label>
+
+                        <input type="text" name="month" id="month" value="<?= $student->name ?>" class="form-control" readonly>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <h3>
+                          <i class="fa fa-rupee-sign"></i>
+
+                          500.00
+                        </h3>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <button type="submit" name="form_submitted" class="btn btn-success">
+                          Confirm & Pay
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      <?php endif; ?>
     </div>
+
+    <?php require_once __DIR__ . '/footer.php'; ?>
+
+    <?php require_once __DIR__ . '/sidebar.php'; ?>
   </div>
 
-  <script defer src="./fee-details.js"></script>
-
-<?php
-endif;
-
-require_once __DIR__ . '/footer.php';
-?>
+  <script src="../plugins/jquery/jquery.min.js"></script>
+  <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script src="../assets/js/adminlte.js"></script>
+  <script src="../assets/js/demo.js"></script>
+  <script src="./index.js"></script>
+  <script src="./fee-details.js"></script>
+</body>
+</html>
