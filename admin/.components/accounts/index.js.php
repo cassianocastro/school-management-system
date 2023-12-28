@@ -1,8 +1,10 @@
-<script>
-  jQuery(document).ready(() => {
-    jQuery('#users-table').DataTable({
+<?php
+
+print <<<JS
+  $(document).ready(() => {
+    $('#users-table').DataTable({
       ajax: {
-        url: '../../../actions/ajax.php?user=<?= $_GET['user'] ?>',
+        url: "../../../actions/ajax.php?user={$_GET['user']}",
         type: 'POST'
       },
       columns: [
@@ -25,30 +27,36 @@
     });
   });
 
-  jQuery('#student-registration').on('submit', () => {
+  $('#student-registration').on('submit', () => {
 
     if ( true )
     {
-      var formdata = jQuery(this).serialize();
+      var formdata = $(this).serialize();
 
-      jQuery.ajax({
+      $.ajax({
+        url: "http://{$_SERVER["SERVER_NAME"]}/actions/student-registration.php",
         type: "post",
-        url: "http://<?= $_SERVER["SERVER_NAME"] ?>/actions/student-registration.php",
         data: formdata,
         dataType: "json",
-        beforeSend: () => jQuery('#loader').show(),
+        beforeSend: () => $('#loader').show(),
         success: (response) => {
           // console.log(response);
 
           if ( response.success == true )
           {
-            location.assign(`http://<?= $_SERVER["SERVER_NAME"] ?>/admin/user-account.php?user=student&action=fee-payment&std_id=${response.std_id}&payment_method=${response.payment_method}`);
+            location.assign(
+              "http://{$_SERVER['SERVER_NAME']}/admin/user-account.php"
+              + "?user=student"
+              + "&action=fee-payment"
+              + "&std_id=" + response.std_id
+              + "&payment_method=" + response.payment_method
+            );
           }
         },
-        complete: () => {} // jQuery('#loader').hide() }
+        complete: () => {} // $('#loader').hide() }
       });
     }
 
     return false;
   });
-</script>
+JS;
