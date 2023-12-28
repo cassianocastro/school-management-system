@@ -1,5 +1,5 @@
-jQuery(document).on('click', '.paynow-btn', () => {
-    var month = jQuery(this).data('month');
+$(document).on('click', '.paynow-btn', () => {
+    let month = $(this).data('month');
 
-    jQuery('#month').val(month);
+    $('#month').val(month);
 });
