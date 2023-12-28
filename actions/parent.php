@@ -9,12 +9,12 @@ if ( isset($_SESSION['login']) )
     {
         $user_type = $_SESSION['user_type'];
 
-        header("Location: /sms-project/$user_type/dashboard.php");
+        header("Location: ../$user_type");
     }
 }
 else
 {
-    header("Location: ../login.php");
+    header("Location: ../login");
 }
 
 $std_id = $_SESSION['user_id'];

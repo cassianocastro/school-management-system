@@ -1,7 +1,6 @@
 <?php
 // session_start();
 
-// $site_url = "http://localhost/sms-project/";
 $site_url = "http://{$_SERVER["SERVER_NAME"]}/";
 
 if ( isset($_SESSION['login']) )
@@ -10,12 +9,12 @@ if ( isset($_SESSION['login']) )
     {
         $user_type = $_SESSION['user_type'];
 
-        header("Location: /sms-project/$user_type/dashboard.php");
+        header("Location: {$site_url}{$user_type}");
     }
 }
 else
 {
-    header("Location: ../login.php");
+    header("Location: ../login");
 }
 
 $std_id  = $_SESSION['user_id'];

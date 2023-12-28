@@ -9,10 +9,7 @@ if ( isset($_SESSION['login']) and $_SESSION['login'] == true )
     {
         $user_type = $_SESSION['user_type'];
 
-        if ( $user_type === "teacher" )
-            header("Location: ../teacher");
-        else
-           header("Location: ../$user_type/dashboard.php");
+        header("Location: $site_url/$user_type");
     }
 }
 else

@@ -23,18 +23,7 @@ if ( isset($_POST["login"]) )
         $_SESSION["user_type"] = $user_type;
         $_SESSION["user_id"]   = $user->id;
 
-        if ( $user_type === "teacher" )
-        {
-            header("Location: ../teacher");
-        }
-        elseif ( $user_type === "parent" )
-        {
-            header("Location: ../parent");
-        }
-        else
-        {
-            header("Location: ../$user_type/dashboard.php");
-        }
+        header("Location: ../$user_type");
 
         exit();
     }

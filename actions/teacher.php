@@ -1,6 +1,4 @@
 <?php
-// error_reporting(E_ALL);
-// ini_set("display_errors", true);
 
 $site_url = "http://{$_SERVER['SERVER_NAME']}";
 
@@ -10,7 +8,7 @@ if ( isset($_SESSION['login']) )
     {
         $user_type = $_SESSION['user_type'];
 
-        header("Location: ../$user_type/dashboard.php");
+        header("Location: ../$user_type");
     }
 }
 else
