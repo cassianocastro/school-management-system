@@ -61,7 +61,7 @@ require_once __DIR__ . '/sidebar.php';
           </thead>
           <tbody>
             <?php
-            $months = ['january', 'fabruary','march','april','may','june','july','august','september','october','november','december'];
+            $months = ['january', 'february','march','april','may','june','july','august','september','october','november','december'];
 
             foreach ( $months as $key => $value ) :
               $highlight = '';
@@ -258,29 +258,6 @@ elseif ( ! empty($posted['hash']) )
   </div>
 </div>
 
-<script>
-  jQuery(document).on('click', '.paynow-btn', function() {
-    var month = jQuery(this).data('month');
-
-    jQuery('#month').val(month);
-  });
-
-  var hash = '<?= $hash ?>';
-
-  function submitPayuForm()
-  {
-    if ( hash == '' )
-    {
-      return;
-    }
-
-    var payuForm = document.forms.payuForm;
-    payuForm.submit();
-  }
-
-  jQuery(document).ready(function() {
-    submitPayuForm();
-  });
-</script>
+<script><?php require_once __DIR__ . '/fee-details copy.js.php'; ?></script>
 
 <?php require_once __DIR__ . '/footer.php'; ?>
