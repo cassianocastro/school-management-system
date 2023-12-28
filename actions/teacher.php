@@ -8,7 +8,7 @@ if ( isset($_SESSION['login']) )
     {
         $user_type = $_SESSION['user_type'];
 
-        header("Location: ../$user_type");
+        header("Location: $site_url/$user_type");
     }
 }
 else
