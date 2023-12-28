@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
-  <a class="brand-link" href="<?= $site_url ?>student/profile.php">
+  <a class="brand-link" href="<?= $site_url ?>/student/profile.php">
     <img
       src="<?= $site_url ?>/assets/img/AdminLTELogo.png"
       alt="AdminLTE Logo"
@@ -20,7 +20,7 @@
 
         <!-- Dashboard -->
         <li class="nav-item">
-          <a class="nav-link" href="<?= $site_url ?>student">
+          <a class="nav-link" href="<?= $site_url ?>/student">
             <i class="nav-icon fas fa-tachometer-alt"></i>
 
             <p>Dashboard</p>
@@ -41,7 +41,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>student/.components/syllabus/courses.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/syllabus/courses.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Courses</p>
@@ -49,7 +49,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>student/.components/syllabus/subjects.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/syllabus/subjects.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Subjects</p>
@@ -57,7 +57,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>student/.components/syllabus/lessons.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/syllabus/lessons.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Lessons</p>
@@ -80,7 +80,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>student/.components/routines/periods.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/routines/periods.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Periods</p>
@@ -88,7 +88,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>student/.components/routines/timetable.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/routines/timetable.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Time Table</p>
@@ -111,7 +111,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>student/.components/examinations/exam-form.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/examinations/exam-form.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Examination Form</p>
@@ -119,7 +119,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>student/.components/examinations/admin-card.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/examinations/admin-card.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Admin card</p>
@@ -127,7 +127,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>student/.components/examinations/paper-schedule.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/examinations/paper-schedule.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Paper Schedule</p>
@@ -135,7 +135,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>student/.components/examinations/results.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/examinations/results.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Results</p>
@@ -158,7 +158,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>student/.components/attendance/attendance.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/attendance/attendance.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Attendance</p>
@@ -166,7 +166,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>student/.components/attendance/leave.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/attendance/leave.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Leave</p>
@@ -189,7 +189,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>student/.components/fee-details/fee-details.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/fee-details/fee-details.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Tuition Fee</p>
@@ -197,7 +197,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>student/.components/fee-details/examination-fee.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/fee-details/examination-fee.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Examination Fee</p>
@@ -220,7 +220,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>student/.components/study-materials/study-materials.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/study-materials/study-materials.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Study Materials</p>
@@ -243,7 +243,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>student/.components/events/campus-functions.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/events/campus-functions.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Campus Functions</p>
@@ -251,7 +251,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>student/.components/events/webinar-seminar.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/events/webinar-seminar.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Webinar/Seminar</p>
@@ -274,7 +274,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>student/.components/communications/parent-meeting.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/communications/parent-meeting.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Parent's Meetings</p>

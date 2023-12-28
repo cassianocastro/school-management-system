@@ -9,7 +9,7 @@
     </li>
 
     <li class="nav-item d-none d-sm-inline-block">
-      <a class="nav-link" href="<?= $site_url ?>student/.components/profile">
+      <a class="nav-link" href="<?= $site_url ?>/student/.components/profile">
         Profile
       </a>
     </li>
@@ -29,7 +29,7 @@
         <a class="dropdown-item" href="#">
           <!-- Message Start -->
           <div class="media">
-            <img src="<?= $site_url ?>assets/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+            <img src="<?= $site_url ?>/assets/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
 
             <div class="media-body">
               <h3 class="dropdown-item-title">
@@ -59,7 +59,7 @@
         <a class="dropdown-item" href="#">
           <!-- Message Start -->
           <div class="media">
-            <img src="<?= $site_url ?>assets/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <img src="<?= $site_url ?>/assets/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
 
             <div class="media-body">
               <h3 class="dropdown-item-title">
@@ -89,7 +89,7 @@
         <a class="dropdown-item" href="#">
           <!-- Message Start -->
           <div class="media">
-            <img src="<?= $site_url ?>assets/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <img src="<?= $site_url ?>/assets/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
 
             <div class="media-body">
               <h3 class="dropdown-item-title">
@@ -165,7 +165,7 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" title="Logout" href="../actions/logout.php">
+      <a class="nav-link" title="Logout" href="<?= $site_url ?>/actions/logout.php">
         Logout
 
         <i class="fa fa-sign-out-alt"></i>

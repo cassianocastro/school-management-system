@@ -10,7 +10,7 @@ if ( isset($_POST['submit']) )
   $subject     = $_POST['subject'];
   $file        = $_FILES["attachment"]["name"];
   $today       = date('Y-m-d');
-  $target_dir  = "../assets/uploads/";
+  $target_dir  = "$site_url/assets/uploads/";
   $target_file = $target_dir . basename($_FILES["attachment"]["name"]);
   // $FileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
   $uploadOk    = 1;
@@ -234,7 +234,7 @@ if ( isset($_POST['submit']) )
                       <tr>
                         <td><?= $count++ ?></td>
                         <td><?= $att->title ?></td>
-                        <td><a href="<?= "{$site_url}assets/uploads/$file_attachment" ?>">Download File</a></td>
+                        <td><a href="<?= "$site_url/assets/uploads/$file_attachment" ?>">Download File</a></td>
                         <td><?= $class->title ?></td>
                         <td><?= $subject->title ?></td>
                         <td><?= $att->publish_date ?></td>

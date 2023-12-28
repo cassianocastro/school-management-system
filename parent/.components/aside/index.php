@@ -2,7 +2,7 @@
 
   <!-- Brand Logo -->
   <a href="<?= $site_url ?>" class="brand-link">
-    <img src="<?= $site_url ?>assets/img/AdminLTELogo.png" alt="AdminLTE Logo" style="opacity: .8" class="brand-image img-circle elevation-3">
+    <img src="<?= $site_url ?>/assets/img/AdminLTELogo.png" alt="AdminLTE Logo" style="opacity: .8" class="brand-image img-circle elevation-3">
 
     <span class="brand-text font-weight-light">Parent Panel</span>
   </a>
@@ -16,7 +16,7 @@
           with font-awesome or any other icon font library
         -->
         <li class="nav-item">
-          <a href="<?= $site_url ?>parent" class="nav-link">
+          <a href="<?= $site_url ?>/parent" class="nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
 
             <p>Dashboard</p>
@@ -36,7 +36,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= $site_url ?>parent/courses.php" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Courses</p>
@@ -44,7 +44,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="<?= $site_url ?>parent/subjects.php" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Subjects</p>
@@ -52,7 +52,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="<?= $site_url ?>parent/lessons.php" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Lessons</p>
@@ -74,7 +74,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= $site_url ?>parent/.components/routines/periods.php" class="nav-link">
+              <a href="<?= $site_url ?>/parent/.components/routines/periods.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Periods</p>
@@ -82,7 +82,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="<?= $site_url ?>parent/.components/routines/timetable.php" class="nav-link">
+              <a href="<?= $site_url ?>/parent/.components/routines/timetable.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Time Table</p>
@@ -116,7 +116,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= $site_url ?>parent/attendance.php" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Attendance</p>
@@ -138,7 +138,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= $site_url ?>parent/fee-details.php" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Fee Details</p>
@@ -160,7 +160,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= $site_url ?>parent/.components/study-materials" class="nav-link">
+              <a href="<?= $site_url ?>/parent/.components/study-materials" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Study Materials</p>
