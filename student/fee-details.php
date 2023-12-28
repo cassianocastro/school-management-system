@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 ini_set("display_errors", true);
 
 require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/../actions/student.php';
 
 $success_msg =  false;
 $user_id     = $_SESSION['user_id'] ?? "";
