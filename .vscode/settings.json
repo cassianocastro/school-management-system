@@ -1,3 +1,23 @@
 {
+    "editor.bracketPairColorization.enabled": true,
+    "editor.cursorStyle": "line",
+    "editor.cursorSmoothCaretAnimation": "explicit",
+    "editor.cursorBlinking": "smooth",
+    "editor.insertSpaces": true,
 
+    "files.associations": {
+
+    },
+    "files.insertFinalNewline": false,
+    "files.encoding": "utf8",
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true,
+
+    "[php]": {
+        "editor.cursorBlinking": "expand"
+    },
+    "[ignore]": {
+        "editor.cursorBlinking": "blink",
+        "editor.cursorStyle": "block"
+    }
 }
