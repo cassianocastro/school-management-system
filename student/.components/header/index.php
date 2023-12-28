@@ -9,7 +9,7 @@
     </li>
 
     <li class="nav-item d-none d-sm-inline-block">
-      <a class="nav-link" href="<?= $site_url ?>student/profile.php">
+      <a class="nav-link" href="<?= $site_url ?>student/.components/profile">
         Profile
       </a>
     </li>
