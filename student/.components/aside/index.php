@@ -49,18 +49,18 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/syllabus/subjects.php">
-                <i class="far fa-circle nav-icon"></i>
-
-                <p>Subjects</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/syllabus/lessons.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Lessons</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/syllabus/subjects.php">
+                <i class="far fa-circle nav-icon"></i>
+
+                <p>Subjects</p>
               </a>
             </li>
           </ul>
@@ -111,18 +111,18 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/examinations/exam-form.php">
-                <i class="far fa-circle nav-icon"></i>
-
-                <p>Examination Form</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/examinations/admin-card.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Admin card</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/examinations/exam-form.php">
+                <i class="far fa-circle nav-icon"></i>
+
+                <p>Examination Form</p>
               </a>
             </li>
 
@@ -189,18 +189,18 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/fee-details/fee-details.php">
-                <i class="far fa-circle nav-icon"></i>
-
-                <p>Tuition Fee</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/fee-details/examination-fee.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Examination Fee</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/fee-details/fee-details.php">
+                <i class="far fa-circle nav-icon"></i>
+
+                <p>Tuition Fee</p>
               </a>
             </li>
           </ul>

@@ -49,18 +49,18 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?=$site_url?>/teacher/subjects.php">
-                <i class="far fa-circle nav-icon"></i>
-
-                <p>Subjects</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
               <a class="nav-link" href="<?=$site_url?>/teacher/lessons.php">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Lessons</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="<?=$site_url?>/teacher/subjects.php">
+                <i class="far fa-circle nav-icon"></i>
+
+                <p>Subjects</p>
               </a>
             </li>
           </ul>

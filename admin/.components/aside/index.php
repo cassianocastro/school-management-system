@@ -47,18 +47,10 @@
             </li>
 
             <li class="nav-item">
-              <a href="<?= $site_url ?>/admin/.components/accounts/?user=teacher" class="nav-link">
+              <a href="<?= $site_url ?>/admin/.components/accounts/?user=librarian" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
-                <p>Teachers</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="<?= $site_url ?>/admin/.components/accounts/?user=student" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-
-                <p>Students</p>
+                <p>Librarian</p>
               </a>
             </li>
 
@@ -71,10 +63,18 @@
             </li>
 
             <li class="nav-item">
-              <a href="<?= $site_url ?>/admin/.components/accounts/?user=librarian" class="nav-link">
+              <a href="<?= $site_url ?>/admin/.components/accounts/?user=student" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
-                <p>Librarian</p>
+                <p>Students</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="<?= $site_url ?>/admin/.components/accounts/?user=teacher" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+
+                <p>Teachers</p>
               </a>
             </li>
           </ul>
@@ -94,14 +94,6 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= $site_url ?>/admin/.components/classes/sections.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-
-                <p>Sections</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
               <a href="<?= $site_url ?>/admin/.components/classes/classes.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
@@ -118,18 +110,26 @@
             </li>
 
             <li class="nav-item">
-              <a href="<?= $site_url ?>/admin/.components/classes/subjects.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-
-                <p>Subjects</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
               <a href="<?= $site_url ?>/admin/.components/classes/lessons.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Lessons</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="<?= $site_url ?>/admin/.components/classes/sections.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+
+                <p>Sections</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="<?= $site_url ?>/admin/.components/classes/subjects.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+
+                <p>Subjects</p>
               </a>
             </li>
           </ul>
@@ -180,18 +180,18 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= $site_url ?>/admin/.components/examinations/exam-form.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-
-                <p>Examination Form</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
               <a href="<?= $site_url ?>/admin/.components/examinations/admin-card.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Admin card</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="<?= $site_url ?>/admin/.components/examinations/exam-form.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+
+                <p>Examination Form</p>
               </a>
             </li>
 

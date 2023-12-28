@@ -47,7 +47,7 @@
               <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
-                <p>Subjects</p>
+                <p>Lessons</p>
               </a>
             </li>
 
@@ -55,7 +55,7 @@
               <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
 
-                <p>Lessons</p>
+                <p>Subjects</p>
               </a>
             </li>
           </ul>
