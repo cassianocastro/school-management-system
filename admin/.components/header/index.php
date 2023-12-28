@@ -182,7 +182,7 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" title="Logout" href="../actions/logout.php">
+      <a class="nav-link" title="Logout" href="<?= $site_url ?>/actions/logout.php">
         Logout
 
         <i class="fa fa-sign-out-alt"></i>

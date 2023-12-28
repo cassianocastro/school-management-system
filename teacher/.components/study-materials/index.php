@@ -237,7 +237,7 @@ if ( isset($_POST['submit']) )
                         <tr>
                           <td><?= $count++ ?></td>
                           <td><?= $att->title ?></td>
-                          <td><a href="<?= "http://{$_SERVER['SERVER_NAME']}/assets/uploads/$file_attachment" ?>">Download File</a></td>
+                          <td><a href="<?= "$site_url/assets/uploads/$file_attachment" ?>">Download File</a></td>
                           <td><?= $class->title ?></td>
                           <td><?= $subject->title ?></td>
                           <td><?= $att->publish_date ?></td>

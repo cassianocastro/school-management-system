@@ -290,6 +290,8 @@
   <script src="../../../assets/js/adminlte.js"></script>
   <script src="../../../assets/js/demo.js"></script>
   <script src="../../index.js"></script>
-  <script><?php require_once __DIR__ . '/fee-details copy.js.php'; ?></script>
+  <script>
+    <?php require_once __DIR__ . '/fee-details copy.js.php'; ?>
+  </script>
 </body>
 </html>

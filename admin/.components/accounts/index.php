@@ -458,6 +458,8 @@ if ( isset($_POST['submit']) )
   <script src="../../../assets/js/adminlte.js"></script>
   <script src="../../../assets/js/demo.js"></script>
   <!-- <script src="./dashboard.js"></script> -->
-  <script><?php require_once __DIR__ . '/index.js.php'; ?></script>
+  <script>
+    <?php require_once __DIR__ . '/index.js.php'; ?>
+  </script>
 </body>
 </html>
