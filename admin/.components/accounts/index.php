@@ -1,5 +1,9 @@
 <?php
+error_reporting(E_ALL);
+ini_set("display_errors", true);
+
 require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../../actions/admin.php';
 
 $error = '';
 
@@ -43,33 +47,7 @@ if ( isset($_POST['submit']) )
   <link rel="stylesheet" type="text/css" href="../../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <link rel="stylesheet" type="text/css" href="../../../assets/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
-
-  <style>
-  /*
-  span#loader
-  {
-    background: #e2e2e2b5;
-
-    position: absolute;
-    left: 50;
-
-    width: 100%;
-    height: 100%;
-  }
-
-  i.fas.fa-circle-notch.fa-spin
-  {
-    font-size: 10rem;
-
-    position: absolute;
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%,-50%);
-    transform-origin: center;
-  }
-  */
-  </style>
+  <link rel="stylesheet" type="text/css" href="./index.css">
 
   <title>Admin's Dashboard | School SysManager</title>
 </head>
@@ -480,6 +458,6 @@ if ( isset($_POST['submit']) )
   <script src="../../../assets/js/adminlte.js"></script>
   <script src="../../../assets/js/demo.js"></script>
   <!-- <script src="./dashboard.js"></script> -->
-  <?php require_once __DIR__ . '/index.js.php'; ?>
+  <script><?php require_once __DIR__ . '/index.js.php'; ?></script>
 </body>
 </html>
