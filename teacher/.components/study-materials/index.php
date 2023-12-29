@@ -102,6 +102,7 @@ if ( isset($_POST['submit']) )
   <link rel="stylesheet" type="text/css" href="../../../assets/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
   <link rel="stylesheet" type="text/css" href="./.components/table/index.css">
+  <link rel="stylesheet" type="text/css" href="./.components/form/index.css">
 
   <title>Teacher's Dashboard | School SysManager</title>
 </head>
@@ -137,17 +138,12 @@ if ( isset($_POST['submit']) )
       <section class="content">
         <div class="container-fluid">
           <?php
-          if ( isset($_GET['action']) and $_GET['action'] == 'add-new' )
-          {
             $classes  = get_posts(['type' => 'class', 'status' => 'publish']);
             $subjects = get_posts(['type' => 'subject', 'status' => 'publish']);
 
-            require_once __DIR__ . '/.components/form/index.php';
-          }
-          else
-          {
             require_once __DIR__ . '/.components/table/index.php';
-          }
+
+            require_once __DIR__ . '/.components/form/index.php';
           ?>
         </div>
       </section>
@@ -164,5 +160,7 @@ if ( isset($_POST['submit']) )
   <script defer src="../../../assets/js/adminlte.js"></script>
   <script defer src="../../../assets/js/demo.js"></script>
   <script defer src="../../index.js"></script>
+  <script defer src="./.components/table/index.js"></script>
+  <script defer src="./.components/form/index.js"></script>
 </body>
 </html>
