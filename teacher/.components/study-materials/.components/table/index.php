@@ -28,7 +28,19 @@
         <tbody>
           <?php
           $count = 1;
-          $query = mysqli_query($db_conn, "SELECT * FROM `posts` WHERE `type` = 'study-material' AND author = 1");
+          $query = mysqli_query(
+            $db_conn,
+            <<<SQL
+              SELECT
+                *
+              FROM
+                posts
+              WHERE
+                type = 'study-material'
+              AND
+                author = 1
+            SQL
+          );
 
           while ( $att = mysqli_fetch_object($query) ) :
             $class_id        = get_metadata($att->id, 'class')[0]->meta_value;
