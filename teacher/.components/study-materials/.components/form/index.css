@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+*
+{
+    border: none;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+dialog::backdrop
+{
+    background: none;
+}
+
+/* #region layout */
+
+#smdialog
+{
+    position: absolute;
+    inset: 10px 10px auto auto;
+    /* z-index: 10; */
+
+    height: 70vh;
+    width: 45%;
+}
+
+#smdialog > :only-child
+{
+    border: thin solid #ccc;
+
+    padding: 10px;
+
+    height: 100%;
+}
+
+#smdialog > :only-child > header
+{
+    height: 10%;
+}
+
+#smdialog > :only-child > form
+{
+    height: 80%;
+}
+
+#smdialog > :only-child > footer
+{
+    height: 10%;
+}
+
+#smdialog > :only-child > :is(header, form, footer) > div
+{
+    height: 100%;
+}
+
+/* #endregion layout */
+
+/* #region header */
+
+#smdialog header > :only-child
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    /* outline: thin solid #ccc; */
+    padding: 10px;
+}
+
+#smdialog header h3
+{
+    color: #777;
+
+    font: bold 1rem sans-serif;
+}
+
+#smdialog header button
+{
+    background: rgb(7, 117, 219);
+    border: none;
+    border-radius: 3px;
+
+    color: white;
+    cursor: pointer;
+
+    font: normal .75rem sans-serif;
+
+    outline: none;
+    padding: 5px 10px;
+
+    text-transform: uppercase;
+}
+
+/* #endregion header */
+
+/* #region form */
+
+#smdialog form > div
+{
+    overflow: hidden scroll;
+
+    padding: 10px 20px;
+}
+
+#smdialog form > fieldset > :only-child
+{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+}
+
+#smdialog form label
+{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 7px;
+}
+
+#smdialog form :is(input, textarea, select)
+{
+    background: none;
+    border: none;
+    border-radius: 5px;
+
+    outline: thin solid #ccc;
+    padding: 5px 10px;
+}
+
+#smdialog form textarea
+{
+    height: 20vh;
+
+    resize: vertical;
+}
+
+#smdialog form input[type="file"]
+{
+    font-size: .9rem;
+}
+
+#smdialog form ::file-selector-button
+{
+    background: #777;
+    border: none;
+    border-radius: 15px;
+
+    color: white;
+
+    font: normal .85rem sans-serif;
+
+    margin-right: 10px;
+    outline: none;
+    padding: 4px 15px;
+}
+
+/* #endregion form */
+
+/* #region footer */
+
+#smdialog footer > :only-child
+{
+    padding: 10px;
+}
+
+#smdialog footer menu
+{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+#smdialog footer menu li
+{
+    list-style: none;
+}
+
+#smdialog footer menu button
+{
+    background: rgb(7, 117, 219);
+    border: none;
+    border-radius: 3px;
+
+    color: white;
+    cursor: pointer;
+
+    outline: none;
+    padding: 3px 20px;
+}
+
+/* #endregion footer */
