@@ -8,7 +8,7 @@
     </li>
 
     <li class="nav-item d-none d-sm-inline-block">
-      <a class="nav-link" href="index3.html">
+      <a class="nav-link" href="#">
         Home
       </a>
     </li>
