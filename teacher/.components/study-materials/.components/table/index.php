@@ -4,11 +4,11 @@
     <h3 class="card-title">Study Materials</h3>
 
     <div class="card-tools">
-      <a href="?action=add-new" class="btn btn-success btn-xs">
-        <i class="fa fa-plus mr-2"></i>
+      <button type="button" title="Add new study material" class="btn btn-success btn-xs">
+        <span class="fa fa-plus mr-2"></span>
 
-        Add New
-      </a>
+        <span>Add New</span>
+      </button>
     </div>
   </div>
 
@@ -66,3 +66,5 @@
     </div>
   </div>
 </div>
+
+<script defer src="./.components/table/index.js"></script>
