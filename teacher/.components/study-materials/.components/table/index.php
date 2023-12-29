@@ -65,5 +65,3 @@
 
   </div>
 </section>
-
-<script defer src="./.components/table/index.js"></script>
