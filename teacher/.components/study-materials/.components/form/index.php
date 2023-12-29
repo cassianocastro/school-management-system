@@ -1,50 +1,70 @@
-<!-- Info boxes -->
-<div class="card">
-  <div class="card-header py-2">
-    <h3 class="card-title">New Study-Material</h3>
-  </div>
+<dialog id="smdialog">
+  <div>
 
-  <div class="card-body">
-    <form action="./" method="post" enctype="multipart/form-data">
-      <div class="form-group">
-        <label for="name">Title</label>
+    <header>
+      <div>
+        <h3>New Study-Material</h3>
 
-        <input type="text" name="title" placeholder="Enter the title" class="form-control">
+        <button type="button" title="Close">Close</button>
       </div>
+    </header>
 
-      <div class="form-group">
-        <label for="description">Description</label>
+    <form id="smf" action="./" method="dialog" enctype="multipart/form-data" spellcheck="true">
+      <div>
+        <fieldset>
+          <div>
+            <label>
+              <span>Title</span>
 
-        <textarea id="description" name="description" placeholder="Enter the description" cols="30" rows="10" class="form-control"></textarea>
+              <input type="text" name="title" placeholder="Enter the title" required>
+            </label>
+
+            <label>
+              <span>Description</span>
+
+              <textarea id="description" name="description" placeholder="Enter the description" required></textarea>
+            </label>
+
+            <label>
+              <span>Class</span>
+
+              <select name="class" id="class" required>
+                <option value="" label="Select"></option>
+                <?php foreach ( $classes as $class ) : ?>
+                  <option value="<?= $class->id ?>" label="<?= $class->title ?>"></option>
+                <?php endforeach; ?>
+              </select>
+            </label>
+
+            <label>
+              <span>Your subject</span>
+
+              <select name="subject" id="subject" required>
+                <option value="" label="Select"></option>
+                <?php foreach ( $subjects as $subject ) : ?>
+                  <option value="<?= $subject->id ?>" label="<?= $subject->title ?>"></option>
+                <?php endforeach; ?>
+              </select>
+            </label>
+
+            <label>
+              <span>Your attachment</span>
+
+              <input type="file" name="attachment" id="attachment" required>
+            </label>
+          </div>
+        </fieldset>
       </div>
-
-      <div class="form-group">
-        <label for="class">Class</label>
-
-        <select name="class" id="class" class="form-control" required>
-          <option value="" label="Select"></option>
-          <?php foreach ( $classes as $class ) : ?>
-            <option value="<?= $class->id ?>" label="<?= $class->title ?>"></option>
-          <?php endforeach; ?>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="subject">Your Subject</label>
-
-        <select name="subject" id="subject" class="form-control" required>
-          <option value="" label="Select"></option>
-          <?php foreach ( $subjects as $subject ) : ?>
-            <option value="<?= $subject->id ?>" label="<?= $subject->title ?>"></option>
-          <?php endforeach; ?>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <input type="file" name="attachment" id="attachment" required>
-      </div>
-
-      <button type="submit" name="submit" class="btn btn-success">Submit</button>
     </form>
+
+    <footer>
+      <div>
+        <menu>
+          <li><button type="button" form="smf" name="cancel" title="Cancel">Cancel</button></li>
+          <li><button type="submit" form="smf" name="submit" title="Submit">Submit</button></li>
+        </menu>
+      </div>
+    </footer>
+
   </div>
-</div>
+</dialog>
