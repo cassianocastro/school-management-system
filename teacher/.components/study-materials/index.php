@@ -88,6 +88,9 @@ if ( isset($_POST['submit']) )
   // ob_start();
   // ob_end_flush();
 }
+
+$classes  = get_posts(['type' => 'class', 'status' => 'publish']);
+$subjects = get_posts(['type' => 'subject', 'status' => 'publish']);
 ?>
 
 <!DOCTYPE html>
@@ -101,6 +104,7 @@ if ( isset($_POST['submit']) )
   <link rel="stylesheet" type="text/css" href="../../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" type="text/css" href="../../../assets/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
+  <link rel="stylesheet" type="text/css" href="./index.css">
   <link rel="stylesheet" type="text/css" href="./.components/table/index.css">
   <link rel="stylesheet" type="text/css" href="./.components/form/index.css">
 
@@ -111,43 +115,36 @@ if ( isset($_POST['submit']) )
 
     <?php require_once __DIR__ . '/../header/index.php'; ?>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    <main class="content-wrapper">
+      <div>
 
-      <!-- Content Header (Page header) -->
-      <div class="content-header">
-        <div class="container-fluid">
-          <div class="row mb-2">
+        <section class="content">
+          <div class="container-fluid">
 
-            <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Study Materials</h1>
-            </div>
+            <header>
+              <div>
+                <h1>Study Materials</h1>
 
-            <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Teacher</a></li>
-                <li class="breadcrumb-item active">Study Materials</li>
-              </ol>
-            </div>
+                <nav>
+                  <div>
+                    <ul>
+                      <li><a href="#">Teacher</a></li>
+                      <li>/</li>
+                      <li><a href="#">Study Materials</a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </header>
 
+            <?php require_once __DIR__ . '/.components/table/index.php'; ?>
+
+            <?php require_once __DIR__ . '/.components/form/index.php'; ?>
           </div>
-        </div>
+        </section>
+
       </div>
-
-      <!-- Main content -->
-      <section class="content">
-        <div class="container-fluid">
-          <?php
-            $classes  = get_posts(['type' => 'class', 'status' => 'publish']);
-            $subjects = get_posts(['type' => 'subject', 'status' => 'publish']);
-
-            require_once __DIR__ . '/.components/table/index.php';
-
-            require_once __DIR__ . '/.components/form/index.php';
-          ?>
-        </div>
-      </section>
-    </div>
+    </main>
 
     <?php require_once __DIR__ . '/../footer/index.php'; ?>
 
