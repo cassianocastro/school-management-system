@@ -1,7 +1,7 @@
 <!-- Info boxes -->
 <div class="card">
   <div class="card-header py-2">
-    <h3 class="card-title">Add New Study-Material</h3>
+    <h3 class="card-title">New Study-Material</h3>
   </div>
 
   <div class="card-body">
