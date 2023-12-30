@@ -157,11 +157,6 @@
     gap: 10px;
 }
 
-#smdialog footer menu li
-{
-    list-style: none;
-}
-
 #smdialog footer menu button
 {
     background: rgb(7, 117, 219);
