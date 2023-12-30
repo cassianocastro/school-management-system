@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+*
+{
+    border: none;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+main > div
+{
+    padding: 20px;
+}
+
+section.content > div > header > div
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px;
+}
+
+section.content > div > header h1
+{
+    font: bold 1.5rem sans-serif;
+}
+
+section.content > div > header ul
+{
+    display: flex;
+    gap: 5px;
+}
+
+section.content > div > header li
+{
+    list-style: none;
+}
+
+table
+{
+    outline: thin solid #ccc;
+}
+
+table tbody tr
+{
+    outline: thin solid #ccc;
+}
+
+table :is(th)
+{
+    text-align: center;
+}
