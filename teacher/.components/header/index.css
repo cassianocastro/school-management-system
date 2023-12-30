@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+body > header > :only-child
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px;
+}
+
+/* #region nav */
+
+body > header nav ul
+{
+    align-items: center;
+    display: flex;
+}
+
+body > header nav :any-link
+{
+    color: rgb(23, 98, 168);
+}
+
+/* #endregion nav */
+
+/* #region form */
+
+body > header form > div
+{
+    border-radius: 20px;
+
+    align-items: center;
+    display: flex;
+
+    outline: thin solid rgb(23, 98, 168);
+    padding: 3px 15px;
+}
+
+body > header form label > :first-child
+{
+    display: none;
+}
+
+body > header form label > :last-child
+{
+    background: none;
+    border: none;
+
+    caret-color: rgb(23, 98, 168);
+
+    font-size: .9rem;
+
+    outline: none;
+    padding: 5px 0 5px 5px;
+}
+
+body > header form label > :last-child::placeholder
+{
+    color: rgb(23, 98, 168);
+}
+
+body > header form [type="submit"]
+{
+    background: none;
+    border: none;
+
+    color: rgb(23, 98, 168);
+    cursor: pointer;
+
+    outline: none;
+    padding: 0;
+}
+
+/* #endregion form */
+
+/* #region menu */
+
+body > header menu
+{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+body > header menu button
+{
+    background: none;
+    border: none;
+
+    color: rgb(23, 98, 168);
+    cursor: pointer;
+
+    align-items: center;
+    display: flex;
+    gap: 7px;
+
+    outline: none;
+    padding: 5px;
+}
+
+body > header menu button > :last-child
+{
+    font-size: .8rem;
+}
+
+/* #endregion menu */
