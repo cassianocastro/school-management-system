@@ -100,10 +100,11 @@ $subjects = get_posts(['type' => 'subject', 'status' => 'publish']);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <link rel="stylesheet" type="text/css" href="../../../plugins/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="../../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" type="text/css" href="../../../assets/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
+  <link rel="stylesheet" type="text/css" href="/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/adminlte.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="./index.css">
   <link rel="stylesheet" type="text/css" href="./.components/table/index.css">
   <link rel="stylesheet" type="text/css" href="./.components/form/index.css">
