@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/*
+	http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126
+  	License: none (public domain)
+*/
+
+html, body, div, span,
+header, footer, aside, article, section,
+hgroup, h1, h2, h3, h4, h5, h6, p, blockquote, cite,
+a, abbr, address,
+pre, var, code, samp, kbd,
+ins, del, dfn, em, q, s, time, mark,
+strong, small, sub, sup,
+b, u, i,
+dl, dt, dd,
+search, form, fieldset, legend, label, output,
+table, caption, thead, tbody, tfoot, tr, th, td,
+details, summary,
+figure, figcaption, img,
+menu, nav, ol, ul, li, ruby,
+audio, video, embed, canvas, object, iframe, dialog
+{
+    border: none;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+/*
+    Apply a natural box layout model to all elements,
+    but allowing components to change.
+*/
+*, ::before, ::after
+{
+    box-sizing: border-box;
+}
+
+::backdrop
+{
+    background: none;
+}
+
+body
+{
+    line-height: 1;
+}
+
+/*
+    HTML5 display-role reset for older browsers
+*/
+header, footer, aside, article, section, nav,
+menu, hgroup, search, details, figcaption, figure
+{
+    display: block;
+}
+
+ol, ul, menu
+{
+    list-style: none;
+}
+
+blockquote, q
+{
+    quotes: none;
+}
+
+blockquote::before, blockquote::after, q::before, q::after
+{
+    content: none;
+}
+
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
