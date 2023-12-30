@@ -104,61 +104,52 @@ $subjects = get_posts(['type' => 'subject', 'status' => 'publish']);
   <link rel="stylesheet" type="text/css" href="/plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/adminlte.min.css">
-  <link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="./index.css">
-  <link rel="stylesheet" type="text/css" href="./.components/table/index.css">
-  <link rel="stylesheet" type="text/css" href="./.components/form/index.css">
 
   <title>Teacher's Dashboard | School SysManager</title>
 </head>
-<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
-  <div class="wrapper">
+<body>
+  <?php require_once __DIR__ . '/../header/index.php'; ?>
 
-    <?php require_once __DIR__ . '/../header/index.php'; ?>
+  <main>
+    <div>
+      <section id="sm">
+        <div>
 
-    <main class="content-wrapper">
-      <div>
+          <header>
+            <div>
+              <h1>Study Materials</h1>
 
-        <section class="content">
-          <div class="container-fluid">
+              <nav>
+                <div>
+                  <ul>
+                    <li><a href="#">Teacher</a></li>
+                    <li>/</li>
+                    <li><a href="#">Study Materials</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </header>
 
-            <header>
-              <div>
-                <h1>Study Materials</h1>
+          <?php require_once __DIR__ . '/.components/table/index.php'; ?>
 
-                <nav>
-                  <div>
-                    <ul>
-                      <li><a href="#">Teacher</a></li>
-                      <li>/</li>
-                      <li><a href="#">Study Materials</a></li>
-                    </ul>
-                  </div>
-                </nav>
-              </div>
-            </header>
+          <?php require_once __DIR__ . '/.components/form/index.php'; ?>
+        </div>
+      </section>
 
-            <?php require_once __DIR__ . '/.components/table/index.php'; ?>
+    </div>
+  </main>
 
-            <?php require_once __DIR__ . '/.components/form/index.php'; ?>
-          </div>
-        </section>
+  <?php require_once __DIR__ . '/../footer/index.php'; ?>
 
-      </div>
-    </main>
+  <?php require_once __DIR__ . '/../aside/index.php'; ?>
 
-    <?php require_once __DIR__ . '/../footer/index.php'; ?>
-
-    <?php require_once __DIR__ . '/../aside/index.php'; ?>
-  </div>
-
-  <script defer src="../../../plugins/jquery/jquery.min.js"></script>
-  <script defer src="../../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script defer src="../../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-  <script defer src="../../../assets/js/adminlte.js"></script>
-  <script defer src="../../../assets/js/demo.js"></script>
-  <script defer src="../../index.js"></script>
-  <script defer src="./.components/table/index.js"></script>
-  <script defer src="./.components/form/index.js"></script>
+  <script defer src="/plugins/jquery/jquery.min.js"></script>
+  <script defer src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script defer src="/assets/js/adminlte.js"></script>
+  <script defer src="/assets/js/demo.js"></script>
+  <script defer type="module" src="./index.js"></script>
 </body>
 </html>
