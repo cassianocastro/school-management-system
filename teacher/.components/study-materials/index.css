@@ -1,17 +1,8 @@
 @charset "UTF-8";
 
-*
+body
 {
-    border: none;
-    box-sizing: border-box;
-
-    margin: 0;
-    padding: 0;
-}
-
-dialog::backdrop
-{
-    background: none;
+    font-family: sans-serif;
 }
 
 main > div
@@ -37,9 +28,4 @@ section.content > div > header ul
 {
     display: flex;
     gap: 5px;
-}
-
-section.content > div > header li
-{
-    list-style: none;
 }
