@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body > footer > :only-child
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px;
+}
+
+body > footer p
+{
+    font-size: .9rem;
+}
+
+body > footer :any-link
+{
+    font-weight: bold;
+}
+
+body > footer p > span
+{
+    font-weight: bold;
+}
