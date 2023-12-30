@@ -17,6 +17,7 @@ require_once __DIR__ . '/../../../../../actions/teacher.php';
   <link rel="stylesheet" type="text/css" href="../../../../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" type="text/css" href="../../../../../assets/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
+  <link rel="stylesheet" type="text/css" href="./index.css">
 
   <title>Teacher's Dashboard | School SysManager</title>
 </head>
@@ -25,65 +26,63 @@ require_once __DIR__ . '/../../../../../actions/teacher.php';
 
     <?php require_once __DIR__ . '/../../../header/index.php'; ?>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    <main class="content-wrapper">
+      <div>
 
-      <!-- Content Header (Page header) -->
-      <div class="content-header">
-        <div class="container-fluid">
-          <div class="row mb-2">
+        <section class="content">
+          <div class="container-fluid">
 
-            <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Periods</h1>
+            <header>
+              <div>
+                <h1>Periods</h1>
+
+                <nav>
+                  <div>
+                    <ul>
+                      <li><a href="#">Teacher</a></li>
+                      <li>/</li>
+                      <li><a href="#">Periods</a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </header>
+
+            <div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>S. No.</th>
+                    <th>Title</th>
+                    <th>From</th>
+                    <th>To</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                  $count   = 1;
+                  $args    = ['type' => 'period', 'status' => 'publish'];
+                  $periods = get_posts($args);
+
+                  foreach ( $periods as $period ) :
+                    $from = get_metadata($period->id, 'from')[0]->meta_value;
+                    $to   = get_metadata($period->id, 'to')[0]->meta_value;
+                  ?>
+                  <tr>
+                    <td><?= $count++ ?></td>
+                    <td><?= $period->title ?></td>
+                    <td><?= date('h:i A', strtotime($from)) ?></td>
+                    <td><?= date('h:i A', strtotime($to)) ?></td>
+                  </tr>
+                  <?php endforeach; ?>
+                </toby>
+              </table>
             </div>
-
-            <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Teacher</a></li>
-                <li class="breadcrumb-item active">Periods</li>
-              </ol>
-            </div>
-
           </div>
-        </div>
+        </section>
+
       </div>
-
-      <!-- Main content -->
-      <section class="content">
-        <div class="container-fluid">
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th>S.No.</th>
-                  <th>Title</th>
-                  <th>From</th>
-                  <th>To</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php
-                $count   = 1;
-                $args    = ['type' => 'period', 'status' => 'publish'];
-                $periods = get_posts($args);
-
-                foreach ( $periods as $period ) :
-                  $from = get_metadata($period->id, 'from')[0]->meta_value;
-                  $to   = get_metadata($period->id, 'to')[0]->meta_value;
-                ?>
-                <tr>
-                  <td><?= $count++ ?></td>
-                  <td><?= $period->title ?></td>
-                  <td><?= date('h:i A', strtotime($from)) ?></td>
-                  <td><?= date('h:i A', strtotime($to)) ?></td>
-                </tr>
-                <?php endforeach; ?>
-              </toby>
-            </table>
-          </div>
-        </div>
-      </section>
-    </div>
+    </main>
 
     <?php require_once __DIR__ . '/../../../footer/index.php'; ?>
 
