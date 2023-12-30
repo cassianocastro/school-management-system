@@ -44,7 +44,7 @@
     font: normal .7rem sans-serif;
 
     outline: none;
-    padding: 7px 10px;
+    padding: 7px 15px;
 }
 
 /* #endregion header */
@@ -59,6 +59,16 @@ table
 table tbody tr
 {
     outline: thin solid #ccc;
+}
+
+table thead th
+{
+    font: bold .85rem sans-serif;
+}
+
+table tbody td
+{
+    font: normal .85rem sans-serif;
 }
 
 table :is(th, td)
