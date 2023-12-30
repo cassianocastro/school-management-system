@@ -45,6 +45,7 @@ audio, video, embed, canvas, object, iframe, dialog
 
 body
 {
+    font-family: sans-serif;
     line-height: 1;
 }
 
