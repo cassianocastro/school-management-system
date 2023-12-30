@@ -1,5 +1,5 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-  <!-- Brand Logo -->
+
   <a class="brand-link" href="<?= $site_url ?>">
     <img
       src="<?= $site_url ?>/assets/img/AdminLTELogo.png"
@@ -10,10 +10,8 @@
     <span class="brand-text font-weight-light">Teacher Panel</span>
   </a>
 
-  <!-- Sidebar -->
   <div class="sidebar">
 
-    <!-- Sidebar Menu -->
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!--
