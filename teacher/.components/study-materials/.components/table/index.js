@@ -11,4 +11,4 @@ function index()
     button.addEventListener("click", () => dialog.showModal());
 }
 
-index();
+export { index };
