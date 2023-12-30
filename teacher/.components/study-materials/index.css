@@ -1,30 +1,36 @@
 @charset "UTF-8";
 
-body
-{
-    font-family: sans-serif;
-}
+@import "/assets/css/reset.css";
+
+@import "../header/index.css";
+@import "../footer/index.css";
+@import "../aside/index.css";
+
+@import "./.components/layout.css";
+@import "./.components/table/index.css";
+@import "./.components/form/index.css";
 
 main > div
 {
-    padding: 20px;
+    padding: 25px;
 }
 
-section.content > div > header > div
+#sm > div > header > div
 {
     align-items: center;
     display: flex;
     justify-content: space-between;
 
+    margin-bottom: 10px;
     padding: 20px;
 }
 
-section.content > div > header h1
+#sm > div > header h1
 {
     font: bold 1.5rem sans-serif;
 }
 
-section.content > div > header ul
+#sm > div > header ul
 {
     display: flex;
     gap: 5px;
