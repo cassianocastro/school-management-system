@@ -1,0 +1,4 @@
+@charset "UTF-8";
+
+@import "./.components/periods/index.css";
+@import "./.components/timetable/index.css";
