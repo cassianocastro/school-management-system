@@ -5,10 +5,10 @@
       <div>
         <ul data-widget="treeview" data-accordion="false" role="menu">
           <li>
-            <a href="<?= $site_url ?>">
+            <a href="<?= SITE_URL ?>">
               <figure>
                 <img
-                  src="<?= $site_url ?>/assets/img/AdminLTELogo.png"
+                  src="<?= SITE_URL ?>/assets/img/AdminLTELogo.png"
                   alt="AdminLTE Logo"
                   height="50"
                   width="50"
@@ -24,7 +24,7 @@
             with font-awesome or any other icon font library
           -->
           <li class="nav-item">
-            <a class="nav-link" href="<?= $site_url ?>/teacher">
+            <a class="nav-link" href="<?= SITE_URL ?>/teacher">
               <span class="fas fa-tachometer-alt"></span>
 
               <span>Dashboard</span>
@@ -44,7 +44,7 @@
 
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a class="nav-link" href="<?= $site_url ?>/teacher/courses.php">
+                <a class="nav-link" href="<?= SITE_URL ?>/teacher/courses.php">
                   <span class="far fa-circle nav-icon"></span>
 
                   <span>Courses</span>
@@ -52,7 +52,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="<?=$site_url?>/teacher/lessons.php">
+                <a class="nav-link" href="<?=SITE_URL?>/teacher/lessons.php">
                   <span class="far fa-circle nav-icon"></span>
 
                   <span>Lessons</span>
@@ -60,7 +60,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="<?=$site_url?>/teacher/subjects.php">
+                <a class="nav-link" href="<?=SITE_URL?>/teacher/subjects.php">
                   <span class="far fa-circle nav-icon"></span>
 
                   <span>Subjects</span>
@@ -80,7 +80,7 @@
 
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a class="nav-link" href="<?= $site_url ?>/teacher/.components/routines/.components/periods">
+                <a class="nav-link" href="<?= SITE_URL ?>/teacher/.components/routines/.components/periods">
                   <span class="far fa-circle"></span>
 
                   <span>Periods</span>
@@ -88,7 +88,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="<?= $site_url ?>/teacher/.components/routines/.components/timetable">
+                <a class="nav-link" href="<?= SITE_URL ?>/teacher/.components/routines/.components/timetable">
                   <span class="far fa-circle"></span>
 
                   <span>Time Table</span>
@@ -122,7 +122,7 @@
 
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a class="nav-link" href="<?= $site_url ?>/teacher/attendance.php">
+                <a class="nav-link" href="<?= SITE_URL ?>/teacher/attendance.php">
                   <span class="far fa-circle nav-icon"></span>
 
                   <span>Attendance</span>
@@ -144,7 +144,7 @@
 
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a class="nav-link" href="<?= $site_url ?>/teacher/fee-details.php">
+                <a class="nav-link" href="<?= SITE_URL ?>/teacher/fee-details.php">
                   <span class="far fa-circle nav-icon"></span>
 
                   <span>Fee Details</span>
@@ -164,7 +164,7 @@
 
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a class="nav-link" href="<?= $site_url ?>/teacher/.components/study-materials">
+                <a class="nav-link" href="<?= SITE_URL ?>/teacher/.components/study-materials">
                   <span class="far fa-circle"></span>
 
                   <span>Study Materials</span>

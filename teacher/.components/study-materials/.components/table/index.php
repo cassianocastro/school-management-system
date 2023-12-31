@@ -54,7 +54,7 @@
           <tr>
             <td><?= $count++ ?></td>
             <td><?= $att->title ?></td>
-            <td><a href="<?= "$site_url/assets/uploads/$file_attachment" ?>">Download File</a></td>
+            <td><a href="<?= SITE_URL . "/assets/uploads/$file_attachment" ?>">Download File</a></td>
             <td><?= $class->title ?></td>
             <td><?= $subject->title ?></td>
             <td><?= $att->publish_date ?></td>

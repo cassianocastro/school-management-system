@@ -9,7 +9,7 @@ if ( isset($_POST['submit']) )
   $file        = $_FILES["attachment"]["name"];
   $today       = date('Y-m-d');
 
-  $target_dir  = "$site_url/assets/uploads/";
+  $target_dir  = SITE_URL . "/assets/uploads/";
   $target_file = $target_dir . basename($_FILES["attachment"]["name"]);
   // $FileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
   $uploadOk = 1;
