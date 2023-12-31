@@ -9,12 +9,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <!--
-    1. Font Awesome Icons
-    2. overlayScrollbars
-    3. Theme style
-    4. Google Font: Source Sans Pro
-  -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
   <link rel="stylesheet" type="text/css" href="/plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
@@ -193,18 +187,11 @@
 
   <?php require_once __DIR__ . '/.components/aside/index.php'; ?>
 
-  <!--
-    1. jQuery
-    2. Bootstrap
-    3. overlayScrollbars
-    4. AdminLTE App
-    5. OPTIONAL SCRIPTS
-  -->
   <script defer src="/plugins/jquery/jquery.min.js"></script>
   <script defer src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script defer src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <script defer src="/assets/js/adminlte.js"></script>
   <script defer src="/assets/js/demo.js"></script>
-  <script defer src="./index.js"></script>
+  <script defer type="module" src="./index.js"></script>
 </body>
 </html>
