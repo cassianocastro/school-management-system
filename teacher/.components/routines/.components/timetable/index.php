@@ -64,8 +64,7 @@ require_once __DIR__ . '/../../../../../actions/teacher.php';
               $args    = ['type' => 'period', 'status' => 'publish'];
               $periods = get_posts($args);
 
-              foreach ( $periods as $period )
-              {
+              foreach ( $periods as $period ) :
                 $from = get_metadata($period->id, 'from')[0]->meta_value;
                 $to   = get_metadata($period->id, 'to')[0]->meta_value;
               ?>
@@ -77,8 +76,7 @@ require_once __DIR__ . '/../../../../../actions/teacher.php';
                 <?php
                   $days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
 
-                  foreach ( $days as $day )
-                  {
+                  foreach ( $days as $day ) :
                     $query = mysqli_query(
                       $db_conn,
                       <<<SQL
@@ -109,10 +107,8 @@ require_once __DIR__ . '/../../../../../actions/teacher.php';
                       SQL
                     );
 
-                    if ( mysqli_num_rows($query) > 0 )
-                    {
-                      while ( $timetable = mysqli_fetch_object($query) )
-                      {
+                    if ( mysqli_num_rows($query) > 0 ) :
+                      while ( $timetable = mysqli_fetch_object($query) ) :
                 ?>
                         <td>
                           <p>
@@ -133,15 +129,21 @@ require_once __DIR__ . '/../../../../../actions/teacher.php';
                             ?>
                           </p>
                         </td>
-                    <?php }
-                    } else { ?>
+                  <?php
+                      endwhile;
+                    else:
+                  ?>
                         <td>
                           Unscheduled
                         </td>
-                    <?php }
-                  }?>
+                  <?php
+                    endif;
+                  endforeach;
+                  ?>
               </tr>
-              <?php } ?>
+              <?php
+              endforeach;
+              ?>
             </tbody>
           </table>
 
