@@ -9,39 +9,67 @@ body > aside > :only-child
     height: 100%;
 }
 
-body > aside figure
+/* #region header */
+
+body > aside header > :only-child
 {
     align-items: center;
     display: flex;
+    justify-content: center;
+
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+body > aside header :any-link
+{
+    color: white;
+
+    text-decoration: none;
+}
+
+body > aside header figure
+{
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
     gap: 10px;
 }
 
-body > aside figure > img
+body > aside header img
 {
     border-radius: 50%;
 
     opacity: .8;
 }
 
-body > aside ul
+/* #endregion header */
+
+/* #region menu */
+
+body > aside menu
 {
+    align-items: center;
     display: flex;
     flex-flow: column nowrap;
     gap: 10px;
 }
 
-body > aside :any-link
+body > aside menu button
 {
+    background: none;
+    border: none;
+
     color: white;
+    cursor: pointer;
 
     align-items: center;
     display: flex;
-    gap: 10px;
-
-    font-size: .9rem;
+    flex-flow: column nowrap;
+    gap: 15px;
 
     outline: none;
-    padding: 15px;
-
-    text-decoration: none;
+    padding: 10px;
 }
+
+/* #endregion menu */
