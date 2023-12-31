@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+#index > div > header > div
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+#index > div > header h1
+{
+    font: bold 1.5rem sans-serif;
+}
+
+#index > div > header ul
+{
+    display: flex;
+    gap: 5px;
+}
