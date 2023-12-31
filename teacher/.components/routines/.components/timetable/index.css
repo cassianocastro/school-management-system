@@ -1,12 +1,36 @@
 @charset "UTF-8";
 
-*
-{
-    border: none;
-    box-sizing: border-box;
+@import "/assets/css/reset.css";
+@import "../../../header/index.css";
+@import "../../../footer/index.css";
+@import "../../../aside/index.css";
 
-    margin: 0;
-    padding: 0;
+body
+{
+    display: grid;
+    grid: 10vh 80vh 10vh / 20% 80%;
+
+    width: 100%;
+}
+
+body > header
+{
+    grid-area: 1 / 2 / 2 / 4;
+}
+
+body > main
+{
+    grid-area: 2 / 2 / 3 / 4;
+}
+
+body > footer
+{
+    grid-area: 3 / 2 / 4 / 4;
+}
+
+body > aside
+{
+    grid-area: 1 / 1 / 4 / 2;
 }
 
 main > div
@@ -14,7 +38,7 @@ main > div
     padding: 20px;
 }
 
-section.content > div > header > div
+#timetable > div > header > div
 {
     align-items: center;
     display: flex;
@@ -23,20 +47,15 @@ section.content > div > header > div
     padding: 20px;
 }
 
-section.content > div > header h1
+#timetable > div > header h1
 {
     font: bold 1.5rem sans-serif;
 }
 
-section.content > div > header ul
+#timetable > div > header ul
 {
     display: flex;
     gap: 5px;
-}
-
-section.content > div > header li
-{
-    list-style: none;
 }
 
 table
@@ -52,4 +71,14 @@ table tbody tr
 table :is(th)
 {
     text-align: center;
+}
+
+th
+{
+    font-weight: bold;
+}
+
+td
+{
+    font-size: .85rem;
 }
