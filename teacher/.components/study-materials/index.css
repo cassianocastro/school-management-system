@@ -1,19 +1,7 @@
 @charset "UTF-8";
 
-@import "/assets/css/reset.css";
-
-@import "../header/index.css";
-@import "../footer/index.css";
-@import "../aside/index.css";
-
-@import "./.components/layout.css";
 @import "./.components/table/index.css";
 @import "./.components/form/index.css";
-
-main > div
-{
-    padding: 25px;
-}
 
 #sm > div > header > div
 {
