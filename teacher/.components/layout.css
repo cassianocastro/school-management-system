@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+body
+{
+    display: grid;
+    grid: 10vh 80vh 10vh / 20vw 80vw;
+}
+
+body > header
+{
+    grid-area: 1 / 2 / 2 / 4;
+}
+
+body > main
+{
+    grid-area: 2 / 2 / 3 / 4;
+}
+
+body > footer
+{
+    grid-area: 3 / 2 / 4 / 4;
+}
+
+body > aside
+{
+    grid-area: 1 / 1 / 4 / 2;
+}
+
+body > main > :only-child
+{
+    overflow: hidden scroll;
+    padding: 25px;
+
+    height: 100%;
+}
