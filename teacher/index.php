@@ -15,44 +15,39 @@
     3. Theme style
     4. Google Font: Source Sans Pro
   -->
-  <link rel="stylesheet" type="text/css" href="../plugins/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" type="text/css" href="../assets/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
+  <link rel="stylesheet" type="text/css" href="/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/adminlte.min.css">
+  <link rel="stylesheet" type="text/css" href="./index.css">
 
   <title>Teacher's Dashboard | School SysManager</title>
 </head>
-<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
-  <div class="wrapper">
+<body>
+  <?php require_once __DIR__ . '/.components/header/index.php'; ?>
 
-    <?php require_once __DIR__ . '/.components/header/index.php'; ?>
+  <main>
+    <div>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+      <section id="index">
+        <div>
 
-      <!-- Content Header (Page header) -->
-      <div class="content-header">
-        <div class="container-fluid">
-          <div class="row mb-2">
+          <header>
+            <div>
+              <h1>Dashboard</h1>
 
-            <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Dashboard</h1>
+              <nav>
+                <div>
+                  <ul>
+                    <li><a href="#">Teacher</a></li>
+                    <li>/</li>
+                    <li><a href="#">Dashboard</a></li>
+                  </ul>
+                </div>
+              </nav>
             </div>
+          </header>
 
-            <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Teacher</a></li>
-                <li class="breadcrumb-item active">Dashboard</li>
-              </ol>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- Main content -->
-      <section class="content">
-        <div class="container-fluid">
           <!-- Info boxes -->
           <div class="row">
 
@@ -157,9 +152,9 @@
           if ( isset($_POST['sign-out']) )
           {
             $attendance[$current_date] = [
-              'signin_at' => $attendance[$current_date]['signin_at'],
+              'signin_at'  => $attendance[$current_date]['signin_at'],
               'signout_at' => time(),
-              'date' => $current_date
+              'date'       => $current_date
             ];
 
             $att_data = serialize($attendance);
@@ -177,17 +172,12 @@
                 </div>
 
                 <div class="card-body">
-                  <form action="" method="post">
-                    <?php
-                    if ( empty($attendance[$current_date]['signin_at']) || $attendance[$current_date]['signout_at'] )
-                    {
-                      echo '<button name="sign-in" class="btn btn-primary">Sign in</button>';
-                    }
-                    else
-                    {
-                      echo '<button name="sign-out" class="btn btn-primary">Sign Out</button>';
-                    }
-                    ?>
+                  <form action="./" method="post">
+                    <?php if ( empty($attendance[$current_date]['signin_at']) || $attendance[$current_date]['signout_at'] ) : ?>
+                      <button name="sign-in" class="btn btn-primary">Sign in</button>
+                    <?php else: ?>
+                      <button name="sign-out" class="btn btn-primary">Sign Out</button>
+                    <?php endif; ?>
                   </form>
                 </div>
               </div>
@@ -195,12 +185,13 @@
           </div>
         </div>
       </section>
+
     </div>
+  </main>
 
-    <?php require_once __DIR__ . '/.components/footer/index.php'; ?>
+  <?php require_once __DIR__ . '/.components/footer/index.php'; ?>
 
-    <?php require_once __DIR__ . '/.components/aside/index.php'; ?>
-  </div>
+  <?php require_once __DIR__ . '/.components/aside/index.php'; ?>
 
   <!--
     1. jQuery
@@ -209,11 +200,11 @@
     4. AdminLTE App
     5. OPTIONAL SCRIPTS
   -->
-  <script defer src="../plugins/jquery/jquery.min.js"></script>
-  <script defer src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script defer src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-  <script defer src="../assets/js/adminlte.js"></script>
-  <script defer src="../assets/js/demo.js"></script>
+  <script defer src="/plugins/jquery/jquery.min.js"></script>
+  <script defer src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script defer src="/assets/js/adminlte.js"></script>
+  <script defer src="/assets/js/demo.js"></script>
   <script defer src="./index.js"></script>
 </body>
 </html>
