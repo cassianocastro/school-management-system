@@ -1,9 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set("display_errors", true);
-
-require_once __DIR__ . '/../../../includes/config.php';
-require_once __DIR__ . '/../../../actions/teacher.php';
 
 if ( isset($_POST['submit']) )
 {
@@ -93,63 +88,27 @@ $classes  = get_posts(['type' => 'class', 'status' => 'publish']);
 $subjects = get_posts(['type' => 'subject', 'status' => 'publish']);
 ?>
 
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<section id="sm">
+  <div>
 
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
-  <link rel="stylesheet" type="text/css" href="/plugins/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" type="text/css" href="/assets/css/adminlte.min.css">
-  <link rel="stylesheet" type="text/css" href="./index.css">
+    <header>
+      <div>
+        <h1>Study Materials</h1>
 
-  <title>Teacher's Dashboard | School SysManager</title>
-</head>
-<body>
-  <?php require_once __DIR__ . '/../header/index.php'; ?>
+        <nav>
+          <div>
+            <ul>
+              <li><a href="#">Teacher</a></li>
+              <li>/</li>
+              <li><a href="#">Study Materials</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-  <main>
-    <div>
-      <section id="sm">
-        <div>
+    <?php require_once __DIR__ . '/.components/table/index.php'; ?>
 
-          <header>
-            <div>
-              <h1>Study Materials</h1>
-
-              <nav>
-                <div>
-                  <ul>
-                    <li><a href="#">Teacher</a></li>
-                    <li>/</li>
-                    <li><a href="#">Study Materials</a></li>
-                  </ul>
-                </div>
-              </nav>
-            </div>
-          </header>
-
-          <?php require_once __DIR__ . '/.components/table/index.php'; ?>
-
-          <?php require_once __DIR__ . '/.components/form/index.php'; ?>
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <?php require_once __DIR__ . '/../footer/index.php'; ?>
-
-  <?php require_once __DIR__ . '/../aside/index.php'; ?>
-
-  <script defer src="/plugins/jquery/jquery.min.js"></script>
-  <script defer src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script defer src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-  <script defer src="/assets/js/adminlte.js"></script>
-  <script defer src="/assets/js/demo.js"></script>
-  <script defer type="module" src="./index.js"></script>
-</body>
-</html>
+    <?php require_once __DIR__ . '/.components/form/index.php'; ?>
+  </div>
+</section>
