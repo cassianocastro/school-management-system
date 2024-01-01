@@ -2,11 +2,6 @@
 
 /* #region layout */
 
-.open
-{
-    display: block;
-}
-
 #notifications
 {
     display: none;
