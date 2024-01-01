@@ -15,6 +15,7 @@ body > header nav ul
 {
     align-items: center;
     display: flex;
+    gap: 20px;
 }
 
 body > header nav :any-link
@@ -80,7 +81,7 @@ body > header menu
 {
     align-items: center;
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 body > header menu button
@@ -97,11 +98,6 @@ body > header menu button
 
     outline: none;
     padding: 5px;
-}
-
-body > header menu button > :last-child
-{
-    font-size: .8rem;
 }
 
 /* #endregion menu */
