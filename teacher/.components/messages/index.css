@@ -4,6 +4,8 @@
 
 #messages
 {
+    display: none;
+
     position: fixed;
     inset: 0 0 0 80vw;
 }
