@@ -1,62 +1,23 @@
 <header>
   <div>
 
-    <nav>
-      <div>
-        <ul>
-          <li class="nav-item">
-            <a class="nav-link" data-widget="pushmenu" role="button" href="#">
-              <span class="fas fa-bars"></span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Home
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <form action="./" method="post" autocomplete="off">
-      <div>
-        <label>
-          <span>Search</span>
-
-          <input type="search" placeholder="Search" aria-label="Search">
-        </label>
-
-        <button type="submit" title="Search">
-          <span class="fas fa-search"></span>
-        </button>
-      </div>
-    </form>
-
     <menu>
-      <li class="dropdown">
-        <button type="button" title="Comments" data-toggle="dropdown">
-          <span class="far fa-comments"></span>
+      <li>
+        <button type="button" title="Sidebar" class="fas fa-bars">
 
-          <span>3</span>
         </button>
       </li>
 
-      <li class="dropdown">
-        <button type="button" title="Notifications" data-toggle="dropdown">
-          <span class="far fa-bell"></span>
+      <li>
+        <button type="button" title="Messages" class="far fa-comments">
 
-          <span>15</span>
         </button>
+      </li>
 
-        <!-- Notifications Dropdown Menu -->
-        <?php require_once __DIR__ . '/../notifications/index.php'; ?>
+      <li>
+        <button type="button" title="Notifications" class="far fa-bell">
+
+        </button>
       </li>
 
       <li>
@@ -67,6 +28,27 @@
         </button>
       </li>
     </menu>
+
+    <form action="./" method="post" autocomplete="off">
+      <div>
+        <label>
+          <span>Search</span>
+
+          <input type="search" name="search" placeholder="Search" required>
+        </label>
+
+        <button type="submit" title="Search" class="fas fa-search"></button>
+      </div>
+    </form>
+
+    <nav>
+      <div>
+        <ul>
+          <li><a title="Homepage" type="text/html" hreflang="en" href="#">Home</a></li>
+          <li><a title="Contact" type="text/html" hreflang="en" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
   </div>
 </header>
