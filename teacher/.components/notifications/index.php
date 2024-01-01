@@ -1,33 +1,59 @@
-<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-  <span class="dropdown-item dropdown-header">15 Notifications</span>
+<aside id="notifications">
+  <div>
 
-  <div class="dropdown-divider"></div>
+    <header>
+      <div>
+        <h3>15 Notifications</h3>
+      </div>
+    </header>
 
-  <a href="#" class="dropdown-item">
-    <i class="fas fa-envelope mr-2"></i> 4 new messages
+    <nav>
+      <div>
+        <ul>
+          <li>
+            <a title="" type="text/html" hreflang="en" href="#">
+              <p class="notification">
+                <span class="fas fa-envelope"></span>
 
-    <span class="float-right text-muted text-sm">3 mins</span>
-  </a>
+                <span>4 new messages</span>
 
-  <div class="dropdown-divider"></div>
+                <span>3 mins</span>
+              </p>
+            </a>
+          </li>
 
-  <a href="#" class="dropdown-item">
-    <i class="fas fa-users mr-2"></i> 8 friend requests
+          <li>
+            <a title="" type="text/html" hreflang="en" href="#">
+              <p class="notification">
+                <span class="fas fa-users"></span>
 
-    <span class="float-right text-muted text-sm">12 hours</span>
-  </a>
+                <span>8 friend requests</span>
 
-  <div class="dropdown-divider"></div>
+                <span>12 hours</span>
+              </p>
+            </a>
+          </li>
 
-  <a href="#" class="dropdown-item">
-    <i class="fas fa-file mr-2"></i> 3 new reports
+          <li>
+            <a title="" type="text/html" hreflang="en" href="#">
+              <p class="notification">
+                <span class="fas fa-file"></span>
 
-    <span class="float-right text-muted text-sm">2 days</span>
-  </a>
+                <span>3 new reports</span>
 
-  <div class="dropdown-divider"></div>
+                <span>2 days</span>
+              </p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-  <a href="#" class="dropdown-item dropdown-footer">
-    See All Notifications
-  </a>
-</div>
+    <footer>
+      <div>
+        <button type="button" title="See All Notifications">See All</button>
+      </div>
+    </footer>
+
+  </div>
+</aside>
