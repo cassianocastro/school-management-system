@@ -31,6 +31,8 @@ require_once __DIR__ . '/../actions/teacher.php';
       <?php require_once __DIR__ . '/.components/routines/index.php'; ?>
 
       <?php require_once __DIR__ . '/.components/study-materials/index.php'; ?>
+
+      <?php require_once __DIR__ . '/.components/messages/index.php'; ?>
     </div>
   </main>
 
