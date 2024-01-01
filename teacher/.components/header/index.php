@@ -46,9 +46,6 @@
 
           <span>3</span>
         </button>
-
-        <!-- Messages Dropdown Menu -->
-        <?php require_once __DIR__ . '/../messages/index.php'; ?>
       </li>
 
       <li class="dropdown">
