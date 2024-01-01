@@ -1,89 +1,98 @@
-<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-  <a class="dropdown-item" href="#">
-    <!-- Message Start -->
-    <div class="media">
-      <img src="<?= SITE_URL ?>/assets/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+<?php
+$users = [
+  [
+    "name"    => "Brad Diesel",
+    "photo"   => "user1-128x128.jpg",
+    "message" => [
+      "content" => "Call me whenever you can...",
+      "time"    => "4 Hours Ago"
+    ]
+  ],
+  [
+    "name"    => "John Pierce",
+    "photo"   => "user8-128x128.jpg",
+    "message" => [
+      "content" => "I got your message bro",
+      "time"    => "4 Hours Ago"
+    ]
+  ],
+  [
+    "name"    => "Nora Silvester",
+    "photo"   => "user3-128x128.jpg",
+    "message" => [
+      "content" => "The subject goes here",
+      "time"    => "4 Hours Ago"
+    ]
+  ]
+];
 
-      <div class="media-body">
-        <h3 class="dropdown-item-title">
-          Brad Diesel
+?>
 
-          <span class="float-right text-sm text-danger">
-            <i class="fas fa-star"></i>
-          </span>
-        </h3>
+<aside id="messages">
+  <div>
 
-        <p class="text-sm">
-          Call me whenever you can...
-        </p>
-
-        <p class="text-sm text-muted">
-          <i class="far fa-clock mr-1"></i> 4 Hours Ago
-        </p>
+    <header>
+      <div>
+        <h3>Messages</h3>
       </div>
-    </div>
-    <!-- Message End -->
-  </a>
+    </header>
 
-  <div class="dropdown-divider"></div>
+    <nav>
+      <div>
+        <ul>
+          <?php foreach ( $users as $user ) : ?>
+            <li>
+              <a title="Chat with <?= $user["name"] ?>" type="text/html" hreflang="en" href="#">
+                <article class="msg">
+                  <div>
+                    <header>
+                      <div>
+                        <figure>
+                          <img
+                            src="<?= SITE_URL ?>/assets/img/<?= $user["photo"] ?>"
+                            alt="User Avatar"
+                            height="50"
+                            width="50"
+                          >
 
-  <a class="dropdown-item" href="#">
-    <!-- Message Start -->
-    <div class="media">
-      <img src="<?= SITE_URL ?>/assets/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                          <figcaption>
+                            <h4>
+                              <span><?= $user["name"] ?></span>
 
-      <div class="media-body">
-        <h3 class="dropdown-item-title">
-          John Pierce
+                              <span class="fas fa-star"></span>
+                            </h4>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </header>
 
-          <span class="float-right text-sm text-muted">
-            <i class="fas fa-star"></i>
-          </span>
-        </h3>
+                    <p>
+                      <?= $user["message"]["content"] ?>
+                    </p>
 
-        <p class="text-sm">
-          I got your message bro
-        </p>
+                    <footer>
+                      <div>
+                        <p>
+                          <span class="far fa-clock"></span>
 
-        <p class="text-sm text-muted">
-          <i class="far fa-clock mr-1"></i> 4 Hours Ago
-        </p>
+                          <?= $user["message"]["time"] ?>
+                        </p>
+                      </div>
+                    </footer>
+                  </div>
+                </article>
+              </a>
+            </li>
+          <?php endforeach; ?>
+        </ul>
       </div>
-    </div>
-    <!-- Message End -->
-  </a>
+    </nav>
 
-  <div class="dropdown-divider"></div>
-
-  <a class="dropdown-item" href="#">
-    <!-- Message Start -->
-    <div class="media">
-      <img src="<?= SITE_URL ?>/assets/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-
-      <div class="media-body">
-        <h3 class="dropdown-item-title">
-          Nora Silvester
-
-          <span class="float-right text-sm text-warning">
-            <i class="fas fa-star"></i>
-          </span>
-        </h3>
-
-        <p class="text-sm">
-          The subject goes here
-        </p>
-
-        <p class="text-sm text-muted">
-          <i class="far fa-clock mr-1"></i> 4 Hours Ago
-        </p>
+    <footer>
+      <div>
+        <button type="button" title="See all messages">See All</button>
       </div>
-    </div>
-    <!-- Message End -->
-  </a>
+    </footer>
 
-  <div class="dropdown-divider"></div>
-
-  <a class="dropdown-item dropdown-footer" href="#">
-    See All Messages
-  </a>
-</div>
+  </div>
+</aside>
