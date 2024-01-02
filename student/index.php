@@ -9,16 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <!--
-    1. Font Awesome Icons
-    2. overlayScrollbars
-    3. Theme style
-    4. Google Font: Source Sans Pro
-  -->
-  <link rel="stylesheet" type="text/css" href="../plugins/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" type="text/css" href="../assets/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
+  <link rel="stylesheet" type="text/css" href="/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/adminlte.min.css">
 
   <title>Student's Dashboard | School SysManager</title>
 </head>
@@ -176,13 +170,12 @@
                 </div>
 
                 <div class="card-body">
-                  <form action="" method="post">
-                    <?php
-                    if ( empty($attendance[$current_date]['signin_at']) || $attendance[$current_date]['signout_at'])
-                      echo '<button name="sign-in" class="btn btn-primary">Sign in</button>';
-                    else
-                      echo '<button name="sign-out" class="btn btn-primary">Sign Out</button>';
-                    ?>
+                  <form action="./" method="post">
+                    <?php if ( empty($attendance[$current_date]['signin_at']) || $attendance[$current_date]['signout_at']) : ?>
+                      <button name="sign-in" class="btn btn-primary">Sign in</button>
+                    <?php else: ?>
+                      <button name="sign-out" class="btn btn-primary">Sign Out</button>
+                    <?php endif; ?>
                   </form>
                 </div>
               </div>
@@ -197,18 +190,11 @@
     <?php require_once __DIR__ . '/.components/aside/index.php'; ?>
   </div>
 
-  <!--
-    1. jQuery
-    2. Bootstrap
-    3. overlayScrollbars
-    4. AdminLTE App
-    5. OPTIONAL SCRIPTS
-  -->
-  <script src="../plugins/jquery/jquery.min.js"></script>
-  <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-  <script src="../assets/js/adminlte.js"></script>
-  <script src="../assets/js/demo.js"></script>
+  <script src="/plugins/jquery/jquery.min.js"></script>
+  <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script src="/assets/js/adminlte.js"></script>
+  <script src="/assets/js/demo.js"></script>
   <script src="./index.js"></script>
 </body>
 </html>
