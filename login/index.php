@@ -7,19 +7,12 @@
 
   <link rel="preload" as="style" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css">
+  <link rel="preload" as="style" href="../assets/css/reset.css">
   <link rel="preload" as="style" href="./index.css">
-
-  <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-  <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
-  <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js">
-  <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js">
 
   <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="./index.css">
 
   <base href="http://<?= $_SERVER['SERVER_NAME'] ?>">
@@ -27,43 +20,47 @@
   <title>Login | School SysManager</title>
 </head>
 <body>
-  <section class="bg-light vh-100 d-flex">
-    <div class="col-3 m-auto">
-      <div class="card">
-        <div class="card-body">
-          <div class="border rounded-circle mx-auto d-flex" style="height: 100px; width: 100px;">
-            <i class="fa fa-user text-light fa-3x m-auto"></i>
-          </div>
+  <main>
+    <div>
 
-          <form action="actions/login.php" method="post" autocomplete="off">
-            <!-- Material input -->
-            <div class="md-form">
-              <input type="email" name="email" id="email" required class="form-control">
+      <section>
+        <div>
 
-              <label for="email">Your Email</label>
+          <header>
+            <div>
+              <h1 class="fa fa-user"></h1>
             </div>
+          </header>
 
-            <!-- Material input -->
-            <div class="md-form">
-              <input type="password" name="password" id="password" required class="form-control">
+          <form action="actions/login.php" method="post" autocomplete="off" spellcheck="false">
+            <div>
+              <fieldset>
+                <div>
+                  <label>
+                    <span>Your Email</span>
 
-              <label for="password">Your Password</label>
-            </div>
+                    <input type="email" name="email" placeholder="user@email.com" required>
+                  </label>
 
-            <div class="text-center">
-              <button type="submit" name="login" class="btn btn-secondary">
-                Login
-              </button>
+                  <label>
+                    <span>Your Password</span>
+
+                    <input type="password" name="password" placeholder="p@55w0rd" required>
+                  </label>
+                </div>
+              </fieldset>
+
+              <menu>
+                <li><button type="reset" name="reset" title="Clear fields">Reset</button></li>
+                <li><button type="submit" name="login" title="Login">Submit</button></li>
+              </menu>
             </div>
           </form>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+        </div>
+      </section>
+
+    </div>
+  </main>
 </body>
 </html>
