@@ -3,7 +3,7 @@
 #table > :only-child
 {
     background: white;
-    box-shadow: 0 0 5px #aaa;
+    /* box-shadow: 0 0 5px #aaa; */
 
     padding: 20px;
 }
