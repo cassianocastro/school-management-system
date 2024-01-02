@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL);
-ini_set("display_errors", true);
+// error_reporting(E_ALL);
+// ini_set("display_errors", true);
 
 require_once __DIR__ . '/../includes/config.php';
 require_once __DIR__ . '/../actions/teacher.php';
@@ -26,21 +26,21 @@ require_once __DIR__ . '/../actions/teacher.php';
 
   <main>
     <div>
-      <?php require_once __DIR__ . '/.components/home/index.php'; ?>
+      <?php require_once __DIR__ . '/.components/study-materials/index.php'; ?>
 
       <?php require_once __DIR__ . '/.components/routines/index.php'; ?>
 
-      <?php require_once __DIR__ . '/.components/study-materials/index.php'; ?>
-
-      <?php require_once __DIR__ . '/.components/messages/index.php'; ?>
-
-      <?php require_once __DIR__ . '/.components/notifications/index.php'; ?>
+      <?php require_once __DIR__ . '/.components/home/index.php'; ?>
     </div>
   </main>
 
   <?php require_once __DIR__ . '/.components/footer/index.php'; ?>
 
   <?php require_once __DIR__ . '/.components/aside/index.php'; ?>
+
+  <?php require_once __DIR__ . '/.components/messages/index.php'; ?>
+
+  <?php require_once __DIR__ . '/.components/notifications/index.php'; ?>
 
   <script defer src="/plugins/jquery/jquery.min.js"></script>
   <script defer src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
