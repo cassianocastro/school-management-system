@@ -3,6 +3,19 @@
 @import "./.components/table/index.css";
 @import "./.components/form/index.css";
 
+#sm
+{
+    position: absolute;
+    inset: 25px;
+}
+
+#sm > div
+{
+    background: white;
+
+    height: 100%;
+}
+
 #sm > div > header > div
 {
     align-items: center;
