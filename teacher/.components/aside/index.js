@@ -3,29 +3,30 @@
 /**
  *
  */
-function index()
+function index(zIndex)
 {
-    let path = location.toString();
-    // console.log(path);
+    let menu = document.querySelector("body > aside menu");
 
-    $(".nav-link").each(() => {
-        var href = $(this).attr('href');
+    {
+        const section = document.querySelector("#index");
+        const button  = menu.querySelector(":first-child > button");
 
-        // console.log(href);
+        button.addEventListener("click", () => section.style.zIndex = ++zIndex);
+    }
 
-        if ( path === decodeURIComponent(href) )
-        {
-            $(this).addClass('active');
+    {
+        const section = document.querySelector("#routines");
+        const button  = menu.querySelector(":nth-child(2) > button");
 
-            var parent = $(this).closest('.has-treeview');
+        button.addEventListener("click", () => section.style.zIndex = ++zIndex);
+    }
 
-            parent.addClass('menu-open');
+    {
+        const section = document.querySelector("#sm");
+        const button  = menu.querySelector(":nth-child(3) > button");
 
-            $(parent).find('.nav-link').first().addClass('active');
-
-            // console.log(parent);
-        }
-    });
+        button.addEventListener("click", () => section.style.zIndex = ++zIndex);
+    }
 }
 
 export { index };
