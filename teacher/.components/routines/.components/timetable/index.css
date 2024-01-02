@@ -1,5 +1,21 @@
 @charset "UTF-8";
 
+#timetable
+{
+    position: absolute;
+    inset: 25px;
+}
+
+#timetable > div
+{
+    background: white;
+
+    /* outline: thin solid red; */
+    padding: 20px;
+
+    height: 100%;
+}
+
 #timetable > div > header > div
 {
     align-items: center;
@@ -22,7 +38,7 @@
 
 table
 {
-    outline: thin solid #ccc;
+    border: thin solid #ccc;
 }
 
 table tbody tr
