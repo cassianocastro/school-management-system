@@ -28,8 +28,9 @@ body > aside
 
 body > main > :only-child
 {
+    contain: layout;
+
     overflow: hidden scroll;
-    padding: 25px;
 
     height: 100%;
 }
