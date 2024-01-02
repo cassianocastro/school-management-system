@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body > aside > :only-child
+#controller > :only-child
 {
     background: rgb(23, 98, 168);
 
@@ -11,7 +11,7 @@ body > aside > :only-child
 
 /* #region header */
 
-body > aside header > :only-child
+#controller header > :only-child
 {
     align-items: center;
     display: flex;
@@ -21,14 +21,14 @@ body > aside header > :only-child
     padding: 10px;
 }
 
-body > aside header :any-link
+#controller header :any-link
 {
     color: white;
 
     text-decoration: none;
 }
 
-body > aside header figure
+#controller header figure
 {
     align-items: center;
     display: flex;
@@ -36,7 +36,7 @@ body > aside header figure
     gap: 10px;
 }
 
-body > aside header img
+#controller header img
 {
     border-radius: 50%;
 
@@ -47,7 +47,7 @@ body > aside header img
 
 /* #region menu */
 
-body > aside menu
+#controller menu
 {
     align-items: center;
     display: flex;
@@ -55,7 +55,7 @@ body > aside menu
     gap: 10px;
 }
 
-body > aside menu button
+#controller menu button
 {
     background: none;
     border: none;
