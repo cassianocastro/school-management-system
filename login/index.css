@@ -1,6 +1,112 @@
 @charset "UTF-8";
 
-.btn
+/* #region layout */
+
+main
 {
-    margin: 0;
+    height: 100vh;
 }
+
+main > :only-child
+{
+    height: 100%;
+}
+
+section > :only-child
+{
+    margin: 60px auto;
+
+    width: 37%;
+}
+
+/* #endregion layout */
+
+/* #region header */
+
+section header > :only-child
+{
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+section header h1
+{
+    color: #555;
+
+    font-size: 3rem;
+}
+
+/* #endregion header */
+
+/* #region form */
+
+section form > div
+{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 30px;
+}
+
+section form fieldset > div
+{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+}
+
+section form label
+{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+section form label > :first-child
+{
+    align-self: center;
+
+    color: #555;
+
+    font: normal .85rem sans-serif;
+}
+
+section form label > :last-child
+{
+    background: none;
+    border: none;
+    border-radius: 7px;
+
+    color: #555;
+
+    font: normal .9rem sans-serif;
+
+    outline: thin solid rgb(23, 98, 168);
+    padding: 10px 15px;
+}
+
+section form menu
+{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+}
+
+section form menu button
+{
+    background: rgb(23, 98, 168);
+    border: none;
+    border-radius: 25px;
+
+    color: white;
+    cursor: pointer;
+
+    font: normal .85rem sans-serif;
+
+    outline: none;
+    padding: 15px;
+
+    width: 100%;
+}
+
+/* #endregion form */
