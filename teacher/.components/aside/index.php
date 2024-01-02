@@ -1,4 +1,4 @@
-<aside>
+<aside id="controller">
   <div>
 
     <header>
