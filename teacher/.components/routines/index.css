@@ -2,3 +2,54 @@
 
 @import "./.components/periods/index.css";
 @import "./.components/timetable/index.css";
+
+#routines
+{
+    position: absolute;
+    inset: 25px;
+}
+
+#routines > div
+{
+    background: white;
+
+    height: 100%;
+}
+
+#routines > div > header > div
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+#routines > div > header h2
+{
+    font: bold 1.5rem sans-serif;
+}
+
+#routines > div > menu
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#routines > div > menu button
+{
+    background: rgb(23, 98, 168);
+    border: none;
+    border-radius: 5px;
+
+    color: white;
+    cursor: pointer;
+
+    font-size: 1rem;
+
+    outline: none;
+    padding: 10px 20px;
+}
