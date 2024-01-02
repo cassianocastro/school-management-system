@@ -13,6 +13,9 @@
     "files.eol": "\n",
     "files.trimTrailingWhitespace": true,
 
+    "css.format.spaceAroundSelectorSeparator": true,
+    "css.format.braceStyle": "expand",
+
     "[php]": {
         "editor.cursorBlinking": "expand"
     },
