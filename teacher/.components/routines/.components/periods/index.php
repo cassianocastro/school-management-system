@@ -1,3 +1,23 @@
+<?php
+$rows    = [];
+$count   = 1;
+$args    = ['type' => 'period', 'status' => 'publish'];
+$periods = get_posts($args);
+
+foreach ( $periods as $period )
+{
+  $from = get_metadata($period->id, 'from')[0]->meta_value;
+  $to   = get_metadata($period->id, 'to')[0]->meta_value;
+
+  $rows[] = [
+    "count" => $count++ ,
+    "title" => $period->title,
+    "from"  => date('h:i A', strtotime($from)),
+    "to"    => date('h:i A', strtotime($to))
+  ];
+}
+?>
+
 <section id="periods">
   <div>
 
@@ -17,35 +37,26 @@
       </div>
     </header>
 
-    <div>
-      <table class="table">
-        <thead>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>S. No.</th>
+          <th>Title</th>
+          <th>From</th>
+          <th>To</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach ( $rows as $row ) : ?>
           <tr>
-            <th>S. No.</th>
-            <th>Title</th>
-            <th>From</th>
-            <th>To</th>
+            <td><?= $row["count"] ?></td>
+            <td><?= $row["title"] ?></td>
+            <td><?= $row["from"] ?></td>
+            <td><?= $row["to"] ?></td>
           </tr>
-        </thead>
-        <tbody>
-          <?php
-          $count   = 1;
-          $args    = ['type' => 'period', 'status' => 'publish'];
-          $periods = get_posts($args);
+        <?php endforeach; ?>
+      </toby>
+    </table>
 
-          foreach ( $periods as $period ) :
-            $from = get_metadata($period->id, 'from')[0]->meta_value;
-            $to   = get_metadata($period->id, 'to')[0]->meta_value;
-          ?>
-          <tr>
-            <td><?= $count++ ?></td>
-            <td><?= $period->title ?></td>
-            <td><?= date('h:i A', strtotime($from)) ?></td>
-            <td><?= date('h:i A', strtotime($to)) ?></td>
-          </tr>
-          <?php endforeach; ?>
-        </toby>
-      </table>
-    </div>
   </div>
 </section>
