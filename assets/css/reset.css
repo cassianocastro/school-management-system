@@ -29,6 +29,11 @@ audio, video, embed, canvas, object, iframe, dialog
     vertical-align: baseline;
 }
 
+:any-link
+{
+    text-decoration: none;
+}
+
 /*
     Apply a natural box layout model to all elements,
     but allowing components to change.
