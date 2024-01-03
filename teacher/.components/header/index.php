@@ -9,6 +9,18 @@
       </li>
 
       <li>
+        <button type="button" title="Homepage" class="fas fa-home">
+
+        </button>
+      </li>
+
+      <li>
+        <button type="button" title="Contacts" class="fas fa-users">
+
+        </button>
+      </li>
+
+      <li>
         <button type="button" title="Messages" class="far fa-comments">
 
         </button>
@@ -41,14 +53,14 @@
       </div>
     </form>
 
-    <nav>
+    <!-- <nav>
       <div>
         <ul>
           <li><a title="Homepage" type="text/html" hreflang="en" href="#">Home</a></li>
           <li><a title="Contact" type="text/html" hreflang="en" href="#">Contact</a></li>
         </ul>
       </div>
-    </nav>
+    </nav> -->
 
   </div>
 </header>
