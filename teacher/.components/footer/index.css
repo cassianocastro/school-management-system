@@ -16,6 +16,8 @@ body > footer p
 
 body > footer :any-link
 {
+    color: rgb(23, 98, 168);
+
     font-weight: bold;
 }
 
