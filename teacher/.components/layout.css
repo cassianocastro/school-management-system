@@ -26,11 +26,14 @@ body > aside
     grid-area: 1 / 1 / 4 / 2;
 }
 
+body > :is(header, footer, main, aside) > :only-child
+{
+    height: 100%;
+}
+
 body > main > :only-child
 {
     contain: layout;
 
     overflow: hidden scroll;
-
-    height: 100%;
 }
