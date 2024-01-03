@@ -2,7 +2,7 @@
 $users = [
   [
     "name"    => "Brad Diesel",
-    "photo"   => "user1-128x128.jpg",
+    "photo"   => "photo1.png",
     "message" => [
       "content" => "Call me whenever you can...",
       "time"    => "4 Hours Ago"
@@ -10,7 +10,7 @@ $users = [
   ],
   [
     "name"    => "John Pierce",
-    "photo"   => "user8-128x128.jpg",
+    "photo"   => "photo2.png",
     "message" => [
       "content" => "I got your message bro",
       "time"    => "4 Hours Ago"
@@ -18,7 +18,7 @@ $users = [
   ],
   [
     "name"    => "Nora Silvester",
-    "photo"   => "user3-128x128.jpg",
+    "photo"   => "photo3.jpg",
     "message" => [
       "content" => "The subject goes here",
       "time"    => "4 Hours Ago"
