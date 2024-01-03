@@ -4,9 +4,9 @@
 {
     background: rgb(23, 98, 168);
 
-    padding: 10px;
+    color: white;
 
-    height: 100%;
+    padding: 20px;
 }
 
 /* #region header */
@@ -17,15 +17,13 @@
     display: flex;
     justify-content: center;
 
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 10px;
 }
 
 #controller header :any-link
 {
-    color: white;
-
-    text-decoration: none;
+    color: inherit;
 }
 
 #controller header figure
@@ -60,7 +58,7 @@
     background: none;
     border: none;
 
-    color: white;
+    color: inherit;
     cursor: pointer;
 
     align-items: center;
