@@ -9,19 +9,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <!--
-    1. Font Awesome Icons
-    [2-5]. overlayScrollbars
-    6. Theme style
-    7. Google Font: Source Sans Pro
-  -->
-  <link rel="stylesheet" type="text/css" href="../plugins/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" type="text/css" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" type="text/css" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" type="text/css" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-  <link rel="stylesheet" type="text/css" href="../assets/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
+  <link rel="stylesheet" type="text/css" href="/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" type="text/css" href="/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/adminlte.min.css">
 
   <title>Admin's Dashboard | School SysManager</title>
 </head>
@@ -124,24 +118,17 @@
     <?php require_once __DIR__ . '/.components/aside/index.php'; ?>
   </div>
 
-  <!--
-    1. jQuery
-    2. Bootstrap
-    [3-8]. overlayScrollbars
-    9. AdminLTE App
-    [10-11]. OPTIONAL SCRIPTS
-  -->
-  <script defer src="../plugins/jquery/jquery.min.js"></script>
-  <script defer src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script defer src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-  <script defer src="../plugins/datatables/jquery.dataTables.min.js"></script>
-  <script defer src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-  <script defer src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-  <script defer src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-  <script defer src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-  <script defer src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-  <script defer src="../assets/js/adminlte.js"></script>
-  <script defer src="../assets/js/demo.js"></script>
+  <script defer src="/plugins/jquery/jquery.min.js"></script>
+  <script defer src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script defer src="/plugins/datatables/jquery.dataTables.min.js"></script>
+  <script defer src="/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script defer src="/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script defer src="/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script defer src="/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script defer src="/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script defer src="/assets/js/adminlte.js"></script>
+  <script defer src="/assets/js/demo.js"></script>
   <script defer src="./index.js"></script>
 </body>
 </html>
