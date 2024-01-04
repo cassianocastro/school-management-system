@@ -3,17 +3,16 @@
 #timetable
 {
     position: absolute;
-    inset: 25px;
+    inset: 0;
 }
 
 #timetable > div
 {
     background: white;
 
-    /* outline: thin solid red; */
-    padding: 20px;
-
     height: 100%;
+
+    padding: 25px;
 }
 
 #timetable > div > header > div
@@ -36,27 +35,33 @@
     gap: 5px;
 }
 
-table
+#timetable > div > table
+{
+    box-shadow: 0 0 5px 1px #aaa;
+
+    table-layout: fixed;
+
+    width: 100%;
+}
+
+#timetable > div > table tbody tr
 {
     border: thin solid #ccc;
 }
 
-table tbody tr
+#timetable > div > table :is(th, td)
 {
-    outline: thin solid #ccc;
-}
+    padding: 20px 15px;
 
-table :is(th)
-{
     text-align: center;
 }
 
-th
+#timetable > div > table th
 {
     font-weight: bold;
 }
 
-td
+#timetable > div > table td
 {
-    font-size: .85rem;
+    font-size: .8rem;
 }

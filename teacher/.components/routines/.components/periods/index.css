@@ -3,17 +3,16 @@
 #periods
 {
     position: absolute;
-    inset: 25px;
+    inset: 0;
 }
 
 #periods > div
 {
     background: white;
 
-    /* outline: thin solid red; */
-    padding: 20px;
-
     height: 100%;
+
+    padding: 25px;
 }
 
 #periods > div > header > div
@@ -36,27 +35,28 @@
     gap: 5px;
 }
 
-table
+#periods > div > table
 {
-    border: thin solid #ccc;
+    box-shadow: 0 0 5px 1px #aaa;
+
+    table-layout: fixed;
+
+    width: 100%;
 }
 
-table tbody tr
+#periods > div > table :is(th, td)
 {
-    outline: thin solid #ccc;
-}
+    padding: 20px 15px;
 
-table :is(th, td)
-{
     text-align: center;
 }
 
-th
+#periods > div > table th
 {
     font-weight: bold;
 }
 
-td
+#periods > div > table td
 {
-    font-size: .85rem;
+    font-size: .8rem;
 }
