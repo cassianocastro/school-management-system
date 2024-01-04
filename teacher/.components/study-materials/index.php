@@ -150,7 +150,7 @@ while ( $att = mysqli_fetch_object($query) )
         <ul>
           <?php foreach ( $materials as $material ) : ?>
             <li>
-              <?php require __DIR__ . '/.components/table/index.php'; ?>
+              <?php require __DIR__ . '/.components/material/index.php'; ?>
             </li>
           <?php endforeach; ?>
         </ul>

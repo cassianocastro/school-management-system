@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import "./.components/table/index.css";
+@import "./.components/material/index.css";
 @import "./.components/form/index.css";
 
 #sm
