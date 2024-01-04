@@ -9,9 +9,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <link rel="stylesheet" type="text/css" href="../../../plugins/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="../../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" type="text/css" href="../../../assets/css/adminlte.min.css">
+  <link rel="stylesheet" type="text/css" href="/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
 
   <title>Student's Dashboard | School SysManager</title>
@@ -21,51 +21,44 @@
 
     <?php require_once __DIR__ . '/../header/index.php'; ?>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    <main>
+      <div>
 
-      <!-- Content Header (Page header) -->
-      <div class="content-header">
-        <div class="container-fluid">
-          <div class="row mb-2">
+        <section>
+          <div>
 
-            <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Parent Meeting</h1>
-            </div>
+            <header>
+              <div>
+                <h1>Parent Meeting</h1>
 
-            <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Student</a></li>
-                <li class="breadcrumb-item active">Parent Meeting</li>
-              </ol>
-            </div>
+                <nav>
+                  <div>
+                    <ul>
+                      <li><a href="#">Student</a></li>
+                      <li><a href="#">Parent Meeting</a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </header>
+
 
           </div>
-        </div>
+        </section>
+
       </div>
-
-      <!-- Main content -->
-      <section class="content">
-        <div class="container-fluid">
-          <div class="card">
-            <div class="card-body">
-
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    </main>
 
     <?php require_once __DIR__ . '/../footer/index.php'; ?>
 
     <?php require_once __DIR__ . '/../aside/index.php'; ?>
   </div>
 
-  <script src="../../../plugins/jquery/jquery.min.js"></script>
-  <script src="../../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-  <script src="../../../assets/js/adminlte.js"></script>
-  <script src="../../../assets/js/demo.js"></script>
+  <script src="/plugins/jquery/jquery.min.js"></script>
+  <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script src="/assets/js/adminlte.js"></script>
+  <script src="/assets/js/demo.js"></script>
   <script src="../../index.js"></script>
 </body>
 </html>
