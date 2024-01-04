@@ -3,7 +3,7 @@
 #index
 {
     position: absolute;
-    inset: 25px;
+    inset: 0;
 }
 
 #index > div
@@ -11,6 +11,8 @@
     background: white;
 
     height: 100%;
+
+    padding: 25px;
 }
 
 /* #region header */

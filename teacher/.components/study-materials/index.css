@@ -6,7 +6,7 @@
 #sm
 {
     position: absolute;
-    inset: 25px;
+    inset: 0;
 }
 
 #sm > div
@@ -14,6 +14,8 @@
     background: white;
 
     height: 100%;
+
+    padding: 25px;
 }
 
 /* #region header */
