@@ -37,7 +37,7 @@ foreach ( $periods as $period )
       </div>
     </header>
 
-    <table class="table">
+    <table>
       <thead>
         <tr>
           <th>S. No.</th>
