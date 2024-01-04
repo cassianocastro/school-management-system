@@ -4,9 +4,10 @@
 
 #smdialog
 {
+    box-shadow: 0 0 5px 1px #ccc;
+
     position: absolute;
     inset: 10px 10px auto auto;
-    /* z-index: 10; */
 
     height: 70vh;
     width: 45%;
@@ -14,8 +15,6 @@
 
 #smdialog > :only-child
 {
-    border: thin solid #ccc;
-
     padding: 10px;
 
     height: 100%;
@@ -90,7 +89,7 @@
     padding: 10px 20px;
 }
 
-#smdialog form > fieldset > :only-child
+#smdialog form fieldset > :only-child
 {
     display: flex;
     flex-flow: column nowrap;
@@ -104,14 +103,21 @@
     gap: 7px;
 }
 
-#smdialog form :is(input, textarea, select)
+#smdialog form label > :first-child
+{
+    font: bold .85rem sans-serif;
+}
+
+#smdialog form label > :last-child
 {
     background: none;
     border: none;
     border-radius: 5px;
 
-    outline: thin solid #ccc;
-    padding: 5px 10px;
+    color: #555;
+
+    outline: thin solid rgb(7, 117, 219);
+    padding: 7px 10px;
 }
 
 #smdialog form textarea
@@ -119,6 +125,11 @@
     height: 20vh;
 
     resize: vertical;
+}
+
+#smdialog form select
+{
+    appearance: none;
 }
 
 #smdialog form input[type="file"]
@@ -167,7 +178,7 @@
     cursor: pointer;
 
     outline: none;
-    padding: 3px 20px;
+    padding: 5px 20px;
 }
 
 /* #endregion footer */
