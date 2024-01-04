@@ -1,6 +1,6 @@
 "use strict";
 
-import { index as Table } from "./.components/table/index.js";
+import { index as Material } from "./.components/material/index.js";
 import { index as Form } from "./.components/form/index.js";
 
 /**
@@ -8,7 +8,11 @@ import { index as Form } from "./.components/form/index.js";
  */
 function index()
 {
-    Table();
+    const dialog = document.querySelector("#smdialog");
+    const button = document.querySelector("#sm footer button");
+
+    button.addEventListener("click", () => dialog.showModal());
+
     Form();
 }
 
