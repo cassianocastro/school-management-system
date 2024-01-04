@@ -26,3 +26,5 @@ School System Management
 ![Study Materials](./assets/img/Captura%20de%20tela%20de%202024-01-04%2017-05-04.png)
 
 ![Study Materials with Dialog opened](./assets/img/Captura%20de%20tela%20de%202024-01-04%2017-05-23.png)
+
+![Periods Table](./assets/img/Captura%20de%20tela%20de%202024-01-04%2018-07-10.png)
