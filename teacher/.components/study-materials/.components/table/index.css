@@ -1,79 +1,101 @@
 @charset "UTF-8";
 
-#table > :only-child
-{
-    background: white;
-    /* box-shadow: 0 0 5px #aaa; */
+/* #region layout */
 
-    padding: 20px;
+.material
+{
+    height: 250px;
 }
+
+.material > :only-child
+{
+    border-radius: 5px;
+    box-shadow: 0 0 5px #aaa;
+
+    padding: 15px;
+
+    height: 100%;
+}
+
+.material > div > :first-child,
+.material > div > :last-child
+{
+    height: 10%;
+}
+
+.material > div > :nth-child(2)
+{
+    height: 80%;
+}
+
+/* #endregion layout */
 
 /* #region header */
 
-#table header > :only-child
+.material header > div
 {
     align-items: center;
     display: flex;
-    justify-content: space-between;
-
-    margin-bottom: 10px;
-    /* outline: thin solid #ccc; */
-    padding: 10px;
+    justify-content: center;
 }
 
-#table header h3
+.material header h3
 {
-    color: #777;
-
-    font: bold 1rem sans-serif;
-}
-
-#table header button
-{
-    background: rgb(29, 150, 49);
-    border: none;
-    border-radius: 15px;
-
-    color: white;
-    cursor: pointer;
-
-    align-items: center;
-    display: flex;
-    gap: 5px;
-
-    font: normal .7rem sans-serif;
-
-    outline: none;
-    padding: 7px 15px;
+    font: normal .9rem sans-serif;
 }
 
 /* #endregion header */
 
-/* #region table */
+/* #region paragraph */
 
-table
+.material p
 {
-    outline: thin solid #ccc;
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 20px;
 }
 
-table tbody tr
+.material p > :first-child
 {
-    outline: thin solid #ccc;
+    font-size: .8rem;
 }
 
-table thead th
+.material p > :last-child
 {
-    font: bold .85rem sans-serif;
+    background: rgba(7, 117, 219);
+    border-radius: 20px;
+
+    color: white;
+
+    font-size: .9rem;
+
+    opacity: .73;
+    padding: 10px 15px;
 }
 
-table tbody td
+/* #endregion paragraph */
+
+/* #region footer */
+
+.material footer > div
 {
-    font: normal .85rem sans-serif;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
 
-table :is(th, td)
+.material footer time
 {
-    text-align: center;
+    font: normal .7rem sans-serif;
 }
 
-/* #endregion table */
+.material footer :any-link
+{
+    color: rgb(7, 117, 219);
+}
+
+/* #endregion footer */
