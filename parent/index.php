@@ -25,7 +25,7 @@
     <div class="content-wrapper">
 
       <!-- Content Header (Page header) -->
-      <div class="content-header">
+      <header class="content-header">
         <div class="container-fluid">
           <div class="row mb-2">
 
@@ -34,15 +34,15 @@
             </div>
 
             <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
+              <ul class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Parent</a></li>
-                <li class="breadcrumb-item active">Dashboard</li>
-              </ol>
+                <li class="breadcrumb-item active"><a href="#">Dashboard</a></li>
+              </ul>
             </div>
 
           </div>
         </div>
-      </div>
+      </header>
 
       <!-- Main content -->
       <section class="content">
