@@ -7,7 +7,7 @@ VALUES
     (16, 'teacher', 'teacher@sms.com', 'e807f1fcf82d132f9bb018ca6738a19f', 'Teacher 3'),
     (17, 'counseller', 'counseller@example.com', 'e807f1fcf82d132f9bb018ca6738a19f', 'Counseller'),
     (25, 'student', 'modifiercrazy@gmail.com', '4a30c7dc09d099f4b92cd8e9f3e488dd', 'Suraj Kumar'),
-    (26, 'parent', '1234567890', 'e807f1fcf82d132f9bb018ca6738a19f', 'Ravindra nath'),
+    (26, 'parent', 'parent@example.com', 'e807f1fcf82d132f9bb018ca6738a19f', 'Ravindra nath'),
     (27, 'student', 'abhishek@student.com', '1d8419608fa09bb75ea05ddf3b91e194', 'Abhishek Kumar'),
     (28, 'student', 'abhishek2@student.com', '1d8419608fa09bb75ea05ddf3b91e194', 'Abhishek Kumar'),
     (29, 'student', 'abhishek3@student.com', '1d8419608fa09bb75ea05ddf3b91e194', 'Abhishek Kumar'),
