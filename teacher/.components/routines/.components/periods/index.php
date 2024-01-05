@@ -1,23 +1,3 @@
-<?php
-$rows    = [];
-$count   = 1;
-$args    = ['type' => 'period', 'status' => 'publish'];
-$periods = get_posts($args);
-
-foreach ( $periods as $period )
-{
-  $from = get_metadata($period->id, 'from')[0]->meta_value;
-  $to   = get_metadata($period->id, 'to')[0]->meta_value;
-
-  $rows[] = [
-    "count" => $count++ ,
-    "title" => $period->title,
-    "from"  => date('h:i A', strtotime($from)),
-    "to"    => date('h:i A', strtotime($to))
-  ];
-}
-?>
-
 <section id="periods">
   <div>
 
