@@ -53,14 +53,5 @@
       </div>
     </form>
 
-    <!-- <nav>
-      <div>
-        <ul>
-          <li><a title="Homepage" type="text/html" hreflang="en" href="#">Home</a></li>
-          <li><a title="Contact" type="text/html" hreflang="en" href="#">Contact</a></li>
-        </ul>
-      </div>
-    </nav> -->
-
   </div>
 </header>
