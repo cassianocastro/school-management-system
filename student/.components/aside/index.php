@@ -220,7 +220,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/study-materials/study-materials.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/study-materials">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Study Materials</p>
