@@ -94,7 +94,7 @@
                   WHERE
                     attendance_month = '$current_month'
                   AND
-                    year(current_session) = '$current_year'
+                    year(current_session) = 2023 -- $current_year
                 SQL;
 
                 $query = mysqli_query($db_conn, $sql);
