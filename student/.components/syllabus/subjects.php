@@ -21,15 +21,12 @@
 
     <?php require_once __DIR__ . '/../header/index.php'; ?>
 
-    <!-- Content Wrapper. Contains page content -->
     <main class="content-wrapper">
       <div>
 
-        <!-- Main content -->
         <section class="content">
           <div class="container-fluid">
 
-            <!-- Content Header (Page header) -->
             <header class="content-header">
               <div class="container-fluid">
                 <h1 class="m-0 text-dark">Subjects</h1>
@@ -50,9 +47,10 @@
 
               </div>
             </div>
-          </div>
 
+          </div>
         </section>
+
       </div>
     </main>
 
