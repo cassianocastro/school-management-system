@@ -40,10 +40,8 @@ foreach ( $periods as $period )
 
     <?php require_once __DIR__ . '/../header/index.php'; ?>
 
-    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
 
-      <!-- Content Header (Page header) -->
       <div class="content-header">
         <div class="container-fluid">
           <div class="row mb-2">
@@ -63,7 +61,6 @@ foreach ( $periods as $period )
         </div>
       </div>
 
-      <!-- Main content -->
       <section class="content">
         <div class="container-fluid">
           <div class="table-responsive">
