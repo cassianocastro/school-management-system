@@ -66,10 +66,8 @@ while ( $att = mysqli_fetch_object($query) )
 
     <?php require_once __DIR__ . '/../header/index.php'; ?>
 
-    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
 
-      <!-- Content Header (Page header) -->
       <header class="content-header">
         <div class="container-fluid">
           <h1 class="m-0 text-dark">Study Materials</h1>
@@ -85,10 +83,9 @@ while ( $att = mysqli_fetch_object($query) )
         </div>
       </header>
 
-      <!-- Main content -->
       <section class="content">
         <div class="container-fluid">
-          <!-- Info boxes -->
+
           <div class="card">
             <div class="card-header py-2">
               <h3 class="card-title">Study Materials</h3>
