@@ -1,10 +1,9 @@
-<?php require_once __DIR__ . '/../../../includes/config.php'; ?>
-
-<?php require_once __DIR__ . '/../../../actions/student.php'; ?>
-
 <?php
 // error_reporting(E_ALL);
 // ini_set("display_errors", true);
+
+require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../../actions/student.php';
 
 $materials = [];
 $usermeta  = get_user_metadata($std_id);
