@@ -189,7 +189,7 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/fee-details/examination-fee.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/fee-details/.components/examination">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Examination Fee</p>
@@ -197,7 +197,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/fee-details/fee-details.php">
+              <a class="nav-link" href="<?= $site_url ?>/student/.components/fee-details/.components/tuition">
                 <i class="far fa-circle nav-icon"></i>
 
                 <p>Tuition Fee</p>
