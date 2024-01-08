@@ -1,8 +1,7 @@
-<?php require_once __DIR__ . '/../../../includes/config.php'; ?>
-
-<?php require_once __DIR__ . '/../../../actions/student.php'; ?>
-
 <?php
+require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../../actions/student.php';
+
 $usermeta = get_user_metadata($std_id);
 $class    = get_post(['id' => $usermeta['class']]);
 ?>
