@@ -2,6 +2,25 @@
 
 <?php require_once __DIR__ . '/../../../actions/student.php'; ?>
 
+<?php
+$rows    = [];
+$count   = 1;
+$periods = get_posts(['type' => 'period', 'status' => 'publish']);
+
+foreach ( $periods as $period )
+{
+  $from = get_metadata($period->id, 'from')[0]->meta_value;
+  $to   = get_metadata($period->id, 'to')[0]->meta_value;
+
+  $rows[] = [
+    "count"  => $count++,
+    "period" => $period->title,
+    "from"   => date('h:i A', strtotime($from)),
+    "to"     => date('h:i A', strtotime($to))
+  ];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 <head>
@@ -58,23 +77,14 @@
                 </tr>
               </thead>
               <tbody>
-                <?php
-                $count   = 1;
-                $args    = ['type' => 'period', 'status' => 'publish'];
-                $periods = get_posts($args);
-
-                foreach ( $periods as $period )
-                {
-                  $from = get_metadata($period->id, 'from')[0]->meta_value;
-                  $to   = get_metadata($period->id, 'to')[0]->meta_value;
-                ?>
-                <tr>
-                  <td><?= $count++ ?></td>
-                  <td><?= $period->title ?></td>
-                  <td><?= date('h:i A', strtotime($from)) ?></td>
-                  <td><?= date('h:i A', strtotime($to)) ?></td>
-                </tr>
-                <?php } ?>
+                <?php foreach ( $rows as $row ) : ?>
+                  <tr>
+                    <td><?= $row["count"] ?></td>
+                    <td><?= $row["period"] ?></td>
+                    <td><?= $row["from"] ?></td>
+                    <td><?= $row["to"] ?></td>
+                  </tr>
+                <?php endforeach; ?>
               </toby>
             </table>
           </div>
