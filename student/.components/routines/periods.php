@@ -1,8 +1,7 @@
-<?php require_once __DIR__ . '/../../../includes/config.php'; ?>
-
-<?php require_once __DIR__ . '/../../../actions/student.php'; ?>
-
 <?php
+require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../../actions/student.php';
+
 $rows    = [];
 $count   = 1;
 $periods = get_posts(['type' => 'period', 'status' => 'publish']);
