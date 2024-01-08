@@ -40,54 +40,55 @@ foreach ( $periods as $period )
 
     <?php require_once __DIR__ . '/../header/index.php'; ?>
 
-    <div class="content-wrapper">
+    <main class="content-wrapper">
+      <div>
 
-      <div class="content-header">
-        <div class="container-fluid">
-          <div class="row mb-2">
+        <section class="content">
+          <div class="container-fluid">
 
-            <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Periods</h1>
-            </div>
+            <header class="content-header">
+              <div class="container-fluid">
+                <h1 class="m-0 text-dark">Periods</h1>
 
-            <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Student</a></li>
-                <li class="breadcrumb-item active">Periods</li>
-              </ol>
-            </div>
+                <nav class="row mb-2">
+                  <div class="col-sm-6">
+                    <ul class="breadcrumb float-sm-right">
+                      <li class="breadcrumb-item"><a href="#">Student</a></li>
+                      <li class="breadcrumb-item active"><a href="#">Periods</a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </header>
 
-          </div>
-        </div>
-      </div>
-
-      <section class="content">
-        <div class="container-fluid">
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th>S.No.</th>
-                  <th>Title</th>
-                  <th>From</th>
-                  <th>To</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php foreach ( $rows as $row ) : ?>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
                   <tr>
-                    <td><?= $row["count"] ?></td>
-                    <td><?= $row["period"] ?></td>
-                    <td><?= $row["from"] ?></td>
-                    <td><?= $row["to"] ?></td>
+                    <th>S.No.</th>
+                    <th>Title</th>
+                    <th>From</th>
+                    <th>To</th>
                   </tr>
-                <?php endforeach; ?>
-              </toby>
-            </table>
+                </thead>
+                <tbody>
+                  <?php foreach ( $rows as $row ) : ?>
+                    <tr>
+                      <td><?= $row["count"] ?></td>
+                      <td><?= $row["period"] ?></td>
+                      <td><?= $row["from"] ?></td>
+                      <td><?= $row["to"] ?></td>
+                    </tr>
+                  <?php endforeach; ?>
+                </toby>
+              </table>
+            </div>
+
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+      </div>
+    </main>
 
     <?php require_once __DIR__ . '/../footer/index.php'; ?>
 
