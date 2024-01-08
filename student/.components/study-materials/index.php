@@ -2,6 +2,51 @@
 
 <?php require_once __DIR__ . '/../../../actions/student.php'; ?>
 
+<?php
+// error_reporting(E_ALL);
+// ini_set("display_errors", true);
+
+$materials = [];
+$usermeta  = get_user_metadata($std_id);
+$class     = $usermeta['class'];
+$count     = 1;
+$query     = mysqli_query(
+  $db_conn,
+  <<<SQL
+    SELECT
+      *
+    FROM
+      posts AS p
+    INNER JOIN
+      metadata AS m ON p.id = m.item_id
+    WHERE
+      p.type = 'study-material'
+    AND
+      m.meta_key = 'class'
+    AND
+      m.meta_value = $class
+  SQL
+);
+
+while ( $att = mysqli_fetch_object($query) )
+{
+  // $class_id     = get_metadata($att->id, 'class')[0]->meta_value;
+  $class           = get_post(['id' => $class]);
+  $subject_id      = get_metadata($att->item_id, 'subject')[0]->meta_value;
+  $subject         = get_post(['id' => $subject_id]);
+  $file_attachment = get_metadata($att->item_id, 'file_attachment')[0]->meta_value;
+
+  $materials[] = [
+    "count"         => $count++,
+    "att_title"     => $att->title,
+    "attachment"    => "$site_url/assets/uploads/$file_attachment",
+    "class_title"   => $class->title,
+    "subject_title" => $subject->title,
+    "att_pubdate"   => $att->publish_date,
+  ];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 <head>
@@ -63,45 +108,16 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <?php
-                    $usermeta = get_user_metadata($std_id);
-                    $class = $usermeta['class'];
-                    $count = 1;
-                    $query = mysqli_query(
-                      $db_conn,
-                      <<<SQL
-                        SELECT
-                          *
-                        FROM
-                          `posts` AS p
-                        INNER JOIN
-                          `metadata` AS m ON p.id = m.item_id
-                        WHERE
-                          p.`type` = 'study-material'
-                        AND
-                          m.meta_key = 'class'
-                        AND
-                          m.meta_value = $class
-                      SQL
-                    );
-
-                    while ( $att = mysqli_fetch_object($query) ) :
-                      // $class_id = get_metadata($att->id, 'class')[0]->meta_value;
-
-                      $class           = get_post(['id' => $class]);
-                      $subject_id      = get_metadata($att->item_id, 'subject')[0]->meta_value;
-                      $subject         = get_post(['id' => $subject_id]);
-                      $file_attachment = get_metadata($att->item_id, 'file_attachment')[0]->meta_value;
-                    ?>
+                    <?php foreach ( $materials as $material ) : ?>
                       <tr>
-                        <td><?= $count++ ?></td>
-                        <td><?= $att->title ?></td>
-                        <td><a href="<?= "$site_url/assets/uploads/$file_attachment" ?>">Download File</a></td>
-                        <td><?= $class->title ?></td>
-                        <td><?= $subject->title ?></td>
-                        <td><?= $att->publish_date ?></td>
+                        <td><?= $material["count"] ?></td>
+                        <td><?= $material["att_title"] ?></td>
+                        <td><a href="<?= $material["attachment"] ?>">Download File</a></td>
+                        <td><?= $material["class_title"] ?></td>
+                        <td><?= $material["subject_title"] ?></td>
+                        <td><?= $material["att_pubdate"] ?></td>
                       </tr>
-                    <?php endwhile; ?>
+                    <?php endforeach; ?>
                   </toby>
                 </table>
               </div>
