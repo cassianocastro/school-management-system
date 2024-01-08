@@ -2,6 +2,11 @@
 
 <?php require_once __DIR__ . '/../../../actions/student.php'; ?>
 
+<?php
+$usermeta = get_user_metadata($std_id);
+$class    = get_post(['id' => $usermeta['class']]);
+?>
+
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 <head>
@@ -21,102 +26,82 @@
 
     <?php require_once __DIR__ . '/../header/index.php'; ?>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    <main class="content-wrapper">
+      <div>
 
-      <!-- Content Header (Page header) -->
-      <div class="content-header">
-        <div class="container-fluid">
-          <div class="row mb-2">
+        <section class="content">
+          <div class="container-fluid">
 
-            <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Manage Student Attendance</h1>
-            </div>
+            <header class="content-header">
+              <div class="container-fluid">
+                <h1 class="m-0 text-dark">Manage Student Attendance</h1>
 
-            <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Student</a></li>
-                <li class="breadcrumb-item active">Attendance</li>
-              </ol>
+                <nav class="row mb-2">
+                  <div class="col-sm-6">
+                    <ul class="breadcrumb float-sm-right">
+                      <li class="breadcrumb-item"><a href="#">Student</a></li>
+                      <li class="breadcrumb-item active"><a href="#">Attendance</a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </header>
+
+            <div class="card">
+              <div class="card-body">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th colspan="4">Student Details</th>
+                    </tr>
+                    <tr>
+                      <th colspan="3">Name: <?= get_users(['id' => $std_id])[0]->name ?></th>
+                      <th>Class: <?= $class->title ?></th>
+                    </tr>
+                    <tr>
+                      <td>Date</td>
+                      <td>Status</td>
+                      <td>Sing In Time</td>
+                      <td>Sing Out Time</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <?php
+                  $current_month = strtolower(date('F'));
+                  $current_year  = date('Y');
+                  $sql = <<<SQL
+                    SELECT
+                      *
+                    FROM
+                      attendance
+                    WHERE
+                      attendance_month = '$current_month'
+                    AND
+                      year(current_session) = 2023 -- $current_year
+                  SQL;
+
+                  $query = mysqli_query($db_conn, $sql);
+                  $row   = mysqli_fetch_object($query);
+
+                  foreach ( unserialize($row->attendance_value) as $date => $value ) :
+                  ?>
+                    <tr>
+                      <td><?= $date ?></td>
+                      <td><?= ($value['signin_at']) ? 'Present' : 'Absent' ?></td>
+                      <td><?= ($value['signin_at']) ? date('d-m-yyy h:i:s', $value['signin_at']) : '' ?></td>
+                      <td><?= ($value['signout_at']) ? date('d-m-yyy h:i:s', $value['signout_at']) : '' ?></td>
+                    </tr>
+                  <?php endforeach; ?>
+                  </tbody>
+                </table>
+              </div>
             </div>
 
           </div>
-        </div>
+        </section>
+
       </div>
-
-      <!-- Main content -->
-      <section class="content">
-        <div class="container-fluid">
-
-          <?php
-          $usermeta = get_user_metadata($std_id);
-          $class    = get_post(['id' => $usermeta['class']]);
-          ?>
-
-          <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">Student Detail</h3>
-            </div>
-
-            <div class="card-body">
-              <strong>Name: </strong><?= get_users(['id' => $std_id])[0]->name ?>
-
-              <br>
-
-              <strong>Class: </strong><?= $class->title ?>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">Attendance</h3>
-            </div>
-
-            <div class="card-body">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <td>Date</td>
-                    <td>Status</td>
-                    <td>Singin Time</td>
-                    <td>Singout Time</td>
-                  </tr>
-                </thead>
-                <tbody>
-                <?php
-                $current_month = strtolower(date('F'));
-                $current_year  = date('Y');
-                $sql = <<<SQL
-                  SELECT
-                    *
-                  FROM
-                    attendance
-                  WHERE
-                    attendance_month = '$current_month'
-                  AND
-                    year(current_session) = 2023 -- $current_year
-                SQL;
-
-                $query = mysqli_query($db_conn, $sql);
-                $row   = mysqli_fetch_object($query);
-
-                foreach ( unserialize($row->attendance_value) as $date => $value ) :
-                ?>
-                  <tr>
-                    <td><?= $date ?></td>
-                    <td><?= ($value['signin_at']) ? 'Present' : 'Absent' ?></td>
-                    <td><?= ($value['signin_at']) ? date('d-m-yyy h:i:s', $value['signin_at']) : '' ?></td>
-                    <td><?= ($value['signout_at']) ? date('d-m-yyy h:i:s', $value['signout_at']) : '' ?></td>
-                  </tr>
-                <?php endforeach; ?>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-        </div>
-      </section>
-    </div>
+    </main>
 
     <?php require_once __DIR__ . '/../footer/index.php'; ?>
 
