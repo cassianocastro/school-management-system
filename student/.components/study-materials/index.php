@@ -65,63 +65,63 @@ while ( $att = mysqli_fetch_object($query) )
 
     <?php require_once __DIR__ . '/../header/index.php'; ?>
 
-    <div class="content-wrapper">
+    <main class="content-wrapper">
+      <div>
 
-      <header class="content-header">
-        <div class="container-fluid">
-          <h1 class="m-0 text-dark">Study Materials</h1>
+        <section class="content">
+          <div class="container-fluid">
 
-          <nav class="row mb-2">
-            <div class="col-sm-6">
-              <ul class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Student</a></li>
-                <li class="breadcrumb-item active"><a href="#">Study Materials</a></li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </header>
+            <header class="content-header">
+              <div class="container-fluid">
+                <h1 class="m-0 text-dark">Study Materials</h1>
 
-      <section class="content">
-        <div class="container-fluid">
+                <nav class="row mb-2">
+                  <div class="col-sm-6">
+                    <ul class="breadcrumb float-sm-right">
+                      <li class="breadcrumb-item"><a href="#">Student</a></li>
+                      <li class="breadcrumb-item active"><a href="#">Study Materials</a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </header>
 
-          <div class="card">
-            <div class="card-header py-2">
-              <h3 class="card-title">Study Materials</h3>
-            </div>
-
-            <div class="card-body">
-              <div class="table-responsive bg-white">
-                <table class="table table-bordered">
-                  <thead>
-                    <tr>
-                      <th>S.No.</th>
-                      <th>Title</th>
-                      <th>Attachment</th>
-                      <th>Class</th>
-                      <th>Subject</th>
-                      <th>Date</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php foreach ( $materials as $material ) : ?>
+            <div class="card">
+              <div class="card-body">
+                <div class="table-responsive bg-white">
+                  <table class="table table-bordered">
+                    <thead>
                       <tr>
-                        <td><?= $material["count"] ?></td>
-                        <td><?= $material["att_title"] ?></td>
-                        <td><a href="<?= $material["attachment"] ?>">Download File</a></td>
-                        <td><?= $material["class_title"] ?></td>
-                        <td><?= $material["subject_title"] ?></td>
-                        <td><?= $material["att_pubdate"] ?></td>
+                        <th>S. No.</th>
+                        <th>Title</th>
+                        <th>Attachment</th>
+                        <th>Class</th>
+                        <th>Subject</th>
+                        <th>Date</th>
                       </tr>
-                    <?php endforeach; ?>
-                  </toby>
-                </table>
+                    </thead>
+                    <tbody>
+                      <?php foreach ( $materials as $material ) : ?>
+                        <tr>
+                          <td><?= $material["count"] ?></td>
+                          <td><?= $material["att_title"] ?></td>
+                          <td><a href="<?= $material["attachment"] ?>">Download File</a></td>
+                          <td><?= $material["class_title"] ?></td>
+                          <td><?= $material["subject_title"] ?></td>
+                          <td><?= $material["att_pubdate"] ?></td>
+                        </tr>
+                      <?php endforeach; ?>
+                    </toby>
+                  </table>
+                </div>
               </div>
             </div>
+
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+      </div>
+    </main>
 
     <?php require_once __DIR__ . '/../footer/index.php'; ?>
 
