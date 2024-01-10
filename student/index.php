@@ -1,6 +1,60 @@
-<?php require_once __DIR__ . '/../includes/config.php'; ?>
+<?php
+require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/../actions/student.php';
 
-<?php require_once __DIR__ . '/../actions/student.php'; ?>
+$current_month = strtolower(date('F'));
+$current_year  = date('Y');
+$current_date  = date('d');
+$sql = "SELECT * FROM `attendance` WHERE `attendance_month` = '$current_month' AND year(current_session) = $current_year AND std_id = $std_id";
+
+$query = mysqli_query($db_conn, $sql);
+$row   = mysqli_fetch_object($query);
+
+$attendance = unserialize($row->attendance_value);
+
+// echo '<pre>', print_r($attendance), '</pre>';
+
+if ( isset($_POST['sign-in']) )
+{
+  // $att_data = [];
+
+  // for ( $i = 1; $i <= 31; $i++ )
+  // {
+  //   $att_data[$i] = [
+  //     'signin_at'  => (date('d') == $i) ? time() : '',
+  //     'signout_at' => (date('d') == $i) ? time() : '',
+  //     'date' => $i
+  //   ];
+  // }
+
+  $attendance[$current_date] = [
+    'signin_at'  => time(),
+    'signout_at' => '',
+    'date'       => $current_date
+  ];
+
+  $att_data = serialize($attendance);
+  $current_month = strtolower(date('F'));
+  $sql = "UPDATE `attendance` SET `attendance_value` = '$att_data' WHERE `attendance_month` = '$current_month' AND std_id = $std_id";
+
+  mysqli_query($db_conn, $sql) or die('DB error');
+}
+
+if ( isset($_POST['sign-out']) )
+{
+  $attendance[$current_date] = [
+    'signin_at'  => $attendance[$current_date]['signin_at'],
+    'signout_at' => time(),
+    'date'       => $current_date
+  ];
+
+  $att_data = serialize($attendance);
+  $current_month = strtolower(date('F'));
+  $sql = "UPDATE `attendance` SET `attendance_value` = '$att_data' WHERE `attendance_month` = '$current_month' AND std_id = $std_id";
+
+  mysqli_query($db_conn, $sql) or die('DB error');
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
@@ -108,60 +162,6 @@
 
           <hr>
 
-          <?php
-          $current_month = strtolower(date('F'));
-          $current_year  = date('Y');
-          $current_date  = date('d');
-          $sql = "SELECT * FROM `attendance` WHERE `attendance_month` = '$current_month' AND year(current_session) = $current_year AND std_id = $std_id";
-
-          $query = mysqli_query($db_conn, $sql);
-          $row   = mysqli_fetch_object($query);
-
-          $attendance = unserialize($row->attendance_value);
-
-          // echo '<pre>', print_r($attendance), '</pre>';
-
-          if ( isset($_POST['sign-in']) )
-          {
-            // $att_data = [];
-
-            // for ( $i = 1; $i <= 31; $i++ )
-            // {
-            //   $att_data[$i] = [
-            //     'signin_at'  => (date('d') == $i) ? time() : '',
-            //     'signout_at' => (date('d') == $i) ? time() : '',
-            //     'date' => $i
-            //   ];
-            // }
-
-            $attendance[$current_date] = [
-              'signin_at'  => time(),
-              'signout_at' => '',
-              'date'       => $current_date
-            ];
-
-            $att_data = serialize($attendance);
-            $current_month = strtolower(date('F'));
-            $sql = "UPDATE `attendance` SET `attendance_value` = '$att_data' WHERE `attendance_month` = '$current_month' AND std_id = $std_id";
-
-            mysqli_query($db_conn, $sql) or die('DB error');
-          }
-
-          if ( isset($_POST['sign-out']) )
-          {
-            $attendance[$current_date] = [
-              'signin_at'  => $attendance[$current_date]['signin_at'],
-              'signout_at' => time(),
-              'date'       => $current_date
-            ];
-
-            $att_data = serialize($attendance);
-            $current_month = strtolower(date('F'));
-            $sql = "UPDATE `attendance` SET `attendance_value` = '$att_data' WHERE `attendance_month` = '$current_month' AND std_id = $std_id";
-
-            mysqli_query($db_conn, $sql) or die('DB error');
-          }
-          ?>
           <div class="row">
             <div class="col-lg-3">
               <div class="card">
