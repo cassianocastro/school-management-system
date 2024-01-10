@@ -21,46 +21,44 @@
         <!-- Dashboard -->
         <li class="nav-item">
           <a class="nav-link" href="<?= $site_url ?>/student">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <span class="nav-icon fas fa-tachometer-alt"></span>
 
-            <p>Dashboard</p>
+            <span>Dashboard</span>
           </a>
         </li>
 
         <!-- Syllabus -->
         <li class="nav-item has-treeview">
           <a class="nav-link" href="#">
-            <i class="nav-icon fas fa-chalkboard"></i>
+            <span class="nav-icon fas fa-chalkboard"></span>
 
-            <p>
-              Manage Syllabus
+            <span>Manage Syllabus</span>
 
-              <i class="fas fa-angle-left right"></i>
-            </p>
+            <span class="fas fa-angle-left right"></span>
           </a>
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/syllabus/courses.php">
-                <i class="far fa-circle nav-icon"></i>
+                <span class="far fa-circle nav-icon"></span>
 
-                <p>Courses</p>
+                <span>Courses</span>
               </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/syllabus/lessons.php">
-                <i class="far fa-circle nav-icon"></i>
+                <span class="far fa-circle nav-icon"></span>
 
-                <p>Lessons</p>
+                <span>Lessons</span>
               </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/syllabus/subjects.php">
-                <i class="far fa-circle nav-icon"></i>
+                <span class="far fa-circle nav-icon"></span>
 
-                <p>Subjects</p>
+                <span>Subjects</span>
               </a>
             </li>
           </ul>
@@ -69,29 +67,27 @@
         <!-- Class Routine -->
         <li class="nav-item has-treeview">
           <a class="nav-link" href="#">
-            <i class="nav-icon fas fa-chalkboard-teacher"></i>
+            <span class="nav-icon fas fa-chalkboard-teacher"></span>
 
-            <p>
-              Manage Class Routines
+            <span>Manage Class Routines</span>
 
-              <i class="fas fa-angle-left right"></i>
-            </p>
+            <span class="fas fa-angle-left right"></span>
           </a>
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/routines/periods.php">
-                <i class="far fa-circle nav-icon"></i>
+                <span class="far fa-circle nav-icon"></span>
 
-                <p>Periods</p>
+                <span>Periods</span>
               </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/routines/timetable.php">
-                <i class="far fa-circle nav-icon"></i>
+                <span class="far fa-circle nav-icon"></span>
 
-                <p>Time Table</p>
+                <span>Time Table</span>
               </a>
             </li>
           </ul>
@@ -100,45 +96,43 @@
         <!-- Examination -->
         <li class="nav-item has-treeview">
           <a class="nav-link" href="#">
-            <i class="nav-icon fas fa-file-alt"></i>
+            <span class="nav-icon fas fa-file-alt"></span>
 
-            <p>
-              Manage Examinations
+            <span>Manage Examinations</span>
 
-              <i class="fas fa-angle-left right"></i>
-            </p>
+            <span class="fas fa-angle-left right"></span>
           </a>
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/examinations/admin-card.php">
-                <i class="far fa-circle nav-icon"></i>
+                <span class="far fa-circle nav-icon"></span>
 
-                <p>Admin card</p>
+                <span>Admin card</span>
               </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/examinations/exam-form.php">
-                <i class="far fa-circle nav-icon"></i>
+                <span class="far fa-circle nav-icon"></span>
 
-                <p>Examination Form</p>
+                <span>Examination Form</span>
               </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/examinations/paper-schedule.php">
-                <i class="far fa-circle nav-icon"></i>
+                <span class="far fa-circle nav-icon"></span>
 
-                <p>Paper Schedule</p>
+                <span>Paper Schedule</span>
               </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/examinations/results.php">
-                <i class="far fa-circle nav-icon"></i>
+                <span class="far fa-circle nav-icon"></span>
 
-                <p>Results</p>
+                <span>Results</span>
               </a>
             </li>
           </ul>
@@ -147,29 +141,27 @@
         <!-- Attendance -->
         <li class="nav-item has-treeview">
           <a class="nav-link" href="#">
-            <i class="nav-icon fas fa-calendar-alt"></i>
+            <span class="nav-icon fas fa-calendar-alt"></span>
 
-            <p>
-              Manage Attendance
+            <span>Manage Attendance</span>
 
-              <i class="fas fa-angle-left right"></i>
-            </p>
+            <span class="fas fa-angle-left right"></span>
           </a>
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/attendance/attendance.php">
-                <i class="far fa-circle nav-icon"></i>
+                <span class="far fa-circle nav-icon"></span>
 
-                <p>Attendance</p>
+                <span>Attendance</span>
               </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/attendance/leave.php">
-                <i class="far fa-circle nav-icon"></i>
+                <span class="far fa-circle nav-icon"></span>
 
-                <p>Leave</p>
+                <span>Leave</span>
               </a>
             </li>
           </ul>
@@ -178,29 +170,27 @@
         <!-- Fees -->
         <li class="nav-item has-treeview">
           <a class="nav-link" href="#">
-            <i class="nav-icon fas fa-money-check"></i>
+            <span class="nav-icon fas fa-money-check"></span>
 
-            <p>
-              Fee Details
+            <span>Fee Details</span>
 
-              <i class="fas fa-angle-left right"></i>
-            </p>
+            <span class="fas fa-angle-left right"></span>
           </a>
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/fee-details/.components/examination">
-                <i class="far fa-circle nav-icon"></i>
+                <span class="far fa-circle nav-icon"></span>
 
-                <p>Examination Fee</p>
+                <span>Examination Fee</span>
               </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/fee-details/.components/tuition">
-                <i class="far fa-circle nav-icon"></i>
+                <span class="far fa-circle nav-icon"></span>
 
-                <p>Tuition Fee</p>
+                <span>Tuition Fee</span>
               </a>
             </li>
           </ul>
@@ -209,21 +199,19 @@
         <!-- Study Materials -->
         <li class="nav-item has-treeview">
           <a class="nav-link" href="#">
-            <i class="nav-icon fas fa-paste"></i>
+            <span class="nav-icon fas fa-paste"></span>
 
-            <p>
-              Study Materials
+            <span>Study Materials</span>
 
-              <i class="fas fa-angle-left right"></i>
-            </p>
+            <span class="fas fa-angle-left right"></span>
           </a>
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/study-materials">
-                <i class="far fa-circle nav-icon"></i>
+                <span class="far fa-circle nav-icon"></span>
 
-                <p>Study Materials</p>
+                <span>Study Materials</span>
               </a>
             </li>
           </ul>
@@ -232,29 +220,27 @@
         <!-- Event -->
         <li class="nav-item has-treeview">
           <a class="nav-link" href="#">
-            <i class="nav-icon fas fa-calendar-check"></i>
+            <span class="nav-icon fas fa-calendar-check"></span>
 
-            <p>
-              Manage Events
+            <span>Manage Events</span>
 
-              <i class="fas fa-angle-left right"></i>
-            </p>
+            <span class="fas fa-angle-left right"></span>
           </a>
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/events/campus-functions.php">
-                <i class="far fa-circle nav-icon"></i>
+                <span class="far fa-circle nav-icon"></span>
 
-                <p>Campus Functions</p>
+                <span>Campus Functions</span>
               </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/events/webinar-seminar.php">
-                <i class="far fa-circle nav-icon"></i>
+                <span class="far fa-circle nav-icon"></span>
 
-                <p>Webinar/Seminar</p>
+                <span>Webinar/Seminar</span>
               </a>
             </li>
           </ul>
@@ -263,21 +249,19 @@
         <!-- Communication -->
         <li class="nav-item has-treeview">
           <a class="nav-link" href="#">
-            <i class="nav-icon fas fa-users"></i>
+            <span class="nav-icon fas fa-users"></span>
 
-            <p>
-              Communications
+            <span>Communications</span>
 
-              <i class="fas fa-angle-left right"></i>
-            </p>
+            <span class="fas fa-angle-left right"></span>
           </a>
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a class="nav-link" href="<?= $site_url ?>/student/.components/communications/parent-meeting.php">
-                <i class="far fa-circle nav-icon"></i>
+                <span class="far fa-circle nav-icon"></span>
 
-                <p>Parent's Meetings</p>
+                <span>Parent's Meetings</span>
               </a>
             </li>
           </ul>
