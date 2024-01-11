@@ -22,44 +22,44 @@
       </div>
     </header>
 
-    <menu class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
-      <li class="nav-item">
-        <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student')">
-          <span class="nav-icon fas fa-tachometer-alt"></span>
+    <menu>
+      <li>
+        <button type="button" onclick="location.assign('<?= $site_url ?>/student')">
+          <span class="fas fa-tachometer-alt"></span>
 
           <span>Dashboard</span>
         </button>
       </li>
 
-      <li class="nav-item has-treeview">
-        <button class="nav-link" onclick="location.assign('#')">
-          <span class="nav-icon fas fa-chalkboard"></span>
+      <li>
+        <button type="button" onclick="location.assign('#')">
+          <span class="fas fa-chalkboard"></span>
 
           <span>Manage Syllabus</span>
 
           <span class="fas fa-angle-left right"></span>
         </button>
 
-        <menu class="nav nav-treeview">
-          <li class="nav-item">
-            <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/syllabus/courses.php')">
-              <span class="far fa-circle nav-icon"></span>
+        <menu>
+          <li>
+            <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/syllabus/courses.php')">
+              <span class="far fa-circle"></span>
 
               <span>Courses</span>
             </button>
           </li>
 
-          <li class="nav-item">
-            <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/syllabus/lessons.php')">
-              <span class="far fa-circle nav-icon"></span>
+          <li>
+            <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/syllabus/lessons.php')">
+              <span class="far fa-circle"></span>
 
               <span>Lessons</span>
             </button>
           </li>
 
-          <li class="nav-item">
-            <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/syllabus/subjects.php')">
-              <span class="far fa-circle nav-icon"></span>
+          <li>
+            <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/syllabus/subjects.php')">
+              <span class="far fa-circle"></span>
 
               <span>Subjects</span>
             </button>
@@ -67,27 +67,27 @@
         </menu>
       </li>
 
-      <li class="nav-item has-treeview">
-        <button class="nav-link" onclick="location.assign('#')">
-          <span class="nav-icon fas fa-chalkboard-teacher"></span>
+      <li>
+        <button type="button" onclick="location.assign('#')">
+          <span class="fas fa-chalkboard-teacher"></span>
 
           <span>Manage Class Routines</span>
 
           <span class="fas fa-angle-left right"></span>
         </button>
 
-        <menu class="nav nav-treeview">
-          <li class="nav-item">
-            <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/routines/periods.php')">
-              <span class="far fa-circle nav-icon"></span>
+        <menu>
+          <li>
+            <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/routines/periods.php')">
+              <span class="far fa-circle"></span>
 
               <span>Periods</span>
             </button>
           </li>
 
-          <li class="nav-item">
-            <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/routines/timetable.php')">
-              <span class="far fa-circle nav-icon"></span>
+          <li>
+            <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/routines/timetable.php')">
+              <span class="far fa-circle"></span>
 
               <span>Time Table</span>
             </button>
@@ -95,43 +95,43 @@
         </menu>
       </li>
 
-      <li class="nav-item has-treeview">
-        <button class="nav-link" onclick="location.assign('#')">
-          <span class="nav-icon fas fa-file-alt"></span>
+      <li>
+        <button type="button" onclick="location.assign('#')">
+          <span class="fas fa-file-alt"></span>
 
           <span>Manage Examinations</span>
 
           <span class="fas fa-angle-left right"></span>
         </button>
 
-        <menu class="nav nav-treeview">
-          <li class="nav-item">
-            <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/examinations/admin-card.php')">
-              <span class="far fa-circle nav-icon"></span>
+        <menu>
+          <li>
+            <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/examinations/admin-card.php')">
+              <span class="far fa-circle"></span>
 
               <span>Admin card</span>
             </button>
           </li>
 
-          <li class="nav-item">
-            <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/examinations/exam-form.php')">
-              <span class="far fa-circle nav-icon"></span>
+          <li>
+            <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/examinations/exam-form.php')">
+              <span class="far fa-circle"></span>
 
               <span>Examination Form</span>
             </button>
           </li>
 
-          <li class="nav-item">
-            <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/examinations/paper-schedule.php')">
-              <span class="far fa-circle nav-icon"></span>
+          <li>
+            <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/examinations/paper-schedule.php')">
+              <span class="far fa-circle"></span>
 
               <span>Paper Schedule</span>
             </button>
           </li>
 
-          <li class="nav-item">
-            <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/examinations/results.php')">
-              <span class="far fa-circle nav-icon"></span>
+          <li>
+            <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/examinations/results.php')">
+              <span class="far fa-circle"></span>
 
               <span>Results</span>
             </button>
@@ -139,27 +139,27 @@
         </menu>
       </li>
 
-      <li class="nav-item has-treeview">
-        <button class="nav-link" onclick="location.assign('#')">
-          <span class="nav-icon fas fa-calendar-alt"></span>
+      <li>
+        <button type="button" onclick="location.assign('#')">
+          <span class="fas fa-calendar-alt"></span>
 
           <span>Manage Attendance</span>
 
           <span class="fas fa-angle-left right"></span>
         </button>
 
-        <menu class="nav nav-treeview">
-          <li class="nav-item">
-            <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/attendance/attendance.php')">
-              <span class="far fa-circle nav-icon"></span>
+        <menu>
+          <li>
+            <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/attendance/attendance.php')">
+              <span class="far fa-circle"></span>
 
               <span>Attendance</span>
             </button>
           </li>
 
-          <li class="nav-item">
-            <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/attendance/leave.php')">
-              <span class="far fa-circle nav-icon"></span>
+          <li>
+            <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/attendance/leave.php')">
+              <span class="far fa-circle"></span>
 
               <span>Leave</span>
             </button>
@@ -167,27 +167,27 @@
         </menu>
       </li>
 
-      <li class="nav-item has-treeview">
-        <button class="nav-link" onclick="location.assign('#')">
-          <span class="nav-icon fas fa-money-check"></span>
+      <li>
+        <button type="button" onclick="location.assign('#')">
+          <span class="fas fa-money-check"></span>
 
           <span>Fee Details</span>
 
           <span class="fas fa-angle-left right"></span>
         </button>
 
-        <menu class="nav nav-treeview">
-          <li class="nav-item">
-            <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/fee-details/.components/examination')">
-              <span class="far fa-circle nav-icon"></span>
+        <menu>
+          <li>
+            <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/fee-details/.components/examination')">
+              <span class="far fa-circle"></span>
 
               <span>Examination Fee</span>
             </button>
           </li>
 
-          <li class="nav-item">
-            <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/fee-details/.components/tuition')">
-              <span class="far fa-circle nav-icon"></span>
+          <li>
+            <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/fee-details/.components/tuition')">
+              <span class="far fa-circle"></span>
 
               <span>Tuition Fee</span>
             </button>
@@ -195,19 +195,19 @@
         </menu>
       </li>
 
-      <li class="nav-item has-treeview">
-        <button class="nav-link" onclick="location.assign('#')">
-          <span class="nav-icon fas fa-paste"></span>
+      <li>
+        <button type="button" onclick="location.assign('#')">
+          <span class="fas fa-paste"></span>
 
           <span>Study Materials</span>
 
           <span class="fas fa-angle-left right"></span>
         </button>
 
-        <menu class="nav nav-treeview">
-          <li class="nav-item">
-            <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/study-materials')">
-              <span class="far fa-circle nav-icon"></span>
+        <menu>
+          <li>
+            <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/study-materials')">
+              <span class="far fa-circle"></span>
 
               <span>Study Materials</span>
             </button>
@@ -215,27 +215,27 @@
         </menu>
       </li>
 
-      <li class="nav-item has-treeview">
-        <button class="nav-link" onclick="location.assign('#')">
-          <span class="nav-icon fas fa-calendar-check"></span>
+      <li>
+        <button type="button" onclick="location.assign('#')">
+          <span class="fas fa-calendar-check"></span>
 
           <span>Manage Events</span>
 
           <span class="fas fa-angle-left right"></span>
         </button>
 
-        <menu class="nav nav-treeview">
-          <li class="nav-item">
-            <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/events/campus-functions.php')">
-              <span class="far fa-circle nav-icon"></span>
+        <menu>
+          <li>
+            <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/events/campus-functions.php')">
+              <span class="far fa-circle"></span>
 
               <span>Campus Functions</span>
             </button>
           </li>
 
-          <li class="nav-item">
-            <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/events/webinar-seminar.php')">
-              <span class="far fa-circle nav-icon"></span>
+          <li>
+            <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/events/webinar-seminar.php')">
+              <span class="far fa-circle"></span>
 
               <span>Webinar/Seminar</span>
             </button>
@@ -243,19 +243,19 @@
         </menu>
       </li>
 
-      <li class="nav-item has-treeview">
-        <button class="nav-link" onclick="location.assign('#')">
-          <span class="nav-icon fas fa-users"></span>
+      <li>
+        <button type="button" onclick="location.assign('#')">
+          <span class="fas fa-users"></span>
 
           <span>Communications</span>
 
           <span class="fas fa-angle-left right"></span>
         </button>
 
-        <menu class="nav nav-treeview">
-          <li class="nav-item">
-            <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/communications/parent-meeting.php')">
-              <span class="far fa-circle nav-icon"></span>
+        <menu>
+          <li>
+            <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/communications/parent-meeting.php')">
+              <span class="far fa-circle"></span>
 
               <span>Parent's Meetings</span>
             </button>
