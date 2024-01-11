@@ -1,18 +1,26 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-  <!-- Brand Logo -->
-  <a class="brand-link" href="<?= $site_url ?>/student/profile.php">
-    <img
-      src="<?= $site_url ?>/assets/img/AdminLTELogo.png"
-      alt="AdminLTE Logo"
-      class="brand-image img-circle elevation-3"
-      style="opacity: .8"
-    >
-    <!-- <span class="brand-image img-circle elevation-3"><i class="fa fa-user"></i></span> -->
-    <span class="brand-text font-weight-light">Student Panel</span>
-  </a>
-
-  <!-- Sidebar -->
   <div class="sidebar">
+    <header>
+      <div>
+        <a class="brand-link" href="<?= $site_url ?>/student/profile.php">
+          <figure>
+            <img
+              src="<?= $site_url ?>/assets/img/AdminLTELogo.png"
+              alt="AdminLTE Logo"
+              class="brand-image img-circle elevation-3"
+              style="opacity: .8"
+            >
+
+            <!--
+            <figcaption class="brand-image img-circle elevation-3">
+              <i class="fa fa-user"></i>
+            </figcaption>
+            -->
+            <figcaption class="brand-text font-weight-light">Student Panel</figcaption>
+          </figure>
+        </a>
+      </div>
+    </header>
 
     <menu class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
       <li class="nav-item">
