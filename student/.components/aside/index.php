@@ -1,14 +1,14 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
-  <div class="sidebar">
+<aside>
+  <div>
     <header>
       <div>
-        <a class="brand-link" href="<?= $site_url ?>/student/profile.php">
+        <a href="<?= $site_url ?>/student/profile.php">
           <figure>
             <img
               src="<?= $site_url ?>/assets/img/AdminLTELogo.png"
               alt="AdminLTE Logo"
-              class="brand-image img-circle elevation-3"
-              style="opacity: .8"
+              height="50"
+              width="50"
             >
 
             <!--
@@ -16,7 +16,7 @@
               <i class="fa fa-user"></i>
             </figcaption>
             -->
-            <figcaption class="brand-text font-weight-light">Student Panel</figcaption>
+            <figcaption>Student Panel</figcaption>
           </figure>
         </a>
       </div>

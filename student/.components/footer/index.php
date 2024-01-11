@@ -1,15 +1,21 @@
-<footer class="main-footer">
-  <strong>
-    Copyright &copy; 2020
+<footer>
+  <div>
+    <p>
+      <strong>
+        Copyright &copy; 2020
 
-    <a title="School SysManager" rel="external" type="text/html" hreflang="en" href="https://technostudy.co.in">
-      School Management System
-    </a>.
-  </strong>
+        <a title="School SysManager" rel="external" type="text/html" hreflang="en" href="https://technostudy.co.in">
+          School Management System
+        </a>.
+      </strong>
 
-  All rights reserved.
+      All rights reserved.
+    </p>
 
-  <div class="float-right d-none d-sm-inline-block">
-    <b>Version</b> 1.0
+    <p>
+      <span>Version</span>
+
+      <span>1.0</span>
+    </p>
   </div>
 </footer>
