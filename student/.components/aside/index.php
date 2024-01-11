@@ -39,27 +39,27 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/syllabus/courses.php">
+              <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/syllabus/courses.php')">
                 <span class="far fa-circle nav-icon"></span>
 
                 <span>Courses</span>
-              </a>
+              </button>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/syllabus/lessons.php">
+              <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/syllabus/lessons.php')">
                 <span class="far fa-circle nav-icon"></span>
 
                 <span>Lessons</span>
-              </a>
+              </button>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/syllabus/subjects.php">
+              <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/syllabus/subjects.php')">
                 <span class="far fa-circle nav-icon"></span>
 
                 <span>Subjects</span>
-              </a>
+              </button>
             </li>
           </ul>
         </li>
@@ -76,19 +76,19 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/routines/periods.php">
+              <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/routines/periods.php')">
                 <span class="far fa-circle nav-icon"></span>
 
                 <span>Periods</span>
-              </a>
+              </button>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/routines/timetable.php">
+              <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/routines/timetable.php')">
                 <span class="far fa-circle nav-icon"></span>
 
                 <span>Time Table</span>
-              </a>
+              </button>
             </li>
           </ul>
         </li>
@@ -105,35 +105,35 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/examinations/admin-card.php">
+              <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/examinations/admin-card.php')">
                 <span class="far fa-circle nav-icon"></span>
 
                 <span>Admin card</span>
-              </a>
+              </button>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/examinations/exam-form.php">
+              <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/examinations/exam-form.php')">
                 <span class="far fa-circle nav-icon"></span>
 
                 <span>Examination Form</span>
-              </a>
+              </button>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/examinations/paper-schedule.php">
+              <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/examinations/paper-schedule.php')">
                 <span class="far fa-circle nav-icon"></span>
 
                 <span>Paper Schedule</span>
-              </a>
+              </button>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/examinations/results.php">
+              <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/examinations/results.php')">
                 <span class="far fa-circle nav-icon"></span>
 
                 <span>Results</span>
-              </a>
+              </button>
             </li>
           </ul>
         </li>
@@ -150,19 +150,19 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/attendance/attendance.php">
+              <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/attendance/attendance.php')">
                 <span class="far fa-circle nav-icon"></span>
 
                 <span>Attendance</span>
-              </a>
+              </button>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/attendance/leave.php">
+              <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/attendance/leave.php')">
                 <span class="far fa-circle nav-icon"></span>
 
                 <span>Leave</span>
-              </a>
+              </button>
             </li>
           </ul>
         </li>
@@ -179,19 +179,19 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/fee-details/.components/examination">
+              <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/fee-details/.components/examination')">
                 <span class="far fa-circle nav-icon"></span>
 
                 <span>Examination Fee</span>
-              </a>
+              </button>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/fee-details/.components/tuition">
+              <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/fee-details/.components/tuition')">
                 <span class="far fa-circle nav-icon"></span>
 
                 <span>Tuition Fee</span>
-              </a>
+              </button>
             </li>
           </ul>
         </li>
@@ -208,11 +208,11 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/study-materials">
+              <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/study-materials')">
                 <span class="far fa-circle nav-icon"></span>
 
                 <span>Study Materials</span>
-              </a>
+              </button>
             </li>
           </ul>
         </li>
@@ -229,19 +229,19 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/events/campus-functions.php">
+              <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/events/campus-functions.php')">
                 <span class="far fa-circle nav-icon"></span>
 
                 <span>Campus Functions</span>
-              </a>
+              </button>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/events/webinar-seminar.php">
+              <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/events/webinar-seminar.php')">
                 <span class="far fa-circle nav-icon"></span>
 
                 <span>Webinar/Seminar</span>
-              </a>
+              </button>
             </li>
           </ul>
         </li>
@@ -258,11 +258,11 @@
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a class="nav-link" href="<?= $site_url ?>/student/.components/communications/parent-meeting.php">
+              <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student/.components/communications/parent-meeting.php')">
                 <span class="far fa-circle nav-icon"></span>
 
                 <span>Parent's Meetings</span>
-              </a>
+              </button>
             </li>
           </ul>
         </li>
