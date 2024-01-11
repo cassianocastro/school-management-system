@@ -20,22 +20,22 @@
 
         <!-- Dashboard -->
         <li class="nav-item">
-          <a class="nav-link" href="<?= $site_url ?>/student">
+          <button class="nav-link" onclick="location.assign('<?= $site_url ?>/student')">
             <span class="nav-icon fas fa-tachometer-alt"></span>
 
             <span>Dashboard</span>
-          </a>
+          </button>
         </li>
 
         <!-- Syllabus -->
         <li class="nav-item has-treeview">
-          <a class="nav-link" href="#">
+          <button class="nav-link" onclick="location.assign('#')">
             <span class="nav-icon fas fa-chalkboard"></span>
 
             <span>Manage Syllabus</span>
 
             <span class="fas fa-angle-left right"></span>
-          </a>
+          </button>
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
@@ -66,13 +66,13 @@
 
         <!-- Class Routine -->
         <li class="nav-item has-treeview">
-          <a class="nav-link" href="#">
+          <button class="nav-link" onclick="location.assign('#')">
             <span class="nav-icon fas fa-chalkboard-teacher"></span>
 
             <span>Manage Class Routines</span>
 
             <span class="fas fa-angle-left right"></span>
-          </a>
+          </button>
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
@@ -95,13 +95,13 @@
 
         <!-- Examination -->
         <li class="nav-item has-treeview">
-          <a class="nav-link" href="#">
+          <button class="nav-link" onclick="location.assign('#')">
             <span class="nav-icon fas fa-file-alt"></span>
 
             <span>Manage Examinations</span>
 
             <span class="fas fa-angle-left right"></span>
-          </a>
+          </button>
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
@@ -140,13 +140,13 @@
 
         <!-- Attendance -->
         <li class="nav-item has-treeview">
-          <a class="nav-link" href="#">
+          <button class="nav-link" onclick="location.assign('#')">
             <span class="nav-icon fas fa-calendar-alt"></span>
 
             <span>Manage Attendance</span>
 
             <span class="fas fa-angle-left right"></span>
-          </a>
+          </button>
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
@@ -169,13 +169,13 @@
 
         <!-- Fees -->
         <li class="nav-item has-treeview">
-          <a class="nav-link" href="#">
+          <button class="nav-link" onclick="location.assign('#')">
             <span class="nav-icon fas fa-money-check"></span>
 
             <span>Fee Details</span>
 
             <span class="fas fa-angle-left right"></span>
-          </a>
+          </button>
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
@@ -198,13 +198,13 @@
 
         <!-- Study Materials -->
         <li class="nav-item has-treeview">
-          <a class="nav-link" href="#">
+          <button class="nav-link" onclick="location.assign('#')">
             <span class="nav-icon fas fa-paste"></span>
 
             <span>Study Materials</span>
 
             <span class="fas fa-angle-left right"></span>
-          </a>
+          </button>
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
@@ -219,13 +219,13 @@
 
         <!-- Event -->
         <li class="nav-item has-treeview">
-          <a class="nav-link" href="#">
+          <button class="nav-link" onclick="location.assign('#')">
             <span class="nav-icon fas fa-calendar-check"></span>
 
             <span>Manage Events</span>
 
             <span class="fas fa-angle-left right"></span>
-          </a>
+          </button>
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
@@ -248,13 +248,13 @@
 
         <!-- Communication -->
         <li class="nav-item has-treeview">
-          <a class="nav-link" href="#">
+          <button class="nav-link" onclick="location.assign('#')">
             <span class="nav-icon fas fa-users"></span>
 
             <span>Communications</span>
 
             <span class="fas fa-angle-left right"></span>
-          </a>
+          </button>
 
           <ul class="nav nav-treeview">
             <li class="nav-item">
