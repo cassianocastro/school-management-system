@@ -37,3 +37,14 @@ body > main > :only-child
 
     overflow: hidden scroll;
 }
+
+main > div > section
+{
+    outline: thin solid red;
+    margin: 10px 0;
+}
+
+main > div > section > div
+{
+    /* height: 100%; */
+}
