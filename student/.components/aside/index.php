@@ -38,7 +38,7 @@
           <span>Manage Syllabus</span>
         </button>
 
-        <menu>
+        <!-- <menu>
           <li>
             <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/syllabus/courses.php')">
               <span class="far fa-circle"></span>
@@ -62,7 +62,7 @@
               <span>Subjects</span>
             </button>
           </li>
-        </menu>
+        </menu> -->
       </li>
 
       <li>
@@ -72,7 +72,7 @@
           <span>Manage Class Routines</span>
         </button>
 
-        <menu>
+        <!-- <menu>
           <li>
             <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/routines/periods.php')">
               <span class="far fa-circle"></span>
@@ -88,7 +88,7 @@
               <span>Time Table</span>
             </button>
           </li>
-        </menu>
+        </menu> -->
       </li>
 
       <li>
@@ -98,7 +98,7 @@
           <span>Manage Examinations</span>
         </button>
 
-        <menu>
+        <!-- <menu>
           <li>
             <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/examinations/admin-card.php')">
               <span class="far fa-circle"></span>
@@ -130,7 +130,7 @@
               <span>Results</span>
             </button>
           </li>
-        </menu>
+        </menu> -->
       </li>
 
       <li>
@@ -140,7 +140,7 @@
           <span>Manage Attendance</span>
         </button>
 
-        <menu>
+        <!-- <menu>
           <li>
             <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/attendance/attendance.php')">
               <span class="far fa-circle"></span>
@@ -156,7 +156,7 @@
               <span>Leave</span>
             </button>
           </li>
-        </menu>
+        </menu> -->
       </li>
 
       <li>
@@ -166,7 +166,7 @@
           <span>Fee Details</span>
         </button>
 
-        <menu>
+        <!-- <menu>
           <li>
             <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/fee-details/.components/examination')">
               <span class="far fa-circle"></span>
@@ -182,7 +182,7 @@
               <span>Tuition Fee</span>
             </button>
           </li>
-        </menu>
+        </menu> -->
       </li>
 
       <li>
@@ -192,7 +192,7 @@
           <span>Study Materials</span>
         </button>
 
-        <menu>
+        <!-- <menu>
           <li>
             <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/study-materials')">
               <span class="far fa-circle"></span>
@@ -200,7 +200,7 @@
               <span>Study Materials</span>
             </button>
           </li>
-        </menu>
+        </menu> -->
       </li>
 
       <li>
@@ -210,7 +210,7 @@
           <span>Manage Events</span>
         </button>
 
-        <menu>
+        <!-- <menu>
           <li>
             <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/events/campus-functions.php')">
               <span class="far fa-circle"></span>
@@ -226,7 +226,7 @@
               <span>Webinar/Seminar</span>
             </button>
           </li>
-        </menu>
+        </menu> -->
       </li>
 
       <li>
@@ -236,7 +236,7 @@
           <span>Communications</span>
         </button>
 
-        <menu>
+        <!-- <menu>
           <li>
             <button type="button" onclick="location.assign('<?= $site_url ?>/student/.components/communications/parent-meeting.php')">
               <span class="far fa-circle"></span>
@@ -244,7 +244,7 @@
               <span>Parent's Meetings</span>
             </button>
           </li>
-        </menu>
+        </menu> -->
       </li>
     </menu>
 
