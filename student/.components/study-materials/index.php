@@ -46,54 +46,48 @@ while ( $att = mysqli_fetch_object($query) )
 }
 ?>
 
-<section class="content">
-  <div class="container-fluid">
+<section>
+  <div>
 
-    <header class="content-header">
-      <div class="container-fluid">
-        <h1 class="m-0 text-dark">Study Materials</h1>
+    <header>
+      <div>
+        <h1>Study Materials</h1>
 
-        <nav class="row mb-2">
-          <div class="col-sm-6">
-            <ul class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Student</a></li>
-              <li class="breadcrumb-item active"><a href="#">Study Materials</a></li>
+        <nav>
+          <div>
+            <ul>
+              <li><a href="#">Student</a></li>
+              <li><a href="#">Study Materials</a></li>
             </ul>
           </div>
         </nav>
       </div>
     </header>
 
-    <div class="card">
-      <div class="card-body">
-        <div class="table-responsive bg-white">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>S. No.</th>
-                <th>Title</th>
-                <th>Attachment</th>
-                <th>Class</th>
-                <th>Subject</th>
-                <th>Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php foreach ( $materials as $material ) : ?>
-                <tr>
-                  <td><?= $material["count"] ?></td>
-                  <td><?= $material["att_title"] ?></td>
-                  <td><a href="<?= $material["attachment"] ?>">Download File</a></td>
-                  <td><?= $material["class_title"] ?></td>
-                  <td><?= $material["subject_title"] ?></td>
-                  <td><?= $material["att_pubdate"] ?></td>
-                </tr>
-              <?php endforeach; ?>
-            </toby>
-          </table>
-        </div>
-      </div>
-    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>S. No.</th>
+          <th>Title</th>
+          <th>Attachment</th>
+          <th>Class</th>
+          <th>Subject</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach ( $materials as $material ) : ?>
+          <tr>
+            <td><?= $material["count"] ?></td>
+            <td><?= $material["att_title"] ?></td>
+            <td><a href="<?= $material["attachment"] ?>">Download File</a></td>
+            <td><?= $material["class_title"] ?></td>
+            <td><?= $material["subject_title"] ?></td>
+            <td><?= $material["att_pubdate"] ?></td>
+          </tr>
+        <?php endforeach; ?>
+      </toby>
+    </table>
 
   </div>
 </section>
