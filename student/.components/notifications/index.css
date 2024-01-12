@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+/* #region layout */
+
+#notifications
+{
+    display: none;
+
+    position: fixed;
+    inset: 0 0 0 80vw;
+}
+
+#notifications > :only-child
+{
+    background: white;
+    box-shadow: 0 0 7px 1px #aaa;
+
+    height: 100%;
+}
+
+#notifications > div > :is(header, footer)
+{
+    height: 10%;
+}
+
+#notifications > div > nav
+{
+    height: 80%;
+}
+
+#notifications > div > :is(header, nav, footer) > div
+{
+    height: 100%;
+
+    padding: 10px;
+}
+
+/* #endregion layout */
+
+/* #region header */
+
+#notifications > div > header > :only-child
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#notifications > div > header h3
+{
+    font: bold 1.1rem sans-serif;
+}
+
+/* #endregion header */
+
+/* #region nav */
+
+#notifications nav ul
+{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+#notifications nav :any-link
+{
+    color: black;
+}
+
+/* #endregion nav */
+
+/* #region footer */
+
+#notifications > div > footer > :only-child
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#notifications > div > footer button
+{
+    background: rgb(23, 98, 168);
+    border: none;
+    border-radius: 3px;
+
+    color: white;
+    cursor: pointer;
+
+    font-size: .9rem;
+
+    outline: none;
+    padding: 5px 15px;
+}
+
+/* #endregion footer */
+
+/* #region paragraph */
+
+.notification
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: 10px;
+
+    padding: 10px;
+}
+
+.notification > :first-child
+{
+    font-size: 2rem;
+}
+
+.notification > :nth-child(2)
+{
+    font: normal .85rem sans-serif;
+}
+
+.notification > :last-child
+{
+    font: normal .65rem sans-serif;
+}
+
+/* #endregion paragraph */

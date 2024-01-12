@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+/* #region layout */
+
+#messages
+{
+    display: none;
+
+    position: fixed;
+    inset: 0 0 0 80vw;
+}
+
+#messages > :only-child
+{
+    background: white;
+    box-shadow: 0 0 7px 1px #aaa;
+
+    height: 100%;
+}
+
+#messages > div > :is(header, footer)
+{
+    height: 10%;
+}
+
+#messages > div > nav
+{
+    height: 80%;
+}
+
+#messages > div > :is(header, nav, footer) > div
+{
+    height: 100%;
+
+    padding: 10px;
+}
+
+/* #endregion layout */
+
+/* #region header */
+
+#messages > div > header > :only-child
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#messages > div > header h3
+{
+    font: bold 1.1rem sans-serif;
+}
+
+/* #endregion header */
+
+/* #region nav */
+
+#messages nav ul
+{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+#messages nav :any-link
+{
+    color: black;
+}
+
+/* #endregion nav */
+
+/* #region footer */
+
+#messages > div > footer > :only-child
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#messages > div > footer button
+{
+    background: rgb(23, 98, 168);
+    border: none;
+    border-radius: 3px;
+
+    color: white;
+    cursor: pointer;
+
+    font-size: .9rem;
+
+    outline: none;
+    padding: 5px 15px;
+}
+
+/* #endregion footer */
+
+
+.msg
+{
+    contain: layout;
+}
+
+.msg > :only-child
+{
+    padding: 10px;
+}
+
+/* #region header */
+
+.msg > div > header > :only-child
+{
+    /* height: 100%; */
+}
+
+.msg > div > header figure
+{
+    display: flex;
+    gap: 10px;
+}
+
+.msg > div > header img
+{
+    border-radius: 50%;
+}
+
+.msg > div > header figcaption
+{
+    font: bold .85rem sans-serif;
+}
+
+/* #endregion header */
+
+/* #region paragraph */
+
+.msg > div > p
+{
+    font: normal .8rem sans-serif;
+
+    position: absolute;
+    inset: 45% 0 auto 70px;
+}
+
+/* #endregion paragraph */
+
+/* #region footer */
+
+.msg > div > footer
+{
+    position: absolute;
+    inset: auto 10px 5px auto;
+}
+
+.msg > div > footer > :only-child
+{
+    font: normal .65rem sans-serif;
+}
+
+/* #endregion footer */
