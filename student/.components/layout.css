@@ -40,13 +40,18 @@ body > main > :only-child
 
 main > div > section
 {
-    outline: thin solid red;
-    margin: 10px 0;
+    contain: content;
+
+    outline: thin solid #555;
+
+    margin-bottom: 10px;
+
+    height: 100%;
 }
 
 main > div > section > div
 {
-    /* height: 100%; */
+    height: 100%;
 }
 
 section > div > header > div
