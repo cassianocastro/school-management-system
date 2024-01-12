@@ -5,126 +5,151 @@ ini_set("display_errors", true);
 require_once __DIR__ . '/../includes/config.php';
 require_once __DIR__ . '/../actions/student.php';
 
-$current_month = strtolower(date('F'));
-$current_year  = date('Y');
-$current_date  = date('d');
-$sql = "SELECT * FROM `attendance` WHERE `attendance_month` = '$current_month' AND year(current_session) = $current_year AND std_id = $std_id";
-
-$query = mysqli_query($db_conn, $sql);
-$row   = mysqli_fetch_object($query);
-
-$attendance = unserialize($row->attendance_value);
-
-// echo '<pre>', print_r($attendance), '</pre>';
-
-if ( isset($_POST['sign-in']) )
+function dash()
 {
-  // $att_data = [];
+  global $db_conn, $std_id;
 
-  // for ( $i = 1; $i <= 31; $i++ )
-  // {
-  //   $att_data[$i] = [
-  //     'signin_at'  => (date('d') == $i) ? time() : '',
-  //     'signout_at' => (date('d') == $i) ? time() : '',
-  //     'date' => $i
-  //   ];
-  // }
+  $current_month = strtolower(date('F'));
+  $current_year  = 2023;// date('Y');
+  $current_date  = date('d');
+  $sql = "SELECT * FROM `attendance` WHERE `attendance_month` = '$current_month' AND year(current_session) = $current_year AND std_id = $std_id";
 
-  $attendance[$current_date] = [
-    'signin_at'  => time(),
-    'signout_at' => '',
-    'date'       => $current_date
+  $query = mysqli_query($db_conn, $sql);
+  $row   = mysqli_fetch_object($query);
+
+  $attendance = unserialize($row->attendance_value);
+
+  // echo '<pre>', print_r($attendance), '</pre>';
+
+  if ( isset($_POST['sign-in']) )
+  {
+    // $att_data = [];
+
+    // for ( $i = 1; $i <= 31; $i++ )
+    // {
+    //   $att_data[$i] = [
+    //     'signin_at'  => (date('d') == $i) ? time() : '',
+    //     'signout_at' => (date('d') == $i) ? time() : '',
+    //     'date' => $i
+    //   ];
+    // }
+
+    $attendance[$current_date] = [
+      'signin_at'  => time(),
+      'signout_at' => '',
+      'date'       => $current_date
+    ];
+
+    $att_data = serialize($attendance);
+    $current_month = strtolower(date('F'));
+    $sql = "UPDATE `attendance` SET `attendance_value` = '$att_data' WHERE `attendance_month` = '$current_month' AND std_id = $std_id";
+
+    mysqli_query($db_conn, $sql) or die('DB error');
+  }
+
+  if ( isset($_POST['sign-out']) )
+  {
+    $attendance[$current_date] = [
+      'signin_at'  => $attendance[$current_date]['signin_at'],
+      'signout_at' => time(),
+      'date'       => $current_date
+    ];
+
+    $att_data = serialize($attendance);
+    $current_month = strtolower(date('F'));
+    $sql = "UPDATE `attendance` SET `attendance_value` = '$att_data' WHERE `attendance_month` = '$current_month' AND std_id = $std_id";
+
+    mysqli_query($db_conn, $sql) or die('DB error');
+  }
+
+  $totals = [
+    ["Students" , 2000, "photo1.png"],
+    ["Teachers" , 50  , "photo2.png"],
+    ["Courses"  , 100 , "photo3.jpg"],
+    ["Inquiries", 10  , "photo4.jpg"]
   ];
 
-  $att_data = serialize($attendance);
-  $current_month = strtolower(date('F'));
-  $sql = "UPDATE `attendance` SET `attendance_value` = '$att_data' WHERE `attendance_month` = '$current_month' AND std_id = $std_id";
-
-  mysqli_query($db_conn, $sql) or die('DB error');
+  return $totals;
 }
 
-if ( isset($_POST['sign-out']) )
-{
-  $attendance[$current_date] = [
-    'signin_at'  => $attendance[$current_date]['signin_at'],
-    'signout_at' => time(),
-    'date'       => $current_date
-  ];
-
-  $att_data = serialize($attendance);
-  $current_month = strtolower(date('F'));
-  $sql = "UPDATE `attendance` SET `attendance_value` = '$att_data' WHERE `attendance_month` = '$current_month' AND std_id = $std_id";
-
-  mysqli_query($db_conn, $sql) or die('DB error');
-}
-
-$totals = [
-  ["Students" , 2000, "photo1.png"],
-  ["Teachers" , 50  , "photo2.png"],
-  ["Courses"  , 100 , "photo3.jpg"],
-  ["Inquiries", 10  , "photo4.jpg"]
-];
+$totals = dash();
 ?>
 
 <?php // Study-Materials
-$materials = [];
-$usermeta  = get_user_metadata($std_id);
-$class     = $usermeta['class'];
-$count     = 1;
-$query     = mysqli_query(
-  $db_conn,
-  <<<SQL
-    SELECT
-      *
-    FROM
-      posts AS p
-    INNER JOIN
-      metadata AS m ON p.id = m.item_id
-    WHERE
-      p.type = 'study-material'
-    AND
-      m.meta_key = 'class'
-    AND
-      m.meta_value = $class
-  SQL
-);
-
-while ( $att = mysqli_fetch_object($query) )
+function sm()
 {
-  // $class_id     = get_metadata($att->id, 'class')[0]->meta_value;
-  $class           = get_post(['id' => $class]);
-  $subject_id      = get_metadata($att->item_id, 'subject')[0]->meta_value;
-  $subject         = get_post(['id' => $subject_id]);
-  $file_attachment = get_metadata($att->item_id, 'file_attachment')[0]->meta_value;
+  global $std_id, $db_conn, $site_url;
 
-  $materials[] = [
-    "count"         => $count++,
-    "att_title"     => $att->title,
-    "attachment"    => "$site_url/assets/uploads/$file_attachment",
-    "class_title"   => $class->title,
-    "subject_title" => $subject->title,
-    "att_pubdate"   => $att->publish_date,
-  ];
+  $materials = [];
+  $usermeta  = get_user_metadata($std_id);
+  $class     = $usermeta['class'];
+  $count     = 1;
+  $query     = mysqli_query(
+    $db_conn,
+    <<<SQL
+      SELECT
+        *
+      FROM
+        posts AS p
+      INNER JOIN
+        metadata AS m ON p.id = m.item_id
+      WHERE
+        p.type = 'study-material'
+      AND
+        m.meta_key = 'class'
+      AND
+        m.meta_value = $class
+    SQL
+  );
+
+  while ( $att = mysqli_fetch_object($query) )
+  {
+    // $class_id     = get_metadata($att->id, 'class')[0]->meta_value;
+    $class           = get_post(['id' => $class]);
+    $subject_id      = get_metadata($att->item_id, 'subject')[0]->meta_value;
+    $subject         = get_post(['id' => $subject_id]);
+    $file_attachment = get_metadata($att->item_id, 'file_attachment')[0]->meta_value;
+
+    $materials[] = [
+      "count"         => $count++,
+      "att_title"     => $att->title,
+      "attachment"    => "$site_url/assets/uploads/$file_attachment",
+      "class_title"   => $class->title,
+      "subject_title" => $subject->title,
+      "att_pubdate"   => $att->publish_date,
+    ];
+  }
+
+  return $materials;
 }
+
+$materials = sm();
 ?>
 
 <?php // Periods
-$rows    = [];
-$count   = 1;
-$periods = get_posts(['type' => 'period', 'status' => 'publish']);
-
-foreach ( $periods as $period )
+function periods()
 {
-  $from = get_metadata($period->id, 'from')[0]->meta_value;
-  $to   = get_metadata($period->id, 'to')[0]->meta_value;
+  $rows    = [];
+  $count   = 1;
+  $periods = get_posts(['type' => 'period', 'status' => 'publish']);
 
-  $rows[] = [
-    "count"  => $count++,
-    "period" => $period->title,
-    "from"   => date('h:i A', strtotime($from)),
-    "to"     => date('h:i A', strtotime($to))
-  ];
+  foreach ( $periods as $period )
+  {
+    $from = get_metadata($period->id, 'from')[0]->meta_value;
+    $to   = get_metadata($period->id, 'to')[0]->meta_value;
+
+    $rows[] = [
+      "count"  => $count++,
+      "period" => $period->title,
+      "from"   => date('h:i A', strtotime($from)),
+      "to"     => date('h:i A', strtotime($to))
+    ];
+  }
+
+  return $rows;
 }
+
+$rows = periods();
 ?>
 
 <?php // Attendance
@@ -155,8 +180,7 @@ function attendance()
   return mysqli_fetch_object($query);
 }
 
-$row = attendance();
-var_dump($row);
+$att = attendance();
 ?>
 
 <!DOCTYPE html>
