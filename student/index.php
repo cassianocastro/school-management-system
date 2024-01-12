@@ -137,23 +137,26 @@ function attendance()
 
   $current_month = strtolower(date('F'));
   $current_year  = date('Y');
-  $sql = <<<SQL
-    SELECT
-      *
-    FROM
-      attendance
-    WHERE
-      attendance_month = '$current_month'
-    AND
-      year(current_session) = 2023 -- $current_year
-  SQL;
 
-  $query = mysqli_query($db_conn, $sql);
+  $query = mysqli_query(
+    $db_conn,
+    <<<SQL
+      SELECT
+        *
+      FROM
+        attendance
+      WHERE
+        attendance_month = '$current_month'
+      AND
+        year(current_session) = 2023 -- $current_year
+    SQL
+  );
 
   return mysqli_fetch_object($query);
 }
 
 $row = attendance();
+var_dump($row);
 ?>
 
 <!DOCTYPE html>
