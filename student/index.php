@@ -86,6 +86,8 @@ $totals = [
 
       <?php require_once __DIR__ . '/.components/home/index.php'; ?>
 
+      <?php require_once __DIR__ . '/.components/study-materials/index.php'; ?>
+
     </div>
   </main>
 
