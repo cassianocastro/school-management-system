@@ -1,6 +1,6 @@
 <?php
-// error_reporting(E_ALL);
-// ini_set("display_errors", true);
+error_reporting(E_ALL);
+ini_set("display_errors", true);
 
 require_once __DIR__ . '/../includes/config.php';
 require_once __DIR__ . '/../actions/student.php';
@@ -108,6 +108,54 @@ while ( $att = mysqli_fetch_object($query) )
 }
 ?>
 
+<?php // Periods
+$rows    = [];
+$count   = 1;
+$periods = get_posts(['type' => 'period', 'status' => 'publish']);
+
+foreach ( $periods as $period )
+{
+  $from = get_metadata($period->id, 'from')[0]->meta_value;
+  $to   = get_metadata($period->id, 'to')[0]->meta_value;
+
+  $rows[] = [
+    "count"  => $count++,
+    "period" => $period->title,
+    "from"   => date('h:i A', strtotime($from)),
+    "to"     => date('h:i A', strtotime($to))
+  ];
+}
+?>
+
+<?php // Attendance
+function attendance()
+{
+  global $std_id, $db_conn;
+
+  $usermeta = get_user_metadata($std_id);
+  $class    = get_post(['id' => $usermeta['class']]);
+
+  $current_month = strtolower(date('F'));
+  $current_year  = date('Y');
+  $sql = <<<SQL
+    SELECT
+      *
+    FROM
+      attendance
+    WHERE
+      attendance_month = '$current_month'
+    AND
+      year(current_session) = 2023 -- $current_year
+  SQL;
+
+  $query = mysqli_query($db_conn, $sql);
+
+  return mysqli_fetch_object($query);
+}
+
+$row = attendance();
+?>
+
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 <head>
@@ -128,11 +176,23 @@ while ( $att = mysqli_fetch_object($query) )
 
   <main>
     <div>
-
       <?php require_once __DIR__ . '/.components/home/index.php'; ?>
 
       <?php require_once __DIR__ . '/.components/study-materials/index.php'; ?>
 
+      <?php require_once __DIR__ . '/.components/syllabus/courses.php'; ?>
+
+      <?php require_once __DIR__ . '/.components/syllabus/lessons.php'; ?>
+
+      <?php require_once __DIR__ . '/.components/syllabus/subjects.php'; ?>
+
+      <?php require_once __DIR__ . '/.components/routines/periods.php'; ?>
+
+      <?php require_once __DIR__ . '/.components/routines/timetable.php'; ?>
+
+      <?php require_once __DIR__ . '/.components/attendance/attendance.php'; ?>
+
+      <?php require_once __DIR__ . '/.components/attendance/leave.php'; ?>
     </div>
   </main>
 
