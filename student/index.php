@@ -95,7 +95,6 @@ if ( isset($_POST['sign-out']) )
             </div>
           </header>
 
-          <!-- Info boxes -->
           <nav>
             <div>
               <ul>
@@ -162,27 +161,24 @@ if ( isset($_POST['sign-out']) )
             </div>
           </nav>
 
-          <hr>
+          <footer>
+            <div>
+              <p>
+                Sign in Info
+              </p>
 
-          <div class="row">
-            <div class="col-lg-3">
-              <div class="card">
-                <div class="card-header">
-                  Sign in Info
+              <form action="./" method="post">
+                <div>
+                  <?php if ( empty($attendance[$current_date]['signin_at']) || $attendance[$current_date]['signout_at']) : ?>
+                    <button name="sign-in" class="btn btn-primary">Sign in</button>
+                  <?php else: ?>
+                    <button name="sign-out" class="btn btn-primary">Sign Out</button>
+                  <?php endif; ?>
                 </div>
-
-                <div class="card-body">
-                  <form action="./" method="post">
-                    <?php if ( empty($attendance[$current_date]['signin_at']) || $attendance[$current_date]['signout_at']) : ?>
-                      <button name="sign-in" class="btn btn-primary">Sign in</button>
-                    <?php else: ?>
-                      <button name="sign-out" class="btn btn-primary">Sign Out</button>
-                    <?php endif; ?>
-                  </form>
-                </div>
-              </div>
+              </form>
             </div>
-          </div>
+          </footer>
+
         </div>
       </section>
 
