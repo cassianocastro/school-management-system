@@ -54,6 +54,13 @@ if ( isset($_POST['sign-out']) )
 
   mysqli_query($db_conn, $sql) or die('DB error');
 }
+
+$totals = [
+  ["Students" , 2000, "photo1.png"],
+  ["Teachers" , 50  , "photo2.png"],
+  ["Courses"  , 100 , "photo3.jpg"],
+  ["Inquiries", 10  , "photo4.jpg"]
+];
 ?>
 
 <!DOCTYPE html>
@@ -77,18 +84,18 @@ if ( isset($_POST['sign-out']) )
   <main>
     <div>
 
-      <section class="content">
-        <div class="container-fluid">
+      <section>
+        <div>
 
-          <header class="content-header">
-            <div class="container-fluid">
-              <h1 class="m-0 text-dark">Dashboard</h1>
+          <header>
+            <div>
+              <h1>Dashboard</h1>
 
-              <nav class="row mb-2">
-                <div class="col-sm-6">
-                  <ul class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Student</a></li>
-                    <li class="breadcrumb-item active"><a href="#">Dashboard</a></li>
+              <nav>
+                <div>
+                  <ul>
+                    <li><a href="#">Student</a></li>
+                    <li><a href="#">Dashboard</a></li>
                   </ul>
                 </div>
               </nav>
@@ -98,65 +105,23 @@ if ( isset($_POST['sign-out']) )
           <nav>
             <div>
               <ul>
-                <li>
-                  <div class="col-12 col-sm-6 col-md-3">
-                    <div class="info-box">
-                      <span class="info-box-icon bg-info elevation-1">
-                        <i class="fas fa-graduation-cap"></i>
-                      </span>
+                <?php foreach ( $totals as $total ) : ?>
+                  <li>
+                    <figure class="info-box">
+                      <img
+                        src="/assets/img/<?= $total[2] ?>"
+                        alt="Photo"
+                        height="70"
+                        width="70"
+                      >
 
-                      <div class="info-box-content">
-                        <span class="info-box-text">Total Students</span>
-                        <span class="info-box-number">2000</span>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="col-12 col-sm-6 col-md-3">
-                    <div class="info-box mb-3">
-                      <span class="info-box-icon bg-danger elevation-1">
-                        <i class="fas fa-users"></i>
-                      </span>
-
-                      <div class="info-box-content">
-                        <span class="info-box-text">Total Teachers</span>
-                        <span class="info-box-number">50</span>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="col-12 col-sm-6 col-md-3">
-                    <div class="info-box mb-3">
-                      <span class="info-box-icon bg-success elevation-1">
-                        <i class="fas fa-book-open"></i>
-                      </span>
-
-                      <div class="info-box-content">
-                        <span class="info-box-text">Total Courses</span>
-                        <span class="info-box-number">100</span>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="col-12 col-sm-6 col-md-3">
-                    <div class="info-box mb-3">
-                      <span class="info-box-icon bg-warning elevation-1">
-                        <i class="fas fa-question"></i>
-                      </span>
-
-                      <div class="info-box-content">
-                        <span class="info-box-text">New Inquiries</span>
-                        <span class="info-box-number">10</span>
-                      </div>
-                    </div>
-                  </div>
-                </li>
+                      <figcaption>
+                        <span><?= $total[0] ?></span>
+                        <span><?= $total[1] ?></span>
+                      </figcaption>
+                    </figure>
+                  </li>
+                <?php endforeach; ?>
               </ul>
             </div>
           </nav>
