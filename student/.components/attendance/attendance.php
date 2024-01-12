@@ -23,7 +23,7 @@
         </tr>
         <tr>
           <th colspan="3">Name: <?= get_users(['id' => $std_id])[0]->name ?></th>
-          <th>Class: <?= $class->title ?></th>
+          <th>Class: <?= get_post(['id' => get_user_metadata($std_id)['class']])->title; ?></th>
         </tr>
         <tr>
           <td>Date</td>
@@ -33,7 +33,7 @@
         </tr>
       </thead>
       <tbody>
-        <?php foreach ( unserialize($row->attendance_value) as $date => $value ) : ?>
+        <?php foreach ( unserialize($att->attendance_value) as $date => $value ) : ?>
           <tr>
             <td><?= $date ?></td>
             <td><?= ($value['signin_at']) ? 'Present' : 'Absent' ?></td>
