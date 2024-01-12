@@ -48,7 +48,7 @@
 
         <form action="./" method="post">
           <div>
-            <?php if ( empty($attendance[$current_date]['signin_at']) || $attendance[$current_date]['signout_at']) : ?>
+            <?php if ( empty($attendance[date('d')]['signin_at']) || $attendance[date('d')]['signout_at']) : ?>
               <button name="sign-in" class="btn btn-primary">Sign in</button>
             <?php else: ?>
               <button name="sign-out" class="btn btn-primary">Sign Out</button>
