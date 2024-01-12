@@ -17,7 +17,7 @@
       </div>
     </header>
 
-    <table class="table">
+    <table>
       <thead>
         <tr>
           <th colspan="4">Student Details</th>
