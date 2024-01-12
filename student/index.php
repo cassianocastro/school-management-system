@@ -67,18 +67,16 @@ if ( isset($_POST['sign-out']) )
   <link rel="stylesheet" type="text/css" href="/plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/adminlte.min.css">
+  <link rel="stylesheet" type="text/css" href="./index.css">
 
   <title>Student's Dashboard | School SysManager</title>
 </head>
-<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
-  <div class="wrapper">
+<body>
+  <?php require_once __DIR__ . '/.components/header/index.php'; ?>
 
-    <?php require_once __DIR__ . '/.components/header/index.php'; ?>
+  <main>
+    <div>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-
-      <!-- Content Header (Page header) -->
       <div class="content-header">
         <div class="container-fluid">
           <div class="row mb-2">
@@ -98,7 +96,6 @@ if ( isset($_POST['sign-out']) )
         </div>
       </div>
 
-      <!-- Main content -->
       <section class="content">
         <div class="container-fluid">
 
@@ -183,12 +180,13 @@ if ( isset($_POST['sign-out']) )
           </div>
         </div>
       </section>
+
     </div>
+  </main>
 
-    <?php require_once __DIR__ . '/.components/footer/index.php'; ?>
+  <?php require_once __DIR__ . '/.components/footer/index.php'; ?>
 
-    <?php require_once __DIR__ . '/.components/aside/index.php'; ?>
-  </div>
+  <?php require_once __DIR__ . '/.components/aside/index.php'; ?>
 
   <script src="/plugins/jquery/jquery.min.js"></script>
   <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
