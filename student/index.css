@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+@import "/assets/css/reset.css";
+
+@import "./.components/header/index.css";
+@import "./.components/footer/index.css";
+@import "./.components/aside/index.css";
+
+@import "./.components/layout.css";
+/* @import "./.components/home/index.css"; */
+/* @import "./.components/routines/index.css"; */
+/* @import "./.components/study-materials/index.css"; */
+/* @import "./.components/messages/index.css"; */
+/* @import "./.components/notifications/index.css"; */

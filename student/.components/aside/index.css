@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+#controller > :only-child
+{
+    background: rgb(23, 98, 168);
+
+    color: white;
+
+    overflow: hidden scroll;
+    padding: 20px;
+}
+
+/* #region header */
+
+#controller header > :only-child
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#controller header :any-link
+{
+    color: inherit;
+}
+
+#controller header figure
+{
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+#controller header img
+{
+    border-radius: 50%;
+
+    opacity: .8;
+}
+
+/* #endregion header */
+
+/* #region menu */
+
+#controller menu
+{
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+#controller menu button
+{
+    background: none;
+    border: none;
+
+    color: inherit;
+    cursor: pointer;
+
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+
+    outline: none;
+    padding: 10px;
+}
+
+/* #endregion menu */
