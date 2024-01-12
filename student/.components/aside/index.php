@@ -36,8 +36,6 @@
           <span class="fas fa-chalkboard"></span>
 
           <span>Manage Syllabus</span>
-
-          <span class="fas fa-angle-left right"></span>
         </button>
 
         <menu>
@@ -72,8 +70,6 @@
           <span class="fas fa-chalkboard-teacher"></span>
 
           <span>Manage Class Routines</span>
-
-          <span class="fas fa-angle-left right"></span>
         </button>
 
         <menu>
@@ -100,8 +96,6 @@
           <span class="fas fa-file-alt"></span>
 
           <span>Manage Examinations</span>
-
-          <span class="fas fa-angle-left right"></span>
         </button>
 
         <menu>
@@ -144,8 +138,6 @@
           <span class="fas fa-calendar-alt"></span>
 
           <span>Manage Attendance</span>
-
-          <span class="fas fa-angle-left right"></span>
         </button>
 
         <menu>
@@ -172,8 +164,6 @@
           <span class="fas fa-money-check"></span>
 
           <span>Fee Details</span>
-
-          <span class="fas fa-angle-left right"></span>
         </button>
 
         <menu>
@@ -200,8 +190,6 @@
           <span class="fas fa-paste"></span>
 
           <span>Study Materials</span>
-
-          <span class="fas fa-angle-left right"></span>
         </button>
 
         <menu>
@@ -220,8 +208,6 @@
           <span class="fas fa-calendar-check"></span>
 
           <span>Manage Events</span>
-
-          <span class="fas fa-angle-left right"></span>
         </button>
 
         <menu>
@@ -248,8 +234,6 @@
           <span class="fas fa-users"></span>
 
           <span>Communications</span>
-
-          <span class="fas fa-angle-left right"></span>
         </button>
 
         <menu>
