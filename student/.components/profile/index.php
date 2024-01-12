@@ -1,5 +1,5 @@
-<section class="content">
-  <div class="container-fluid">
+<section>
+  <div>
 
     <header>
       <div>
@@ -17,184 +17,224 @@
       </div>
     </header>
 
-    <div class="row">
-      <div class="col-md-3">
-        <div class="card card-primary card-outline">
-          <div class="card-body box-profile">
-            <div class="text-center">
+    <section>
+      <div>
+
+        <header>
+          <div>
+            <h3>Parent's Information</h3>
+          </div>
+        </header>
+
+        <div>
+          <ul>
+            <li>
+              <div>
+                <strong>
+                  <span class="fas fa-book"></span>
+
+                  <span>Education</span>
+                </strong>
+
+                <p>
+                  B.S. in Computer Science from the University of Tennessee at Knoxville
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <strong>
+                  <span class="fas fa-map-marker-alt"></span>
+
+                  <span>Location</span>
+                </strong>
+
+                <p>
+                  Malibu, California
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <strong>
+                  <span class="fas fa-pencil-alt"></span>
+
+                  <span>Skills</span>
+                </strong>
+
+                <ul>
+                  <li>UI Design</li>
+                  <li>Coding</li>
+                  <li>Javascript</li>
+                  <li>PHP</li>
+                  <li>Node.js</li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <strong>
+                  <span class="far fa-file-alt"></span>
+
+                  <span>Notes</span>
+                </strong>
+
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div>
+
+        <header>
+          <div>
+            <h3>Parent's Information</h3>
+          </div>
+        </header>
+
+        <div>
+          <ul>
+            <li>
+              <div>
+                <strong>
+                  <span class="fas fa-book"></span>
+
+                  <span>Education</span>
+                </strong>
+
+                <p>
+                  B.S. in Computer Science from the University of Tennessee at Knoxville
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <strong>
+                  <span class="fas fa-map-marker-alt"></span>
+
+                  <span>Location</span>
+                </strong>
+
+                <p>
+                  Malibu, California
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <strong>
+                  <span class="fas fa-pencil-alt"></span>
+
+                  <span>Skills</span>
+                </strong>
+
+                <ul>
+                  <li>UI Design</li>
+                  <li>Coding</li>
+                  <li>Javascript</li>
+                  <li>PHP</li>
+                  <li>Node.js</li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <strong>
+                  <span class="far fa-file-alt"></span>
+
+                  <span>Notes</span>
+                </strong>
+
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <aside>
+      <div>
+
+        <header>
+          <div>
+            <figure>
               <img src="<?= $site_url ?>/assets/img/AdminLTELogo.png" alt="User profile picture" class="profile-user-img img-fluid img-circle">
-            </div>
 
-            <h3 class="profile-username text-center"><?= $student->name ?></h3>
+              <figcaption>
+                <h3><?= $student->name ?></h3>
+              </figcaption>
+            </figure>
 
-            <p class="text-muted text-center">
+            <p>
               <?= $stdmeta['address'] ?>,
               <?= $stdmeta['state'] ?>,
               <?= $stdmeta['country'] ?>
               (<?= $stdmeta['zip'] ?>)
             </p>
-
-            <hr>
-
-            <p>
-              <strong>
-                <i class="fa-fw fas fa-chalkboard mr-1"></i>
-
-                Class
-              </strong>
-
-              <span class="text-muted float-right">
-                <?= $class->title; ?> (<?= $section->title ?>)
-              </span>
-            </p>
-
-            <hr>
-
-            <p>
-              <strong>
-                <i class="fa-fw fas fa-calendar-alt mr-1"></i>
-
-                DOB
-              </strong>
-
-              <span class="text-muted float-right">
-                <?= $stdmeta['dob'] ?>
-              </span>
-            </p>
-
-            <hr>
-
-            <p>
-              <strong>
-                <i class="fa-fw fas fa-phone-square mr-1"></i>
-
-                Mobile
-              </strong>
-
-              <span class="text-muted float-right">
-                <?= $stdmeta['mobile'] ?>
-              </span>
-            </p>
           </div>
-        </div>
+        </header>
+
+        <nav>
+          <div>
+            <ul>
+              <li>
+                <p>
+                  <strong>
+                    <span class="fa-fw fas fa-chalkboard"></span>
+
+                    <span>Class</span>
+                  </strong>
+
+                  <span><?= $class->title; ?> (<?= $section->title ?>)</span>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <strong>
+                    <span class="fa-fw fas fa-calendar-alt"></span>
+
+                    <span>DOB</span>
+                  </strong>
+
+                  <span><?= $stdmeta['dob'] ?></span>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <strong>
+                    <span class="fa-fw fas fa-phone-square"></span>
+
+                    <span>Mobile</span>
+                  </strong>
+
+                  <span><?= $stdmeta['mobile'] ?></span>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
       </div>
+    </aside>
 
-      <div class="col-md-9">
-        <div class="card card-primary">
-          <div class="card-header">
-            <h3 class="card-title">Parent's Information</h3>
-          </div>
-
-          <div class="card-body">
-            <strong>
-              <i class="fas fa-book mr-1"></i>
-
-              Education
-            </strong>
-
-            <p class="text-muted">
-              B.S. in Computer Science from the University of Tennessee at Knoxville
-            </p>
-
-            <hr>
-
-            <strong>
-              <i class="fas fa-map-marker-alt mr-1"></i>
-
-              Location
-            </strong>
-
-            <p class="text-muted">
-              Malibu, California
-            </p>
-
-            <hr>
-
-            <strong>
-              <i class="fas fa-pencil-alt mr-1"></i>
-
-              Skills
-            </strong>
-
-            <p class="text-muted">
-              <span class="tag tag-danger">UI Design</span>
-              <span class="tag tag-success">Coding</span>
-              <span class="tag tag-info">Javascript</span>
-              <span class="tag tag-warning">PHP</span>
-              <span class="tag tag-primary">Node.js</span>
-            </p>
-
-            <hr>
-
-            <strong>
-              <i class="far fa-file-alt mr-1"></i>
-
-              Notes
-            </strong>
-
-            <p class="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.
-            </p>
-          </div>
-        </div>
-
-        <div class="card card-primary">
-          <div class="card-header">
-            <h3 class="card-title">Parent's Information</h3>
-          </div>
-
-          <div class="card-body">
-            <strong>
-              <i class="fas fa-book mr-1"></i>
-
-              Education
-            </strong>
-
-            <p class="text-muted">
-              B.S. in Computer Science from the University of Tennessee at Knoxville
-            </p>
-
-            <hr>
-
-            <strong>
-              <i class="fas fa-map-marker-alt mr-1"></i>
-
-              Location
-            </strong>
-
-            <p class="text-muted">Malibu, California</p>
-
-            <hr>
-
-            <strong>
-              <i class="fas fa-pencil-alt mr-1"></i>
-
-              Skills
-            </strong>
-
-            <p class="text-muted">
-              <span class="tag tag-danger">UI Design</span>
-              <span class="tag tag-success">Coding</span>
-              <span class="tag tag-info">Javascript</span>
-              <span class="tag tag-warning">PHP</span>
-              <span class="tag tag-primary">Node.js</span>
-            </p>
-
-            <hr>
-
-            <strong>
-              <i class="far fa-file-alt mr-1"></i>
-
-              Notes
-            </strong>
-
-            <p class="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
   </div>
 </section>
