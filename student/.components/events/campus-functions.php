@@ -9,6 +9,7 @@
           <div>
             <ul>
               <li><a href="#">Student</a></li>
+              <li>&sol;</li>
               <li><a href="#">Campus Functions</a></li>
             </ul>
           </div>

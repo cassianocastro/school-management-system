@@ -48,3 +48,19 @@ main > div > section > div
 {
     /* height: 100%; */
 }
+
+section > div > header > div
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px;
+}
+
+section > div > header ul
+{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
