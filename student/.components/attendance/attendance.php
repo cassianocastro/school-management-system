@@ -1,24 +1,3 @@
-<?php
-$usermeta = get_user_metadata($std_id);
-$class    = get_post(['id' => $usermeta['class']]);
-
-$current_month = strtolower(date('F'));
-$current_year  = date('Y');
-$sql = <<<SQL
-  SELECT
-    *
-  FROM
-    attendance
-  WHERE
-    attendance_month = '$current_month'
-  AND
-    year(current_session) = 2023 -- $current_year
-SQL;
-
-$query = mysqli_query($db_conn, $sql);
-$row   = mysqli_fetch_object($query);
-?>
-
 <section>
   <div>
 
