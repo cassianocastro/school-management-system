@@ -1,32 +1,15 @@
 "use strict";
 
+import { index as Header } from "./.components/header/index.js";
+import { index as Aside } from "./.components/aside/index.js";
+
 /**
  *
  */
 function index()
 {
-    var path = window.location.href;
-    // console.log(path);
-
-    $(".nav-link").each(() => {
-
-        var href = $(this).attr('href');
-
-        // console.log(href);
-
-        if ( path === decodeURIComponent(href) )
-        {
-            $(this).addClass('active');
-
-            var parent = $(this).closest('.has-treeview');
-
-            parent.addClass('menu-open');
-
-            $(parent).find('.nav-link').first().addClass('active');
-
-            // console.log(parent);
-        }
-    });
+    Header();
+    Aside();
 }
 
 index();
