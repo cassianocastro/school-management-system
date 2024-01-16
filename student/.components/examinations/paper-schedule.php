@@ -1,4 +1,4 @@
-<section>
+<section id="paper-schedule">
   <div>
 
     <header>

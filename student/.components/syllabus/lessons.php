@@ -1,4 +1,4 @@
-<section>
+<section id="lessons">
   <div>
 
     <header>

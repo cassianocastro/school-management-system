@@ -1,4 +1,4 @@
-<section>
+<section id="attendance">
   <div>
 
     <header>
