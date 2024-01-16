@@ -1,1 +1,130 @@
 @charset "UTF-8";
+
+#index
+{
+    /* position: absolute; */
+    /* inset: 0; */
+}
+
+#index > div
+{
+    background: white;
+
+    height: 100%;
+
+    padding: 25px;
+}
+
+/* #region header */
+
+#index > div > header > :only-child
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px;
+}
+
+#index > div > header h1
+{
+    font: bold 1.5rem sans-serif;
+}
+
+#index > div > header ul
+{
+    display: flex;
+    gap: 5px;
+}
+
+/* #endregion header */
+
+/* #region nav */
+
+#index > div > nav > :only-child
+{
+    margin: 30px 0;
+    padding: 10px;
+}
+
+#index > div > nav ul
+{
+    display: grid;
+    grid: auto / repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* #endregion nav */
+
+/* #region footer */
+
+#index > div > footer > :only-child
+{
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+
+    padding: 10px;
+}
+
+#index > div > footer p
+{
+    font: bold .9rem sans-serif;
+}
+
+#index > div > footer button
+{
+    background: rgb(23, 98, 168);
+    border: none;
+    border-radius: 20px;
+
+    color: white;
+    cursor: pointer;
+
+    font: normal .9rem sans-serif;
+
+    outline: none;
+    padding: 10px 25px;
+}
+
+/* #endregion footer */
+
+
+
+.info-box
+{
+    border-radius: 3px;
+    box-shadow: 0 0 5px #aaa;
+
+    align-items: center;
+    display: flex;
+    gap: 15px;
+
+    padding: 5px;
+}
+
+.info-box img
+{
+    border-radius: 5px;
+}
+
+.info-box figcaption
+{
+    font: normal .9rem sans-serif;
+}
+
+.info-box figcaption > span
+{
+    display: block;
+}
+
+.info-box figcaption > :first-child
+{
+    margin-bottom: 5px;
+}
+
+.info-box figcaption > :last-child
+{
+    font-weight: bold;
+}
