@@ -24,7 +24,7 @@
 
     <menu>
       <li>
-        <button type="button" onclick="location.assign('<?= SITE_URL ?>/student')">
+        <button type="button" title="Dashboard's Index">
           <span class="fas fa-tachometer-alt"></span>
 
           <span>Dashboard</span>
@@ -32,10 +32,10 @@
       </li>
 
       <li>
-        <button type="button" onclick="location.assign('#')">
+        <button type="button" title="Manage Syllabus">
           <span class="fas fa-chalkboard"></span>
 
-          <span>Manage Syllabus</span>
+          <span>Syllabus</span>
         </button>
 
         <!-- <menu>
@@ -66,10 +66,10 @@
       </li>
 
       <li>
-        <button type="button" onclick="location.assign('#')">
+        <button type="button" title="Manage Class Routines">
           <span class="fas fa-chalkboard-teacher"></span>
 
-          <span>Manage Class Routines</span>
+          <span>Routines</span>
         </button>
 
         <!-- <menu>
@@ -92,10 +92,10 @@
       </li>
 
       <li>
-        <button type="button" onclick="location.assign('#')">
+        <button type="button" title="Manage Examinations">
           <span class="fas fa-file-alt"></span>
 
-          <span>Manage Examinations</span>
+          <span>Examinations</span>
         </button>
 
         <!-- <menu>
@@ -134,10 +134,10 @@
       </li>
 
       <li>
-        <button type="button" onclick="location.assign('#')">
+        <button type="button" title="Manage Attendance">
           <span class="fas fa-calendar-alt"></span>
 
-          <span>Manage Attendance</span>
+          <span>Attendance</span>
         </button>
 
         <!-- <menu>
@@ -160,7 +160,7 @@
       </li>
 
       <li>
-        <button type="button" onclick="location.assign('#')">
+        <button type="button" title="Fee Details">
           <span class="fas fa-money-check"></span>
 
           <span>Fee Details</span>
@@ -186,7 +186,7 @@
       </li>
 
       <li>
-        <button type="button" onclick="location.assign('#')">
+        <button type="button" title="Study Materials">
           <span class="fas fa-paste"></span>
 
           <span>Study Materials</span>
@@ -204,10 +204,10 @@
       </li>
 
       <li>
-        <button type="button" onclick="location.assign('#')">
+        <button type="button" title="Manage Events">
           <span class="fas fa-calendar-check"></span>
 
-          <span>Manage Events</span>
+          <span>Events</span>
         </button>
 
         <!-- <menu>
@@ -230,7 +230,7 @@
       </li>
 
       <li>
-        <button type="button" onclick="location.assign('#')">
+        <button type="button" title="Communications">
           <span class="fas fa-users"></span>
 
           <span>Communications</span>
