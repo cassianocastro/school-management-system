@@ -262,11 +262,11 @@ $section = $foo[1];
 
   <?php require_once __DIR__ . '/.components/aside/index.php'; ?>
 
-  <script src="/plugins/jquery/jquery.min.js"></script>
+  <script defer type="module" src="/plugins/jquery/jquery.min.js"></script>
   <!-- <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
   <!-- <script src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script> -->
   <!-- <script src="/assets/js/adminlte.js"></script> -->
   <!-- <script src="/assets/js/demo.js"></script> -->
-  <script src="./index.js"></script>
+  <script defer type="module" src="./index.js"></script>
 </body>
 </html>
