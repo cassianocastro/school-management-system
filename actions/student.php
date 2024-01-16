@@ -1,7 +1,7 @@
 <?php
 // session_start();
 
-$site_url = "http://{$_SERVER["SERVER_NAME"]}";
+define("SITE_URL", "http://{$_SERVER["SERVER_NAME"]}");
 
 if ( isset($_SESSION['login']) )
 {
@@ -9,7 +9,7 @@ if ( isset($_SESSION['login']) )
     {
         $user_type = $_SESSION['user_type'];
 
-        header("Location: $site_url/$user_type");
+        header("Location: " . SITE_URL . "/$user_type");
     }
 }
 else
