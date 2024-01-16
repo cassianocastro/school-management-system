@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+#sm
+{
+    /* position: absolute; */
+    /* inset: 0; */
+}
+
+#sm > div
+{
+    background: white;
+
+    height: 100%;
+
+    padding: 25px;
+}
+
+/* #region header */
+
+#sm > div > header > div
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px;
+}
+
+#sm > div > header h1
+{
+    font: bold 1.5rem sans-serif;
+}
+
+#sm > div > header ul
+{
+    display: flex;
+    gap: 5px;
+}
+
+/* #endregion header */
+
+/* #region nav */
+
+#sm > div > nav > :only-child
+{
+    padding: 20px;
+}
+
+#sm > div > nav ul
+{
+    display: grid;
+    grid: auto / repeat(5, 1fr);
+    gap: 2%;
+}
+
+/* #endregion nav */
+
+/* #region card */
+
+/* #region layout */
+
+.material
+{
+    height: 250px;
+}
+
+.material > :only-child
+{
+    border-radius: 5px;
+    box-shadow: 0 0 5px #aaa;
+
+    padding: 15px;
+
+    height: 100%;
+}
+
+.material > div > :first-child,
+.material > div > :last-child
+{
+    height: 10%;
+}
+
+.material > div > :nth-child(2)
+{
+    height: 80%;
+}
+
+/* #endregion layout */
+
+/* #region header */
+
+.material header > div
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.material header h3
+{
+    font: normal .9rem sans-serif;
+}
+
+/* #endregion header */
+
+/* #region paragraph */
+
+.material p
+{
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 20px;
+}
+
+.material p > :first-child
+{
+    font-size: .8rem;
+}
+
+.material p > :last-child
+{
+    background: rgba(7, 117, 219);
+    border-radius: 20px;
+
+    color: white;
+
+    font-size: .9rem;
+
+    opacity: .73;
+    padding: 10px 15px;
+}
+
+/* #endregion paragraph */
+
+/* #region footer */
+
+.material footer > div
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.material footer time
+{
+    font: normal .7rem sans-serif;
+}
+
+.material footer :any-link
+{
+    color: rgb(7, 117, 219);
+}
+
+/* #endregion footer */
+
+/* #endregion card */
