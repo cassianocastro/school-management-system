@@ -78,7 +78,7 @@ $totals = dash();
 <?php // Study-Materials
 function sm()
 {
-  global $std_id, $db_conn, $site_url;
+  global $std_id, $db_conn;
 
   $materials = [];
   $usermeta  = get_user_metadata($std_id);
@@ -113,7 +113,7 @@ function sm()
     $materials[] = [
       "count"         => $count++,
       "att_title"     => $att->title,
-      "attachment"    => "$site_url/assets/uploads/$file_attachment",
+      "attachment"    => SITE_URL . "/assets/uploads/$file_attachment",
       "class_title"   => $class->title,
       "subject_title" => $subject->title,
       "att_pubdate"   => $att->publish_date,
