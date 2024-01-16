@@ -262,6 +262,10 @@ $section = $foo[1];
 
   <?php require_once __DIR__ . '/.components/aside/index.php'; ?>
 
+  <?php require_once __DIR__ . '/.components/messages/index.php'; ?>
+
+  <?php require_once __DIR__ . '/.components/notifications/index.php'; ?>
+
   <script defer type="module" src="/plugins/jquery/jquery.min.js"></script>
   <!-- <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
   <!-- <script src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script> -->
