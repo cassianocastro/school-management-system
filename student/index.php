@@ -202,6 +202,36 @@ $section = $foo[1];
 // var_dump($foo[0], $foo[1]);
 ?>
 
+<?php // Messages
+$users = [
+  [
+    "name"    => "Brad Diesel",
+    "photo"   => "photo1.png",
+    "message" => [
+      "content" => "Call me whenever you can...",
+      "time"    => "4 Hours Ago"
+    ]
+  ],
+  [
+    "name"    => "John Pierce",
+    "photo"   => "photo2.png",
+    "message" => [
+      "content" => "I got your message bro",
+      "time"    => "4 Hours Ago"
+    ]
+  ],
+  [
+    "name"    => "Nora Silvester",
+    "photo"   => "photo3.jpg",
+    "message" => [
+      "content" => "The subject goes here",
+      "time"    => "4 Hours Ago"
+    ]
+  ]
+];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 <head>
