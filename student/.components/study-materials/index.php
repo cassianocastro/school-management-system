@@ -17,30 +17,39 @@
       </div>
     </header>
 
-    <table>
-      <thead>
-        <tr>
-          <th>S. No.</th>
-          <th>Title</th>
-          <th>Attachment</th>
-          <th>Class</th>
-          <th>Subject</th>
-          <th>Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php foreach ( $materials as $material ) : ?>
-          <tr>
-            <td><?= $material["count"] ?></td>
-            <td><?= $material["att_title"] ?></td>
-            <td><a href="<?= $material["attachment"] ?>">Download File</a></td>
-            <td><?= $material["class_title"] ?></td>
-            <td><?= $material["subject_title"] ?></td>
-            <td><?= $material["att_pubdate"] ?></td>
-          </tr>
-        <?php endforeach; ?>
-      </toby>
-    </table>
+    <nav>
+      <div>
+        <ul>
+          <?php foreach ( $materials as $material ) : ?>
+            <li>
+              <article id="material-<?= $material["count"] ?>" class="material">
+                <div>
+                  <header>
+                    <div>
+                      <h3><?= $material["att_title"] ?></h3>
+                    </div>
+                  </header>
+
+                  <p>
+                    <span><?= $material["class_title"] ?></span>
+
+                    <span><?= $material["subject_title"] ?></span>
+                  </p>
+
+                  <footer>
+                    <div>
+                      <time><?= $material["att_pubdate"] ?></time>
+
+                      <a class="fas fa-download" href="<?= $material["attachment"] ?>"></a>
+                    </div>
+                  </footer>
+                </div>
+              </article>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
+    </nav>
 
   </div>
 </section>
