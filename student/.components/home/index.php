@@ -49,10 +49,10 @@
 
         <form action="./" method="post">
           <div>
-            <?php if ( empty($attendance[date('d')]['signin_at']) || $attendance[date('d')]['signout_at']) : ?>
-              <button name="sign-in" class="btn btn-primary">Sign in</button>
+            <?php if ( empty($attendance[date('d')]['signin_at']) or $attendance[date('d')]['signout_at']) : ?>
+              <button type="submit" title="Sign In" name="sign-in">Sign in</button>
             <?php else: ?>
-              <button name="sign-out" class="btn btn-primary">Sign Out</button>
+              <button type="submit" title="Sign Out" name="sign-out">Sign Out</button>
             <?php endif; ?>
           </div>
         </form>
