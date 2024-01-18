@@ -4,7 +4,7 @@
 
 <!-- <menu>
   <li>
-    <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/fee-details/.components/examination')">
+    <button type="button" title="Examination Fee">
       <span class="far fa-circle"></span>
 
       <span>Examination Fee</span>
@@ -12,7 +12,7 @@
   </li>
 
   <li>
-    <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/fee-details/.components/tuition')">
+    <button type="button" title="Tuition Fee">
       <span class="far fa-circle"></span>
 
       <span>Tuition Fee</span>
