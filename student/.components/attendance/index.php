@@ -1,6 +1,6 @@
-<?php require_once __DIR__ . '/attendance.php'; ?>
+<?php require_once __DIR__ . '/attendance/index.php'; ?>
 
-<?php require_once __DIR__ . '/leave.php'; ?>
+<?php require_once __DIR__ . '/leave/index.php'; ?>
 
 <!-- <menu>
   <li>
