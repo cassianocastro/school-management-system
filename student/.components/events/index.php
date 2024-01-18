@@ -1,6 +1,6 @@
-<?php require_once __DIR__ . '/campus-functions.php'; ?>
+<?php require_once __DIR__ . '/cf/index.php'; ?>
 
-<?php require_once __DIR__ . '/webinar-seminar.php'; ?>
+<?php require_once __DIR__ . '/ws/index.php'; ?>
 
 <!-- <menu>
   <li>
