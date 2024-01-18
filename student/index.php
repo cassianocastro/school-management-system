@@ -260,6 +260,8 @@ $users = [
 
       <?php require_once __DIR__ . '/.components/attendance/index.php'; ?>
 
+      <?php require_once __DIR__ . '/.components/fee-details/index.php'; ?>
+
       <?php require_once __DIR__ . '/.components/communications/parent-meeting.php'; ?>
 
       <?php require_once __DIR__ . '/.components/events/index.php'; ?>
