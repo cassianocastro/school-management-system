@@ -1,3 +1,7 @@
+<?php require_once __DIR__ . '/.components/examination/index.php'; ?>
+
+<?php // require_once __DIR__ . '/.components/tuition/index.php'; ?>
+
 <!-- <menu>
   <li>
     <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/fee-details/.components/examination')">
