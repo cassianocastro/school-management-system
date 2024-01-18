@@ -1,3 +1,21 @@
 <?php require_once __DIR__ . '/attendance.php'; ?>
 
 <?php require_once __DIR__ . '/leave.php'; ?>
+
+<!-- <menu>
+  <li>
+    <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/attendance/attendance.php')">
+      <span class="far fa-circle"></span>
+
+      <span>Attendance</span>
+    </button>
+  </li>
+
+  <li>
+    <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/attendance/leave.php')">
+      <span class="far fa-circle"></span>
+
+      <span>Leave</span>
+    </button>
+  </li>
+</menu> -->
