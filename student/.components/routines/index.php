@@ -4,7 +4,7 @@
 
 <!-- <menu>
   <li>
-    <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/routines/periods.php')">
+    <button type="button" title="See Periods">
       <span class="far fa-circle"></span>
 
       <span>Periods</span>
@@ -12,7 +12,7 @@
   </li>
 
   <li>
-    <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/routines/timetable.php')">
+    <button type="button" title="See Time Table">
       <span class="far fa-circle"></span>
 
       <span>Time Table</span>

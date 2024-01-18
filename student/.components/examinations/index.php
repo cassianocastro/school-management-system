@@ -8,7 +8,7 @@
 
 <!-- <menu>
   <li>
-    <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/examinations/admin-card.php')">
+    <button type="button" title="Manage Admin Cards">
       <span class="far fa-circle"></span>
 
       <span>Admin card</span>
@@ -16,7 +16,7 @@
   </li>
 
   <li>
-    <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/examinations/exam-form.php')">
+    <button type="button" title="Manage Examination Forms">
       <span class="far fa-circle"></span>
 
       <span>Examination Form</span>
@@ -24,7 +24,7 @@
   </li>
 
   <li>
-    <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/examinations/paper-schedule.php')">
+    <button type="button" title="Manage Paper Schedule">
       <span class="far fa-circle"></span>
 
       <span>Paper Schedule</span>
@@ -32,7 +32,7 @@
   </li>
 
   <li>
-    <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/examinations/results.php')">
+    <button type="button" title="Manage Results">
       <span class="far fa-circle"></span>
 
       <span>Results</span>

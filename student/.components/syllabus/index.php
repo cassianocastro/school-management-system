@@ -6,7 +6,7 @@
 
 <!-- <menu>
   <li>
-    <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/syllabus/courses.php')">
+    <button type="button" title="Manage Courses">
       <span class="far fa-circle"></span>
 
       <span>Courses</span>
@@ -14,7 +14,7 @@
   </li>
 
   <li>
-    <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/syllabus/lessons.php')">
+    <button type="button" title="Manage Lessons">
       <span class="far fa-circle"></span>
 
       <span>Lessons</span>
@@ -22,7 +22,7 @@
   </li>
 
   <li>
-    <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/syllabus/subjects.php')">
+    <button type="button" title="Manage Subjects">
       <span class="far fa-circle"></span>
 
       <span>Subjects</span>

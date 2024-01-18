@@ -4,7 +4,7 @@
 
 <!-- <menu>
   <li>
-    <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/events/campus-functions.php')">
+    <button type="button" title="Manage Campus Functions">
       <span class="far fa-circle"></span>
 
       <span>Campus Functions</span>
@@ -12,7 +12,7 @@
   </li>
 
   <li>
-    <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/events/webinar-seminar.php')">
+    <button type="button" title="Webinars & Seminars">
       <span class="far fa-circle"></span>
 
       <span>Webinar/Seminar</span>

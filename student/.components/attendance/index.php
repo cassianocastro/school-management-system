@@ -4,7 +4,7 @@
 
 <!-- <menu>
   <li>
-    <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/attendance/attendance.php')">
+    <button type="button" title="Manage Attendance">
       <span class="far fa-circle"></span>
 
       <span>Attendance</span>
@@ -12,7 +12,7 @@
   </li>
 
   <li>
-    <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/attendance/leave.php')">
+    <button type="button" title="Leave">
       <span class="far fa-circle"></span>
 
       <span>Leave</span>
