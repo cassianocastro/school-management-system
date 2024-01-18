@@ -1,8 +1,8 @@
-<?php require_once __DIR__ . '/courses.php'; ?>
+<?php require_once __DIR__ . '/courses/index.php'; ?>
 
-<?php require_once __DIR__ . '/lessons.php'; ?>
+<?php require_once __DIR__ . '/lessons/index.php'; ?>
 
-<?php require_once __DIR__ . '/subjects.php'; ?>
+<?php require_once __DIR__ . '/subjects/index.php'; ?>
 
 <!-- <menu>
   <li>
