@@ -17,7 +17,7 @@ if ( isset($_POST['form_submitted']) )
   $month     = $_POST["month"] ?? '';
   $title     = "$month - Fee";
 
-  $query = mysqli_query($db_conn, "INSERT INTO posts (title, type, description, status, author, parent) VALUES ($title, payment,'', $status, $user_id, 0)");
+  $query = mysqli_query($db_conn, "INSERT INTO posts (title, type, description, status, author, parent) VALUES ('$title', 'payment','', '$status', $user_id, 0)");
 
   if ( $query )
   {
@@ -33,7 +33,7 @@ if ( isset($_POST['form_submitted']) )
 
   foreach ( $payment_data as $key => $value )
   {
-    mysqli_query($db_conn, "INSERT INTO metadata (item_id, meta_key, meta_value) VALUES ($item_id, $key, $value)");
+    mysqli_query($db_conn, "INSERT INTO metadata (item_id, meta_key, meta_value) VALUES ('$item_id', '$key', '$value')");
   }
 
   $success_msg = true;
@@ -57,7 +57,7 @@ if ( isset($_POST['form_submitted']) )
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
   <div class="wrapper">
 
-    <?php require_once __DIR__ . '/../../../header/index.php'; ?>
+    <?php //require_once __DIR__ . '/../../../header/index.php'; ?>
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -394,9 +394,9 @@ if ( isset($_POST['form_submitted']) )
       <?php endif; ?>
     </div>
 
-    <?php require_once __DIR__ . '/../../../footer/index.php'; ?>
+    <?php //require_once __DIR__ . '/../../../footer/index.php'; ?>
 
-    <?php require_once __DIR__ . '/../../../aside/index.php'; ?>
+    <?php //require_once __DIR__ . '/../../../aside/index.php'; ?>
   </div>
 
   <script src="/plugins/jquery/jquery.min.js"></script>
