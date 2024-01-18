@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+/* #region layout */
+
+#paynow-popup
+{
+    height: 45vh;
+    width: 40vw;
+}
+
+#paynow-popup > :only-child
+{
+    box-shadow: 0 0 5px 1px #aaa;
+
+    height: 100%;
+}
+
+#paynow-popup > div > :is(header, footer)
+{
+    height: 15%;
+}
+
+#paynow-popup > div > form
+{
+    height: 70%;
+}
+
+#paynow-popup > div > :is(header, form, footer) > :only-child
+{
+    height: 100%;
+}
+
+/* #endregion layout */
+
+/* #region header */
+
+#paynow-popup header > :only-child
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 10px;
+}
+
+#paynow-popup header h5
+{
+    font: normal .9rem sans-serif;
+}
+
+#paynow-popup header button
+{
+    background: rgb(4, 110, 231);
+    border: none;
+    border-radius: 3px;
+
+    color: white;
+    cursor: default;
+
+    font: normal .75rem sans-serif;
+
+    outline: none;
+    padding: 3px 10px;
+
+    text-transform: uppercase;
+}
+
+/* #endregion header */
+
+/* #region form */
+
+#paynow-popup form > :only-child
+{
+    padding: 20px;
+}
+
+#paynow-popup form fieldset > :only-child
+{
+    display: grid;
+    grid: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 20px;
+}
+
+#paynow-popup form label
+{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 7px;
+}
+
+#paynow-popup form label > :first-child
+{
+    align-self: center;
+
+    font: normal .8rem sans-serif;
+}
+
+#paynow-popup form label > :last-child
+{
+    background: none;
+    border: none;
+    border-radius: 20px;
+
+    font: normal .75rem sans-serif;
+
+    outline: thin solid #aaa;
+    padding: 5px 15px;
+}
+
+/* #endregion form */
+
+/* #region footer */
+
+#paynow-popup footer > :only-child
+{
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+
+    padding: 0 10px;
+}
+
+#paynow-popup footer label
+{
+    align-items: center;
+    display: flex;
+    gap: 7px;
+}
+
+#paynow-popup footer label > :first-child
+{
+    font-size: .8rem;
+}
+
+#paynow-popup footer label > :last-child
+{
+    background: none;
+    border: none;
+
+    font: normal .8rem sans-serif;
+
+    outline: none;
+}
+
+#paynow-popup footer button
+{
+    background: rgb(4, 110, 231);
+    border: none;
+    border-radius: 15px;
+
+    color: white;
+    cursor: pointer;
+
+    outline: none;
+    padding: 5px 25px;
+}
+
+/* #endregion footer */
