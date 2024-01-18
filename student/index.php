@@ -241,8 +241,6 @@ $users = [
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
   <link rel="stylesheet" type="text/css" href="/plugins/fontawesome-free/css/all.min.css">
-  <!-- <link rel="stylesheet" type="text/css" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css"> -->
-  <!-- <link rel="stylesheet" type="text/css" href="/assets/css/adminlte.min.css"> -->
   <link rel="stylesheet" type="text/css" href="./index.css">
 
   <title>Student's Dashboard | School SysManager</title>
@@ -281,10 +279,6 @@ $users = [
   <?php require_once __DIR__ . '/.components/notifications/index.php'; ?>
 
   <script defer type="module" src="/plugins/jquery/jquery.min.js"></script>
-  <!-- <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
-  <!-- <script src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script> -->
-  <!-- <script src="/assets/js/adminlte.js"></script> -->
-  <!-- <script src="/assets/js/demo.js"></script> -->
   <script defer type="module" src="./index.js"></script>
 </body>
 </html>
