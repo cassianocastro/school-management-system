@@ -258,27 +258,15 @@ $users = [
 
       <?php require_once __DIR__ . '/.components/syllabus/index.php'; ?>
 
-      <?php require_once __DIR__ . '/.components/routines/periods.php'; ?>
+      <?php require_once __DIR__ . '/.components/routines/index.php'; ?>
 
-      <?php require_once __DIR__ . '/.components/routines/timetable.php'; ?>
-
-      <?php require_once __DIR__ . '/.components/attendance/attendance.php'; ?>
-
-      <?php require_once __DIR__ . '/.components/attendance/leave.php'; ?>
+      <?php require_once __DIR__ . '/.components/attendance/index.php'; ?>
 
       <?php require_once __DIR__ . '/.components/communications/parent-meeting.php'; ?>
 
-      <?php require_once __DIR__ . '/.components/events/campus-functions.php'; ?>
+      <?php require_once __DIR__ . '/.components/events/index.php'; ?>
 
-      <?php require_once __DIR__ . '/.components/events/webinar-seminar.php'; ?>
-
-      <?php require_once __DIR__ . '/.components/examinations/admin-card.php'; ?>
-
-      <?php require_once __DIR__ . '/.components/examinations/exam-form.php'; ?>
-
-      <?php require_once __DIR__ . '/.components/examinations/paper-schedule.php'; ?>
-
-      <?php require_once __DIR__ . '/.components/examinations/results.php'; ?>
+      <?php require_once __DIR__ . '/.components/examinations/index.php'; ?>
 
       <?php require_once __DIR__ . '/.components/profile/index.php'; ?>
     </div>
