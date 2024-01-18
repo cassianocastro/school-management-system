@@ -11,11 +11,6 @@
               width="50"
             >
 
-            <!--
-            <figcaption class="brand-image img-circle elevation-3">
-              <i class="fa fa-user"></i>
-            </figcaption>
-            -->
             <figcaption>Student Panel</figcaption>
           </figure>
         </a>
@@ -37,32 +32,6 @@
 
           <span>Syllabus</span>
         </button>
-
-        <!-- <menu>
-          <li>
-            <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/syllabus/courses.php')">
-              <span class="far fa-circle"></span>
-
-              <span>Courses</span>
-            </button>
-          </li>
-
-          <li>
-            <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/syllabus/lessons.php')">
-              <span class="far fa-circle"></span>
-
-              <span>Lessons</span>
-            </button>
-          </li>
-
-          <li>
-            <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/syllabus/subjects.php')">
-              <span class="far fa-circle"></span>
-
-              <span>Subjects</span>
-            </button>
-          </li>
-        </menu> -->
       </li>
 
       <li>
@@ -71,24 +40,6 @@
 
           <span>Routines</span>
         </button>
-
-        <!-- <menu>
-          <li>
-            <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/routines/periods.php')">
-              <span class="far fa-circle"></span>
-
-              <span>Periods</span>
-            </button>
-          </li>
-
-          <li>
-            <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/routines/timetable.php')">
-              <span class="far fa-circle"></span>
-
-              <span>Time Table</span>
-            </button>
-          </li>
-        </menu> -->
       </li>
 
       <li>
@@ -97,40 +48,6 @@
 
           <span>Examinations</span>
         </button>
-
-        <!-- <menu>
-          <li>
-            <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/examinations/admin-card.php')">
-              <span class="far fa-circle"></span>
-
-              <span>Admin card</span>
-            </button>
-          </li>
-
-          <li>
-            <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/examinations/exam-form.php')">
-              <span class="far fa-circle"></span>
-
-              <span>Examination Form</span>
-            </button>
-          </li>
-
-          <li>
-            <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/examinations/paper-schedule.php')">
-              <span class="far fa-circle"></span>
-
-              <span>Paper Schedule</span>
-            </button>
-          </li>
-
-          <li>
-            <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/examinations/results.php')">
-              <span class="far fa-circle"></span>
-
-              <span>Results</span>
-            </button>
-          </li>
-        </menu> -->
       </li>
 
       <li>
@@ -139,24 +56,6 @@
 
           <span>Attendance</span>
         </button>
-
-        <!-- <menu>
-          <li>
-            <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/attendance/attendance.php')">
-              <span class="far fa-circle"></span>
-
-              <span>Attendance</span>
-            </button>
-          </li>
-
-          <li>
-            <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/attendance/leave.php')">
-              <span class="far fa-circle"></span>
-
-              <span>Leave</span>
-            </button>
-          </li>
-        </menu> -->
       </li>
 
       <li>
@@ -165,24 +64,6 @@
 
           <span>Fee Details</span>
         </button>
-
-        <!-- <menu>
-          <li>
-            <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/fee-details/.components/examination')">
-              <span class="far fa-circle"></span>
-
-              <span>Examination Fee</span>
-            </button>
-          </li>
-
-          <li>
-            <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/fee-details/.components/tuition')">
-              <span class="far fa-circle"></span>
-
-              <span>Tuition Fee</span>
-            </button>
-          </li>
-        </menu> -->
       </li>
 
       <li>
@@ -191,16 +72,6 @@
 
           <span>Study Materials</span>
         </button>
-
-        <!-- <menu>
-          <li>
-            <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/study-materials')">
-              <span class="far fa-circle"></span>
-
-              <span>Study Materials</span>
-            </button>
-          </li>
-        </menu> -->
       </li>
 
       <li>
@@ -209,24 +80,6 @@
 
           <span>Events</span>
         </button>
-
-        <!-- <menu>
-          <li>
-            <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/events/campus-functions.php')">
-              <span class="far fa-circle"></span>
-
-              <span>Campus Functions</span>
-            </button>
-          </li>
-
-          <li>
-            <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/events/webinar-seminar.php')">
-              <span class="far fa-circle"></span>
-
-              <span>Webinar/Seminar</span>
-            </button>
-          </li>
-        </menu> -->
       </li>
 
       <li>
@@ -235,16 +88,6 @@
 
           <span>Communications</span>
         </button>
-
-        <!-- <menu>
-          <li>
-            <button type="button" onclick="location.assign('<?= SITE_URL ?>/student/.components/communications/parent-meeting.php')">
-              <span class="far fa-circle"></span>
-
-              <span>Parent's Meetings</span>
-            </button>
-          </li>
-        </menu> -->
       </li>
     </menu>
 
