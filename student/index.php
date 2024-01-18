@@ -256,11 +256,7 @@ $users = [
 
       <?php require_once __DIR__ . '/.components/study-materials/index.php'; ?>
 
-      <?php require_once __DIR__ . '/.components/syllabus/courses.php'; ?>
-
-      <?php require_once __DIR__ . '/.components/syllabus/lessons.php'; ?>
-
-      <?php require_once __DIR__ . '/.components/syllabus/subjects.php'; ?>
+      <?php require_once __DIR__ . '/.components/syllabus/index.php'; ?>
 
       <?php require_once __DIR__ . '/.components/routines/periods.php'; ?>
 
