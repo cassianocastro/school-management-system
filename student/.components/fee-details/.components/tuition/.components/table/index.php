@@ -1,13 +1,14 @@
 <!-- Content Header (Page header) -->
-<header class="content-header">
-  <div class="container-fluid">
-    <h1 class="m-0 text-dark">Manage Student Fee Details</h1>
+<header>
+  <div>
+    <h1>Manage Student Fee Details</h1>
 
-    <nav class="row mb-2">
-      <div class="col-sm-6">
-        <ul class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="#">Student</a></li>
-          <li class="breadcrumb-item active"><a href="#">Student Fee Details</a></li>
+    <nav>
+      <div>
+        <ul>
+          <li><a href="#">Student</a></li>
+          <li>&sol;</li>
+          <li><a href="#">Student Fee Details</a></li>
         </ul>
       </div>
     </nav>
