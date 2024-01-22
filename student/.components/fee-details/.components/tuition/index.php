@@ -60,15 +60,18 @@ if ( isset($_POST['form_submitted']) )
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <?php
-      if ( isset($_GET['action']) and $_GET['action'] == 'view-invoice' )
-      {
-        require_once __DIR__ . '/.components/invoice/index.php';
-      }
-      else
-      {
+      // if ( isset($_GET['action']) and $_GET['action'] == 'view-invoice' )
+      // {
+
+
+
+      // }
+      // else
+      // {
         require_once __DIR__ . '/.components/table/index.php';
+        require_once __DIR__ . '/.components/invoice/index.php';
         require_once __DIR__ . '/.components/modal/index.php';
-      }
+      // }
       ?>
     </div>
 
