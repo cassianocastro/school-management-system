@@ -49,7 +49,22 @@ $class    = get_post(['id' => $usermeta['class']]);
       </thead>
       <tbody>
         <?php
-        $sql = "SELECT m.meta_value as `month` FROM `posts` as p JOIN `metadata` as m ON p.id = m.item_id WHERE p.type = 'payment' AND p.author = $user_id AND m.meta_key = 'month' AND year(p.publish_date) = 2023";
+        $sql = <<<SQL
+          SELECT
+            m.meta_value AS month
+          FROM
+            posts AS p
+          JOIN
+            metadata AS m ON p.id = m.item_id
+          WHERE
+            p.type = 'payment'
+          AND
+            p.author = $user_id
+          AND
+            m.meta_key = 'month'
+          AND
+            year(p.publish_date) = 2023
+        SQL;
 
         $query = mysqli_query($db_conn, $sql);
         $paid_fees = [];
