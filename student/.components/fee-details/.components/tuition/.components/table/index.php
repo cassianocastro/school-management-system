@@ -30,6 +30,62 @@ while ( $row = mysqli_fetch_object($query) )
 // echo '<pre>', print_r($paid_fees), '</pre>';
 
 $months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+$tr = [];
+
+foreach ( $months as $key => $value )
+{
+  $highlight = '';
+
+  $paid = false;
+
+  if ( in_array($value, $paid_fees) )
+  {
+    $paid = true;
+    $highlight = 'class="bg-success"';
+  }
+
+  // if ( date('F') == ucwords($value) )
+  // {
+  //   $highlight = 'class="bg-success"';
+  // }
+
+  $tr[] = sprintf(
+    <<<HTML
+      <tr>
+        <td>%d</td>
+        <td>%s</td>
+        <td class="%s">%s</td>
+        <td>%s</td>
+      </tr>
+    HTML,
+    ++$key,
+    ucwords($value),
+    $highlight,
+    ( $paid ) ? "Paid" : "Pending",
+    (function() use ($paid, $value, $std_id): string {
+      if ( $paid )
+      {
+        return <<<HTML
+          <button type="button" title="View" onclick="location.assign('?action=view-invoice&month={$value}&std_id={$std_id}')">
+            <span class="fa fa-eye fa-fw"></span>
+
+            <span>View</span>
+          </button>
+        HTML;
+      }
+
+      $value = ucwords($value);
+
+      return <<<HTML
+        <button type="button" title="Pay now" data-month="{$value}">
+          <span class="fa fa-money-check-alt fa-fw"></span>
+
+          <span>Pay</span>
+        </button>
+      HTML;
+    })()
+  );
+}
 ?>
 
 <section class="content">
@@ -66,53 +122,27 @@ $months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'augu
           <th colspan="4">Student Detail</th>
         </tr>
         <tr>
-          <th colspan="3"><strong>Name: </strong><?= get_users(['id' => $std_id])[0]->name ?></th>
-          <th><strong>Class: </strong><?= $class->title ?></th>
+          <th colspan="3">
+            <strong>Name: </strong>
+
+            <?= get_users(['id' => $std_id])[0]->name ?>
+          </th>
+          <th>
+            <strong>Class: </strong>
+
+            <?= $class->title ?>
+          </th>
         </tr>
         <tr>
-          <th>S.No</th>
+          <th>S. No.</th>
           <th>Month</th>
           <th>Fee Status</th>
           <th>Action</th>
         </tr>
       </thead>
       <tbody>
-        <?php foreach ( $months as $key => $value ) :
-          $highlight = '';
-
-          $paid = false;
-
-          if ( in_array($value, $paid_fees) )
-          {
-            $paid = true;
-            $highlight = 'class="bg-success"';
-          }
-
-          // if ( date('F') == ucwords($value) )
-          // {
-          //   $highlight = 'class="bg-success"';
-          // }
-        ?>
-          <tr>
-            <td><?= ++$key ?></td>
-            <td><?= ucwords($value) ?></td>
-            <td <?= $highlight ?>><?= ($paid) ? "Paid" : "Pending"; ?></td>
-            <td>
-              <?php if ( $paid ) : ?>
-                <button type="button" title="View" onclick="location.assign('?action=view-invoice&month=<?= $value ?>&std_id=<?= $std_id ?>')">
-                  <span class="fa fa-eye fa-fw"></span>
-
-                  <span>View</span>
-                </button>
-              <?php else : ?>
-                <button type="button" title="Pay now" data-month="<?= ucwords($value) ?>">
-                  <span class="fa fa-money-check-alt fa-fw"></span>
-
-                  <span>Pay</span>
-                </button>
-              <?php endif; ?>
-            </td>
-          </tr>
+        <?php foreach ( $tr as &$r ): ?>
+          <?= $r ?>
         <?php endforeach; ?>
       </tbody>
     </table>
