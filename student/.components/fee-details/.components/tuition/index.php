@@ -84,5 +84,6 @@ if ( isset($_POST['form_submitted']) )
   <script src="/assets/js/demo.js"></script>
   <script src="../../../../index.js"></script>
   <script src="./index.js"></script>
+  <script defer src="./.components/table/index.js"></script>
 </body>
 </html>
