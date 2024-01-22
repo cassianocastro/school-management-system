@@ -1,33 +1,35 @@
 <dialog id="" open class="container">
   <div class="card-body">
 
-    <div class="invoice-title">
-      <h4 class="float-end font-size-15">
-        Invoice #DS0204
+    <header class="invoice-title">
+      <div>
+        <h4 class="float-end font-size-15">
+          Invoice #DS0204
 
-        <span class="badge bg-success font-size-12 ms-2">Paid</span>
-      </h4>
+          <span class="badge bg-success font-size-12 ms-2">Paid</span>
+        </h4>
 
-      <div class="mb-4">
-        <h2 class="mb-1 text-muted">Techno Study</h2>
+        <div class="mb-4">
+          <h2 class="mb-1 text-muted">Techno Study</h2>
+        </div>
+
+        <div class="text-muted">
+          <p class="mb-1">
+            Vishwsh khand, Gomtinagar, Lucknow, UP 231216, India
+          </p>
+
+          <p class="mb-1">
+            <i class="uil uil-envelope-alt me-1"></i>
+            modifiercrazy@gmail.com
+          </p>
+
+          <p>
+            <i class="uil uil-phone me-1"></i>
+            012-345-6789
+          </p>
+        </div>
       </div>
-
-      <div class="text-muted">
-        <p class="mb-1">
-          Vishwsh khand, Gomtinagar, Lucknow, UP 231216, India
-        </p>
-
-        <p class="mb-1">
-          <i class="uil uil-envelope-alt me-1"></i>
-          modifiercrazy@gmail.com
-        </p>
-
-        <p>
-          <i class="uil uil-phone me-1"></i>
-          012-345-6789
-        </p>
-      </div>
-    </div>
+    </header>
 
     <hr class="my-4">
 
