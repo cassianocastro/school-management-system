@@ -16,7 +16,7 @@ $student = new class("Cassiano Castro", "example@example.com")
 <link rel="stylesheet" href="/assets/css/reset.css">
 <link rel="stylesheet" href="./index.css">
 
-<dialog id="paynow-popup" open>
+<dialog id="paynow-popup">
   <div>
 
     <header>
