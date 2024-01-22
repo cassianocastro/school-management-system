@@ -80,22 +80,22 @@ $class    = get_post(['id' => $usermeta['class']]);
           // }
         ?>
           <tr>
-            <td><?= ++$key; ?></td>
-            <td><?= ucwords($value); ?></td>
-            <td <?= $highlight; ?>><?= ($paid) ? "Paid" : "Pending"; ?></td>
+            <td><?= ++$key ?></td>
+            <td><?= ucwords($value) ?></td>
+            <td <?= $highlight ?>><?= ($paid) ? "Paid" : "Pending"; ?></td>
             <td>
-              <?php if ($paid) : ?>
-                <a href="?action=view-invoice&month=<?= $value ?>&std_id=<?= $std_id ?>" class="btn btn-sm btn-primary">
-                  <i class="fa fa-eye fa-fw"></i>
+              <?php if ( $paid ) : ?>
+                <button type="button" title="View" onclick="location.assign('?action=view-invoice&month=<?= $value ?>&std_id=<?= $std_id ?>')">
+                  <span class="fa fa-eye fa-fw"></span>
 
-                  View
-                </a>
+                  <span>View</span>
+                </button>
               <?php else : ?>
-                <a href="#" data-toggle="modal" data-month="<?= ucwords($value) ?>" data-target="#paynow-popup" class="btn btn-sm btn-warning paynow-btn">
-                  <i class="fa fa-money-check-alt fa-fw"></i>
+                <button type="button" title="Pay now" data-month="<?= ucwords($value) ?>">
+                  <span class="fa fa-money-check-alt fa-fw"></span>
 
-                  Pay Now
-                </a>
+                  <span>Pay</span>
+                </button>
               <?php endif; ?>
             </td>
           </tr>
