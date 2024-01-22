@@ -69,46 +69,45 @@
       </div>
     </div>
 
-    <div class="py-2">
-      <h5 class="font-size-15">Order Summary</h5>
+    <div class="py-2 table-responsive">
+      <table class="table align-middle table-nowrap table-centered mb-0">
+        <caption class="font-size-15">
+          Order Summary
+        </caption>
+        <thead>
+          <tr>
+            <th style="width: 70px;">No.</th>
+            <th>Fees</th>
+            <th class="text-end" style="width: 120px;">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">01</th>
 
-      <div class="table-responsive">
-        <table class="table align-middle table-nowrap table-centered mb-0">
-          <thead>
-            <tr>
-              <th style="width: 70px;">No.</th>
-              <th>Fees</th>
-              <th class="text-end" style="width: 120px;">Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">01</th>
+            <td>
+              <div>
+                <h5 class="text-truncate font-size-14 mb-1">Tuition Fee</h5>
+                <!-- <p class="text-muted mb-0">Watch, Black</p> -->
+              </div>
+            </td>
 
-              <td>
-                <div>
-                  <h5 class="text-truncate font-size-14 mb-1">Tuition Fee</h5>
-                  <!-- <p class="text-muted mb-0">Watch, Black</p> -->
-                </div>
-              </td>
+            <td class="text-end">Rs. 500.00</td>
+          </tr>
+          <tr>
+            <th scope="row" colspan="2" class="text-end">Sub Total</th>
 
-              <td class="text-end">Rs. 500.00</td>
-            </tr>
-            <tr>
-              <th scope="row" colspan="2" class="text-end">Sub Total</th>
+            <td class="text-end">Rs. 500.00</td>
+          </tr>
+          <tr>
+            <th scope="row" colspan="2" class="border-0 text-end">Total</th>
 
-              <td class="text-end">Rs. 500.00</td>
-            </tr>
-            <tr>
-              <th scope="row" colspan="2" class="border-0 text-end">Total</th>
-
-              <td class="border-0 text-end">
-                <h4 class="m-0 fw-semibold">Rs. 500.00</h4>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+            <td class="border-0 text-end">
+              <h4 class="m-0 fw-semibold">Rs. 500.00</h4>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <footer class="d-print-none mt-4">
