@@ -1,20 +1,3 @@
-<!-- Content Header (Page header) -->
-<header>
-  <div>
-    <h1>Manage Student Fee Details</h1>
-
-    <nav>
-      <div>
-        <ul>
-          <li><a href="#">Student</a></li>
-          <li>&sol;</li>
-          <li><a href="#">Student Fee Details</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-</header>
-
 <!-- Main content -->
 <section class="content">
   <div class="container-fluid">
@@ -24,6 +7,23 @@
         Payment has been completed, Thank You!
       </div>
     <?php endif; ?>
+
+    <!-- Content Header (Page header) -->
+    <header>
+      <div>
+        <h1>Manage Student Fee Details</h1>
+
+        <nav>
+          <div>
+            <ul>
+              <li><a href="#">Student</a></li>
+              <li>&sol;</li>
+              <li><a href="#">Student Fee Details</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
 
     <?php
     $usermeta = get_user_metadata($std_id);
