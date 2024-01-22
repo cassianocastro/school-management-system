@@ -65,8 +65,9 @@ foreach ( $months as $key => $value )
     (function() use ($paid, $value, $std_id): string {
       if ( $paid )
       {
+        // onclick="location.assign('?action=view-invoice&month={$value}&std_id={$std_id}')"
         return <<<HTML
-          <button type="button" title="View" onclick="location.assign('?action=view-invoice&month={$value}&std_id={$std_id}')">
+          <button type="button" title="View">
             <span class="fa fa-eye fa-fw"></span>
 
             <span>View</span>
