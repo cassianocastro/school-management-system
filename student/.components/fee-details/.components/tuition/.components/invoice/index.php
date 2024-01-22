@@ -1,4 +1,4 @@
-<dialog id="invoice" open class="container">
+<dialog id="invoice" class="container">
   <div class="card-body">
 
     <header class="invoice-title">
