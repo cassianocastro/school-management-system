@@ -109,20 +109,25 @@
           </tbody>
         </table>
       </div>
-
     </div>
 
-    <div class="d-print-none mt-4">
-      <div class="float-end">
-        <a href="javascript:window.print()" class="btn btn-success me-1">
-          <i class="fa fa-print"></i>
-        </a>
+    <footer class="d-print-none mt-4">
+      <div>
+        <menu class="float-end">
+          <li>
+            <button type="button" title="Print document" onclick="print()" class="btn btn-success me-1">
+              <span class="fa fa-print"></span>
+            </button>
+          </li>
 
-        <a href="#" class="btn btn-primary w-md">
-          Send
-        </a>
+          <li>
+            <button type="button" title="Send" class="btn btn-primary w-md">
+              <span>Send</span>
+            </button>
+          </li>
+        </menu>
       </div>
-    </div>
+    </footer>
 
   </div>
 </dialog>
