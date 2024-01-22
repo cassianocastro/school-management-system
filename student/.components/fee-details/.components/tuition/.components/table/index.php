@@ -1,6 +1,35 @@
 <?php
 $usermeta = get_user_metadata($std_id);
 $class    = get_post(['id' => $usermeta['class']]);
+
+$sql = <<<SQL
+  SELECT
+    m.meta_value AS month
+  FROM
+    posts AS p
+  JOIN
+    metadata AS m ON p.id = m.item_id
+  WHERE
+    p.type = 'payment'
+  AND
+    p.author = $user_id
+  AND
+    m.meta_key = 'month'
+  AND
+    year(p.publish_date) = 2023
+SQL;
+
+$query = mysqli_query($db_conn, $sql);
+$paid_fees = [];
+
+while ( $row = mysqli_fetch_object($query) )
+{
+  $paid_fees[] = strtolower($row->month);
+}
+
+// echo '<pre>', print_r($paid_fees), '</pre>';
+
+$months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
 ?>
 
 <section class="content">
@@ -48,38 +77,7 @@ $class    = get_post(['id' => $usermeta['class']]);
         </tr>
       </thead>
       <tbody>
-        <?php
-        $sql = <<<SQL
-          SELECT
-            m.meta_value AS month
-          FROM
-            posts AS p
-          JOIN
-            metadata AS m ON p.id = m.item_id
-          WHERE
-            p.type = 'payment'
-          AND
-            p.author = $user_id
-          AND
-            m.meta_key = 'month'
-          AND
-            year(p.publish_date) = 2023
-        SQL;
-
-        $query = mysqli_query($db_conn, $sql);
-        $paid_fees = [];
-
-        while ( $row = mysqli_fetch_object($query) )
-        {
-          $paid_fees[] = strtolower($row->month);
-        }
-
-        // echo '<pre>', print_r($paid_fees), '</pre>';
-
-        $months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
-
-        foreach ( $months as $key => $value )
-        {
+        <?php foreach ( $months as $key => $value ) :
           $highlight = '';
 
           $paid = false;
@@ -89,6 +87,7 @@ $class    = get_post(['id' => $usermeta['class']]);
             $paid = true;
             $highlight = 'class="bg-success"';
           }
+
           // if ( date('F') == ucwords($value) )
           // {
           //   $highlight = 'class="bg-success"';
@@ -114,7 +113,7 @@ $class    = get_post(['id' => $usermeta['class']]);
               <?php endif; ?>
             </td>
           </tr>
-        <?php } ?>
+        <?php endforeach; ?>
       </tbody>
     </table>
 
