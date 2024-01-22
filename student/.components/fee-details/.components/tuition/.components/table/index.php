@@ -1,4 +1,8 @@
-<!-- Main content -->
+<?php
+$usermeta = get_user_metadata($std_id);
+$class    = get_post(['id' => $usermeta['class']]);
+?>
+
 <section class="content">
   <div class="container-fluid">
 
@@ -8,7 +12,6 @@
       </div>
     <?php endif; ?>
 
-    <!-- Content Header (Page header) -->
     <header>
       <div>
         <h1>Manage Student Fee Details</h1>
@@ -25,10 +28,6 @@
       </div>
     </header>
 
-    <?php
-    $usermeta = get_user_metadata($std_id);
-    $class    = get_post(['id' => $usermeta['class']]);
-    ?>
     <div class="card">
       <div class="card-header">
         <h3 class="card-title">Student Detail</h3>
