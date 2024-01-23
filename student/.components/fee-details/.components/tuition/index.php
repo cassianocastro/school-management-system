@@ -163,23 +163,21 @@ $student = new class("Cassiano Castro", "example@example.com")
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
   <div class="wrapper">
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-      <?php
-      // if ( isset($_GET['action']) and $_GET['action'] == 'view-invoice' )
-      // {
-
-
-
-      // }
-      // else
-      // {
+    <main class="content-wrapper">
+      <div>
+        <?php
+        // if ( isset($_GET['action']) and $_GET['action'] == 'view-invoice' )
+        // {}
+        // else
+        // {}
         require_once __DIR__ . '/.components/table/index.php';
+
         require_once __DIR__ . '/.components/invoice/index.php';
+
         require_once __DIR__ . '/.components/modal/index.php';
-      // }
-      ?>
-    </div>
+        ?>
+      </div>
+    </main>
 
   </div>
 
