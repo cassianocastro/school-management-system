@@ -1,6 +1,6 @@
-<?php require_once __DIR__ . '/cf/index.php'; ?>
+<?php require_once __DIR__ . '/.components/cf/index.php'; ?>
 
-<?php require_once __DIR__ . '/ws/index.php'; ?>
+<?php require_once __DIR__ . '/.components/ws/index.php'; ?>
 
 <!-- <menu>
   <li>
