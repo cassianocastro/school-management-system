@@ -1,4 +1,4 @@
 @charset "UTF-8";
 
-@import "./periods/index.css";
-@import "./timetable/index.css";
+@import "./.components/periods/index.css";
+@import "./.components/timetable/index.css";

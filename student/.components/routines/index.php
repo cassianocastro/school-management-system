@@ -1,6 +1,6 @@
-<?php require_once __DIR__ . '/periods/index.php'; ?>
+<?php require_once __DIR__ . '/.components/periods/index.php'; ?>
 
-<?php require_once __DIR__ . '/timetable/index.php'; ?>
+<?php require_once __DIR__ . '/.components/timetable/index.php'; ?>
 
 <!-- <menu>
   <li>
