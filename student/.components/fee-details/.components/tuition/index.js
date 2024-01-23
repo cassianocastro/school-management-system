@@ -1,5 +1,21 @@
-$(document).on('click', '.paynow-btn', () => {
-    let month = $(this).data('month');
+import { index as Table } from "./.components/table/index.js";
+import { index as Modal } from "./.components/modal/index.js";
+import { index as Invoice } from "./.components/invoice/index.js";
 
-    $('#month').val(month);
-});
+/**
+ *
+ */
+function index()
+{
+    $(document).on('click', '.paynow-btn', () => {
+        let month = $(this).data('month');
+
+        $('#month').val(month);
+    });
+
+    Table();
+    Modal();
+    Invoice();
+}
+
+index();
