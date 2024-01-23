@@ -142,6 +142,7 @@ foreach ( $months as $key => $value )
   <link rel="stylesheet" type="text/css" href="/plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/adminlte.min.css">
+  <link rel="stylesheet" type="text/css" href="./index.css">
 
   <title>Student's Dashboard | School SysManager</title>
 </head>
