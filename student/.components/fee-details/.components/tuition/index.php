@@ -154,8 +154,6 @@ $student = new class("Cassiano Castro", "example@example.com")
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
   <link rel="stylesheet" type="text/css" href="/plugins/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" type="text/css" href="/assets/css/adminlte.min.css">
   <link rel="stylesheet" type="text/css" href="./index.css">
 
   <title>Student's Dashboard | School SysManager</title>
