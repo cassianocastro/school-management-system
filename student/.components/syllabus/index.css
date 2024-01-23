@@ -1,5 +1,5 @@
 @charset "UTF-8";
 
-@import "./courses/index.css";
-@import "./lessons/index.css";
-@import "./subjects/index.css";
+@import "./.components/courses/index.css";
+@import "./.components/lessons/index.css";
+@import "./.components/subjects/index.css";
