@@ -1,10 +1,10 @@
-<?php require_once __DIR__ . '/admin-card/index.php'; ?>
+<?php require_once __DIR__ . '/.components/admin-card/index.php'; ?>
 
-<?php require_once __DIR__ . '/exam-form/index.php'; ?>
+<?php require_once __DIR__ . '/.components/exam-form/index.php'; ?>
 
-<?php require_once __DIR__ . '/paper-schedule/index.php'; ?>
+<?php require_once __DIR__ . '/.components/paper-schedule/index.php'; ?>
 
-<?php require_once __DIR__ . '/results/index.php'; ?>
+<?php require_once __DIR__ . '/.components/results/index.php'; ?>
 
 <!-- <menu>
   <li>
