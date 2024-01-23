@@ -131,6 +131,20 @@ foreach ( $months as $key => $value )
 }
 ?>
 
+<?php // Modal
+$student = new class("Cassiano Castro", "example@example.com")
+{
+  public $name;
+  public $email;
+
+  public function __construct(string $name, string $email)
+  {
+    $this->name = $name;
+    $this->email = $email;
+  }
+};
+?>
+
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 <head>
