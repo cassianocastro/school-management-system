@@ -28,4 +28,4 @@ function index()
     }
 }
 
-index();
+export { index };
