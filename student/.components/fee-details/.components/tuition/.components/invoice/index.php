@@ -118,7 +118,7 @@
       <div>
         <menu>
           <li>
-            <button type="button" title="Print document" onclick="print()">
+            <button type="button" title="Print document">
               <span class="fa fa-print"></span>
             </button>
           </li>
