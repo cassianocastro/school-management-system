@@ -1,17 +1,3 @@
-<?php
-$student = new class("Cassiano Castro", "example@example.com")
-{
-  public $name;
-  public $email;
-
-  public function __construct(string $name, string $email)
-  {
-    $this->name = $name;
-    $this->email = $email;
-  }
-};
-?>
-
 <dialog id="paynow-popup">
   <div>
 
