@@ -175,7 +175,7 @@
         <header>
           <div>
             <figure>
-              <img src="<?= $site_url ?>/assets/img/AdminLTELogo.png" alt="User profile picture" class="profile-user-img img-fluid img-circle">
+              <img src="<?= SITE_URL ?>/assets/img/AdminLTELogo.png" alt="User profile picture" class="profile-user-img img-fluid img-circle">
 
               <figcaption>
                 <h3><?= $student->name ?></h3>
