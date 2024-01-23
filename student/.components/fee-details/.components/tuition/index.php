@@ -145,41 +145,13 @@ $student = new class("Cassiano Castro", "example@example.com")
 };
 ?>
 
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<?php
+// if ( isset($_GET['action']) and $_GET['action'] == 'view-invoice' )
+// {}
+// else
+// {}
+require_once __DIR__ . '/.components/table/index.php';
 
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
-  <link rel="stylesheet" type="text/css" href="/plugins/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="./index.css">
+require_once __DIR__ . '/.components/invoice/index.php';
 
-  <title>Student's Dashboard | School SysManager</title>
-</head>
-<body>
-  <div>
-
-    <main>
-      <div>
-        <?php
-        // if ( isset($_GET['action']) and $_GET['action'] == 'view-invoice' )
-        // {}
-        // else
-        // {}
-        require_once __DIR__ . '/.components/table/index.php';
-
-        require_once __DIR__ . '/.components/invoice/index.php';
-
-        require_once __DIR__ . '/.components/modal/index.php';
-        ?>
-      </div>
-    </main>
-
-  </div>
-
-  <script defer type="module" src="/plugins/jquery/jquery.min.js"></script>
-  <script defer type="module" src="./index.js"></script>
-</body>
-</html>
+require_once __DIR__ . '/.components/modal/index.php';
