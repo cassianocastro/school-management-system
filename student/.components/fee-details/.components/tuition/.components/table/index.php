@@ -1,8 +1,8 @@
-<section class="content">
-  <div class="container-fluid">
+<section id="">
+  <div>
 
     <?php if ($success_msg) : ?>
-      <div class="alert alert-success" role="alert">
+      <div role="alert">
         Payment has been completed, Thank You!
       </div>
     <?php endif; ?>
@@ -23,7 +23,7 @@
       </div>
     </header>
 
-    <table class="table table-bordered">
+    <table>
       <caption>
         Tution Fee
       </caption>

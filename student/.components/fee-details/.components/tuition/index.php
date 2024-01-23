@@ -158,10 +158,10 @@ $student = new class("Cassiano Castro", "example@example.com")
 
   <title>Student's Dashboard | School SysManager</title>
 </head>
-<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
-  <div class="wrapper">
+<body>
+  <div>
 
-    <main class="content-wrapper">
+    <main>
       <div>
         <?php
         // if ( isset($_GET['action']) and $_GET['action'] == 'view-invoice' )
