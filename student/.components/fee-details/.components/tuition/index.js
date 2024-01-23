@@ -1,3 +1,5 @@
+"use strict";
+
 import { index as Table } from "./.components/table/index.js";
 import { index as Modal } from "./.components/modal/index.js";
 import { index as Invoice } from "./.components/invoice/index.js";
@@ -18,4 +20,4 @@ function index()
     Invoice();
 }
 
-index();
+export { index };
