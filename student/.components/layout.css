@@ -34,23 +34,23 @@ body > :is(header, footer, main, aside) > :only-child
 body > main > :only-child
 {
     contain: layout;
-
-    overflow: hidden scroll;
 }
 
 main > div > section
 {
     contain: content;
 
-    outline: thin solid #555;
-
-    margin-bottom: 10px;
-
-    height: 100%;
+    position: absolute;
+    inset: 0;
 }
 
 main > div > section > div
 {
+    background: white;
+
+    overflow: hidden scroll;
+    padding: 20px;
+
     height: 100%;
 }
 
