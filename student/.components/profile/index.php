@@ -202,7 +202,7 @@
                     <span>Class</span>
                   </strong>
 
-                  <span><?= $class->title; ?> (<?= $section->title ?>)</span>
+                  <span><?= $class->title ?> (<?= is_null($section) ? "" : $section->title ?>)</span>
                 </p>
               </li>
 
