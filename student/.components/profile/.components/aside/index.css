@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-/* #region aside */
-
 #profile > div > aside > :only-child
 {
     border-radius: 5px;
@@ -9,21 +7,31 @@
 
     padding: 10px;
 
-    height: 100%;
+    position: sticky;
+    inset: 0 auto auto 0;
 }
 
-#profile > div > aside header > div
+#profile > div > aside :is(header, nav)
+{
+    /* height: 100%; */
+}
+
+#profile > div > aside :is(header, nav) > :only-child
+{
+    /* height: 100%; */
+}
+
+/* #region header */
+
+#profile > div > aside header > :only-child
 {
     align-items: center;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 
-    /* outline: thin solid #ccc; */
     padding: 10px;
-
-    height: 100%;
 }
 
 #profile > div > aside header figure
@@ -31,22 +39,34 @@
     align-items: center;
     display: flex;
     flex-flow: column nowrap;
-    gap: 10px;
+    gap: 20px;
 }
 
 #profile > div > aside header figure > img
 {
     border-radius: 50%;
-    outline: 2px solid #1762a8;
+
+    outline: medium solid #1762a8;
 }
 
-#profile > div > aside nav > div
+#profile > div > aside header figure > figcaption
+{
+    font: bold 1rem sans-serif;
+}
+
+#profile > div > aside header p
+{
+    font: normal .9rem sans-serif;
+}
+
+/* #endregion header */
+
+/* #region nav */
+
+#profile > div > aside nav > :only-child
 {
     margin-top: 20px;
-    /* outline: thin solid #ccc; */
     padding: 10px;
-
-    height: 100%;
 }
 
 #profile > div > aside nav ul
@@ -56,10 +76,27 @@
     gap: 15px;
 }
 
-#profile > div > aside nav ul p > :last-child
+#profile > div > aside .data > :first-child
+{
+    align-items: center;
+    display: inline-flex;
+    gap: 10px;
+
+    font: normal .9rem sans-serif;
+}
+
+#profile > div > aside .data > :first-child > [class]
+{
+    color: #1762a8;
+}
+
+#profile > div > aside .data > :last-child
 {
     display: block;
+
+    font: normal .85rem sans-serif;
+
     text-align: right;
 }
 
-/* #endregion aside */
+/* #endregion nav */
