@@ -1,4 +1,4 @@
-<section>
+<section class="parent-information">
   <div>
 
     <header>
