@@ -2,13 +2,13 @@
 
 /* #region section */
 
-#profile > div > section > :only-child
+.parent-information > :only-child
 {
     border-radius: 5px;
     box-shadow: 0 0 5px 1px #aaa;
 }
 
-#profile > div > section > div > header > div
+.parent-information > div > header > div
 {
     background: #1762a8;
     border-radius: 5px 5px 0 0;
@@ -16,43 +16,43 @@
     color: white;
 }
 
-#profile > div > section > div > nav > div
+.parent-information > div > nav > div
 {
     padding: 10px;
 }
 
-#profile > div > section > div > nav ul
+.parent-information > div > nav ul
 {
     display: flex;
     flex-flow: column nowrap;
 }
 
-#profile > div > section > div > nav ul div
+.parent-information > div > nav ul div
 {
     padding: 10px;
 }
 
-#profile > div > section > div > nav ul div > p
+.parent-information > div > nav ul div > p
 {
     font: normal .9rem sans-serif;
 }
 
-#profile > div > section > div > nav ul div > p,
-#profile > div > section > div > nav ul div > ul
+.parent-information > div > nav ul div > p,
+.parent-information > div > nav ul div > ul
 {
     /* outline: thin solid red; */
     margin-top: 10px;
     padding-left: 1cm;
 }
 
-#profile > div > section > div > nav ul div ul
+.parent-information > div > nav ul div ul
 {
     display: flex;
     flex-flow: row nowrap;
     gap: 10px;
 }
 
-#profile > div > section > div > nav ul div ul li
+.parent-information > div > nav ul div ul li
 {
     border: thin solid #1762a8;
     border-radius: 20px;
