@@ -29,7 +29,7 @@
       <div>
         <ul>
           <li>
-            <p>
+            <p class="data">
               <strong>
                 <span class="fa-fw fas fa-chalkboard"></span>
 
@@ -41,11 +41,11 @@
           </li>
 
           <li>
-            <p>
+            <p class="data">
               <strong>
                 <span class="fa-fw fas fa-calendar-alt"></span>
 
-                <span>DOB</span>
+                <span>Date of Birth</span>
               </strong>
 
               <span><?= $stdmeta['dob'] ?></span>
@@ -53,11 +53,11 @@
           </li>
 
           <li>
-            <p>
+            <p class="data">
               <strong>
                 <span class="fa-fw fas fa-phone-square"></span>
 
-                <span>Mobile</span>
+                <span>Mobile Phone</span>
               </strong>
 
               <span><?= $stdmeta['mobile'] ?></span>
