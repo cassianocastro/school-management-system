@@ -11,7 +11,7 @@
       <div>
         <ul>
           <li>
-            <div>
+            <div class="info">
               <strong>
                 <span class="fas fa-book"></span>
 
@@ -25,7 +25,7 @@
           </li>
 
           <li>
-            <div>
+            <div class="info">
               <strong>
                 <span class="fas fa-map-marker-alt"></span>
 
@@ -39,7 +39,7 @@
           </li>
 
           <li>
-            <div>
+            <div class="info">
               <strong>
                 <span class="fas fa-pencil-alt"></span>
 
@@ -47,17 +47,17 @@
               </strong>
 
               <ul>
-                <li>UI Design</li>
-                <li>Coding</li>
-                <li>Javascript</li>
-                <li>PHP</li>
-                <li>Node.js</li>
+                <li class="skill">UI Design</li>
+                <li class="skill">Coding</li>
+                <li class="skill">Javascript</li>
+                <li class="skill">PHP</li>
+                <li class="skill">Node.js</li>
               </ul>
             </div>
           </li>
 
           <li>
-            <div>
+            <div class="info">
               <strong>
                 <span class="far fa-file-alt"></span>
 
