@@ -25,6 +25,7 @@
 
     color: white;
 
+    opacity: .9;
     padding: 20px 15px;
 }
 
@@ -101,6 +102,7 @@
 
     font: normal .83rem sans-serif;
 
+    opacity: .8;
     padding: 4px 15px;
 }
 
