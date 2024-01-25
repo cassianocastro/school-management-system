@@ -54,7 +54,7 @@ main > div > section > div
     height: 100%;
 }
 
-section > div > header > div
+main > div > section > div > header > div
 {
     align-items: center;
     display: flex;
@@ -63,7 +63,7 @@ section > div > header > div
     padding: 20px;
 }
 
-section > div > header ul
+main > div > section > div > header ul
 {
     align-items: center;
     display: flex;
