@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/* #region layout */
+
+#profile > :only-child
+{
+    /* border: thin solid red; */
+
+    display: grid;
+    grid: 10% auto auto / calc(25% - 10px) calc(75% - 10px);
+    gap: 5% 2%;
+}
+
+#profile > div > :first-child
+{
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+#profile > div > :nth-child(2)
+{
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+#profile > div > :nth-child(3)
+{
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+#profile > div > :last-child
+{
+    grid-area: 2 / 1 / 4 / 2;
+}
+
+/* #endregion layout */
+
+/* #region header */
+
+#profile > div > header > :only-child
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 20px;
+
+    height: 100%;
+}
+
+/* #endregion header */
