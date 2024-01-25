@@ -46,4 +46,13 @@
     height: 100%;
 }
 
+#profile > div > header h1
+{
+    align-items: center;
+    display: inline-flex;
+    gap: 10px;
+
+    font: bold 1.3rem sans-serif;
+}
+
 /* #endregion header */
