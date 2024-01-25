@@ -1,24 +1,50 @@
 @charset "UTF-8";
 
-/* #region section */
-
 .parent-information > :only-child
 {
-    border-radius: 5px;
     box-shadow: 0 0 5px 1px #aaa;
+
+    padding: 10px;
 }
+
+.parent-information:first-of-type > :only-child
+{
+    border-radius: 10px 10px 0 0;
+}
+
+.parent-information:last-of-type > :only-child
+{
+    border-radius: 0 0 10px 10px;
+}
+
+/* #region header */
 
 .parent-information > div > header > div
 {
     background: #1762a8;
-    border-radius: 5px 5px 0 0;
 
     color: white;
+
+    padding: 20px 15px;
 }
+
+.parent-information:first-of-type > div > header > div
+{
+    border-radius: 7px 7px 0 0;
+}
+
+.parent-information:last-of-type > div > header > div
+{
+    border-radius: 0 0 7px 7px;
+}
+
+/* #endregion header */
+
+/* #region nav */
 
 .parent-information > div > nav > div
 {
-    padding: 10px;
+    margin-top: 10px;
 }
 
 .parent-information > div > nav ul
@@ -27,39 +53,55 @@
     flex-flow: column nowrap;
 }
 
-.parent-information > div > nav ul div
+/* #endregion nav */
+
+/* #region info */
+
+.parent-information .info
 {
     padding: 10px;
 }
 
-.parent-information > div > nav ul div > p
+.parent-information .info > :first-child
+{
+    align-items: center;
+    display: inline-flex;
+    gap: 10px;
+
+    font: bold .9rem sans-serif;
+}
+
+.parent-information .info > :last-child
+{
+    margin-top: 10px;
+}
+
+.parent-information .info > p
 {
     font: normal .9rem sans-serif;
+
+    text-indent: 1cm;
 }
 
-.parent-information > div > nav ul div > p,
-.parent-information > div > nav ul div > ul
-{
-    /* outline: thin solid red; */
-    margin-top: 10px;
-    padding-left: 1cm;
-}
-
-.parent-information > div > nav ul div ul
+.parent-information .info > ul
 {
     display: flex;
     flex-flow: row nowrap;
     gap: 10px;
+
+    padding-left: 1cm;
 }
 
-.parent-information > div > nav ul div ul li
+.parent-information .info .skill
 {
-    border: thin solid #1762a8;
+    background: #1762a8;
     border-radius: 20px;
 
-    font: normal .85rem sans-serif;
+    color: white;
 
-    padding: 3px 15px;
+    font: normal .83rem sans-serif;
+
+    padding: 4px 15px;
 }
 
-/* #endregion section */
+/* #endregion info */
