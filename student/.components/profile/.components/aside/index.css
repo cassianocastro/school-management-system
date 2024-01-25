@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+/* #region aside */
+
+#profile > div > aside > :only-child
+{
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px #aaa;
+
+    padding: 10px;
+
+    height: 100%;
+}
+
+#profile > div > aside header > div
+{
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 20px;
+
+    /* outline: thin solid #ccc; */
+    padding: 10px;
+
+    height: 100%;
+}
+
+#profile > div > aside header figure
+{
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+#profile > div > aside header figure > img
+{
+    border-radius: 50%;
+    outline: 2px solid #1762a8;
+}
+
+#profile > div > aside nav > div
+{
+    margin-top: 20px;
+    /* outline: thin solid #ccc; */
+    padding: 10px;
+
+    height: 100%;
+}
+
+#profile > div > aside nav ul
+{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+}
+
+#profile > div > aside nav ul p > :last-child
+{
+    display: block;
+    text-align: right;
+}
+
+/* #endregion aside */
