@@ -3,7 +3,11 @@
 
     <header>
       <div>
-        <h1>Profile</h1>
+        <h1>
+          <span class="fa fa-user"></span>
+
+          <span>Profile</span>
+        </h1>
 
         <nav>
           <div>
