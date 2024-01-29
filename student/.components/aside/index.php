@@ -2,7 +2,7 @@
   <div>
     <header>
       <div>
-        <a href="<?= SITE_URL ?>/student/profile.php">
+        <a href="<?= SITE_URL ?>">
           <figure>
             <img
               src="<?= SITE_URL ?>/assets/img/AdminLTELogo.png"
