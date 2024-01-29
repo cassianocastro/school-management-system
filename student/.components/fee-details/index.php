@@ -1,21 +1,43 @@
-<?php require_once __DIR__ . '/.components/examination/index.php'; ?>
+<section id="fee-details">
+  <div>
 
-<?php require_once __DIR__ . '/.components/tuition/index.php'; ?>
+    <header>
+      <div>
+        <h2>Fee Details</h2>
 
-<!-- <menu>
-  <li>
-    <button type="button" title="Examination Fee">
-      <span class="far fa-circle"></span>
+        <nav>
+          <div>
+            <ul>
+              <li><a href="#">Student</a></li>
+              <li>&sol;</li>
+              <li><a href="#">Fee Details</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-      <span>Examination Fee</span>
-    </button>
-  </li>
+    <menu>
+      <li>
+        <button type="button" title="Examination Fee">
+          <span class="far fa-circle"></span>
 
-  <li>
-    <button type="button" title="Tuition Fee">
-      <span class="far fa-circle"></span>
+          <span>Examination Fee</span>
+        </button>
+      </li>
 
-      <span>Tuition Fee</span>
-    </button>
-  </li>
-</menu> -->
+      <li>
+        <button type="button" title="Tuition Fee">
+          <span class="far fa-circle"></span>
+
+          <span>Tuition Fee</span>
+        </button>
+      </li>
+    </menu>
+
+    <?php require_once __DIR__ . '/.components/examination/index.php'; ?>
+
+    <?php require_once __DIR__ . '/.components/tuition/index.php'; ?>
+
+  </div>
+</section>

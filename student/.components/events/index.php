@@ -1,21 +1,43 @@
-<?php require_once __DIR__ . '/.components/cf/index.php'; ?>
+<section id="events">
+  <div>
 
-<?php require_once __DIR__ . '/.components/ws/index.php'; ?>
+    <header>
+      <div>
+        <h2>Events</h2>
 
-<!-- <menu>
-  <li>
-    <button type="button" title="Manage Campus Functions">
-      <span class="far fa-circle"></span>
+        <nav>
+          <div>
+            <ul>
+              <li><a href="#">Student</a></li>
+              <li>&sol;</li>
+              <li><a href="#">Events</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-      <span>Campus Functions</span>
-    </button>
-  </li>
+    <menu>
+      <li>
+        <button type="button" title="Manage Campus Functions">
+          <span class="far fa-circle"></span>
 
-  <li>
-    <button type="button" title="Webinars & Seminars">
-      <span class="far fa-circle"></span>
+          <span>Campus Functions</span>
+        </button>
+      </li>
 
-      <span>Webinar/Seminar</span>
-    </button>
-  </li>
-</menu> -->
+      <li>
+        <button type="button" title="Webinars & Seminars">
+          <span class="far fa-circle"></span>
+
+          <span>Webinar/Seminar</span>
+        </button>
+      </li>
+    </menu>
+
+    <?php require_once __DIR__ . '/.components/cf/index.php'; ?>
+
+    <?php require_once __DIR__ . '/.components/ws/index.php'; ?>
+
+  </div>
+</section>

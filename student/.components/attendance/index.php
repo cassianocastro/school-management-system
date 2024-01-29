@@ -1,21 +1,43 @@
-<?php require_once __DIR__ . '/.components/attendance/index.php'; ?>
+<section id="attendance">
+  <div>
 
-<?php require_once __DIR__ . '/.components/leave/index.php'; ?>
+    <header>
+      <div>
+        <h2>Attendance</h2>
 
-<!-- <menu>
-  <li>
-    <button type="button" title="Manage Attendance">
-      <span class="far fa-circle"></span>
+        <nav>
+          <div>
+            <ul>
+              <li><a href="#">Student</a></li>
+              <li>&sol;</li>
+              <li><a href="#">Attendance</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-      <span>Attendance</span>
-    </button>
-  </li>
+    <menu>
+      <li>
+        <button type="button" title="Manage Attendance">
+          <span class="far fa-circle"></span>
 
-  <li>
-    <button type="button" title="Leave">
-      <span class="far fa-circle"></span>
+          <span>Attendance</span>
+        </button>
+      </li>
 
-      <span>Leave</span>
-    </button>
-  </li>
-</menu> -->
+      <li>
+        <button type="button" title="Leave">
+          <span class="far fa-circle"></span>
+
+          <span>Leave</span>
+        </button>
+      </li>
+    </menu>
+
+    <?php require_once __DIR__ . '/.components/attendance/index.php'; ?>
+
+    <?php require_once __DIR__ . '/.components/leave/index.php'; ?>
+
+  </div>
+</section>
